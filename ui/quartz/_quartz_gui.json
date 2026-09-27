@@ -1,0 +1,842 @@
+// mc-disable resourcepack.ui.inheritance.missing
+{
+  "namespace": "quartz_gui",
+  
+  //----------------------------
+  //Title background elements
+  //----------------------------
+
+  "title_background":{
+    "type":"image",
+    "layer": -2,
+    "$lock_theme|default":false,
+    "$title_background_texture|default":"textures/ui/generic/title_background_generic",
+    "texture": "$title_background_texture",
+    "$title_background_size|default":["100% + 12px", 15],
+    "size": "$title_background_size",
+    "$title_background_offset|default":[0,4],
+    "offset": "$title_background_offset",
+    "anchor_from":"bottom_middle",
+    "anchor_to":"bottom_middle",
+    "keep_ratio": false,
+    "variables":[
+      {
+        "requires": "($container_title_font = 'MinecraftFive')",
+        "$title_background_offset":[0,3] //Pretty sure this offset is wrong
+      },
+      {
+        "requires": "$lock_theme",
+        "$title_background_texture":"textures/ui/generic/title_background_generic"
+      }
+    ]
+  },
+
+  "title_shadow":{
+    "$shadow_colour|default":"$generic_shadow_title_colour",
+    "$lock_theme|default":false,
+    "offset": [0,1],
+    "type":"label",
+    "font_type":"$container_title_font",
+    "text": "$parent_text",
+    "color": "$shadow_colour",
+    "localize": true,
+    "layer": -1,
+    "variables":{
+      "requires": "$lock_theme",
+      "$shadow_colour":"$generic_shadow_title_colour"
+    }
+  },
+
+  "title_background_and_shadow":{
+    "type":"panel",
+    "controls":[
+      {"title_shadow@title_shadow":{}},
+      {"title_background@title_background":{}}
+    ]
+  },
+
+  "crafting_title_shadow@quartz_gui.title_shadow":{
+    "text":"#crafting_label_text",
+    "bindings":[{"binding_name": "#crafting_label_text"}]
+  },
+
+  "crafting_title_background_and_shadow":{
+    "type":"panel",
+    "controls":[
+      {"crafting_title_shadow@crafting_title_shadow":{}},
+      {"title_background@title_background":{}}
+    ]
+  },
+
+  //--------------------
+  // Enchanting screen
+  //--------------------
+
+  "enchant_button_label":{
+    "type":"label",
+    "text": "container.enchant",
+    "localize": true,
+    "color": [1.0,1.0,1.0]
+  },
+
+  //------------------------------
+  // Enchanting Portal Background
+  //------------------------------
+
+  "enchanting_portal_bg":{
+    "type":"image",
+    "texture": "textures/ui/enchanting/enchant_portal_bg",
+    "size": [16,16],
+    "uv_size": [16,16],
+    "uv": "@quartz_gui.enchanting_bg_animation",
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "offset": [15,40]
+  },
+
+  "enchanting_bg_animation":{
+    "anim_type":"aseprite_flip_book",
+    "initial_uv":[0,0]
+  },
+
+  //-----------------------------------
+  // Large Container Scrolling Panel
+  //-----------------------------------
+
+  "large_scroll_box":{
+    "type":"image",
+    "texture": "textures/ui/generic/large_scroll_box_background",
+    "controls":[
+      {
+        "large_scroll_box_tactile":{
+          "type":"image",
+          "texture": "textures/ui/generic/large_scroll_box_tactile",
+          "tiled":true,
+          "size": ["100% - 6px", "100% - 6px"],
+          "anchor_from":"center",
+          "anchor_to":"center"
+        }
+      }
+    ]
+  },
+
+  //-----------------------------
+  // Cartography rename panel
+  //-----------------------------
+
+  "map_rename_panel":{
+    "type":"panel",
+    "controls":[
+      {"text_edit_control@cartography.text_edit_control":{}},
+      {"output_description_label@cartography.output_description_label":{
+        "offset": [0,-12]
+        }
+      }
+    ],
+    "bindings":[
+      {
+        "binding_name": "#is_rename_mode",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  //------------------------
+  // Recipe Scroll Panel
+  //------------------------
+
+  "survival_recipe_cell@crafting.grid_item_for_recipe_book":{
+    "$scrolling_grid_item_size":[24,24],
+    "$cell_image_size":[24,24],
+    "$item_renderer_panel_size":[20,20],
+    "$item_renderer_size":[16,16]
+  },
+
+  "survival_recipe_grid@crafting.scroll_grid":{
+    "$creative_mode":false,
+    "$grid_item_template": "quartz_gui.survival_recipe_cell",
+    "bindings":[
+      {
+        "binding_name": "#is_creative_mode"
+      },
+      {
+        "binding_name": "#is_left_tab_inventory"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "(not (#is_creative_mode or #is_left_tab_inventory))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_name": "#recipe_book_total_items",
+        "binding_name_override": "#maximum_grid_items",
+        "binding_condition": "$binding_condition",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name"
+      }
+    ]
+  },
+
+  //------------------------------
+  // Anvil Text Box Controls
+  //------------------------------
+
+  "anvil_text_box_locked":{
+    "type":"image",
+    "texture": "textures/ui/anvil/text_field_disabled"
+  },
+
+  "anvil_text_box_default":{
+    "type":"image",
+    "texture": "textures/ui/anvil/text_field_enabled"
+  },
+
+  //-----------------------
+  // Tab Icon Renderers
+  //-----------------------
+
+  "icon_template_renderer":{
+    "type":"custom",
+    "renderer":"inventory_item_renderer",
+    "size":[16,16],
+    "property_bag":{
+      "#item_id_aux":"$icon_item_id_aux"
+    }
+  },
+
+  "construction_icon_renderer@quartz_gui.icon_template_renderer":{
+    "$icon_item_id_aux": 2949120  //Brick Block
+  },
+
+  "equipment_icon_renderer":{
+    "type":"image",
+    "size": [16,16],
+    "texture": "textures/items/diamond_sword"
+  },
+
+  "items_icon_renderer":{
+    "type":"image",
+    "size": [16,16],
+    "texture": "textures/items/redstone_dust"
+  },
+
+  "nature_icon_renderer@quartz_gui.icon_template_renderer":{
+    "$icon_item_id_aux": 131072   // Grass Block
+  },
+
+  //----------------------------------------------
+  // Pocket Redstone Dispenser & Dropper Grid
+  //----------------------------------------------
+
+  "redstone_pocket_grid_panel":{
+    "type":"panel",
+    "visible": "(($is_dispenser or $is_dropper) and $is_chest_panel)",
+    "controls":
+    [
+      {
+        "redstone_pocket_grid":{
+          "type":"grid",
+          "grid_dimensions": [3,3],
+          "$is_dropper|default":false,
+          "$is_dispenser|default":false,
+          "grid_item_template": "common.pocket_ui_container_item",
+          "collection_name": "$pane_collection",
+          "$pane_collection":"container_items",
+          "$item_collection_name": "$pane_collection"
+        }
+      },
+      {"redstone_grid_background@quartz_gui.redstone_grid_background":{"$redstone_grid_bg_size":["100%sm + 4px","100%sm + 6px"]}}
+    ]
+  },
+
+  "pocket_hopper_grid":{
+    "type":"grid",
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "grid_item_template": "common.pocket_ui_container_item",
+    "collection_name": "container_items",
+    "$item_collection_name":"container_items",
+    "grid_dimensions": [5,1],
+    "maximum_grid_items":5,
+    "size": [140,32]
+  },
+
+  //--------------------
+  // Horse Elements
+  //--------------------
+
+  "horse_chest_background":{
+    "type":"image",
+    "texture": "textures/ui/horse/chest_background",
+    "size": [104,75]
+  },
+
+  "horse_slot_bg_panel":{
+    "type":"panel",
+    "size": [28,50],
+    "offset": [-5,-6],
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "controls":[
+      {"horse_single_slot_bg@quartz_gui.horse_single_slot_bg":{}},
+      {"horse_double_slot_bg@quartz_gui.horse_double_slot_bg":{}}
+    ]
+  },
+
+  "horse_single_slot_bg":{
+    "type":"image",
+    "texture": "textures/ui/horse/single_slot_bg",
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "size": [28,29],
+    "offset": [0,1],
+    "bindings":[
+      {"binding_name": "#has_saddle_slot"},
+      {"binding_name": "#has_only_horse_armor_slot"},
+      {"binding_name": "#has_only_carpet_slot"},
+      {"binding_name": "#has_only_nautilus_armor_slot"},
+      {
+        "binding_type":"view",
+        "source_property_name": "((#has_only_horse_armor_slot or #has_only_carpet_slot or #has_only_nautilus_armor_slot) or (#has_saddle_slot and not (#has_only_horse_armor_slot or #has_only_carpet_slot or #has_only_nautilus_armor_slot)))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "horse_double_slot_bg":{
+    "type":"image",
+    "texture": "textures/ui/horse/double_slot_bg",
+    "size": [28,50],
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "bindings":[
+      {"binding_name": "#has_horse_armor_and_saddle_slot"},
+      {"binding_name": "#has_carpet_and_saddle_slot"},
+      {"binding_name": "#has_nautilus_armor_and_saddle_slot"},
+      {
+        "binding_type":"view",
+        "source_property_name": "(#has_horse_armor_and_saddle_slot or #has_carpet_and_saddle_slot or #has_nautilus_armor_and_saddle_slot)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  //---------------------
+  // Debugging Elements
+  //---------------------
+
+  
+  "debug_villager_texture_label":{
+    "ignored": "(not $debug_release_colourful_oreui)",
+    "type":"label",
+    "offset": [0,-60],
+    "text": "#test_text",
+    "bindings":[
+      {
+        "binding_name": "#name_label"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "((#name_label - '§r') = #name_label)",
+        "target_property_name": "#val"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "('textures/ui/trading/professions/' + (('%.' + 12 * (1 - #val) + 's') * #name_label) + (('%.' + (6 * #val) + 's') * 'backup')))",
+        "target_property_name": "#test_text"
+      }
+    ]
+  },
+
+  //--------------------
+  // Villager Sprite
+  //--------------------
+
+  "villager_sprite":{
+    "type":"image",
+    "anchor_from":"bottom_left",
+    "anchor_to":"bottom_left",
+    "size": [38,39],
+    "offset": [-4,0],
+    "controls":[
+      {"villager_eyes@quartz_anim.villager_eyes":{}}
+    ],
+    "bindings":[
+      {
+        "binding_name": "#name_label"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "((#name_label - '§r') = #name_label)",
+        "target_property_name": "#val"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "('textures/ui/trading/professions/' + (('%.' + 12 * (1 - #val) + 's') * #name_label) + (('%.' + (6 * #val) + 's') * 'backup')))",
+        "target_property_name": "#texture"
+      }
+    ]
+  },
+
+  "llama_sprite":{
+    "type":"image",
+    "texture": "textures/ui/trading/professions/llama",
+    "size": [44,45],
+    "offset": [3,0],
+    "anchor_from":"bottom_right",
+    "anchor_to":"bottom_right",
+    "bindings":[
+      {
+        "binding_name": "#name_label"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "(('%.12s' * #name_label) = '§c§6§1§r')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+
+  //--------------------------
+  // Villager elements
+  //--------------------------
+
+  "trading_title_stripe":{
+    "type":"image",
+    "texture": "textures/ui/trading/trade_title_stripe",
+    "size": [84,14],
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "offset": [0,-8],
+    "layer": 3,
+    "controls":[
+      {
+        "trading_title_label":{
+          "type":"label",
+          "text": "trade.trade",
+          "localize": true,
+          "color": [0,0,0]
+        }
+      }
+    ]
+  },
+
+  //----------------------------------
+  // Villager progress bar nubs
+  //----------------------------------
+
+  "filled_bar_nub":{
+    "type":"image",
+    "texture": "textures/ui/progress_bars/filled_bar_nub",
+    "size": ["100% - 2px","100%"],
+    "color": [1.0,1.0,1.0],
+    "tiled": true,
+    "clip_direction":"left",
+    "clip_pixelperfect": false,
+    "layer": 6,
+    "bindings": [
+      {
+        "binding_name": "#exp_progress",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "global",
+        "binding_condition":"always_when_visible"
+      }
+    ]
+  },
+
+  "preview_bar_nub":{
+    "type":"image",
+    "texture": "textures/ui/progress_bars/white_bar_nub",
+    "color": [1.0,1.0,1.0],
+    "size": ["100% - 2px","100%"],
+    "tiled": true,
+    "clip_direction":"left",
+    "clip_pixelperfect": false,
+    "layer": 4,
+    "bindings": [
+      {
+        "binding_name": "#exp_possible_progress",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "global",
+        "binding_condition":"always_when_visible"
+      }
+    ]
+  },
+
+  //---------------------------
+  // Toolbar Panel Centerer
+  //---------------------------
+
+  "toolbar_panel_centerer":{
+    "type":"panel",
+    "size": [326,"100%c"],
+    "anchor_to":"bottom_right",
+    "anchor_from":"top_left",
+    "controls":[{"toolbar_panel@crafting.toolbar_panel":{}}]
+  },
+
+  "centering_padding":{
+    "type":"panel",
+    "size": [75,"100%"],
+    "bindings":[
+      {
+        "binding_name": "#is_survival_layout",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  //------------------------------
+  // Pocket Scrolling Elements
+  //------------------------------
+
+  "chest_scroll_box":{
+    "type":"image",
+    "$lock_theme|default":false,
+    "$container_scroll_box_texture|default":"textures/ui/generic/scroller",
+    "texture": "$container_scroll_box_texture",
+    "variables":{
+      "requires": "$lock_theme",
+      "$container_scroll_box_texture|default":"textures/ui/generic/scroller"
+    }
+  },
+
+  "chest_scroll_track":{
+    "type":"image",
+    "keep_ratio": false,
+    "texture": "textures/ui/chest/scroll_track",
+    "color": "$chest_label_primary_colour"
+  },
+
+  //-----------------------------------------
+  // Pocket Enchanting Background Elements
+  //-----------------------------------------
+
+  "enchanting_pocket_book_bg":{
+    "type":"image",
+    "texture": "textures/ui/enchanting/pocket_enchanting_book",
+    "size": ["100% + 4px","100% + 4px"]
+  },
+
+  "pocket_enchanting_input_bg":{
+    "type":"image",
+    "texture": "textures/ui/enchanting/enchanting_input_slots_bg",
+    "size": ["100% + 8px", "100% + 12px"]
+  },
+
+  //------------------------------------
+  // Pocket Template Container Titles
+  //------------------------------------
+
+  // These controls are not used in Colorful OreUI, since Pocket UI is not supported
+
+  "pocket_template_title":{
+    "type":"label",
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "offset": [0,-5],
+    "controls":[{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{}}]
+  },
+
+  "pocket_inventory_title@quartz_gui.pocket_template_title":{
+    "text": "chestScreen.header.player",
+    "$parent_text|default":"chestScreen.header.player",
+    "$lock_theme":true,
+    "color": "$generic_main_title_colour",
+    "localize": true,
+    "layer": 4
+  },
+
+  "pocket_container_title@quartz_gui.pocket_template_title":{
+    "$container_title_custom|default":"$container_title",
+    "$parent_text|default":"$container_title_custom",
+    "text": "$container_title_custom",
+    "color": "$main_container_colour",
+    "localize": true,
+    "layer": 4
+  },
+
+  //---------------------------
+  // Beacon Title Label
+  //---------------------------
+
+  "beacon_title_label":{
+    "type":"label",
+    "text": "tile.beacon.name",
+    "$parent_text":"tile.beacon.name",
+    "color": [0.000,0.631,0.569],
+    "$shadow_colour":[0.761,1.000,0.980],
+    "localize": true,
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "offset": [0,1],
+    "layer": 5,
+    "controls":[
+      {"title_background_and_shadow@quartz_gui.title_background_and_shadow":{}}
+    ]
+  },
+
+  //-----------------------------------------------
+  // Anvil Slot Stack Panel
+  //-----------------------------------------------
+
+  "anvil_slot_stack_panel":{
+    "type":"stack_panel",
+    "size": [125,18],
+    "orientation":"horizontal",
+    "anchor_from":"bottom_left",
+    "anchor_to":"bottom_left",
+    "offset": [19,-12],
+    "controls":[
+      {
+        "input_item_slot@anvil.anvil_item_slot": {
+          "$item_collection_name": "anvil_input_items",
+
+          "$focus_id_binding_type": "none",
+          "$focus_id": "anvil_input",
+
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "anvil_material"
+        }
+      },
+      {
+        "padding_0":{
+          "type":"panel",
+          "size": [31,1]
+        }
+      },
+      {
+        "material_item_slot@anvil.anvil_item_slot": {
+          "$item_collection_name": "anvil_material_items",
+
+          "$focus_id_binding_type": "none",
+          "$focus_id": "anvil_material",
+
+          "$focus_override_left_binding_type": "none",
+          "$focus_override_left": "anvil_input",
+
+          "$focus_override_right_binding_type": "none",
+          "$focus_override_right": "anvil_result"
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [40,1],
+          "controls": [
+            { "arrow_icon@anvil.arrow_icon": {} },
+            {
+              "cross_out_icon@anvil.cross_out_icon": {
+                "layer": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "result_item_slot@anvil.anvil_item_slot": {
+          "$item_collection_name": "anvil_result_items",
+          "$button_ref": "anvil.anvil_output_slot_button",
+
+          "$focus_id_binding_type": "none",
+          "$focus_id": "anvil_result",
+
+          "$focus_override_left_binding_type": "none",
+          "$focus_override_left": "anvil_material"
+        }
+      }
+    ]
+  },
+
+  //---------------------------------
+  // Loom Top Half Panel
+  //---------------------------------
+
+  "loom_top_half_slots_panel":{
+    "type":"panel",
+    "size": [148,64],
+    "offset": [5,-5],
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "controls":[
+      {
+        "input_item_slot@loom.input_item_slot": {
+          "anchor_from":"top_left",
+          "anchor_to":"top_left",
+          "offset": [0,15]
+        }
+      },
+      {
+        "dye_item_slot@loom.dye_item_slot":{
+          "anchor_from":"top_left",
+          "anchor_to":"top_left",
+          "offset": [20,15]
+        }
+      },
+      {
+        "material_item_slot@loom.material_item_slot":{
+          "anchor_from":"bottom_left",
+          "anchor_to":"bottom_left",
+          "offset": [10,-11]
+        }
+      },
+      {
+        "result_item_slot@loom.result_item_slot":{
+          "anchor_from":"bottom_right",
+          "anchor_to":"bottom_right",
+          "offset": [0,1]
+        }
+      },
+      {
+        "result_banner_renderer@loom.result_banner_renderer": {
+          "layer": 1,
+          "anchor_from":"top_right",
+          "anchor_to":"top_right",
+          "offset": [1,-1]
+        }
+      }
+    ]
+  },
+
+  //-------------------------
+  // Cartography Lock
+  //-------------------------
+
+  "cartography_lock":{
+    "type":"image",
+    "texture": "textures/ui/cartography/lock",
+    "size": [10,14],
+    "offset": [-5,-6],
+    "anchor_from":"bottom_right",
+    "anchor_to":"bottom_right",
+    "bindings":[
+      {
+        "binding_name": "$map_binding_name",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  //------------------------------------------
+  // Template small container Scroll Panel
+  //------------------------------------------
+
+  "small_panel_scroll_box":{
+    "type":"image",
+    "texture": "$small_panel_scroll_box_texture"
+  },
+
+  "small_container_scroll_panel@common.container_scroll_panel":{
+    "$is_small_scrolling_panel":true,
+    "$scroll_view_port_offset":[0,0],
+    "$use_large_scroll_box":false,
+    "$show_background":false,
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "$scroll_box_size":[12,"100%"],
+    "$scroll_size":[12,"100%"],
+    "$scroll_box_mouse_image_control": "quartz_gui.small_panel_scroll_box",
+    "$scroll_box_touch_image_control": "quartz_gui.small_panel_scroll_box",
+    "$scroll_track_image_control": "common.empty_panel"
+  },
+
+  //---------------------------------------
+  // Loom Scroll Scroll Panel
+  //---------------------------------------
+  
+  "loom_grid_small@loom.scroll_grid":{
+    "$grid_item_template|default": "quartz_gui.loom_pattern_button_small"
+  },
+
+  "loom_pattern_button_small@loom.pattern_button":{
+    "size": [14,14],
+    "$background_images|default":"quartz_gui.loom_small_pattern_cell_image"
+  },
+
+  "loom_small_pattern_cell_image":{
+    "type":"image",
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_name": "#pattern_cell_background_texture",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name",
+        "binding_condition": "always_when_visible"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "(#pattern_cell_background_texture + '_loom')",
+        "target_property_name": "#texture"
+      }
+    ]
+  },
+
+  "small_loom_scroll_grid_panel":{
+    "type": "input_panel",
+    "size": [ "100%", "100%c + 2px" ],
+    "controls":[{"grid@quartz_gui.loom_pattern_button_small":{}}]
+  },
+
+  "loom_scroll_panel@quartz_gui.small_container_scroll_panel":{
+    "size": [72,56],
+    "offset": [52,-2],
+    "$scroll_view_port_size":[60,56],
+    "$scroll_view_port_offset":[0,0],
+    "$small_panel_scroll_box_texture":"textures/ui/loom/scroller",
+    "$collection_name": "patterns",
+    "$scrolling_content":"quartz_gui.loom_grid_small"
+  },
+
+  //-----------------------------------
+  // Stonecutter small scroll panel
+  //-----------------------------------
+
+  "stonecutter_cell_image_small":{
+    "type": "image",
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_name": "#stone_cell_background_texture",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name",
+        "binding_condition": "always_when_visible"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "(#stone_cell_background_texture + '_stone')",
+        "target_property_name": "#texture"
+      }
+    ]
+  },
+
+  "stonecutter_button_small@stonecutter.stone_button":{
+    "size": [16,18],
+    "$background_images|default": "quartz_gui.stonecutter_cell_image_small"
+  },
+
+  "stonecutter_scroll_grid_small@stonecutter.scroll_grid":{
+    "$grid_item_template|default":"quartz_gui.stonecutter_button_small"
+  },
+
+  "stonecutter_scroll_panel@quartz_gui.small_container_scroll_panel":{
+    "size": [81,56],
+    "offset": [45,0],
+    "layer": 6,
+    "$scroll_view_port_size":[66,54],
+    "$scroll_view_port_offset":[-1,0],
+    "$scroll_track_offset":[-2,0],
+    "$small_panel_scroll_box_texture":"textures/ui/stonecutter/scroller",
+    "$scrolling_content": "quartz_gui.stonecutter_scroll_grid_small",
+    "$collection_name": "stones"
+  },
+
+  //---------------------------
+  // Recipe Book Background
+  //---------------------------
+
+  "recipe_book_background_image":{
+    "type":"image",
+    "texture": "textures/ui/recipe/recipe_book_background"
+  }
+}

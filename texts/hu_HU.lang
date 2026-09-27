@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rPáncélkovács
+entity.villager.butcher=§c§c§4§rMészáros
+entity.villager.cartographer=§c§6§e§rTérképész
+entity.villager.cleric=§c§d§5§rPap
+entity.villager.farmer=§c§6§2§rFöldműves
+entity.villager.fisherman=§c§7§6§rHalász
+entity.villager.fletcher=§c§7§4§rNyílkészítő
+entity.villager.leather=§c§b§a§rTímár
+entity.villager.librarian=§c§e§r§rKönyvtáros
+entity.villager.shepherd=§c§7§r§rPásztor
+entity.villager.tool=§c§c§d§rEszközkovács
+entity.villager.weapon=§c§b§9§rFegyverkovács
+entity.villager.mason=§c§0§8§rMason
+entity.wandering_trader.name=§c§6§1§rVándorkereskedő
+
+entity.ender_dragon.name=§b§d§rEndersárkány
+raid.name=§b§c§rRoham

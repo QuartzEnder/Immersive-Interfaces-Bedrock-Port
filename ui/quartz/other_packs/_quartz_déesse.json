@@ -1,0 +1,25 @@
+{
+  "namespace": "quartz_déesse",
+
+  "all_button_icon":{
+    "type":"image",
+    "texture": "textures/déesse_ui/all_button_icon",
+    "size": [11,7]
+  },
+
+  "all_button_icon_small@quartz_déesse.all_button_icon":{
+    "size": [8.25,5.25]
+  },
+
+  "all_button_template@common_toggles.light_image_toggle":{
+    "$button_content":"quartz_déesse.all_button_icon",
+    "$toggle_name": "('add_qcqi_' + $button_mode)",
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 0,
+    "size": "$button_size",
+
+    "$toggle_default_state": true,
+    "$toggle_group_forced_index": 0,
+    "$toggle_view_binding_name": "($button_mode + '_all_toggle')"
+  }
+}

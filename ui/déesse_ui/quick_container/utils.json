@@ -1,0 +1,48 @@
+{
+  "namespace": "déesse_qcUtils",
+
+  "crafting_table_stacked_buttons_panel":{
+    "offset": [-24,16]
+  },
+
+  "crafter_stacked_buttons_panel":{
+    "offset": [4.5,16.5]
+  },
+
+  "quick_disenchant_panel":{
+    "offset": [2,30]
+  },
+
+  "quick_craft_button":{
+    "$déesse_quick_craft_offset|default":[0,0],
+    "offset": "$déesse_quick_craft_offset"
+  },
+
+  "quick_craft_icon":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{
+          "all_button_icon@quartz_déesse.all_button_icon":{
+            "color":"$text_color",
+            "ignored":"(not (($quick_craft_text = 'déesse.all') or ($quick_craft_text = 'all')))"
+          }
+        }
+      }
+    ]
+  },
+
+  "quick_craft_icon/text":{
+    "ignored": "(($quick_craft_text = 'déesse.all') or ($quick_craft_text = 'all'))"
+  },
+
+  "clear_crafting_grid_button":{
+    "$clear_crafting_offset|default":[-18,22],
+    "offset": "$clear_crafting_offset"
+  },
+
+  "unequip_armor_button":{
+    "offset": [79,40]
+  }
+}

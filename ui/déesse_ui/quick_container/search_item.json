@@ -1,0 +1,71 @@
+{
+  "namespace": "déesse_searchItems",
+
+  "item_search_panel":{
+    "$ihtbp_offset|default":[0,-2],
+    "variables": {
+      "requires": "$is_large_chest",
+      "$ihtbp_offset":[0,20]
+    }
+  },
+
+  "custom_text_edit_box":{
+    "$alternate_edit_box_texture":true
+  },
+
+  "search_items_text_box_panel":{
+    "type":"stack_panel",
+    "orientation":"horizontal",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":
+          {
+            "magnifying_glass_holder":{
+              "type":"panel",
+              "size":[13,14],
+              "controls":[
+                {
+                  "magnifying_glass@common.text_magnifying_glass_image":{
+                    "texture":"textures/ui/generic/magnifying_glass_no_bg",
+                    "size":[11,11],
+                    "offset":[0,1],
+                    "anchor_from":"left_middle",
+                    "anchor_to":"left_middle"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+
+  "search_items_text_box_panel/text_edit_box":{
+    "size": ["fill","default"],
+    "$text_edit_box_label_offset":[2,0],
+    "$default_edit_box_texture":"textures/ui/generic/text_box_default",
+    "$hover_edit_box_texture":"textures/ui/generic/text_box_hover"
+  },
+
+  "item_search_panel/search_bar_content/invert_search_bttn":{
+    "size": ["100% + 2px","100% + 2px"]
+  },
+
+  "item_search_panel/search_bar_content/invert_search_bttn/btton":{
+    "offset": [0,0]
+  },
+
+  //------------------------
+  // Exclude button
+  //------------------------
+
+  "exclude_hotbar_panel":{
+    "offset": [0,-7]
+  },
+
+  "exclude_inventory_panel":{
+    //"offset": [0,-29]
+  }
+}

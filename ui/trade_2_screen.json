@@ -1,0 +1,354 @@
+{
+  "namespace": "trade2",
+
+  "trade_screen":{
+    "$default_border_visible": false,
+    "$hover_border_visible": false,
+    "$close_button_offset":[28.5,0.5],
+    "$big_close_button_offset":[27,4],
+    "$screen_content": "trade2.screen_panel",
+    "$is_dimz_advanced_container|default":false,
+    "variables":{
+      "requires": "$is_dimz_advanced_container",
+      "$big_close_button_offset":[27,1],
+      "$close_button_offset":[27.5,0.5]
+    }
+  },
+
+  "screen_stack_panel":{
+    "$scroll_track_image_control": "common.empty_panel",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "center_fold"
+      }
+    ]
+  },
+
+  //------------------
+  // Right Panel
+  //------------------
+
+  "villager_name_label":{
+    "color": "$creative_label_colour"
+  },
+
+  "right_panel/common_panel":{
+    "$background_texture":"textures/ui/trading/villager_background",
+    "$common_panel_size":[164,73],
+    "$show_close_button":true,
+    "$show_side_help_button":true
+  },
+
+  "trade_button":{
+    "ignored":true,
+    "$default_text_color":[1.0,1.0,1.0],
+    "$border_visible":false
+  },
+
+  "how_to_play_button":{
+    "ignored": true
+  },
+
+  "item_slot":{
+    "$trade_item_slot_size":[18,18],
+    "size": "$trade_item_slot_size",
+    "$cell_image_size":[18,18],
+    "$item_renderer_panel_size": [16,16],
+    "$item_renderer_size": [16,16]
+  },
+
+  "toolbar_panel":{
+    "ignored": true
+  },
+
+  "item_slots_stack_panel":{
+    "size": [102,"100%cm"],
+    "offset": [29,-0.5],
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_after",
+        "control_name": "ingredient_item_1_holder",
+        "value":{
+          "padding_between_slots":{
+            "type":"panel",
+            "size":[8,1],
+            "ignored":"$second_item_slot_ignored"
+          }
+        }
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "pointing_right_arrow_holder"
+      },
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "pointing_left_arrow_holder",
+        "value":{
+          "trading_padding1":{
+            "type":"panel",
+            "size":["fill",1]
+          }
+        }
+      },
+      {
+        "array_name":"controls",
+        "operation":"insert_after",
+        "control_name": "ingredient_item_2_holder",
+        "value":{
+          "trading_padding2":{
+            "type":"panel",
+            "size":[21,1]
+          }
+        }
+      }
+    ]
+  },
+
+  "top_half_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"villager_sprite@quartz_gui.villager_sprite":{}}
+      },
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"llama_sprite@quartz_gui.llama_sprite":{}}
+      },
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"debug_villager_texture_label@quartz_gui.debug_villager_texture_label":{}}
+      }
+    ]
+  },
+
+  "top_half_stack_panel":{
+    "size": ["100%","100%cm"]
+  },
+
+  "top_half_stack_panel/item_slots_holder":{
+    "size": ["100%","100%cm"]
+  },
+
+  //--------------------
+  // Left Panel
+  //--------------------
+
+  "arrow_holder/arrow_image":{
+    "bindings":[
+      {
+        "binding_type":"collection_details"
+      },
+      {
+        "binding_name":"#trade_cross_out_visible"
+      },
+      {
+        "binding_name": "#trade_toggle_enabled"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "(not #trade_cross_out_visible and #trade_toggle_enabled)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  
+  "arrow_right_image":{
+    "size":[7,6],
+    "texture": "textures/ui/arrow"
+  },
+
+  "left_panel":{ // This is now used as a holder to be used in screen_stack_panel
+    "$overwriteable":false,
+    "size": ["100%c",166],
+    "$background_texture":"textures/ui/trading/left_trading_background",
+    "controls":[
+      {
+        "left_panel_container":{
+          "type":"panel",
+          "size": [104,156],
+          "offset": [5,0],
+          "anchor_from":"bottom_right",
+          "anchor_to":"bottom_right",
+          "controls":[
+            {"bg@common.common_panel": {"$show_close_button": false}},
+            {"trade_scroll_panel@trade2.trade_scroll_panel": {}},
+            {"trading_title_stripe@quartz_gui.trading_title_stripe":{}}
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroll_background_image":{
+    "ignored":true
+  },
+
+  "trade_scroll_panel":{
+    "anchor_from":"left_middle",
+    "anchor_to":"left_middle",
+    "size": [100,144],
+    "offset": [3,0],
+    "$scroll_view_port_offset":[1,2],
+    "$scroll_view_port_size":[90,140],
+    "$scroll_bar_left_padding_size":[0,0],
+    "$scroll_bar_right_padding_size":[3,0],
+    "$scroll_track_image_control": "common.empty_panel",
+    "$scroll_box_touch_image_control": "quartz_gui.small_panel_scroll_box",
+    "$scroll_box_size":[6,"100%"],
+    "$scroll_size":[6,140]
+  },
+
+  "trade_toggle":{
+    "size": [90,22],
+    "$hover_texture": "textures/ui/button_borderless_lighthover",
+    "$pressed_no_hover_texture":"textures/ui/button_borderless_lighthover"
+  },
+
+  "trade_toggle_holder":{
+    "size": ["100%","100%c - 3px"]
+  },
+
+  "trade_toggle_checked/toggle_checked_red":{
+    "$new_ui_button_texture": "textures/ui/button_borderless_lighthover"
+  },
+
+  "lock_image":{
+    "offset": [0,1]
+  },
+
+  "cross_out_image":{
+    "size": [9,9],
+    "offset": [-3.5,0]
+  },
+
+  "container_cell_image":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "cell_image"
+      }
+    ]
+  },
+
+  //-----------------
+  // Tier Labels
+  //-----------------
+
+  "tier_stack_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "padding"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "tier_label_holder"
+      }
+    ]
+  },
+
+  "tier_label":{
+    "text_alignment":"center"
+  },
+
+  "tier_label_locked":{
+    "text_alignment":"center"
+  },
+
+  //---------------------
+  // Progress bars
+  //---------------------
+
+  "exp_progress_bar":{
+    "size": [102,5]
+  },
+
+  "exp_progress_bar/empty_progress_bar":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_after",
+        "control_name": "blue_progress_bar",
+        "value":{"filled_bar_nub@quartz_gui.filled_bar_nub":{}}
+      },
+      {
+        "array_name":"controls",
+        "operation":"insert_after",
+        "control_name": "white_progress_bar",
+        "value":{"preview_bar_nub@quartz_gui.preview_bar_nub":{}}
+      }
+    ]
+  },
+  
+  "empty_progress_bar":{  
+    "texture": "textures/ui/progress_bars/generic_progress_bar_empty"
+  },
+
+  "blue_progress_bar":{ // It's been changed to green
+    "texture": "textures/ui/progress_bars/filled_progress_bar",
+    "clips_children": true,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"filled_bar_nub@quartz_gui.filled_bar_nub":{}}
+      }
+    ]
+  },
+
+  "white_progress_bar":{
+    "texture": "textures/ui/progress_bars/white_progress_bar",
+    "clips_children": true,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"preview_bar_nub@quartz_gui.preview_bar_nub":{}}
+      }
+    ]
+  },
+
+  "progress_bar_nub":{
+    "texture": "textures/ui/progress_bars/empty_bar_nub"
+  },
+
+  "exp_progress_bar/empty_progress_bar/progress_bar_nub":{
+    "size": ["100% - 2px","100%"],
+    "layer": 2
+  },
+  
+  "exp_progress_bar/empty_progress_bar/blue_progress_bar":{
+    "layer": 5
+  },
+
+  "exp_progress_bar/empty_progress_bar/white_progress_bar":{
+    "layer": 3
+  },
+
+  "top_half_stack_panel/trade_button_holder":{
+    "$déesse_quick_trade_anchor_from":"bottom_left",
+    "$déesse_quick_trade_anchor_to":"top_right",
+    "$déesse_quick_trade_offset":[-44,13]
+  },
+
+  //--------------------------
+  // Advanced Containers
+  //--------------------------
+
+  "quick_trade_button@common_buttons.light_content_button":{
+    "offset": [9,9.5]
+  }
+}

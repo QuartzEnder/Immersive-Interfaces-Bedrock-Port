@@ -1,0 +1,13 @@
+{
+  "namespace": "settings_common",
+
+  "section_title_label": {
+    "color": "$section_label_colour",
+    "$section_label_colour|default":"$title_text_color",
+    "$is_déesse_ui_pack|default":false,
+    "variables":{
+      "requires": "$is_déesse_ui_pack",
+      "$section_label_colour":"$preserved_oreui_default_text_color"
+    }
+  }
+}

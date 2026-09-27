@@ -1,0 +1,52 @@
+{
+  "namespace": "container_ds-acr",
+
+  "container_control_panel/stack_panel/close_button_padding":{
+    "$adv_cont_close_padding_size|default":[20,22],
+    "size":"$adv_cont_close_padding_size",
+    "ignored":false
+  },
+
+  "container_control_panel/stack_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name":"close_button"
+      }
+    ]
+  },
+
+  "search_bar":{
+    "$alternate_edit_box_texture":true
+  },
+
+  "destroy_item_button_panel/bottom_right_tab":{
+    "texture":"textures/ui/advanced_container/destroy_item_bg",
+    "layer":0
+  },
+
+  "destroy_item_button_panel/bottom_right_tab/destroy_item_button":{
+    "offset":[0,0.5]
+  },
+
+  "destroy_item_button_panel/bottom_right_tab/destroy_item_button/default":{
+    "texture":"textures/ui/advanced_container/cell_destroy_default"
+  },
+
+  "destroy_item_button_panel/bottom_right_tab/destroy_item_button/hover":{
+    "texture":"textures/ui/advanced_container/cell_destroy_red"
+  },
+
+  "destroy_item_button_panel/bottom_right_tab/destroy_item_button/pressed":{
+    "texture":"textures/ui/advanced_container/cell_destroy_red"
+  },
+
+  "destroy_item_button_panel/bottom_right_tab/destroy_item_button/destroy_item_icon":{
+   "visible":false
+  },
+
+  "toggle_switcher_icon":{
+    "color":[1.0,1.0,1.0]
+  }
+}

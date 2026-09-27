@@ -1,0 +1,7 @@
+{
+  "namespace": "start",
+
+  "realms_button":{
+    "$pressed_button_texture":"textures/ui/realms_button_borderless_hover"
+  }
+}

@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rZırhçı
+entity.villager.butcher=§c§c§4§rKasap
+entity.villager.cartographer=§c§6§e§rHaritacı
+entity.villager.cleric=§c§d§5§rPapaz
+entity.villager.farmer=§c§6§2§rÇiftçi
+entity.villager.fisherman=§c§7§6§rBalıkçı
+entity.villager.fletcher=§c§7§4§rOk Satıcısı
+entity.villager.leather=§c§b§a§rDeri İşçisi
+entity.villager.librarian=§c§e§r§rKütüphaneci
+entity.villager.shepherd=§c§7§r§rÇoban
+entity.villager.tool=§c§c§d§rAlet Yapımcısı
+entity.villager.weapon=§c§b§9§rSilâhtar
+entity.villager.mason=§c§0§8§rMason
+entity.wandering_trader.name=§c§6§1§rGezgin Tüccar
+
+entity.ender_dragon.name=§b§d§rEnder Ejderhası
+raid.name=§b§c§rBaskın

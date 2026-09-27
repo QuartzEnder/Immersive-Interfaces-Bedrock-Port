@@ -1,0 +1,69 @@
+{
+  "namespace": "common_tabs",
+
+  "tab_close_and_help_button":{
+    "ignored": true
+  },
+
+  "base_tab":{  //These variables aren't vanilla
+    "$tab_side|default":"undefined",
+    "$unchecked_default_texture|default":"textures/ui/generic/tab_unselected",
+    "$unchecked_hover_texture|default":"textures/ui/generic/tab_hover",
+    "$checked_default_texture|default":"textures/ui/generic/tab_selected",
+    "$tab_content_offset_unchecked|default":[0,0], // In the end I didn't need this
+    "$tab_content_offset_checked|default":[0,0] 
+  },
+
+  "base_tab/$tab_view_binding_name/unchecked":{
+    "$tab_texture":"$unchecked_default_texture",
+    "$tab_content_offset":"$tab_content_offset_unchecked"
+  },
+
+  "base_tab/$tab_view_binding_name/unchecked_hover":{
+    "$tab_texture":"$unchecked_hover_texture",
+    "$tab_content_offset":"$tab_content_offset_unchecked"
+  },
+
+  "base_tab/$tab_view_binding_name/checked":{
+    "$tab_texture":"$checked_default_texture",
+    "$tab_content_offset":"$tab_content_offset_checked"
+  },
+
+  "base_tab/$tab_view_binding_name/checked_hover":{
+    "$tab_texture":"$checked_default_texture",
+    "$tab_content_offset":"$tab_content_offset_checked"
+  },
+
+  //-------------------------------------
+  // Tab Content offset modifications
+  //-------------------------------------
+
+  "tab_panel/tab_content_sizer":{
+    "$tab_content_offset|default":[0,0],
+    "offset": "$tab_content_offset"
+  },
+
+  //---------------------------
+  // Pocket UI Modifications
+  //---------------------------
+
+  "pocket_tab_left":{
+    "size": [40,29]
+  },
+
+  "pocket_tab_right":{
+    "size": [40,29]
+  },
+
+  "pocket_tab_close_button":{
+    "alpha": 0
+  },
+
+  "pocket_tab_help_button":{
+    "alpha": 0
+  },
+
+  "pocket_tab_close_and_help_button":{
+    "alpha": 0
+  }
+}

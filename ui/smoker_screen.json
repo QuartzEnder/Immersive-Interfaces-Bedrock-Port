@@ -1,0 +1,12 @@
+{
+  "namespace": "smoker",
+
+  "smoker_screen":{
+    "$is_furnace_screen":false,
+    "$background_texture":"textures/ui/smoker/screen_background_smoker",
+    "$title_background_texture":"textures/ui/smoker/title_background_smoker",
+    "$title_background_size":["100% + 12px", 13],
+    "$title_background_offset":[0,3],
+    "$furnace_label_offset":[0,-7]
+  }
+}

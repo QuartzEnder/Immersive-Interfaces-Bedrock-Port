@@ -1,0 +1,12 @@
+{
+  "namespace": "déesse_QCPocket",
+
+  "quick_items_screen_panel":{
+    "$qcqi_offset":"$déesse_pocket_top_buttons_offset",
+    "$déesse_pocket_top_buttons_offset|default":[0,32]
+  },
+
+  "quick_move_items_screen_panel":{
+    "offset": [0,-32]
+  }
+}

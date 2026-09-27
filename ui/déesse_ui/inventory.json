@@ -1,0 +1,9 @@
+{
+  "namespace": "déesse_inventory",
+
+  "armor_grid_creative_layout_panel":{
+    "texture": "textures/ui/generic/screen_background_generic",
+    "layer": -1,
+    "$cell_image_visible":true
+  }
+}

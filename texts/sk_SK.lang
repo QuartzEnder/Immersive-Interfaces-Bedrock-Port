@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rZbrojár
+entity.villager.butcher=§c§c§4§rMäsiar
+entity.villager.cartographer=§c§6§e§rKartograf
+entity.villager.cleric=§c§d§5§rKlerik
+entity.villager.farmer=§c§6§2§rFarmár
+entity.villager.fisherman=§c§7§6§rRybár
+entity.villager.fletcher=§c§7§4§rVýrobca šípov
+entity.villager.leather=§c§b§a§rGarbiar
+entity.villager.librarian=§c§e§r§rKnihovník
+entity.villager.shepherd=§c§7§r§rPastier
+entity.villager.tool=§c§c§d§rKováč nástrojov
+entity.villager.weapon=§c§b§9§rKováč zbraní
+entity.villager.mason=§c§0§8§rKamenár
+entity.wandering_trader.name=§c§6§1§rPotulný obchodník
+
+entity.ender_dragon.name=§b§d§rDrak z konca sveta
+raid.name=§b§c§rNájazd

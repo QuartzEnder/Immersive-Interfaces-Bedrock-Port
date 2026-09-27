@@ -1,0 +1,12 @@
+{
+  "namespace": "déesse_instantButton",
+
+  "inv_instant_stack_button":{
+    "$deesse_inv_instant_offset|default":[-9,-12],
+    "$deesse_inv_instant_anchor|default":"right_middle",
+    "anchor_from":"$deesse_inv_instant_anchor",
+    "anchor_to":"$deesse_inv_instant_anchor",
+    "offset":"$deesse_inv_instant_offset",
+    "$hover_text_anchor":"top_right"
+  }
+}

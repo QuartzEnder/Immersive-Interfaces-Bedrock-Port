@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rΚατασκευαστής πανοπλιών
+entity.villager.butcher=§c§c§4§rΧασάπης
+entity.villager.cartographer=§c§6§e§rΧαρτογράφος
+entity.villager.cleric=§c§d§5§rΚληρικός
+entity.villager.farmer=§c§6§2§rΑγρότης
+entity.villager.fisherman=§c§7§6§rΨαράς
+entity.villager.fletcher=§c§7§4§rΤοξοποιός
+entity.villager.leather=§c§b§a§rΒυρσοδέψης
+entity.villager.librarian=§c§e§r§rΒιβλιοθηκάριος
+entity.villager.shepherd=§c§7§r§rΒοσκός
+entity.villager.tool=§c§c§d§rΚατασκευαστής εργαλείων
+entity.villager.weapon=§c§b§9§rΟπλοποιός
+entity.villager.mason=§c§0§8§rΜέισον
+entity.wandering_trader.name=§c§6§1§rΓυρολόγος
+
+entity.ender_dragon.name=§b§d§rΔράκαινα Τελειωτή
+raid.name=§b§c§rΕπιδρομή

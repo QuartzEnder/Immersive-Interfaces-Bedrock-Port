@@ -1,0 +1,288 @@
+// mc-disable resourcepack.ui.inheritance.missing
+{
+  "namespace": "quartz_toggles",
+
+  "recipe_book_toggle_template":{
+    "size": [22,20],
+    "type":"panel",
+    "$radio_toggle_group": true,
+    "$default_border_visible": false,
+    "$hover_border_visible": false,
+
+    "$use_custom_view_toggle_bindings|default":false,
+    "$closed_book_visibility_bindings|default":[],
+    "$open_book_visibility_bindings|default":[],
+    "controls":[
+      {
+        "closed_book@common_toggles.light_image_toggle":{
+          "$border_visible":false,
+          "$toggle_name":"$book_toggle_name",
+
+          "$toggle_binding_type|default": "global",
+          "$toggle_state_binding_name": "$closed_book_toggle_state_binding_name",
+          "$toggle_group_forced_index": "$closed_book_toggle_group_forced_index",
+
+          "$default_texture": "textures/ui/recipe/recipe_book_closed_default",
+          "$pressed_texture": "textures/ui/recipe/recipe_book_closed_hover",
+
+          "$toggle_tts_header": "$closed_book_tts",
+
+          "bindings":"$closed_book_visibility_bindings"
+        }
+      },
+      {
+        "open_book@common_toggles.light_image_toggle":{
+          "$border_visible":false,
+          "$toggle_name":"$book_toggle_name",
+
+          "$toggle_binding_type|default": "global",
+          "$toggle_state_binding_name": "$open_book_toggle_state_binding_name",
+          "$toggle_group_forced_index": "$open_book_toggle_group_forced_index",
+
+          "$default_texture": "textures/ui/recipe/recipe_book_open_default",
+          "$pressed_texture": "textures/ui/recipe/recipe_book_open_hover",
+
+          "$toggle_tts_header": "$open_book_tts",
+
+          "bindings":"$open_book_visibility_bindings"
+        }
+      }
+    ]
+  },
+
+  "recipe_toggle_view_template@common_toggles.switch_toggle":{
+    "size": [22,20],
+    "$is_déesse_ui_pack|default":false,
+    "$default_border_visible": false,
+    "$hover_border_visible": false,
+    "$toggle_name":"recipe_book",
+
+    "$default_texture": "textures/ui/recipe/recipe_book_closed_default",
+    "$pressed_texture": "textures/ui/recipe/recipe_book_closed_hover",
+    "$hover_texture": "textures/ui/recipe/recipe_book_open_default",
+    "$pressed_no_hover_texture": "textures/ui/recipe/recipe_book_open_hover",
+    "$locked_texture":"textures/ui/absorbing_full_blinking"
+  },
+
+  //------------------------------------------
+  // Recipe Book Toggles
+  //------------------------------------------
+
+  "recipe_toggle_survival@quartz_toggles.recipe_book_toggle_template":{
+    "$book_toggle_name":"layout_toggle",
+
+    "$closed_book_toggle_state_binding_name":"#is_recipe_book_layout",
+    "$closed_book_toggle_group_forced_index":"$recipe_book_layout_index",
+    "$closed_book_tts": "accessibility.button.survival.layout",
+    "$closed_book_visibility_bindings":[
+      {
+        "binding_name":"#is_survival_layout",
+        "binding_name_override":"#visible"
+      }
+    ],
+
+    "$open_book_toggle_state_binding_name":"#is_survival_layout",
+    "$open_book_toggle_group_forced_index":"$survival_layout_index",
+    "$open_book_tts":"accessibility.button.recipebook.layout",
+    "$open_book_visibility_bindings":[
+      {
+        "binding_name":"(not #is_survival_layout)",
+        "binding_name_override":"#visible"
+      }
+    ]
+  },
+
+  //--------------------------------------------
+  // Déesse UI Brewing Stand Book Toggle
+  //--------------------------------------------
+
+  "déesse_toggle_brewing@quartz_toggles.recipe_book_toggle_template":{
+    "$book_toggle_name":"container_guide_layout_toggle",
+    "$toggle_view_binding_name":"brewing_guide_tog",
+    "ignored": "(not $is_déesse_ui_pack)",
+
+    "$use_custom_view_toggle_bindings":true,
+
+    "$closed_book_toggle_state_binding_name":"(not #toggle_state)",
+    "$closed_book_toggle_group_forced_index":0,
+    "$closed_book_tts": "accessibility.button.survival.layout",
+    "$closed_book_toggle_bindings":[
+      {
+        "binding_type": "view",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#toggle_state"
+      }
+    ],
+    "$closed_book_visibility_bindings":[
+      {
+        "binding_type": "view",
+        "source_control_name": "brewing_guide_tog",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
+
+    "$open_book_toggle_state_binding_name":"#toggle_state",
+    "$open_book_toggle_group_forced_index":1,
+    "$open_book_tts":"accessibility.button.recipebook.layout",
+    "$open_book_toggle_bindings":[
+      {
+        "binding_type": "view",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#toggle_state"
+      }
+    ],
+    "$open_book_visibility_bindings":[
+      {
+        "ignored":"(not $is_déesse_ui_pack)",
+        "binding_type": "view",
+        "source_control_name": "brewing_guide_tog",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  //---------------------------------
+  // Furnace Book Toggle
+  //---------------------------------
+
+  "recipe_toggle_furnace@quartz_toggles.recipe_toggle_view_template":{
+    "$toggle_view_binding_name":"recipe_furnace_toggle"
+  },
+
+  //------------------------------------
+  // Stonecutter & Loom layout toggle
+  //------------------------------------
+
+  "bedrock_large_toggle@quartz_toggles.recipe_book_toggle_template":{
+    "$book_toggle_name":"left_panel_toggle",
+    "$toggle_view_binding_name":"left_panel_toggle",
+    "layer": 3,
+
+    "$use_custom_view_toggle_bindings":true,
+
+    "$closed_book_toggle_state_binding_name":"(not #toggle_state)",
+    "$closed_book_toggle_group_forced_index":0,
+    "$closed_book_tts": "", // placeholder
+
+    "$closed_book_visibility_bindings":[
+      {
+        "binding_type": "view",
+        "source_control_name": "left_panel_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
+
+    "$open_book_toggle_state_binding_name":"#toggle_state",
+    "$open_book_toggle_group_forced_index":1,
+    "$open_book_tts":"", // placeholder
+
+    "$open_book_visibility_bindings":[
+      {
+        "binding_type": "view",
+        "source_control_name": "left_panel_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  //------------------
+  // Anim Toggle
+  //------------------
+
+  "anim_toggle@common_toggles.switch_toggle":{
+    "$is_déesse_ui_pack|default":false,
+    "$is_dimz_advanced_container|default":false,
+    "anchor_from":"top_right",
+    "anchor_to":"top_right",
+    "layer": 3,
+    "size": [16,16],
+    "$anim_toggle_offset|default":[16,23],
+    "offset": "$anim_toggle_offset",
+    "$toggle_name":"quartz_anim_toggle",
+    "$toggle_view_binding_name":"quartz_anim_toggle_state",
+    "$default_border_visible": false,
+    "$hover_border_visible": false,
+    "$hover_texture":"textures/ui/recipe/anim_toggle_off",
+    "$default_texture":"textures/ui/recipe/anim_toggle_on",
+    "$pressed_no_hover_texture":"textures/ui/recipe/anim_toggle_off_hover",
+    "$pressed_texture": "textures/ui/recipe/anim_toggle_on_hover",
+    "ignored": "$pocket_screen",
+    "variables":[
+      {
+        "requires": "$is_déesse_ui_pack",
+        "$anim_toggle_offset|default":[20,23]
+      },
+      {
+        "requires": "$is_dimz_advanced_container",
+        "$anim_toggle_offset|default":[19,43]
+      }
+    ]
+  },
+
+  "anim_toggle_big@quartz_toggles.anim_toggle":{
+    "size": [20,20],
+    "$big_anim_toggle_offset|default":[22,26],
+    "offset": "$big_anim_toggle_offset",
+    "$hover_texture":"textures/ui/recipe/big_anim_toggle_off",
+    "$default_texture":"textures/ui/recipe/big_anim_toggle_on",
+    "$pressed_no_hover_texture":"textures/ui/recipe/big_anim_toggle_off_hover",
+    "$pressed_texture": "textures/ui/recipe/big_anim_toggle_on_hover",
+    "ignored": "$desktop_screen",
+    "variables":[
+      {
+        "requires": "$is_déesse_ui_pack",
+        "$big_anim_toggle_offset|default":[18,26]
+      },
+      {
+        "requires": "$is_dimz_advanced_container",
+        "$big_anim_toggle_offset|default":[22,45]
+      }
+    ]
+  },
+
+  "anim_toggle_panel":{
+    "type":"panel",
+    "$is_déesse_ui_pack|default":false,
+    "layer": 3,
+    "controls":[
+      {"anim_toggle@quartz_toggles.anim_toggle":{}},
+      {"anim_toggle_big@quartz_toggles.anim_toggle_big":{}}
+    ]
+  },
+
+  "big_close_button@common.close_button":{
+    "size": [18,18],
+    "$use_compact_close_button|default":false,
+    "offset": "$big_close_button_offset",
+    "$close_button_panel_size": [18,18],
+    "$big_close_button_offset|default":[21,0],
+    "$close_button_default_texture":"textures/ui/generic/close_button_default_big",
+    
+    "visible": "$show_close_button",
+    "ignored": "($desktop_screen or $use_compact_close_button)",
+    "layer": "$close_button_layer",
+    "$close_button_layer|default":55,
+    "controls": [
+      {
+        "default@common.close_button_panel": {
+          "$close_button_texture": "$close_button_default_texture",
+          "$button_alpha": "$default_button_alpha"
+        }
+      },
+      {
+        "hover@common.close_button_panel": {
+          "$close_button_texture": "textures/ui/generic/close_button_hover_big"
+        }
+      },
+      {
+        "pressed@common.close_button_panel": {
+          "$close_button_texture": "textures/ui/generic/close_button_hover_big"
+        }
+      }
+    ]
+  }
+}

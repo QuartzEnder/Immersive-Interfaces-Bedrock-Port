@@ -1,0 +1,36 @@
+{ "frames": [
+   {
+    "filename": "sawblade 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 155, "h": 58 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 155, "h": 58 },
+    "sourceSize": { "w": 155, "h": 58 },
+    "duration": 50
+   },
+   {
+    "filename": "sawblade 1.ase",
+    "frame": { "x": 0, "y": 58, "w": 155, "h": 58 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 155, "h": 58 },
+    "sourceSize": { "w": 155, "h": 58 },
+    "duration": 50
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.17-dev",
+  "image": "sawblade.png",
+  "format": "RGBA8888",
+  "size": { "w": 155, "h": 116 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

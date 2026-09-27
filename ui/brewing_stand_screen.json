@@ -1,0 +1,131 @@
+{
+  "namespace": "brewing_stand",
+
+  "brewing_stand_screen":{
+    "$title_background_offset":[0,3],
+    "$title_background_size":["100% + 10px", 14],
+    "$background_texture":"textures/ui/brewing/screen_background_brewing",
+    "$title_background_texture":"textures/ui/brewing/title_background_brewing",
+    "$main_container_colour": [0.674,0.510,0.008],
+    "$shadow_colour":[1.000,0.945,0.773],
+    "$common_panel_size":[109,67],
+    "$common_panel_offset": [-17.5,12.5],
+    "$inventory_background_layer":-5,
+    "$close_button_offset":[67.5,-2.5],
+    "$big_close_button_offset":[72,0],
+    "$is_déesse_ui_pack|default":false,
+    "$is_dimz_advanced_container|default":false,
+
+    "$screen_content": "brewing_stand.brewing_stand_panel",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "variables":[
+      {
+        "requires": "$is_déesse_ui_pack",
+        "$close_button_offset":[73.5,-2.5]
+      },
+      {
+        "requires": "$is_dimz_advanced_container",
+        "$close_button_offset":[72.5,-7.5],
+        "$big_close_button_offset":[72,-8]
+      }
+    ]
+  },
+
+  "brewing_panel_top_half":{
+    "$is_déesse_ui_pack|default":false,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{
+          "déesse_toggle_brewing@quartz_toggles.déesse_toggle_brewing":{
+            "anchor_from":"right_middle",
+            "anchor_to":"right_middle",
+            "offset":[-15,0]
+          }
+        }
+      }
+    ]
+  },
+
+  "brewing_fuel_bar_full_image":{
+    "size": [18,4],
+    "offset": [-18,3]
+  },
+  
+  "bottle_empty_image":{
+    "bindings":[]
+  },
+
+  "bubbles_empty_image":{
+    "visible": false
+  },
+
+  "brewing_pipes":{
+    "visible": false
+  },
+
+  "fuel_empty_image":{
+    "visible": false
+  },
+
+  "brewing_arrow_empty_image":{
+    "visible": false
+  },
+
+  "brewing_fuel_bar_empty_image":{
+    "visible": false
+  },
+
+  "brewing_fuel_pipes":{
+    "visible": false
+  },
+
+  "brewing_label":{
+    "font_type":"$container_title_font",
+    "color": "$main_container_colour",
+    "offset": [0,-7.5],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{
+          "title_background_and_shadow@quartz_gui.title_background_and_shadow":{
+            "$parent_text":"$container_title"
+          }
+        }
+      }
+    ]
+  },
+
+  //--------------
+  // Slots
+  //--------------
+
+  "brewing_stand_pictogram":{
+    "offset": [2,0]
+  },
+  
+  "brewing_fuel_slot":{
+    "offset": [-62,-18],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "fuel_grid_item",
+        "value":{
+          "fuel_grid_item@common.container_item": {  // the reason of this modification is to eliminate the $cell_overlay_ref variable
+            "$item_collection_name": "brewing_fuel_item",
+
+            "$focus_id_binding_type": "none",
+            "$focus_id": "brewing_fuel",
+
+            "$focus_override_right_binding_type": "none",
+            "$focus_override_right": "brewing_input_item0"
+          }
+        }    
+      }
+    ]
+  }
+}

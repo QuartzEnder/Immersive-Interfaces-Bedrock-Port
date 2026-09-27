@@ -1,0 +1,224 @@
+{
+  "namespace": "cartography",
+
+  //---------------
+  // GENERAL
+  //---------------
+
+  "cartography_panel":{
+    "$common_panel_size":[176,78],
+    "$show_side_help_button":true,
+    "$anchor_point":"top_middle"
+  },
+
+  "cartography_screen":{
+    "$title_background_offset":[0,3],
+    "$title_background_size":["100% + 12px", 13],
+    "$background_texture":"textures/ui/cartography/screen_background_cartography",
+    "$title_background_texture":"textures/ui/cartography/title_background_cartography",
+    "$main_title_colour":[0.247,0.173,0.086],
+    "$shadow_colour":[0.647,0.455,0.235],
+
+    "$screen_content": "cartography.cartography_panel",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "variables":[]
+  },
+
+  "cartography_panel/root_panel":{
+    "$show_close_button":true,
+    "size": ["100% - 44px",166],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"compass@quartz_anim.animated_compass":{}}
+      },
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{
+          "map_rename_panel@quartz_gui.map_rename_panel":{
+            "offset":[0,-18]
+          }
+        }
+      }
+    ]
+  },
+
+  //-------------------------
+  // Main Panel & Top Half
+  //-------------------------
+
+  "main_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "arrow_icon"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "arrow_icon2"
+      }
+    ]
+  },
+
+  "top_half_panel":{
+    "layer": 5,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "padding1"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "padding2"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "padding3"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "padding4"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "padding5"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "text_box_panel"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "output_description_label"
+      }
+    ]
+  },
+
+  "title_label":{
+    "color": "$main_title_colour",
+    "$parent_text":"tile.cartography_table.name",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{}}
+      }
+    ]
+  },
+
+  "main_panel/result_item_slot":{
+    "size": [18,18],
+    "offset": [-7,4],  
+    "$cell_image_size":[18,18]
+  },
+
+  "input_slots":{
+    "offset": [7,-1.5],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "plus_centerer",
+        "value":{
+          "vertical_slots_padding":{
+            "type":"panel",
+            "size":[0,19]
+          }
+        }
+      }
+    ]
+  },
+
+  "map_image_panel":{
+    "offset": [12,3]
+  },
+
+  "map_image_panel/map":{
+    "$map_texture":"textures/ui/cartography_table_empty"
+  },
+
+  "map_image_panel/rename_map":{
+    "$map_texture":"textures/ui/cartography_table_empty"
+  },
+
+  "map_image_panel/locator_map":{
+    "$map_texture":"textures/ui/cartography_table_empty"
+  },
+
+  "map_image_panel/lock_map":{
+    "$map_texture":"textures/ui/cartography_table_empty",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"cartography_lock@quartz_gui.cartography_lock":{}}
+      }
+    ]
+  },
+
+  //----------------------------
+  // Texture and size changes
+  //----------------------------
+
+  "arrow_icon":{ // Used in the Déesse UI Brewing Stand guide only
+    "size": [7,6]
+  },
+
+  "plus_sign_icon":{
+    "texture": "textures/ui/plus_cartography",
+    "size": [7,8]
+  },
+
+  //---------------------
+  // Text Edit Control
+  //---------------------
+
+  "text_edit_control":{
+    "$text_edit_box_label_size":["100%",100],
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "size": ["100%",14],
+    "$alternate_edit_box_texture":true,
+    "$text_edit_box_label_anchor_point":"top_middle",
+    "variables":[
+      {
+        "requires": "$alternate_edit_box_texture",
+        "$default_edit_box_texture":"textures/ui/generic/flat_bg_generic",
+        "$hover_edit_box_texture":"textures/ui/generic/flat_bg_generic"
+      }
+    ]
+  },
+
+  "text_box_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "map_name_label",
+        "value":{
+          "invisible_map_name_label":{
+            "type":"panel",
+            "size":[0,7]
+          }
+        }
+      }
+    ]
+  },
+
+  "output_description_label":{
+    "layer": -1,
+    "color":[1.0,1.0,1.0]
+  }
+}

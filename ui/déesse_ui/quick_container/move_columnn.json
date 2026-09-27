@@ -1,0 +1,11 @@
+{
+  "namespace": "déesse_moveItemsColumn",
+
+  "large_chest_slot_column":{
+    "offset": [0,-40]
+  },
+
+  "container_slot_column":{
+    "offset": [0,-40]
+  }
+}

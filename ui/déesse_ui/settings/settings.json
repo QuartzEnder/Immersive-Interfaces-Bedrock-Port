@@ -1,0 +1,7 @@
+{
+  "namespace": "déesse_settings",
+
+  "search_pack_box":{
+    "$ignore_magnifying_glass":false
+  }
+}

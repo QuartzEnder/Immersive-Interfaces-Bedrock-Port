@@ -1,0 +1,130 @@
+{
+  "namespace": "beacon",
+
+  "beacon_screen":{
+    "$background_texture":"textures/ui/beacon/screen_background_beacon",
+    "$title_background_texture":"textures/ui/beacon/title_background_beacon",
+    // The colours for the title label are defined in the control itself (the controls is at @quartz_gui)
+    
+    "$screen_content": "beacon.beacon_panel",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "$is_dimz_advanced_container|default":false,
+    "variables":[
+      {
+        "requires": "$is_dimz_advanced_container",
+        "$close_button_offset":[42.5,-0.5]
+      }
+    ]
+  },
+
+  //----------------
+  // PANELS
+  //----------------
+
+  "beacon_panel/root_panel":{
+    "$show_close_button":true,
+    "size": [256,219],
+    "$common_panel_size":[214,130],
+    "$is_déesse_ui_pack|default":false,
+    "$anchor_point":"top_middle",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"beacon_title_label@quartz_gui.beacon_title_label":{}}    
+      }
+    ],
+    "variables":{
+      "requires": "$is_déesse_ui_pack",
+      "$common_panel_offset":[0,3]
+    }
+  },
+
+  "beacon_panel/root_panel/beacon_inventory":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "where":{"control_name":"inventory_panel_bottom_half"},
+        "value":{"inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label":{"$background_offset":[120,40]}}
+      }
+    ]
+  },
+
+  "beacon_inner_panel":{
+    "alpha": 0,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "middle_strip"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "pyramid_panel"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "primary_power_label"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "secondary_power_label"
+      }
+    ]
+  },
+
+  //--------------------
+  // PAYMENT PANEL
+  //--------------------
+
+  "payment_panel":{
+    "anchor_from":"top_left",
+    "anchor_to":"top_left"
+  },
+
+  "beacon_panel/root_panel/beacon_inventory/payment_panel":{
+    "offset": [0,107]
+  },
+
+  "payment_panel/cancel_panel":{
+    "$image_size":[12,12]
+  },
+
+  "usable_items_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "item_seperator_0"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "item_seperator_1"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "item_seperator_2"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "item_seperator_3"
+      }
+    ]
+  },
+
+  "usable_items_panel/emerald":{
+    "offset": [21,0]
+  },
+
+  "usable_items_panel/diamond":{
+    "offset": [43,0]
+  }
+}

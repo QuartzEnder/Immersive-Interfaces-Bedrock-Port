@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rКовач на брони
+entity.villager.butcher=§c§c§4§rКасапин
+entity.villager.cartographer=§c§6§e§rКартограф
+entity.villager.cleric=§c§d§5§rДуховник
+entity.villager.farmer=§c§6§2§rФермер
+entity.villager.fisherman=§c§7§6§rРибар
+entity.villager.fletcher=§c§7§4§rПродавач на стрели
+entity.villager.leather=§c§b§a§rШивач на кожена броня
+entity.villager.librarian=§c§e§r§rБиблиотекар
+entity.villager.shepherd=§c§7§r§rfОвчар
+entity.villager.tool=§c§c§d§rКовач на инструменти
+entity.villager.weapon=§c§b§9§rКовач на оръжия
+entity.villager.mason=§c§0§8§rЗидар
+entity.wandering_trader.name=§c§6§1§rСтранстващ търговец
+
+entity.ender_dragon.name=§b§d§rЕндър дракон
+raid.name=§b§c§rНашествие

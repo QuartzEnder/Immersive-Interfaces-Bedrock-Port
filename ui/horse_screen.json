@@ -1,0 +1,107 @@
+{
+  "namespace": "horse",
+
+  "horse_screen":{
+    "$dialog_background":"common.empty_panel",
+    "$main_title_colour":"$generic_main_title_colour",
+    "$shadow_colour":"$generic_shadow_title_colour",
+    "$close_button_offset":[21.5,6.5],
+
+    "$screen_content": "horse.horse_panel",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "variables":[]
+  },
+
+  "horse_panel":{
+    "$is_déesse_ui_pack|default":false,
+    "$inventory_background_layer":-1,
+    "$déesse_lowering_padding_size":[1,17]
+  },
+
+  "horse_panel/root_panel/common_panel":{
+    "$use_compact_close_button":false
+  },
+
+  "horse_panel/root_panel/equipment":{
+    "offset": [7,19]
+  },
+
+  "horse_panel/root_panel/renderer":{
+    "offset": [28,19]
+  },
+
+  "horse_renderer":{
+    "size": [45,54]
+  },
+
+  "horse_renderer/horse_custom_panel":{
+    "size": ["50%","50%"]
+  },
+
+  "renderer_bg":{
+    "visible": false
+  },
+
+  "inv_panel":{
+    "offset": [79,17.5]
+  },
+
+  "inv_grid":{
+    "$cell_image_visible":true,
+    "$cell_texture":"textures/ui/horse/chest_slot_bg"
+  },
+
+  "inv_bg_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "cell_image",
+        "value":{"horse_chest_background@quartz_gui.horse_chest_background":{}}
+      }
+    ]
+  },
+
+  "equip_panel":{
+    "$cell_texture":"textures/ui/horse/chest_slot_bg",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"horse_slot_bg_panel@quartz_gui.horse_slot_bg_panel":{}}
+      }
+    ]
+  },
+
+  "equip_panel/horse_armor_1":{
+    "offset": [1,21]
+  },
+
+  "equip_panel/carpet_1":{
+    "offset": [1,21]
+  },
+
+  "equip_panel/nautilus_armor_1":{
+    "offset": [1,21]
+  },
+
+  "equip_grid":{
+    "size": ["100%c",40]
+  },
+
+  "horse_label":{
+    "anchor_from":"left_middle",
+    "anchor_to":"left_middle",
+    "color":"$main_title_colour",
+    "offset": [10,-9],
+    "$parent_text":"$container_title",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{}}
+      }
+    ]
+  }
+}

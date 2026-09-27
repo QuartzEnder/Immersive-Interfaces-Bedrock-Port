@@ -1,0 +1,65 @@
+{
+  "namespace": "déesse_brewing",
+
+  "brewing_stand_stack_panel":{
+    "$show_deesse_tab_navigation_panel":false,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "center_fold"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "toolbar_anchor"
+      }
+    ]
+  },
+
+  "brewing_stand_stack_panel/brewing_stand_panel/common_panel":{
+    "$show_close_button":true
+  },
+
+  "brewing_guide_panel":{
+    "$background_texture":"textures/ui/recipe/recipe_book_background",
+    "$common_panel_size":["100%","100%"],
+    "$common_panel_offset":[0,0]
+  },
+
+  "brewing_guide_content":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "brewing_guide_tab_panel"
+      }
+    ]
+  },
+
+  "brewing_guide_content_scrolling_content":{
+    "$scroll_view_port_offset":[-10,1]
+  },
+
+  "pot_ext_cont_content":{
+    "$cartography_arrow_texture":"textures/ui/arrow",
+    "$cartography_arrow_size":[5,9]
+  },
+
+  "plus_icon/plus":{
+    "texture": "textures/ui/generic/generic_plus"
+  },
+
+  "fuel_text_panel":{
+    "text_alignment":"right",
+    "offset": [4,1],
+    "color": [1.0,1.0,1.0],
+    "font_scale_factor": 1,
+    "shadow": true
+  },
+
+  "brewing_duration_text":{
+    "color": [1.0,1.0,1.0],
+    "shadow": true
+  }
+}

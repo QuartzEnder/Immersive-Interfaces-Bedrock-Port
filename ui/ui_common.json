@@ -1,0 +1,393 @@
+{
+  "namespace": "common",
+
+  "inventory_screen_common":{
+    "$is_dropper|default":false,
+    "$is_dispenser|default":false
+  },
+
+  //-------------------
+  // General
+  //-------------------
+
+  "button":{
+    "$show_border":false,
+    "$default_border_visible": false,
+    "$hover_border_visible": false,
+    "$show_white_border":false
+  },
+  
+  "cell_image":{
+    "$lock_theme|default":false,
+    "$cell_texture|default":"textures/ui/generic/cell_generic",
+    "texture": "$cell_texture",
+    "layer": 0,
+    "$cell_image_visible|default":false,
+    "visible": "$cell_image_visible"
+  },
+
+  "cell_image_panel/cell_image":{
+    "$cell_image_visible|default":false,
+    "$cell_image_alpha|default":1,
+    "$cell_image_colour|default":[1,1,1],
+    "visible": "$cell_image_visible",
+    "alpha": "$cell_image_alpha",
+    "color": "$cell_image_colour",
+    "bindings":[],
+    "variables":{
+      "requires": "$debug_release_colourful_oreui",
+      "$cell_image_visible":true,
+      "$cell_image_alpha":0.4,
+      "$cell_image_colour":[1,0,0]
+    }
+  },
+
+  "highlight_slot":{
+    "texture": "$highlight_slot_texture",
+    "$highlight_slot_texture|default":"textures/ui/highlight_slot",
+    "$highlight_slot_size|default":["100% + 6px","100% + 6px"],
+    "$is_small_scrolling_panel|default":false,
+    "size": "$highlight_slot_size",
+    "alpha": 1,
+    "$highlight_slot_layer|default":1,
+    "layer":"$highlight_slot_layer" ,
+    "variables":{
+      "requires": "$is_small_scrolling_panel",
+      "$highlight_slot_texture|default":"textures/ui/generic/slot_hover",
+      "$highlight_slot_size|default":["100%","100%"]
+    }
+  },
+
+  "white_border_slot":{
+    "ignored": true
+  },
+
+  "dialog_background_opaque":{
+    "layer": 0,
+    "$background_texture|default":"textures/ui/generic/screen_background_generic",
+    "$lock_theme|default":false,
+    "texture": "$background_texture",
+    "variables":{
+      "requires": "$lock_theme",
+      "$background_texture":"textures/ui/generic/screen_background_generic"
+    }
+  },
+
+  "help_button": {
+    "size": [15,16]
+  },
+
+  "close_button":{
+    "$close_button_offset|default":[18.5,-0.5],
+    "$close_button_panel_size|default": [14,14],
+    "$is_déesse_ui_pack|default":false,
+    "$is_dimz_advanced_container|default":false,
+    "variables":[
+      {
+        "requires": "$is_déesse_ui_pack",
+        "$close_button_offset|default":[22.5,0]
+      },
+      {
+        "requires": "$is_dimz_advanced_container",
+        "$close_button_offset|default":[21.5,0]
+      }
+    ]
+  },
+
+  "close_button/pressed":{
+    "$close_button_texture":"textures/ui/close_button_hover"
+  },
+    
+  "light_close_button/default":{
+    "$close_button_texture":"textures/ui/close_button_default"
+  },
+
+  "light_close_button/hover":{
+    "$close_button_texture": "textures/ui/close_button_hover"
+  },
+
+  "light_close_button/pressed":{
+    "$close_button_texture": "textures/ui/close_button_pressed"
+  },
+  
+  "layout_template_toggle":{
+    "$default_texture":"textures/ui/button_borderless_light",
+    "$pressed_texture":"textures/ui/button_borderless_lighthover",
+    "$pressed_no_hover_texture":"$hover_texture"
+  },
+
+  "non_interact_focus_border":{
+    "$show_white_border|default":true,
+    "visible": "$show_white_border"
+  },
+
+  //-------------------------------
+  //Inventory in other containers
+  //-------------------------------
+
+  "inventory_panel_bottom_half_with_label":{ 
+    "layer":0,
+    "modifications":[
+    {
+      "operation":"insert_front",
+      "array_name":"controls",
+      "value":{
+          "inventory_background@common.dialog_background_opaque":{
+            "$background_texture":"textures/ui/generic/inventory_bottom_half",
+            "size":[176,90],
+            "anchor_from":"bottom_middle",
+            "anchor_to":"bottom_middle",
+            "$inventory_background_layer|default":-3,
+            "layer":"$inventory_background_layer"
+        }
+      }
+    },
+    {
+      "operation":"remove",
+      "array_name":"controls",
+      "control_name": "inventory_label"
+    }
+  ]
+},
+
+"search_icon":{
+  "texture": "textures/items/compass_item",
+  "size": [16,16]
+},
+
+//---------------------------------------
+//Inventory in the inventory screen
+//---------------------------------------
+
+  "inventory_panel/inventory_grid":{
+    "offset": [0,-29]
+  },
+
+  "inventory_panel_bottom_half":{ 
+    "layer": 0,
+    "$background_texture":"textures/ui/generic/inventory_bottom_half",
+    "modifications":[
+    {
+      "operation":"insert_front",
+        "array_name":"controls",
+        "value":{
+          "inventory_background@dialog_background_opaque":{
+            "size":[176,90],
+            "offset":[0,0],
+            "anchor_from":"bottom_middle",
+            "anchor_to":"bottom_middle",
+            "layer":-2
+          }
+        }
+      }
+    ]
+  },
+
+  "hotbar_grid_template":{
+
+    "offset": [0,-7]
+  },
+
+  "common_panel":{
+    "$common_panel_size|default":["100%","100%"],
+    "$common_panel_offset|default":[0,0],
+    "$anchor_point|default":"center",
+    "$overwriteable|default":"true", //set to false if it is needed to set $common_panel_size or the anchors manually
+    "anchor_from":"$anchor_point",
+    "anchor_to":"$anchor_point",
+    "size": "$common_panel_size",
+    "offset": "$common_panel_offset",
+    "$close_button_layer|default":55,
+    "variables":[
+      {
+        "requires": "($overwriteable and $show_close_button and ($dialog_background = 'common.dialog_background_opaque'))",
+        "$common_panel_offset|default":[0,3],
+        "$common_panel_size|default":[176,78],
+        "$anchor_point|default":"top_middle"
+      }
+    ],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":[
+          {
+            "side_help_button@common.help_button":{
+              "anchor_from":"top_right",
+              "anchor_to":"top_right",
+              "offset":[16,19],
+              "$show_side_help_button":false,
+              "visible":"$show_side_help_button"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "common_panel/close_button_holder":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"big_close_button@quartz_toggles.big_close_button":{}}
+      }
+    ]
+  },
+
+  "common_panel/close_button_holder/close":{
+    "ignored": "($use_compact_close_button or $pocket_screen)"
+  },
+
+  //----------------
+  // Text Edit Box
+  //----------------
+  
+  "text_edit_box":{
+    "$text_background_locked|default":"$text_background_default",
+    "$magnifying_glass_size|default":[12,12],
+    "$magnifying_glass_offset|default":[0,0],
+    "$alternate_edit_box_texture|default":false,
+    "variables":[
+      {
+        "requires": "$magnifying_glass_enabled",
+        "$text_edit_box_label_offset":[2,0]
+      },
+      {
+        "requires": "$alternate_edit_box_texture",
+        "$default_edit_box_texture":"textures/ui/generic/text_box_default",
+        "$hover_edit_box_texture":"textures/ui/generic/text_box_hover"
+      }
+    ]
+  },
+
+  "text_edit_box/locked":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "edit_box_indent",
+        "value":{
+          "edit_box_indent@$text_background_locked":{
+            "$color": "$disabled_color",
+            "$alpha": "$disabled_alpha"
+          }
+        }
+      }
+    ]
+  },
+   
+  "edit_box_indent":{
+    "$default_edit_box_texture|default":"textures/ui/edit_box_indent",
+    "texture":"$default_edit_box_texture"
+  },
+
+  "edit_box_indent_hover":{
+    "$hover_edit_box_texture|default":"textures/ui/edit_box_indent_hover",
+    "texture": "$hover_edit_box_texture"
+  },
+
+  "text_magnifying_glass_image":{
+    "size": [11,12]
+  },
+
+  //--------------------
+  // Scrolling Panel
+  //--------------------
+
+  "container_scroll_panel":{
+    "$show_background|default":false,
+    "$use_large_scroll_box|default":false,
+    "$scroll_size|default":[6,"100%"],
+    "$scroll_box_size|default":[6,"100%"],
+    "$scroll_view_port_size|default":["100% - 2px","100% - 1px"],
+    "$scroll_track_image_control": "common.empty_panel",
+    "variables":{
+      "requires": "$use_large_scroll_box",
+      "$scroll_size|default":[14,"100%"],
+      "$scroll_view_port_offset|default":[1,2],
+      "$scroll_view_port_size|default":["100% - 2px","100% - 1px"],
+      "$scroll_track_image_control|default": "common.empty_panel"
+    }
+  },
+
+  "container_scroll_bar_side_rails":{
+    "$scrolling_rail_texture|default":"textures/ui/ScrollGutterWithBG",
+    "texture": "$scrolling_rail_texture"
+  },
+
+  "scrollbar_box_image":{
+    "size": [6,"100%"]
+  },
+
+  "scroll_bar_and_track/stack_panel/panel/centered_panel":{
+    "$scroll_track_anchor":"left_middle"
+  },
+
+  //--------------------------
+  // Pocket UI Modifications 
+  //--------------------------
+
+  "pocket_content_panels":{
+    "$middle_offset_visible|default":false
+  },
+
+  "pocket_hotbar_and_content_panels":{
+    "$has_side_tabs|default":true,
+    "$hide_hotbar|default":false,
+    "$pocket_double_panel_size|default":["100%","100% - 2px"],
+    "size": "$pocket_double_panel_size",
+    "variables":{
+      "requires": "(not $has_side_tabs)",
+      "$pocket_double_panel_size": ["100% - 88px","100% - 2px"]
+    },
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{
+          "lowering_padding":{
+            "type":"panel",
+            "$lowering_padding_size":["100%",13],
+            "size":"$lowering_padding_size",
+            "variables":{
+              "requires":"$hide_hotbar",
+              "$lowering_padding_size":["100%",19]
+            }
+          }
+        }
+      },
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{
+          "invisible_hotbar_padding":{
+            "type":"panel",
+            "size":[260,28],
+            "visible":"$hide_hotbar"
+          }
+        }
+      }
+    ]
+  },
+
+  "pocket_hotbar_and_content_panels/hotbar_drop_item_panel":{
+    "visible": "(not $hide_hotbar)"
+  },
+
+  "blank_pocket_content_panel":{
+    "size": ["fill",221]
+  },
+
+  "pocket_hotbar_panel":{
+    "$lock_theme":true
+  },
+
+  //-----------------------------
+  // Pocket Scrolling Elements
+  //-----------------------------
+
+  "scrolling_panel":{
+    "$is_scrolling_panel":true
+  }
+}

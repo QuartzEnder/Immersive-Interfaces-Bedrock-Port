@@ -1,0 +1,106 @@
+{
+  "namespace": "anvil",
+
+  "anvil_screen":{
+    "$background_texture":"textures/ui/anvil/screen_background_anvil",
+    "$title_background_texture":"textures/ui/anvil/title_background_anvil",
+    "$main_title_colour":"$generic_main_title_colour",
+    "$shadow_colour":"$generic_shadow_title_colour",
+    "$anchor_point":"top_middle",
+
+    "$screen_content": "anvil.anvil_panel",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "variables":[]
+  },
+
+  "top_half_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"title_label@anvil.title_label":{}}
+      }
+    ]
+  },
+  
+  "anvil_title_and_text_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "title_panel"
+      }
+    ]
+  },
+
+  "cost_label":{
+    "offset": [-4,2.5]
+  },
+
+  "title_label":{
+    "color": "$main_title_colour",
+    "text": "tile.anvil.name",
+    "$parent_text":"tile.anvil.name",
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "offset": [0,-6],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{}}
+      }
+    ]
+  },
+
+  "recipe_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "recipe_grid",
+        "value":{"anvil_slot_stack_panel@quartz_gui.anvil_slot_stack_panel":{}}
+      }
+    ]
+  },
+
+  "plus_sign_icon":{
+    "visible": false
+  },
+
+  "cross_out_icon":{
+    "texture": "textures/ui/anvil/anvil_crossout",
+    "size": [15,15],
+    "offset": [-0.5,9]
+  },
+
+  "anvil_icon":{
+    "visible": false
+  },
+
+  "arrow_icon":{
+    "alpha": 0,
+    "modifications":[
+      {
+        "array_name":"bindings",
+        "operation":"insert_front",
+        "value":{
+          "binding_name":"(not #cross_out_icon)",
+          "binding_name_override":"#visible"
+        }
+      }
+    ]
+  },
+
+  "text_edit_panel":{
+    "size": [110,16],
+    "offset": [20,-2]
+  },
+
+  "text_edit_control":{
+    "$text_background_default":"quartz_gui.anvil_text_box_default",
+    "$text_background_hover":"quartz_gui.anvil_text_box_default",
+    "$text_background_locked":"quartz_gui.anvil_text_box_locked"
+  }
+}

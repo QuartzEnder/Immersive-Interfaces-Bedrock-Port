@@ -1,0 +1,77 @@
+{
+  "namespace": "hud",
+
+  "empty_progress_bar":{
+    "texture": "textures/ui/progress_bars/progress_bar_empty"
+  },
+
+  "full_progress_bar":{
+    "texture": "textures/ui/progress_bars/filled_progress_bar"
+  },
+
+  "progress_bar_nub":{
+    "texture": "textures/ui/progress_bars/filled_bar_nub",
+    "clip_direction": "left",
+    "clip_pixelperfect": false,
+    "bindings":[
+      {
+        "binding_name": "#exp_progress",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  // Whoever designed this tree, may you have warm pillows
+
+  "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar":{
+    "size": [182,5]
+  },
+
+  "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar":{
+    "size": [182,5]
+  },
+
+  "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar/progress_bar_nub":{
+    "size": [180,5]
+  },
+
+  "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar/progress_bar_nub/horse_jump_rend":{
+    "size": [182,5]
+  },
+
+  "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar/progress_bar_nub/horse_jump_rend/dash_rend":{
+    "size": [182,5]
+  },
+
+  "hotbar_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "hotbar_start_cap"
+      }
+    ]
+  },
+  
+  "hotbar_renderer":{
+    "$hotbar_renderer_size|default": [20,22],
+    "layer": 0
+  },
+
+  "hotbar_slot_selected_image":{
+    "layer": 2,
+    "size": [22,22]
+  },
+
+  "boss_health_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name":"progress_bar_for_collections",
+        "value":{"bossbar_wrapper@quartz_bossbars.bossbar_wrapper":{}}
+      }
+    ]
+  }
+}

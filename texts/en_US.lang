@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rArmorer
+entity.villager.butcher=§c§c§4§rButcher
+entity.villager.cartographer=§c§6§e§rCartographer
+entity.villager.cleric=§c§d§5§r§c§d§5§rCleric
+entity.villager.farmer=§c§6§2§r§c§6§2§rFarmer
+entity.villager.fisherman=§c§7§6§rFisherman
+entity.villager.fletcher=§c§7§4§rFletcher
+entity.villager.leather=§c§b§a§rLeatherworker
+entity.villager.librarian=§c§e§r§rLibrarian
+entity.villager.shepherd=§c§7§r§rShepherd
+entity.villager.tool=§c§c§d§rTool Smith
+entity.villager.weapon=§c§b§9§rWeapon Smith
+entity.villager.mason=§c§0§8§rMason
+entity.wandering_trader.name=§c§6§1§rWandering Trader
+
+entity.ender_dragon.name=§b§d§rEnder Dragon
+raid.name=§b§c§rRaid

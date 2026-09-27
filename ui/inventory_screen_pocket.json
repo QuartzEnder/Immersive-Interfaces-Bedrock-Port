@@ -1,0 +1,255 @@
+{
+  "namespace": "crafting_pocket",
+
+  "crafting_screen_pocket":{
+    "$background_texture":"textures/ui/crafting/3x3_crafting_bg",
+    "$title_background_texture":"textures/ui/crafting/title_background_crafting",
+    "$hide_toolbar_panel":true,
+    "$common_panel_size":[176,78],
+    "$common_panel_offset":[0,3],
+    "$anchor_point":"top_middle",
+    "$deesse_inv_instant_anchor":"top_right",
+    "$deesse_inv_instant_offset": [-26,12],
+    "$crafting_label_offset":[0,0],
+
+    "send_telemetry": false,
+    "$uses_bundle_tooltip": true,
+    "$screen_content": "crafting.recipe_inventory_screen_content",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "$top_half_variant": "crafting.crafting_panel_top_half",
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt"
+  },
+
+  "inventory_screen_pocket":{
+    
+    "$background_texture":"textures/ui/crafting/2x2_crafting_bg",
+    "$anchor_point":"top_right",
+    "$common_panel_size":[105,81],
+    "$common_panel_offset":[0,3],
+    
+    "cache_screen": true,
+    "send_telemetry": false,
+    "$uses_bundle_tooltip": true,
+    "$screen_content": "crafting.recipe_inventory_screen_content",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "$top_half_variant": "crafting.survival_panel_top_half",
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt"
+  },
+
+  //----------------------
+  // GENERAL
+  //----------------------
+
+  "left_panel":{
+    "use_anchored_offset":true,
+    "$background_texture":"textures/ui/generic/screen_background_generic",
+    "$title_background_texture":"textures/ui/generic/title_background_generic"
+  },
+
+  "hotbar_panel":{
+    "$background_texture":"textures/ui/generic/screen_background_generic",
+    "$title_background_texture":"textures/ui/generic/title_background_generic"
+  },
+
+  "right_tab_content":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{
+          "armour_bg@common.common_panel":{
+            "$show_close_button":false,
+            //"$lock_theme":true,
+            "bindings":[
+              {
+                "binding_name":"#is_right_tab_armor",
+                "binding_name_override":"#visible"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+
+  "right_tab_content/bg":{
+    "modifications":[
+      {
+        "array_name":"bindings",
+        "operation":"insert_back",
+        "value":{
+          "binding_name": "(not #is_right_tab_armor)",
+          "binding_name_override": "#visible"
+        }
+      }
+    ]
+  },
+
+  //----------------------
+  // BOTH PANELS
+  //----------------------
+
+  "hotbar_and_panels/gamepad_helper_border":{
+    "size": ["100%","fill"]
+  },
+
+  "gamepad_helper_border":{
+    "size": ["100%","fill"]
+  },
+
+  "hotbar_and_panels/padding_1":{
+    "size": ["100%",13]
+  },
+
+  "both_panels":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "offset_panel"
+      }
+    ]
+  },
+
+  //----------------------
+  // LEFT TABS
+  //----------------------
+
+  "left_tab_navigation_panel_pocket":{
+    "size": [40,"100%"]
+  },
+
+  "left_tab_navigation_panel_pocket/content":{
+    "size": [40,"100%"]
+  },
+
+  //----------------------
+  // RIGHT TABS
+  //----------------------
+
+  "right_tab_navigation_panel_pocket":{
+    "size": [40,"100%"]
+  },
+
+  "right_tab_navigation_panel_pocket/content":{
+    "size": [40,"100%"]
+  },
+
+  "right_tab_navigation_panel_pocket/content/close":{
+    "alpha": 0
+  },
+
+  "right_tab_navigation_panel_pocket/content/close/close_button":{
+    "size": [30,32]
+  },
+
+  //----------------------
+  // CRAFTING TABLE
+  //----------------------
+
+  "survival_panel_crafting_pocket":{
+    "$pocket_arrow_texture":"textures/ui/crafting/arrow_crafting_pocket",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"crafting_label@crafting.crafting_label":{}}
+      }
+    ]
+  },
+
+  "crafting_arrow_down":{
+    "$pocket_arrow_texture|default": "textures/ui/generic/arrow_generic_pocket",
+    "texture":"$pocket_arrow_texture",
+    "size": [18,30]
+  },
+
+  "crafting_grid_3x3":{
+    "layer": 11 // to make room for the grid background
+  },
+
+  "crafting_grid_3x3_with_label":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "crafting_label",
+        "value":{"crafting_grid_background@quartz_gui.crafting_grid_background":{
+            "size":[92,94],
+            "layer":10,
+            "offset":[0,7]
+          }
+        }
+      }
+    ]
+  },
+  
+  //----------------------
+  // GENERAL INVENTORY
+  //----------------------
+
+  "crafting_grid_2x2_with_label":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "crafting_label"
+      }
+    ]
+  },
+
+  "survival_panel_pocket":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"crafting_label@crafting.crafting_label":{
+            "color":"$generic_main_title_colour",
+            "$shadow_colour":"$generic_shadow_title_colour"
+          }
+        }
+      }
+    ]
+  },
+
+  "inventory_tab_content":{
+    "$ignore_scroll_background":true,
+    "$is_inventory_tab":true
+  },
+
+  "pocket_armor_tab_content/equipment_and_renderer/armor_panel/armor_and_player/player_preview_border":{
+    "texture": "textures/ui/generic/cell_generic"
+  },
+
+  "pocket_armor_tab_content/equipment_and_renderer/armor_panel/armor_and_player/player_preview_border/player_bg":{
+    "alpha":0
+  },
+
+  //-----------------
+  // TAB ICONS
+  //-----------------
+
+  "construction_tab":{
+    "$tab_icon":"quartz_gui.construction_icon_renderer"
+  },
+
+  "equipment_tab":{
+    "$tab_icon":"quartz_gui.equipment_icon_renderer"
+  },
+  
+  "items_tab":{
+    "$tab_icon":"quartz_gui.items_icon_renderer"
+  },
+
+  "nature_tab":{
+    "$tab_icon":"quartz_gui.nature_icon_renderer"
+  },
+
+  "armor_icon":{
+    "size": [14,22]
+  }
+}

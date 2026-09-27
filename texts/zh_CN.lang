@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§r盔甲匠
+entity.villager.butcher=§c§c§4§r屠夫
+entity.villager.cartographer=§c§6§e§r制图师
+entity.villager.cleric=§c§d§5§r牧师
+entity.villager.farmer=§c§6§2§r农民
+entity.villager.fisherman=§c§7§6§r渔夫
+entity.villager.fletcher=§c§7§4§r制箭师
+entity.villager.leather=§c§b§a§r皮匠
+entity.villager.librarian=§c§e§r§r图书管理员
+entity.villager.shepherd=§c§7§r§r牧羊人
+entity.villager.tool=§c§c§d§r工具匠
+entity.villager.weapon=§c§b§9§r武器匠
+entity.villager.mason=§c§0§8§r石匠
+entity.wandering_trader.name=§c§6§1§r流浪商人
+
+entity.ender_dragon.name=§b§d§r末影龙
+raid.name=§b§c§r劫掠

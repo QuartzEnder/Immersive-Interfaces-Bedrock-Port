@@ -1,0 +1,13 @@
+{
+  "namespace": "common-classic",
+
+  "button_state_default":{
+    "$classic_button_texture|default": "textures/ui/classic-button",
+    "$is_scrolling_panel|default":false,
+    "texture":"$classic_button_texture",
+    "variables":{
+      "requires": "$is_scrolling_panel",
+      "$classic_button_texture":"textures/ui/generic/scroller"
+    }
+  }
+}

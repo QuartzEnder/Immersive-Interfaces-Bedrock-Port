@@ -1,0 +1,36 @@
+{
+  "namespace": "$déesse_furnace",
+
+  "furnace_stack_panel":{
+    "$show_deesse_tab_navigation_panel":false,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "center_fold"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "toolbar_anchor"
+      }
+    ]
+  },
+
+  "fuel_tab_holder":{
+    "size": [35,28],
+    "offset": [0,0],
+    "alpha": 0,
+    "layer": 0
+  },
+
+  "fuel_tab_holder/fuel_taub":{
+    "size": [35,28],
+    "offset": [-1,1],
+    "layer": -2,
+    "$default_texture": "textures/ui/generic/tab_unselected",
+    "$hover_texture": "textures/ui/generic/tab_selected",
+    "$pressed_texture":"textures/ui/generic/tab_hover",
+    "$pressed_no_hover_texture":"textures/ui/generic/tab_hover"
+  }
+}

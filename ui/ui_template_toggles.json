@@ -1,0 +1,15 @@
+{
+  "namespace": "common_toggles",
+
+  "toggle_locked":{
+    "$déesse_item_colour":[0.3,0.3,0.3]
+  },
+
+  "toggle_unchecked_locked":{
+    "$déesse_item_colour":[0.3,0.3,0.3]
+  },
+
+  "toggle_checked_locked":{
+    "$déesse_item_colour":[0.3,0.3,0.3]
+  }
+}

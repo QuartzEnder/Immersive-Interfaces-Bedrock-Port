@@ -1,0 +1,23 @@
+{
+  "namespace": "déesse_qcMain",
+
+  "top_left_stack_buttons":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{
+          "déesse_lowering_padding":{
+            "type":"panel",
+            "$déesse_lowering_padding_size|default":[1,26],
+            "size":"$déesse_lowering_padding_size"
+          }
+        }
+      }
+    ]
+  },
+
+  "show_move_button_icon":{
+    "color": [1.0,1.0,1.0]
+  }
+}

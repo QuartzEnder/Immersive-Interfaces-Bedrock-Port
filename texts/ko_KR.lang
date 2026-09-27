@@ -1,0 +1,18 @@
+entity.villager.name=주민
+entity.villager.armor=§c§0§7§r갑옷 제조자
+entity.villager.butcher=§c§c§4§r도축업자
+entity.villager.cartographer=§c§6§e§r지도 제작자
+entity.villager.cleric=§c§d§5§r성직자
+entity.villager.farmer=§c§6§2§r농부
+entity.villager.fisherman=§c§7§6§r어부
+entity.villager.fletcher=§c§7§4§r화살 제조인
+entity.villager.leather=§c§b§a§r가죽 세공인
+entity.villager.librarian=§c§e§r§r도서관 사서
+entity.villager.shepherd=§c§7§r§r양치기
+entity.villager.tool=§c§c§d§r도구 제조인
+entity.villager.weapon=§c§b§9§r무기 제조인
+entity.villager.mason=§c§0§8§r석공
+entity.wandering_trader.name=§c§6§1§r떠돌이 상인
+
+entity.ender_dragon.name=§b§d§r엔더 드래곤
+raid.name=§b§c§r습격

@@ -1,0 +1,194 @@
+{
+  "namespace": "stonecutter",
+
+  "stonecutter_screen":{
+    "$title_background_texture":"textures/ui/stonecutter/title_background_stonecutter",
+    "$title_background_size":["100% + 12px",13],
+    "$title_background_offset":[0,3],
+    "$main_title_colour":"$generic_main_title_colour",
+    "$shadow_colour":"$generic_shadow_title_colour",
+    
+    "$screen_content": "stonecutter.stonecutter_panel",
+    "$is_dimz_advanced_container|default":false,
+    "variables":[
+      {
+        "requires": "$is_dimz_advanced_container",
+        "$close_button_offset":[21.5,-1.5]
+      }
+    ]
+  },
+
+  "right_panel":{
+    "$background_texture":"textures/ui/stonecutter/screen_background_stonecutter",
+    "$common_panel_offset":[0,6],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_after",
+        "control_name": "common_panel",
+        "value":{"stonecutter_sawblade@quartz_anim.stonecutter_sawblade":{}}
+      },
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{
+          "anim_toggle_panel@quartz_toggles.anim_toggle_panel":{
+            "$anim_toggle_offset":[16,27],
+            "variables":[
+              {
+                "requires":"$is_déesse_ui_pack",
+                "$anim_toggle_offset":[20,27],
+                "$big_anim_toggle_offset":[22,30]
+              },
+              {
+                "requires":"$is_dimz_advanced_container",
+                "$anim_toggle_offset":[19,43]
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+
+  "scroll_panel":{
+    "size": ["100% - 12px","100% - 16px"]
+  },
+
+  "stone_book_panel":{
+    "$background_texture":"textures/ui/recipe/recipe_book_background",
+    "bindings":[
+      {
+        "binding_type":"view",
+        "source_control_name": "left_panel_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "stonecutter_label":{
+    "color": "$main_title_colour",
+    "$parent_text":"container.stonecutter",
+    "offset": [0,0],
+    "layer": 10,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{}}
+      }
+    ]
+  },
+
+  "right_panel/stonecutter_screen_inventory":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "stonecutter_label",
+        "value":{
+          "title_label_anchor":{
+            "type":"panel",
+            "size":[1,1],
+            "anchor_from":"top_middle",
+            "anchor_to":"top_middle",
+            "offset":[3.5,0],
+            "controls":[{"stonecutter_label@stonecutter.stonecutter_label":{}}]
+          }
+        }
+      }
+    ]
+  },
+  
+  "top_half_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"stonecutter_scroll_panel@quartz_gui.stonecutter_scroll_panel":{}}
+      },
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{
+          "bedrock_large_toggle@quartz_toggles.bedrock_large_toggle":{
+            "anchor_from":"top_left",
+            "anchor_to":"top_left",
+            "offset":[10,-12]
+          }
+        }
+      }
+    ]
+  },
+
+  "top_half_stack_panel":{
+    "layer": 5,
+    "size": [141,"100%cm"],
+    "anchor_from":"bottom_right",
+    "anchor_to":"bottom_right",
+    "$stonecutter_stack_panel_offset|default":[-9,-26],
+    "$déesse_quick_craft_offset":[0,-43],
+    "offset": "$stonecutter_stack_panel_offset",
+    "$is_déesse_ui_pack|default":false,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "padding_2",
+        "value":{
+          "déesse_padding":{
+            "type":"panel",
+            "size":[101,0],
+            "visible":"$is_déesse_ui_pack"
+          }
+        }
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "arrow_holder"
+      }
+    ],
+    "variables":{
+      "requires": "$is_déesse_ui_pack",
+      "$stonecutter_stack_panel_offset":[-9,-22]
+    }
+  },
+
+  "top_half_stack_panel/padding_1":{
+    "size": ["fill",0]
+  },
+
+  "arrow_icon":{
+    "visible": false
+  },
+
+  "right_panel/common_panel":{
+    "$show_close_button":true
+  },
+
+  "result_item_slot":{
+    "size": [18,18],
+    "$cell_image_size":[18,18]
+  },
+
+  "center_fold":{
+    "size": [2,166],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "center_bg"
+      }
+    ]
+  },
+
+  "stone_button":{
+    "size": [20,20]
+  },
+
+  "toolbar_panel":{
+    "ignored": true
+  }
+}

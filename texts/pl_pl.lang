@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rPłatnerz
+entity.villager.butcher=§c§c§4§rRzeźnik
+entity.villager.cartographer=§c§6§e§rKartograf
+entity.villager.cleric=§c§d§5§rKapłan
+entity.villager.farmer=§c§6§2§rRolnik
+entity.villager.fisherman=§c§7§6§rRybak
+entity.villager.fletcher=§c§7§4§rŁuczarz
+entity.villager.leather=§c§b§a§rRymarz
+entity.villager.librarian=§c§e§r§rBibliotekarz
+entity.villager.shepherd=§c§7§r§rPasterz
+entity.villager.tool=§c§c§d§rWytwórca narzędzi
+entity.villager.weapon=§c§b§9§rZbrojmistrz
+entity.villager.mason=§c§0§8§rKamieniarz
+entity.wandering_trader.name=§c§6§1§rKupiec wędrowny
+
+entity.ender_dragon.name=§b§d§rSmok Kresu
+raid.name=§b§c§rNajazd

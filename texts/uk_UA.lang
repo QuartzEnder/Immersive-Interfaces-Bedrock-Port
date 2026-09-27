@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rЗброяр
+entity.villager.butcher=§c§c§4§rМ’ясник
+entity.villager.cartographer=§c§6§e§rКартограф
+entity.villager.cleric=§c§d§5§rСвященик
+entity.villager.farmer=§c§6§2§rФермер
+entity.villager.fisherman=§c§7§6§rРибалка
+entity.villager.fletcher=§c§7§4§rМайстер-лучник
+entity.villager.leather=§c§b§a§rЧинбар
+entity.villager.librarian=§c§e§r§rБібліотекар
+entity.villager.shepherd=§c§7§r§rПастух
+entity.villager.tool=§c§c§d§rКоваль інструментів
+entity.villager.weapon=§c§b§9§rКоваль зброї
+entity.villager.mason=§c§0§8§rМуляр
+entity.wandering_trader.name=§c§6§1§rМандрівний крамар
+
+entity.ender_dragon.name=§b§d§rДракон Ендеру
+raid.name=§b§c§rНаскок

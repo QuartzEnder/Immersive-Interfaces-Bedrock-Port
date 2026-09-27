@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rArmero
+entity.villager.butcher=§c§c§4§rCarnicero
+entity.villager.cartographer=§c§6§e§rCartógrafo
+entity.villager.cleric=§c§d§5§rClérigo
+entity.villager.farmer=§c§6§2§rGranjero
+entity.villager.fisherman=§c§7§6§rPescador
+entity.villager.fletcher=§c§7§4§rFlechero
+entity.villager.leather=§c§b§a§rCurtidor
+entity.villager.librarian=§c§e§r§rBibliotecario
+entity.villager.shepherd=§c§7§r§rPastor
+entity.villager.tool=§c§c§d§rFerretero
+entity.villager.weapon=§c§b§9§rHerrero de armas
+entity.villager.mason=§c§0§8§rAlbañil
+entity.wandering_trader.name=§c§6§1§rVendedor errante
+
+entity.ender_dragon.name=§b§d§rDragona de Ender
+raid.name=§b§c§rAsalto

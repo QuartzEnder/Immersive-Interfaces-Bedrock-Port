@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rPembuat Baju Zirah
+entity.villager.butcher=§c§c§4§rTukang Daging
+entity.villager.cartographer=§c§6§e§rKartografer
+entity.villager.cleric=§c§d§5§rPendeta
+entity.villager.farmer=§c§6§2§rPetani
+entity.villager.fisherman=§c§7§6§rNelayan
+entity.villager.fletcher=§c§7§4§rPembuat Panah
+entity.villager.leather=§c§b§a§rPerajin Kulit
+entity.villager.librarian=§c§e§r§rPustakawan
+entity.villager.shepherd=§c§7§r§rPenggembala
+entity.villager.tool=§c§c§d§rPembuat Alat
+entity.villager.weapon=§c§b§9§rPembuat Senjata
+entity.villager.mason=§c§0§8§rTukang Batu
+entity.wandering_trader.name=§c§6§1§rPedagang Keliling
+
+entity.ender_dragon.name=§b§d§rNaga Ender
+raid.name=§b§c§rSerbuan

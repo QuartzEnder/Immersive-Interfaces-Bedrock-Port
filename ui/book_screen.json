@@ -1,0 +1,19 @@
+{
+  "namespace": "book",
+
+  "close_button":{
+    "size": [15,16]
+  },
+
+  "book_and_buttons_panel/book_panel/close_button":{
+    "offset": [21,7]
+  },
+
+  "cover_and_buttons_panel/cover_panel/close_button":{
+    "offset": [16,5]
+  },
+
+  "close_button_default":{
+    "color": [1.0,1.0,1.0]
+  }
+}

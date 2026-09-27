@@ -1,0 +1,7 @@
+{
+  "namespace": "déesse_contentLog",
+
+  "text_edit_box":{
+    "$ignore_magnifying_glass":false
+  }
+}

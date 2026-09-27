@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rRüstungsschmied
+entity.villager.butcher=§c§c§4§rMetzger
+entity.villager.cartographer=§c§6§e§rKartograf
+entity.villager.cleric=§c§d§5§rGeistlicher
+entity.villager.farmer=§c§6§2§rBauer
+entity.villager.fisherman=§c§7§6§rFischer
+entity.villager.fletcher=§c§7§4§rPfeilmacher
+entity.villager.leather=§c§b§a§rGerber
+entity.villager.librarian=§c§e§r§rBibliothekar
+entity.villager.shepherd=§c§7§r§rSchäfer
+entity.villager.tool=§c§c§d§rWerkzeugschmied
+entity.villager.weapon=§c§b§9§rWaffenschmied
+entity.villager.mason=§c§0§8§rSteinmetz
+entity.wandering_trader.name=§c§6§1§rFahrender Händler
+
+entity.ender_dragon.name=§b§d§rEnderdrache
+raid.name=§b§c§rÜberfall

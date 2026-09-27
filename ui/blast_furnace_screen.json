@@ -1,0 +1,8 @@
+{
+  "namespace": "blast_furnace",
+
+  "blast_furnace_screen":{
+    "$is_furnace_screen":false,
+    "$background_texture":"textures/ui/blast_furnace/screen_background_blast_furnace"
+  }
+}

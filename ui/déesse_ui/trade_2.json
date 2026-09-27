@@ -1,0 +1,87 @@
+{
+  "namespace": "déesse_trade2",
+
+  "arrow_holder/arrow_image":{
+    "bindings":[
+      {
+        "binding_type":"collection_details"
+      },
+      {
+        "binding_name":"#trade_cross_out_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "unlock_trade_tog",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#toggle_visible"
+      },
+      {
+        "binding_name": "#trade_toggle_enabled"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "(not #trade_cross_out_visible and (#trade_toggle_enabled or #toggle_visible)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "trade_utils_top_panel/stack":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_after",
+        "control_name": "filter_enc_button_panel",
+        "value":
+          {
+            "magnifying_glass_holder":{
+              "type":"panel",
+              "size":[12,14],
+              "controls":[{"magnifying_glass@common.text_magnifying_glass_image":{}}]
+          }
+        }
+      }
+    ]
+  },
+
+  "trade_hover_text_panel":{
+    "size": ["100% - 4px",20]
+  },
+
+  "quick_trade_icon":{
+    "size": [21,21],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "text",
+        "value":{"all_button_icon@quartz_déesse.all_button_icon":{}}
+      }
+    ]
+  },
+
+  "items_search_text_box":{
+    "$default_edit_box_texture":"textures/ui/generic/text_box_default",
+    "$hover_edit_box_texture":"textures/ui/generic/text_box_hover",
+    "$text_edit_box_label_offset": [2,0]
+  },
+
+  "trade_utils_top_panel/stack/instant_trade_togg":{
+    "$button_content":"quartz_déesse.all_button_icon_small"
+  },
+
+  "level_up_target_text":{
+    "color": "$anvil_cost_success_text_color",
+    "shadow": true,
+    "layer": 3
+  },
+
+  "quick_trade_button":{
+    "$déesse_quick_trade_anchor_from|default":"top_left",
+    "$déesse_quick_trade_anchor_to|default":"top_left",
+    "$déesse_quick_trade_offset|default":[0,23],
+    "anchor_from":"$déesse_quick_trade_anchor_from",
+    "anchor_to":"déesse_quick_trade_anchor_to",
+    "offset":"$déesse_quick_trade_offset"
+  }
+}

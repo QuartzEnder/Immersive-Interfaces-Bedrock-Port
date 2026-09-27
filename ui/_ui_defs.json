@@ -1,0 +1,12 @@
+{
+  "ui_defs": [
+    "ui/quartz/_quartz_gui.json",
+    "ui/quartz/_quartz_containers.json",
+    "ui/quartz/_quartz_horse_screen.json",
+    "ui/quartz/_quartz_toggles.json",
+    "ui/quartz/_quartz_inventory.json",
+    "ui/quartz/_quartz_anim.json",
+    "ui/quartz/_quartz_bossbars.json",
+    "ui/quartz/other_packs/_quartz_déesse.json"
+  ]
+}

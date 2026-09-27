@@ -1,0 +1,99 @@
+{ "frames": [
+   {
+    "filename": "villager_eyes 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "sourceSize": { "w": 12, "h": 5 },
+    "duration": 5000
+   },
+   {
+    "filename": "villager_eyes 0.ase",
+    "frame": { "x": 0, "y": 5, "w": 12, "h": 5 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "sourceSize": { "w": 12, "h": 5 },
+    "duration": 3000
+   },
+   {
+    "filename": "villager_eyes 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "sourceSize": { "w": 12, "h": 5 },
+    "duration": 3000
+   },
+   {
+    "filename": "villager_eyes 0.ase",
+    "frame": { "x": 0, "y": 10, "w": 12, "h": 5 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "sourceSize": { "w": 12, "h": 5 },
+    "duration": 1000
+   },
+   {
+    "filename": "villager_eyes 0.ase",
+    "frame": { "x": 0, "y": 20, "w": 12, "h": 5 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "sourceSize": { "w": 12, "h": 5 },
+    "duration": 100
+   },
+   {
+    "filename": "villager_eyes 0.ase",
+    "frame": { "x": 0, "y": 25, "w": 12, "h": 5 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "sourceSize": { "w": 12, "h": 5 },
+    "duration": 100
+   },
+   {
+    "filename": "villager_eyes 0.ase",
+    "frame": { "x": 0, "y": 30, "w": 12, "h": 5 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "sourceSize": { "w": 12, "h": 5 },
+    "duration": 100
+   },
+   {
+    "filename": "villager_eyes 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "sourceSize": { "w": 12, "h": 5 },
+    "duration": 3000
+   },
+   {
+    "filename": "villager_eyes 0.ase",
+    "frame": { "x": 0, "y": 15, "w": 12, "h": 5 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 5 },
+    "sourceSize": { "w": 12, "h": 5 },
+    "duration": 2000
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.17-dev",
+  "image": "villager_eyes.png",
+  "format": "RGBA8888",
+  "size": { "w": 12, "h": 35 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

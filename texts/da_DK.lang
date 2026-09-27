@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rRustningssmed
+entity.villager.butcher=§c§c§4§rSlagter
+entity.villager.cartographer=§c§6§e§rKorttegner
+entity.villager.cleric=§c§d§5§rGejstlig
+entity.villager.farmer=§c§6§2§rLandmand
+entity.villager.fisherman=§c§7§6§rFisker
+entity.villager.fletcher=§c§7§4§rPilemager
+entity.villager.leather=§c§b§a§rLæderarbejder
+entity.villager.librarian=§c§e§r§rBibliotekar
+entity.villager.shepherd=§c§7§r§rHyrde
+entity.villager.tool=§c§c§d§rVærktøjsmager
+entity.villager.weapon=§c§b§9§rVåbensmed
+entity.villager.mason=§c§0§8§rMason
+entity.wandering_trader.name=§c§6§1§rHandelsrejsende
+
+entity.ender_dragon.name=§b§d§rEnder-drage
+raid.name=§b§c§rPlyndringstogt

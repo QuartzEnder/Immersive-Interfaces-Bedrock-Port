@@ -1,0 +1,147 @@
+{
+  "namespace": "enchanting",
+
+///---------------------------------
+/// TRANSFORMING THE COMMON PANEL
+///---------------------------------
+
+  "enchanting_panel":{
+    "$show_close_button":true,
+    "$use_compact_close_button":false
+  },
+
+  "enchanting_screen":{
+    "$inventory_background_layer":-5,
+    "$title_background_offset":[0,2],
+    "$title_background_size":["100% + 12px", 12],
+    "$background_texture":"textures/ui/enchanting/screen_background_enchanting",
+    "$title_background_texture":"textures/ui/enchanting/title_background_enchanting",
+    "$close_button_offset":[19,3],
+    "$main_container_colour":[0.192,0.098,0.188],
+    "$shadow_colour":[0.596,0.588,0.843],
+    "$is_déesse_ui_pack|default":false,
+    "$screen_content": "enchanting.enchanting_panel",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "$is_dimz_advanced_container|default":false,
+
+    "variables":[
+      {
+        "requires": "$is_dimz_advanced_container",
+        "$close_button_offset":[21.5,0]
+      }
+    ]
+  },
+
+//-------------------
+/// ELEMENT CHANGES
+//-------------------
+
+  "lapis_image":{
+    "texture": "textures/ui/lapis"
+  },
+
+  "enchanting_label":{
+    "$enchanting_label_anchor|default":"top_middle",
+    "font_type":"$container_title_font",
+    "anchor_from":"$enchanting_label_anchor",
+    "anchor_to":"$enchanting_label_anchor",
+    "color": "$main_container_colour",
+    "offset": [0,-7],
+    "layer": 10,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{
+          "title_background_and_shadow@quartz_gui.title_background_and_shadow":{
+            "$parent_text":"$container_title",
+            "$title_background_texture":"textures/ui/enchanting/title_background_enchanting"
+          }
+        }
+      }
+    ]
+  },
+
+  "enchanting_panel_top_half":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"enchanting_portal_bg@quartz_gui.enchanting_portal_bg":{}}
+      }
+    ]
+  },
+
+  "enchanting_panel_top_half/item_grid":{
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "offset": [14,38]
+  },
+
+  "enchanting_panel_top_half/lapis_grid":{
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "offset": [34,39]
+  },
+
+  "enchant_button_panel":{
+    "size": [108,19]
+  },
+
+  "enchanting_panel_top_half/grid_panel/enchantments_grid":{
+    "size": [108,57]
+  },
+
+  "enchanting_panel_top_half/grid_panel":{
+    "anchor_from":"top_right",
+    "anchor_to":"top_right",
+    "size": [110,59],
+    "offset": [-6,6],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "indent"
+      }
+    ]
+  },
+
+  //---------------
+  // Hover Text
+  //---------------
+
+  "background_with_hover_text/hover_text": {
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_name_override": "#text_custom",
+        "binding_collection_name": "#enchant_buttons",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text_custom - '§o')",
+        "target_property_name": "#hover_text"
+      }
+    ]
+  },
+
+  //-----------------
+  // Déesse UI
+  //-----------------
+
+  "enchant_reveal_toggle@déesse_toggles.saved_state_content_toggle":{
+    "anchor_from":"top_right",
+    "anchor_to":"top_right",
+    "offset": [0,0]
+  },
+
+  "c_enchant_runes_text":{
+    "$colord|default": "$enchanting_runes_color"
+  },
+
+  "enchant_t_content":{
+    "color": [1.0,1.0,1.0]
+  }
+}

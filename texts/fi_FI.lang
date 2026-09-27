@@ -1,0 +1,18 @@
+entity.villager.name=Kyläläinen
+entity.villager.armor=§c§0§7§rHaarniskaseppä
+entity.villager.butcher=§c§c§4§rLihakauppias
+entity.villager.cartographer=§c§6§e§rKartantekijä
+entity.villager.cleric=§c§d§5§rPappi
+entity.villager.farmer=§c§6§2§rMaanviljelijä
+entity.villager.fisherman=§c§7§6§rKalastaja
+entity.villager.fletcher=§c§7§4§rJousiseppä
+entity.villager.leather=§c§b§a§rNahkuri
+entity.villager.librarian=§c§e§r§rKirjastonhoitaja
+entity.villager.shepherd=§c§7§r§rPaimen
+entity.villager.tool=§c§c§d§rTyökaluseppä
+entity.villager.weapon=§c§b§9§rAseseppä
+entity.villager.mason=§c§0§8§rMason
+entity.wandering_trader.name=§c§6§1§rKuljeskeleva kauppias
+
+entity.ender_dragon.name=§b§d§rÄärilisko
+raid.name=§b§c§rRynnäkkö

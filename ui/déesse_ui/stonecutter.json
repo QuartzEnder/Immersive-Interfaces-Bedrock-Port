@@ -1,0 +1,11 @@
+{
+  "namespace": "déesse_stonecutter",
+
+  "bulk_craft_button_panel/bulk_craft_container/bg":{
+    "layer": 2
+  },
+
+  "select_stone_button/item_renderer":{
+    "offset": [0,-43]
+  }
+}

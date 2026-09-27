@@ -1,0 +1,120 @@
+{
+  "namespace": "quartz_horse",
+
+  // Horse Screen in Pocket UI
+  
+  "mounts_half_inventory":{
+    "type":"panel",
+    "size": ["50%","100%"],
+    "$lock_theme":true,
+    "$container_size": 36,
+    "$pane_collection": "combined_hotbar_and_inventory_items",
+    "controls":[
+      {"pocket_inventory_title@quartz_gui.pocket_inventory_title":{}},
+      {"bg@common.common_panel":{"$show_close_button":false}},
+      {"half_screen_inventory@horse_pocket.half_screen_inventory":{}},
+      {"mounts_tabs_panel@quartz_horse.mounts_tabs_panel":{}}
+    ]
+  },
+
+  "mounts_half_container":{
+    "type":"panel",
+    "size": ["50%","100%"],
+    "$is_container_panel":true,
+    "controls":[
+      {"bg@common.common_panel":{"layer": -1}},
+      {"horse_title_label@horse.horse_label":{}},
+      {
+        "chest_tab": {
+          "type": "panel",
+          "controls": [
+            {
+              "chest@horse_pocket.half_screen_chest": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$container_size": "$chest_size",
+                "$pane_collection": "container_items"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "chest_tab_interactive",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "renderer_tab": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "renderer@horse_pocket.half_screen_renderer": {
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "renderer_tab_interactive",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {"equip_middle_screen@horse_pocket.equip_middle_screen":{}}
+    ]
+  },
+
+  "mounts_double_panel@common.pocket_hotbar_and_content_panels":{
+    "$has_side_tabs":false,
+    "$hide_hotbar":true,
+    "$left_panel_control":"quartz_horse.mounts_half_inventory",
+    "$right_panel_control":"quartz_horse.mounts_half_container"
+  },
+
+  "mounts_tabs_panel":{
+    "type":"stack_panel",
+    "anchor_from":"bottom_left",
+    "anchor_to":"bottom_right",
+    "size": [40,"100%c"],
+    "controls":[
+      {
+        "chest_tab_toggle@common_tabs.pocket_tab_left":{
+          "$tab_view_binding_name": "chest_tab_interactive",
+          "$toggle_view_binding_name": "chest_tab_interactive",
+          "$toggle_name":"horse_interactive_tabs",
+          "$toggle_group_forced_index": 2,
+          "$tab_content": "horse_pocket.chest_icon_front",
+          "$toggle_binding_type": "global",
+          "$toggle_state_binding_name": "#chest_tab_toggle",
+          "bindings":[
+            {
+              "binding_name": "#is_chested",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "renderer_tab_toggle@common_tabs.pocket_tab_left":{
+          "$tab_view_binding_name": "renderer_tab_interactive",
+          "$toggle_view_binding_name": "renderer_tab_interactive",
+          "$toggle_name":"horse_interactive_tabs",
+          "$toggle_group_forced_index": 1,
+          "$tab_content": "horse_pocket.saddle_icon_front",
+          "$toggle_binding_type": "global",
+          "$toggle_state_binding_name": "#renderer_tab_toggle"
+        }
+      }
+    ]
+  }
+}

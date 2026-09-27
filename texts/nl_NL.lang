@@ -1,0 +1,17 @@
+entity.villager.armor=§c§0§7§rHarnassmid
+entity.villager.butcher=§c§c§4§rSlager
+entity.villager.cartographer=§c§6§e§rKaartenmaker
+entity.villager.cleric=§c§d§5§rGeestelijke
+entity.villager.farmer=§c§6§2§rBoer
+entity.villager.fisherman=§c§7§6§rVisser
+entity.villager.fletcher=§c§7§4§rPijlenmaker
+entity.villager.leather=§c§b§a§rLeerbewerker
+entity.villager.librarian=§c§e§r§rBibliothecaris
+entity.villager.shepherd=§c§7§r§rHerder
+entity.villager.tool=§c§c§d§rGereedschapssmid
+entity.villager.weapon=§c§b§9§rWapensmid
+entity.villager.mason=§c§0§8§rMetselaar
+entity.wandering_trader.name=§c§6§1§rZwervende handelaar
+
+entity.ender_dragon.name=§b§d§rEnderdraak
+raid.name=§b§c§rPlundering

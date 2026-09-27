@@ -1,0 +1,529 @@
+{
+  "namespace": "furnace",
+
+  "furnace_screen":{
+    "$alternate_edit_box_texture":true,
+    "$is_furnace_screen":true,
+    "$background_texture":"textures/ui/furnace/screen_background_furnace",
+    "$title_background_texture":"textures/ui/furnace/title_background_furnace",
+    "$furnace_label_colour":"$generic_main_title_colour",
+    "$shadow_colour":"$generic_shadow_title_colour",
+    "$main_container_colour":"$furnace_label_colour",
+
+    "$screen_content": "furnace.furnace_panel",
+    "$screen_background_alpha": 0.4,
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_button_mappings": [
+          {
+            "from_button_id": "button.menu_cancel",
+            "to_button_id": "button.menu_exit",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_inventory_cancel",
+            "to_button_id": "button.menu_exit",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_up",
+            "to_button_id": "button.menu_up",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_down",
+            "to_button_id": "button.menu_down",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_left",
+            "to_button_id": "button.menu_left",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_right",
+            "to_button_id": "button.menu_right",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_secondary_select",
+            "to_button_id": "button.cursor_drop_one",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.controller_back",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed",
+            "ignored": "(not $is_ps4)"
+          },
+          {
+            "from_button_id": "button.controller_select",
+            "to_button_id": "button.clear_hotbar_or_drop",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_clear",
+            "to_button_id": "button.menu_clear",
+            "mapping_type": "focused"
+          },
+          {
+            "from_button_id": "button.menu_tab_left",
+            "to_button_id": "button.left_panel_tab_decrement",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_tab_right",
+            "to_button_id": "button.left_panel_tab_increment",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_alternate_tab_left",
+            "to_button_id": "button.layout_increment",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_alternate_tab_right",
+            "to_button_id": "button.layout_decrement",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select_left",
+            "to_button_id": "button.shift_pane_focus",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select_right",
+            "to_button_id": "button.clear_selected_recipe",
+            "mapping_type": "global"
+          }
+        ]
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_button_mappings": [
+          {
+            "from_button_id": "button.menu_cancel",
+            "to_button_id": "button.menu_exit",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_inventory_cancel",
+            "to_button_id": "button.menu_exit",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_up",
+            "to_button_id": "button.menu_up",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_down",
+            "to_button_id": "button.menu_down",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_left",
+            "to_button_id": "button.menu_left",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_right",
+            "to_button_id": "button.menu_right",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_secondary_select",
+            "to_button_id": "button.cursor_drop_one",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.controller_back",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed",
+            "ignored": "(not $is_ps4)"
+          },
+          {
+            "from_button_id": "button.controller_select",
+            "to_button_id": "button.cursor_drop_one",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_tab_left",
+            "to_button_id": "button.left_panel_tab_decrement",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_tab_right",
+            "to_button_id": "button.left_panel_tab_increment",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_alternate_tab_left",
+            "to_button_id": "button.left_panel_tab_increment",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_alternate_tab_right",
+            "to_button_id": "button.left_panel_tab_decrement",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select_left",
+            "to_button_id": "button.controller_secondary_select_left",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_clear",
+            "to_button_id": "button.menu_clear",
+            "mapping_type": "focused"
+          }
+        ]
+      }
+    ]
+  },
+
+  "right_panel/common_panel":{
+    "$show_close_button":true,
+    "layer": 2
+  },
+
+  "furnace_panel_top_half":{
+    "$is_déesse_ui_pack|default":false,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "furnace_arrow_empty_image",
+        "value":{
+          "recipe_toggle_furnace@quartz_toggles.recipe_toggle_furnace":{
+            "anchor_from":"left_middle",
+            "anchor_to":"left_middle",
+            "offset":[15,1]
+          }
+        }
+      }
+    ]
+  },
+
+  "furnace_input_panel":{
+    "size": [18,52],
+    "offset": [75,29]
+  },
+
+  "furnace_input_panel/panel":{
+    "anchor_from":"top_right",
+    "anchor_to":"top_right"
+  },
+
+  "furnace_output_panel/output_item":{
+    "size": [18,18],
+    "offset": [27,27],
+    "$cell_image_size":[18,18],
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "$background_images": "furnace.container_cell_images"
+  },
+
+  "furnace_label":{
+    "font_type":"$container_title_font",
+    "$furnace_label_offset|default":[0,-6],
+    "offset": "$furnace_label_offset",
+    "$parent_text":"$container_title",
+    "color": "$furnace_label_colour",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{}}
+      }
+    ]
+  },
+
+  "furnace_fuel_panel":{
+    "offset": [-20,17]
+  },
+
+  "flame_panel":{
+    "anchor_from":"bottom_right",
+    "anchor_to":"bottom_right",
+    "offset": [-23,-2]
+  },
+
+  "furnace_arrow_full_image":{
+    "offset": [3,-1]
+  },
+
+  "container_cell_images":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "cell_classic"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "cell_normal"
+      }
+    ]
+  },
+
+  //----------------------------
+  // Furnace Recipe Book
+  //----------------------------
+
+  "recipe_book_panel":{
+    "$background_texture":"textures/ui/recipe/recipe_book_background"
+  },
+
+  "recipe_book_panel/tab_navigation_panel":{
+    "size": [33,"100% - 3px"],
+    "offset": [3,3],
+    "anchor_from":"top_left",
+    "anchor_to":"top_right"
+  },
+
+  "recipe_book_panel/tab_content_panel":{
+    "$tab_content_panel_size|default":["100%","100%"],
+    "size": "$tab_content_panel_size",
+    "$is_déesse_ui_pack|default":false,
+    "variables":{
+      "requires": "$is_déesse_ui_pack",
+      "$tab_content_panel_size":["100% + 8px","100%"]
+    }
+  },
+
+  "tab_navigation_panel_layout/navigation_tabs/content":{
+    "orientation":"vertical"
+  },
+
+  "tab_navigation_panel_layout/navigation_tabs/content/food_tab_holder":{
+    "size": [33,26],
+    "visible": "$is_furnace_screen"
+  },
+  "tab_navigation_panel_layout/navigation_tabs/content/blocks_tab_holder":{
+    "size": [33,26],
+    "visible": "$is_furnace_screen"
+  },
+  "tab_navigation_panel_layout/navigation_tabs/content/items_tab_holder":{
+    "size": [33,26],
+    "visible": "$is_furnace_screen"
+  },
+  "tab_navigation_panel_layout/navigation_tabs/content/search_tab_holder":{
+    "size": [33,26],
+    "visible": "$is_furnace_screen"
+  },
+
+  "tab_navigation_panel_layout/navigation_tabs/content/food_tab_holder/food_tab_control":{
+    "bindings":[]
+  },
+  "tab_navigation_panel_layout/navigation_tabs/content/blocks_tab_holder/blocks_tab_leftmost":{
+    "bindings":[]
+  },
+  "tab_navigation_panel_layout/navigation_tabs/content/blocks_tab_holder/blocks_tab_normal":{
+    "bindings":[]
+  },
+  "tab_navigation_panel_layout/navigation_tabs/content/items_tab_holder/items_tab_leftmost":{
+    "bindings":[]
+  },
+  "tab_navigation_panel_layout/navigation_tabs/content/items_tab_holder/items_tab_normal":{
+    "bindings":[]
+  },
+
+  "tab_content/tab_content_search_bar_panel/items_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "shadow_stack"
+      }
+    ]
+  },
+
+  "tab_content/tab_content_search_bar_panel/items_panel/scroll_pane":{
+    "size": ["100% + 6px","100%"],
+    "$show_background":false,
+    "$scroll_size":[6,"100%"],
+    "$scroll_box_size":[6,"100%"],
+    "$scroll_track_offset":[-2,0],
+    "$scroll_track_image_control": "common.empty_panel",
+    "$scroll_view_port_size": [ "100%", "100%" ],
+    "$scroll_view_port_size_touch": [ "100% - 4px", "100%" ]
+  },
+
+  "tab_content/tab_content_search_bar_panel/pocket_vertical_padding_3":{
+    "visible": "$is_pocket_mode",
+    "bindings":[]
+  },
+
+  "tab_content/tab_content_search_bar_panel/vertical_padding_3_1":{
+    "visible": "$is_pocket_mode",
+    "bindings":[]
+  },
+
+  "tab_label":{
+    "$text_alignment|default": "left"
+  },
+
+  "screen_stack_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "center_fold"
+      },
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "toolbar_anchor"
+      }
+    ]
+  },
+
+  "tab_content/tab_content_search_bar_panel":{
+    "size": ["100% - 24px","100% - 20px"]
+  },
+
+  "tab_content/tab_content_search_bar_panel/vertical_padding_1":{
+    "size": [0,3]
+  },
+
+  "tab_content/tab_content_search_bar_panel/search_and_filter_panel":{
+    "size": ["100% + 1px", 14],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{
+          "search_padding":{
+            "type":"panel",
+            "size":[3,1]
+          }
+        }
+      },
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{
+          "magnifying_glass_holder":{
+            "type":"panel",
+            "size":[11,14],
+            "controls":[
+              {"magnifying_glass@common.text_magnifying_glass_image":{}}
+            ]
+          }
+        }
+      }
+    ]
+  },
+
+  "tab_content/tab_content_search_bar_panel/search_and_filter_panel/text_edit_control":{
+    "size": ["fill",14],
+    "$magnifying_glass_size":[12,12],
+    "$magnifying_glass_offset":[0,0],
+    "$text_edit_box_label_offset": [2,0],
+    "$magnifying_glass_enabled":false
+  },
+
+  "filter_toggle":{
+    "size": [26,17]
+  },
+
+  "cell_image": {
+    "type": "image",
+    "texture": "textures/ui/generic/cell_generic"
+  },
+
+  "cell_image_classic@furnace.cell_image": {
+    "texture": "textures/ui/generic/cell_generic"
+  },
+
+  "grid_item_for_recipe_book":{
+    "$scrolling_grid_item_size":[24,24],
+    "$cell_image_size":[24,24],
+    "$item_renderer_panel_size":[20,20],
+    "$item_render_size":[18,18],
+    "$overwrite_cell_size|default":false
+  },
+
+  //---------------------
+  // Tab Icons
+  //---------------------
+
+  "food_icon":{
+    "texture": "textures/items/chicken_cooked",
+    "layer": 4
+  },
+
+  "blocks_icon":{
+    "layer": 4
+  },
+
+  "items_icon":{
+    "texture": "textures/items/gold_ingot",
+    "layer": 4
+  },
+
+  //----------------------------
+  // Déesse UI modifications
+  //----------------------------
+
+  "cust_scroll_panel":{
+    "offset": [3,0],
+    "$scroll_track_offset":[3,0]
+  },
+
+  //----------------------------------
+  // Removing the global binding
+  //----------------------------------
+
+  "screen_stack_panel/recipe_book_panel":{
+    "bindings":[
+      {
+        "binding_type":"view",
+        "source_control_name": "recipe_furnace_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

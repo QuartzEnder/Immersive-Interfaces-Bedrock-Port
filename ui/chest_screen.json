@@ -1,0 +1,381 @@
+{
+  "namespace": "chest",
+
+  //---------------------------------------------------------------------
+  //Modifications to the general top half of the chests & Title Label
+  //---------------------------------------------------------------------
+  
+  "chest_label":{
+    "font_type":"$container_title_font",
+    "color":"$chest_label_primary_colour",
+    "$container_title_custom":"$container_title",
+    "$chest_label_anchor|default":"top_middle",
+    "anchor_from":"$chest_label_anchor",
+    "anchor_to":"$chest_label_anchor",
+    "text": "$container_title_custom",
+    "size": ["default","default"],
+    "$chest_label_offset|default":[0,6],
+    "offset": "$chest_label_offset",
+    "text_alignment":"center",
+    "layer": 10,
+    "$show_bg_and_shadow|default":false,
+    
+    "$is_dimz_advanced_container|default":false,
+    "bindings":[],
+    "variables":{
+      "requires": "$show_bg_and_shadow",
+      "$chest_label_offset|default":[0,-3]
+    },
+    "visible": "(not $is_dimz_advanced_container)",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{
+          "$parent_text":"$container_title",
+          "visible":"$show_bg_and_shadow"
+          }
+        }
+      }
+    ]
+  },
+
+  "small_chest_panel":{
+    "$show_close_button":true,
+    "$inventory_background_layer":-5,
+    "$container_title_custom":"$container_title",
+    "$anchor_point":"top_middle",
+    "$is_déesse_ui_pack|default":false,
+    "variables":{
+      "requires": "$is_déesse_ui_pack",
+      "$close_button_offset":[21.5,-0.5]
+    }
+  },
+
+  "small_chest_panel_top_half":{
+    "offset": [0,-2],
+    "layer": 3,
+    "modifications":[
+      {
+        "operation":"insert_back", 
+        "array_name":"controls",
+        "value":{
+          "ender_eye_element@quartz_anim.ender_eye_element":{}
+        }
+      }
+    ]
+  },
+  
+  "small_chest_panel_top_half/small_chest_grid":{
+    "offset": "$chest_grid_offset",
+    "$chest_grid_offset|default":[0,17],
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle"
+  },
+
+  //--------------------
+  //Large chest panel
+  //--------------------
+
+  "large_chest_panel":{
+    "$show_close_button":true,
+    "$anchor_point":"top_middle",
+    "$common_panel_size":[176,138],
+    "$common_panel_offset":[0,-2],
+    "$inventory_background_layer":-5,
+    "$container_title_custom":"$container_title",
+    "$is_déesse_ui_pack|default":false,
+    "variables":{
+      "requires": "$is_déesse_ui_pack",
+      "$close_button_offset":[21.5,-0.5]
+    }
+  },
+
+  "large_chest_panel_top_half":{
+    "offset": [0,8]
+  },
+  
+  "large_chest_panel_top_half/chest_label":{
+    "offset": [0,-5]
+  },
+
+  "large_chest_panel/root_panel/common_panel":{
+    //"offset": [0,7]
+  },
+  
+  //-----------------------------
+  //Particular Chest Containers
+  //-----------------------------
+
+  "small_chest_screen":{
+    "$show_close_button":true,
+    "$common_panel_size":[176,83],
+    "$common_panel_offset":[0,-2],
+    "$big_close_button_offset":[20,0],
+    "$déesse_lowering_padding_size":[1,12],
+    "$background_texture":"textures/ui/chest/screen_background_chest",
+    "$title_background_texture":"textures/ui/chest/title_background_chest",
+    "$container_scroll_box_texture":"textures/ui/chest/scroller",
+    "$show_side_help_button":false,
+    "$container_title_custom|default":"$container_title",
+    "$localization_key":"container.chest",
+    "$ignore_eye|default": true,
+    "$chest_label_primary_colour":[0.859,0.678,0.322],
+    "variables": [
+      // SCREEN CONTENT
+      {
+        "requires": "($desktop_screen or $pocket_screen)",
+        "$screen_content": "chest.small_chest_panel",
+        "$screen_bg_content": "common.screen_background",
+        "$background_texture":"textures/ui/chest/screen_background_small_chest",
+        "$screen_background_alpha": 0.4
+      },
+      {
+      // DETECT COPPER CHEST
+        "requires":"(($container_title_custom = 'container.chestCopper') or ('%.3s' * $container_title_custom = '§n'))",
+        "$background_texture":"textures/ui/copper_chest/screen_background_small_copper_chest",
+        "$container_scroll_box_texture":"textures/ui/copper_chest/scroller",
+        "$chest_label_primary_colour":[0.887,0.561,0.424]
+      }
+    ]
+  },
+
+  "large_chest_screen":{
+    "$chest_label_primary_colour":[0.859,0.678,0.322],
+    "$has_title_label":false,
+    "$big_close_button_offset":[20,0],
+    "$déesse_lowering_padding_size":[1,19],
+    "$background_texture":"textures/ui/chest/screen_background_chest",
+    "$title_background_texture":"textures/ui/chest/title_background_chest",
+    "$container_title_custom|default":"$container_title",
+    "$container_scroll_box_texture":"textures/ui/chest/scroller",
+    "variables":[
+      // SCREEN CONTENT
+      {
+        "requires": "($desktop_screen or $pocket_screen)",
+        "$background_texture":"textures/ui/chest/screen_background_large_chest",
+        "$screen_content": "chest.large_chest_panel",
+        "$screen_bg_content": "common.screen_background",
+        "$screen_background_alpha": 0.4
+      },
+      {
+      // DETECT COPPER CHEST
+        "requires": "(($container_title_custom = 'container.chestDoubleCopper') or ('%.3s' * $container_title_custom = '§n'))",
+        "$cell_texture":"textures/ui/copper_chest/cell_copper_chest",
+        "$background_texture":"textures/ui/copper_chest/screen_background_large_copper_chest",
+        "$container_scroll_box_texture":"textures/ui/copper_chest/scroller",
+        "$chest_label_primary_colour":[0.887,0.561,0.424]
+      }
+    ]
+  },
+
+  "large_chest_panel_top_half/large_chest_grid":{
+    "offset": [7,7]
+  },
+  
+  "ender_chest_screen":{
+    "$chest_label_anchor":"top_left",
+    "$chest_label_offset":[8,6],
+    "$common_panel_size":[176,83],
+    "$common_panel_offset":[0,-2],
+    "$chest_label_primary_colour":[0.251,0.345,0.392],
+    "$background_texture":"textures/ui/ender_chest/screen_background_ender_chest",
+    "$title_background_texture":"textures/ui/ender_chest/title_background_ender_chest",
+    "$container_scroll_box_texture":"textures/ui/ender_chest/scroller",
+    "$localization_key":"container.enderchest",
+    "$ignore_eye": false,
+
+    "$screen_content": "chest.shulker_box_panel",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "variables":[]
+  },
+
+  "barrel_screen":{
+    "$chest_label_offset":[0,2],
+    "$show_bg_and_shadow":true,
+    "$common_panel_size":[176,79],
+    "$common_panel_offset":[0,2],
+    "$déesse_lowering_padding_size":[1,15],
+    "$chest_label_primary_colour":[0.482,0.337,0.149],
+    "$shadow_colour":[0.851,0.706,0.498],
+    "$chest_grid_offset":[0,18],
+    "$cell_texture":"textures/ui/barrel/cell_barrel",
+    "$background_texture":"textures/ui/barrel/screen_background_barrel",
+    "$title_background_texture":"textures/ui/barrel/title_background_barrel",
+    "$container_scroll_box_texture":"textures/ui/barrel/scroller",
+    "$localization_key":"container.barrel",
+
+    "$screen_content": "chest.barrel_panel",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "variables":[]
+  },
+
+  "shulker_box_screen":{
+    "$chest_label_offset":[0,3],
+    "$show_bg_and_shadow":true,
+    "$chest_label_primary_colour":[0.380,0.263,0.482],
+    "$shadow_colour":[0.863,0.745,0.941],
+    "$common_panel_offset":[0,3],
+    "$déesse_lowering_padding_size":[1,22],
+    "$chest_grid_offset":[0,19],
+    "$common_panel_size":[176,78],
+    "$cell_texture":"textures/ui/shulker/default/cell_shulker",
+    "$background_texture":"textures/ui/shulker/default/screen_background_shulker",
+    "$title_background_texture":"textures/ui/shulker/default/title_background_shulker",
+    "$container_scroll_box_texture":"textures/ui/shulker/default/scroller",
+    "$localization_key":"container.shulkerbox",
+
+    "$screen_content": "chest.shulker_box_panel",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "variables":[
+        // SCREEN CONTENT HAS BEEN MOVED ABOVE SINCE POCKET UI IS NOT SUPPORTED
+      {
+        // BLACK
+        "requires": "(((%.3s * $container_title_custom) = '§0') or ((%.3s * $container_title_custom) = '§j'))",
+        "$background_texture":"textures/ui/shulker/black/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/black/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/black/scroller",
+        "$chest_label_primary_colour":[0.173,0.176,0.200],
+        "$shadow_colour":[0.435,0.439,0.490]
+      },
+      {
+        // BLUE
+        "requires": "(((%.3s * $container_title_custom) = '§9') or ((%.3s * $container_title_custom) = '§1'))",
+        "$background_texture":"textures/ui/shulker/blue/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/blue/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/blue/scroller",
+        "$chest_label_primary_colour":[0.157,0.167,0.451],
+        "$shadow_colour":[0.388,0.424,0.886]
+      },
+      {
+        // BROWN
+        "requires": "((%.3s * $container_title_custom) = '§n')",
+        "$background_texture":"textures/ui/shulker/brown/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/brown/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/brown/scroller",
+        "$chest_label_primary_colour":[0.353,0.243,0.145],
+        "$shadow_colour":[0.824,0.576,0.369]
+      },
+      {
+        // CYAN
+        "requires": "(((%.3s * $container_title_custom) = '§3') or ((%.3s * $container_title_custom) = '§s'))",
+        "$background_texture":"textures/ui/shulker/cyan/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/cyan/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/cyan/scroller",
+        "$chest_label_primary_colour":[0.090,0.412,0.443],
+        "$shadow_colour":[0.353,0.859,0.882]
+      },
+      {
+        // GREY
+        "requires": "((%.3s * $container_title_custom) = '§8')",
+        "$background_texture":"textures/ui/shulker/grey/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/grey/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/grey/scroller",
+        "$chest_label_primary_colour":[0.290,0.318,0.341],
+        "$shadow_colour":[0.694,0.761,0.792]
+      },
+      {
+        // GREEN
+        "requires": "(((%.3s * $container_title_custom) = '§2') or ((%.3s * $container_title_custom) = '§q'))",
+        "$background_texture":"textures/ui/shulker/green/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/green/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/green/scroller",
+        "$chest_label_primary_colour":[0.231,0.302,0.090],
+        "$shadow_colour":[0.553,0.737,0.243]
+      },
+      {
+        // LIGHT BLUE
+        "requires": "((%.3s * $container_title_custom) = '§b')",
+        "$background_texture":"textures/ui/shulker/light_blue/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/light_blue/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/light_blue/scroller",
+        "$chest_label_primary_colour":[0.169,0.471,0.561],
+        "$shadow_colour":[0.494,0.886,0.957]
+      },
+      {
+        // LIGHT GREY
+        "requires": "(((%.3s * $container_title_custom) = '§7') or ((%.3s * $container_title_custom) = '§h') or ((%.3s * $container_title_custom) = '§i'))",
+        "$background_texture":"textures/ui/shulker/light_grey/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/light_grey/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/light_grey/scroller",
+        "$chest_label_primary_colour":[0.427,0.455,0.427],
+        "$shadow_colour":[0.855,0.878,0.855]
+      },
+      {
+        // LIME
+        "requires": "((%.3s * $container_title_custom) = '§a')",
+        "$background_texture":"textures/ui/shulker/lime/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/lime/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/lime/scroller",
+        "$chest_label_primary_colour":[0.286,0.486,0.082],
+        "$shadow_colour":[0.663,0.918,0.271]
+      },
+      {
+        // MAGENTA
+        "requires": "((%.3s * $container_title_custom) = '§5')",
+        "$background_texture":"textures/ui/shulker/magenta/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/magenta/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/magenta/scroller",
+        "$chest_label_primary_colour":[0.490,0.188,0.486],
+        "$shadow_colour":[0.914,0.490,0.914]
+      },
+      {
+        // ORANGE
+        "requires": "(((%.3s * $container_title_custom) = '§p') or ((%.3s * $container_title_custom) = '§6') or ((%.3s * $container_title_custom) = '§v'))",
+        "$background_texture":"textures/ui/shulker/orange/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/orange/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/orange/scroller",
+        "$chest_label_primary_colour":[0.529,0.318,0.102],
+        "$shadow_colour":[0.957,0.765,0.263]
+      },
+      {
+        // PINK
+        "requires": "((%.3s * $container_title_custom) = '§d')",
+        "$background_texture":"textures/ui/shulker/pink/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/pink/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/pink/scroller",
+        "$chest_label_primary_colour":[0.624,0.310,0.424],
+        "$shadow_colour":[0.988,0.761,0.843]
+      },
+      {
+        // PURPLE
+        "requires": "((%.3s * $container_title_custom) = '§u')",
+        "$background_texture":"textures/ui/shulker/purple/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/purple/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/purple/scroller",
+        "$chest_label_primary_colour":[0.400,0.110,0.609],
+        "$shadow_colour":[0.812,0.365,0.969]
+      },
+      {
+        // RED
+        "requires": "(((%.3s * $container_title_custom) = '§c') or ((%.3s * $container_title_custom) = '§4') or ((%.3s * $container_title_custom) = '§m'))",
+        "$background_texture":"textures/ui/shulker/red/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/red/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/red/scroller",
+        "$chest_label_primary_colour":[0.424,0.141,0.141],
+        "$shadow_colour":[0.867,0.361,0.349]
+      },
+      {
+        // WHITE
+        "requires": "((%.3s * $container_title_custom) = '§f')",
+        "$background_texture":"textures/ui/shulker/white/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/white/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/white/scroller",
+        "$chest_label_primary_colour":[0.514,0.533,0.533],
+        "$shadow_colour":[0.949,0.961,0.961]
+      },
+      {
+        // YELLOW
+        "requires": "(((%.3s * $container_title_custom) = '§e') or ((%.3s * $container_title_custom) = '§g'))",
+        "$background_texture":"textures/ui/shulker/yellow/screen_background_shulker",
+        "$title_background_texture":"textures/ui/shulker/yellow/title_background_shulker",
+        "$container_scroll_box_texture":"textures/ui/shulker/yellow/scroller",
+        "$chest_label_primary_colour":[0.780,0.651,0.043],
+        "$shadow_colour":[1.000,0.949,0.133]
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Do you want an experience where you're not greeted by the same grey interface every time you open a container? If so, Colourful OreUI is for you.\n\nThis pack changes practically every GUI and UI element in minecraft, featuring; fluid animations, polished, premium gradient finish, fresh boss bars and fresh shader panorama's for each version. Oh, and a whole load more that brings colour and life to Minecraft's UI.\n\nUnofficial Bedrock port by §uQuartzEnder§r of §bMrGamingLoons'§r Colourful Oreui.\n\nThis pack features elements inspired by other resource packs:\n\n - AR's OreUI by amongsreality\n- Re-colourful Containers by Vi_Tu\n- Colourful Containers GUI by Kingybu\n- Ore UI-ify by BoardSodie\n- Unique Dark by amongstreality\n- Ingot UI by Zeit709\n- Colorful Containers OreUI (Never Released) by Springfall\n- OreUI by Mojang Studios",
+        "name": "Immersive Interfaces 1.0",
+        "uuid": "b73161be-f069-4b53-9f1c-bbce99e962e8",
+        "min_engine_version": [1,26,50],
+        "version": [1,0,0]
+    },
+    "modules": [
+        {
+          "type": "resources",
+          "uuid": "144115f6-e0e8-49d6-9f03-ca54309a0ac7",
+          "version": [1,0,0]
+        }
+    ],
+    "capabilities":["pbr"],
+    "subpacks": [
+      {
+        "name": "Vanilla HUD",
+        "folder_name": "vanilla",
+        "memory_tier": 0
+      },
+      {
+        "name": "Full features",
+        "folder_name": "full",
+        "memory_tier": 0
+      }
+    ],
+    "metadata": {
+        "authors": ["QuartzEnder (Port)"]
+    }
+}
