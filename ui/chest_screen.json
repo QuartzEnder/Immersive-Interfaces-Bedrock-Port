@@ -132,7 +132,6 @@
       {
       // DETECT COPPER CHEST
         "requires": "(($container_title_custom = 'container.chestDoubleCopper') or ('%.3s' * $container_title_custom = '§n'))",
-        "$cell_texture":"textures/ui/copper_chest/cell_copper_chest",
         "$background_texture":"textures/ui/copper_chest/screen_background_large_copper_chest",
         "$container_scroll_box_texture":"textures/ui/copper_chest/scroller",
         "$chest_label_primary_colour":[0.887,0.561,0.424]
@@ -168,7 +167,6 @@
     "$chest_label_primary_colour":[0.482,0.337,0.149],
     "$shadow_colour":[0.851,0.706,0.498],
     "$chest_grid_offset":[0,18],
-    "$cell_texture":"textures/ui/barrel/cell_barrel",
     "$background_texture":"textures/ui/barrel/screen_background_barrel",
     "$title_background_texture":"textures/ui/barrel/title_background_barrel",
     "$container_scroll_box_texture":"textures/ui/barrel/scroller",
@@ -189,7 +187,6 @@
     "$déesse_lowering_padding_size":[1,22],
     "$chest_grid_offset":[0,19],
     "$common_panel_size":[176,101],
-    "$cell_texture":"textures/ui/shulker/default/cell_shulker",
     "$background_texture":"textures/ui/shulker/default/screen_background_shulker",
     "$title_background_texture":"textures/ui/shulker/default/title_background_shulker",
     "$container_scroll_box_texture":"textures/ui/shulker/default/scroller",

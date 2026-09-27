@@ -6,7 +6,8 @@
     "$title_background_texture":"textures/ui/smithing/title_background_smithing",
     "$main_title_colour":[0.157,0.169,0.216],
     "$shadow_colour":[0.404,0.455,0.573],
-    "$common_panel_size":[170,42]
+    "$common_panel_size":[170,42],
+    "$common_panel_offset":[-12,40]
   },
 
   "toolbar_panel":{

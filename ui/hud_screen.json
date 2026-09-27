@@ -1,6 +1,10 @@
 {
   "namespace": "hud",
 
+  "start_cap_image":{
+    "texture": "textures/ui/hotbar_end_cap"
+  },
+
   "empty_progress_bar":{
     "texture": "textures/ui/progress_bars/progress_bar_empty"
   },

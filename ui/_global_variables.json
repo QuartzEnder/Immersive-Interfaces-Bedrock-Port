@@ -1,5 +1,5 @@
 {
-  "$debug_release_colourful_oreui":true,
+  "$debug_release_colourful_oreui":false,
 
   "$is_quartz_immersive_interfaces_pack":true, // Use these for compatibility with your packs
   "$is_quartzender_pack":true,

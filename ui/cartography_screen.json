@@ -5,19 +5,12 @@
   // GENERAL
   //---------------
 
-  "cartography_panel":{
-    "$common_panel_size":[176,109],
-    "$show_side_help_button":true,
-    "$anchor_point":"top_middle"
-  },
-
   "cartography_screen":{
-    "$title_background_offset":[0,3],
-    "$title_background_size":["100% + 12px", 13],
     "$background_texture":"textures/ui/cartography/screen_background_cartography",
     "$title_background_texture":"textures/ui/cartography/title_background_cartography",
-    "$main_title_colour":[0.247,0.173,0.086],
-    "$shadow_colour":[0.647,0.455,0.235],
+    "$anchor_point":"top_middle",
+    "$common_panel_size":[176,109],
+    "$common_panel_offset":[0,-16],
 
     "$screen_content": "cartography.cartography_panel",
     "$screen_bg_content": "common.screen_background",
