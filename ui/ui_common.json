@@ -38,7 +38,7 @@
       "requires": "$debug_release_colourful_oreui",
       "$cell_image_visible":true,
       "$cell_image_alpha":0.4,
-      "$cell_image_colour":[1,0,0]
+      "$cell_image_colour":[0,0,1]
     }
   },
 
@@ -393,5 +393,13 @@
 
   "scrolling_panel":{
     "$is_scrolling_panel":true
+  },
+
+  //-----------------------------
+  // Debug
+  //-----------------------------
+
+  "root_panel":{
+    "debug":"green"
   }
 }

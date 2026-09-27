@@ -1,9 +1,8 @@
 {
-  "$debug_release_colourful_oreui":false,
+  "$debug_release_colourful_oreui":true,
 
-  "$is_quartz_colourful_oreui_pack":true, // Use these for compatibility with your packs
+  "$is_quartz_immersive_interfaces_pack":true, // Use these for compatibility with your packs
   "$is_quartzender_pack":true,
-  "$quartz_colourful_oreui_pack_version":"1.0.0",
   "$is_quartzender_gui_pack":true,
 
   "$creative_label_colour":[0.3,0.3,0.3],

@@ -15,18 +15,6 @@
         }
     ],
     "capabilities":["pbr"],
-    "subpacks": [
-      {
-        "name": "Vanilla HUD",
-        "folder_name": "vanilla",
-        "memory_tier": 0
-      },
-      {
-        "name": "Full features",
-        "folder_name": "full",
-        "memory_tier": 0
-      }
-    ],
     "metadata": {
         "authors": ["QuartzEnder (Port)"]
     }

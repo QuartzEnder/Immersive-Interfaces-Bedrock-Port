@@ -43,16 +43,6 @@
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar/progress_bar_nub/horse_jump_rend/dash_rend":{
     "size": [182,5]
   },
-
-  "hotbar_panel":{
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"remove",
-        "control_name": "hotbar_start_cap"
-      }
-    ]
-  },
   
   "hotbar_renderer":{
     "$hotbar_renderer_size|default": [20,22],
@@ -61,7 +51,7 @@
 
   "hotbar_slot_selected_image":{
     "layer": 2,
-    "size": [22,22]
+    "size": [24,24]
   },
 
   "boss_health_panel":{

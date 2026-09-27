@@ -146,8 +146,8 @@
         "array_name":"controls",
         "operation":"remove",
         "control_name": "player_preview_border"
-      },
-      {
+      }
+      /*{
         "array_name":"controls",
         "operation":"insert_after",
         "control_name": "player_bg",
@@ -158,7 +158,7 @@
         "operation":"insert_before",
         "control_name": "offhand_grid",
         "value":{"offhand_bg@quartz_inv.offhand_bg":{}}
-      }
+      }*/
     ]
   },
 
