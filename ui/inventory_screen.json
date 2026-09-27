@@ -118,7 +118,7 @@
     "$hide_toolbar_panel":false,
     "$background_texture":"textures/ui/crafting/2x2_crafting_bg",
     "$anchor_point":"top_right",
-    "$common_panel_size":[105,81],
+    "$common_panel_size":[184,107],
     "$common_panel_offset":[0,3],
     "$deesse_inv_instant_offset":[0,-12]
   },

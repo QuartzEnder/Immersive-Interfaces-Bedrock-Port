@@ -400,6 +400,6 @@
   //-----------------------------
 
   "root_panel":{
-    "debug":"green"
+    "debug":"white"
   }
 }

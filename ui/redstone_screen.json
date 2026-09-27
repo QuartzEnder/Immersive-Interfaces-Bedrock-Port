@@ -98,7 +98,7 @@
     "$grid_offset_override":[0,12],
     "$title_background_size":["100% + 12px", 12],
     "$title_background_offset":[0,3],
-    "$common_panel_offset":[0,1],
+    "$common_panel_offset":[0,15],
     "$common_panel_size":[138,32],
     "$not_dispenser":true,
     "$not_dropper":true,
