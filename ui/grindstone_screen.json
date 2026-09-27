@@ -53,19 +53,7 @@
   },
 
   "title_label":{
-    "anchor_from":"top_middle",
-    "anchor_to":"top_middle",
-    "text": "tile.grindstone.name",
-    "color": "$main_title_colour",
-    "$parent_text":"tile.grindstone.name",
-    "layer": 6,
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"insert_back",
-        "value":{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{}}   
-      }
-    ]
+    "visible": false
   },
 
   "top_half_panel":{

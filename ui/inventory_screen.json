@@ -73,23 +73,7 @@
   },
 
 "crafting_label":{
-  "anchor_from":"top_middle",
-  "anchor_to":"top_middle",
-  "text_alignment":"center",
-  "font_type":"$container_title_font",
-  "$title_background_size":["100% + 10px", 14],
-  "layer": 7,
-  "color":[0.687,0.447,0.059],
-  "$crafting_label_offset|default":[0,-5],
-  "offset": "$crafting_label_offset",
-  "$shadow_colour":[0.906,0.839,0.565],
-  "modifications":[
-    {
-      "array_name":"controls",
-      "operation":"insert_back",
-      "value":{"crafting_title_background_and_shadow@quartz_gui.crafting_title_background_and_shadow":{}}
-    }
-  ]
+  "visible": false
 },
 
 "crafting_grid_3x3_with_label":{
@@ -353,8 +337,7 @@
   },
 
   "creative_label":{
-    "text_alignment":"left",
-    "color": "$creative_label_colour"
+    "visible": false
   },
 
   "recipe_book":{

@@ -40,19 +40,7 @@
   },
 
   "title_label":{
-    "color": "$main_title_colour",
-    "text": "tile.anvil.name",
-    "$parent_text":"tile.anvil.name",
-    "anchor_from":"top_middle",
-    "anchor_to":"top_middle",
-    "offset": [0,-6],
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"insert_back",
-        "value":{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{}}
-      }
-    ]
+    "visible": false
   },
 
   "recipe_panel":{

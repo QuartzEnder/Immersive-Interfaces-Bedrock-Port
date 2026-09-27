@@ -46,20 +46,7 @@
   },
 
   "item_dropper_label":{
-    "offset": [0,1],
-    "layer": 6,
-    "anchor_from":"top_middle",
-    "anchor_to":"top_middle",
-    "color": "$generic_main_title_colour",
-    "$shadow_colour":"$generic_shadow_title_colour",
-    "$parent_text":"$container_title",
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"insert_back",
-        "value":{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{}}
-      }
-    ]
+    "visible": false
   },
   
   //---------------
@@ -167,20 +154,7 @@
   },
 
   "crafter_label":{
-    "font_type":"$container_title_font",
-    "layer": 9,
-    "color": "$main_title_colour",
-    "offset": [0,0],
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"insert_back",
-        "value":{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{
-          "$parent_text":"$container_title"
-          }
-        }
-      }
-    ]
+    "visible": false
   },
 
   "cell_image":{

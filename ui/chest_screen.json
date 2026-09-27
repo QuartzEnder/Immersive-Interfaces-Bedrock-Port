@@ -6,38 +6,8 @@
   //---------------------------------------------------------------------
   
   "chest_label":{
-    "font_type":"$container_title_font",
-    "color":"$chest_label_primary_colour",
-    "$container_title_custom":"$container_title",
-    "$chest_label_anchor|default":"top_middle",
-    "anchor_from":"$chest_label_anchor",
-    "anchor_to":"$chest_label_anchor",
-    "text": "$container_title_custom",
-    "size": ["default","default"],
-    "$chest_label_offset|default":[0,6],
-    "offset": "$chest_label_offset",
-    "text_alignment":"center",
-    "layer": 10,
-    "$show_bg_and_shadow|default":false,
-    
-    "$is_dimz_advanced_container|default":false,
-    "bindings":[],
-    "variables":{
-      "requires": "$show_bg_and_shadow",
-      "$chest_label_offset|default":[0,-3]
-    },
-    "visible": "(not $is_dimz_advanced_container)",
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"insert_front",
-        "value":{"title_background_and_shadow@quartz_gui.title_background_and_shadow":{
-          "$parent_text":"$container_title",
-          "visible":"$show_bg_and_shadow"
-          }
-        }
-      }
-    ]
+    "$show_chest_label|default":false,
+    "visible": "$show_chest_label"
   },
 
   "small_chest_panel":{

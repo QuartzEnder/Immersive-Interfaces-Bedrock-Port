@@ -44,25 +44,7 @@
   },
 
   "enchanting_label":{
-    "$enchanting_label_anchor|default":"top_middle",
-    "font_type":"$container_title_font",
-    "anchor_from":"$enchanting_label_anchor",
-    "anchor_to":"$enchanting_label_anchor",
-    "color": "$main_container_colour",
-    "offset": [0,-7],
-    "layer": 10,
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"insert_back",
-        "value":{
-          "title_background_and_shadow@quartz_gui.title_background_and_shadow":{
-            "$parent_text":"$container_title",
-            "$title_background_texture":"textures/ui/enchanting/title_background_enchanting"
-          }
-        }
-      }
-    ]
+    "visible": false
   },
 
   "enchanting_panel_top_half":{

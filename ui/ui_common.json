@@ -180,7 +180,7 @@
             "offset":[0,43],
             "anchor_from":"bottom_middle",
             "anchor_to":"bottom_middle",
-            "$inventory_background_layer|default":-3,
+            "$inventory_background_layer|default":-2,
             "layer":"$inventory_background_layer"
           }
         }
@@ -189,7 +189,6 @@
   },
 
   "hotbar_grid_template":{
-
     "offset": [0,-7]
   },
 
