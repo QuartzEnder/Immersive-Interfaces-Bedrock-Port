@@ -109,8 +109,8 @@
 
   "small_chest_screen":{
     "$show_close_button":true,
-    "$common_panel_size":[176,83],
-    "$common_panel_offset":[0,-2],
+    "$common_panel_size":[184,91],
+    "$common_panel_offset":[0,0],
     "$big_close_button_offset":[20,0],
     "$déesse_lowering_padding_size":[1,12],
     "$background_texture":"textures/ui/chest/screen_background_chest",
@@ -145,6 +145,7 @@
     "$has_title_label":false,
     "$big_close_button_offset":[20,0],
     "$déesse_lowering_padding_size":[1,19],
+    "$common_panel_size":[200,159],
     "$background_texture":"textures/ui/chest/screen_background_chest",
     "$title_background_texture":"textures/ui/chest/title_background_chest",
     "$container_title_custom|default":"$container_title",
@@ -176,8 +177,6 @@
   "ender_chest_screen":{
     "$chest_label_anchor":"top_left",
     "$chest_label_offset":[8,6],
-    "$common_panel_size":[176,83],
-    "$common_panel_offset":[0,-2],
     "$chest_label_primary_colour":[0.251,0.345,0.392],
     "$background_texture":"textures/ui/ender_chest/screen_background_ender_chest",
     "$title_background_texture":"textures/ui/ender_chest/title_background_ender_chest",
@@ -194,8 +193,7 @@
   "barrel_screen":{
     "$chest_label_offset":[0,2],
     "$show_bg_and_shadow":true,
-    "$common_panel_size":[176,79],
-    "$common_panel_offset":[0,2],
+    "$common_panel_size":[176,85],
     "$déesse_lowering_padding_size":[1,15],
     "$chest_label_primary_colour":[0.482,0.337,0.149],
     "$shadow_colour":[0.851,0.706,0.498],
