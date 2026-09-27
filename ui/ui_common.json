@@ -127,14 +127,15 @@
 
   "inventory_panel_bottom_half_with_label":{ 
     "layer":0,
+    "$inv_background_texture|default":"textures/ui/generic/inventory_bottom_half",
     "modifications":[
     {
       "operation":"insert_front",
       "array_name":"controls",
       "value":{
           "inventory_background@common.dialog_background_opaque":{
-            "$background_texture":"textures/ui/generic/inventory_bottom_half",
-            "size":[176,90],
+            "$background_texture":"$inv_background_texture",
+            "size":[200,129],
             "anchor_from":"bottom_middle",
             "anchor_to":"bottom_middle",
             "$inventory_background_layer|default":-3,
@@ -166,17 +167,19 @@
   "inventory_panel_bottom_half":{ 
     "layer": 0,
     "$background_texture":"textures/ui/generic/inventory_bottom_half",
+    "$inv_background_texture|default":"textures/ui/generic/inventory_bottom_half",
     "modifications":[
     {
       "operation":"insert_front",
         "array_name":"controls",
         "value":{
           "inventory_background@dialog_background_opaque":{
-            "size":[176,90],
-            "offset":[0,0],
+            "$background_texture":"$inv_background_texture",
+            "size":[200,129],
             "anchor_from":"bottom_middle",
             "anchor_to":"bottom_middle",
-            "layer":-2
+            "$inventory_background_layer|default":-3,
+            "layer":"$inventory_background_layer"
           }
         }
       }
