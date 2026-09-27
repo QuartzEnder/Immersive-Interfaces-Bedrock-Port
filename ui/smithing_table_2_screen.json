@@ -5,7 +5,8 @@
     "$background_texture":"textures/ui/smithing/screen_background_smithing",
     "$title_background_texture":"textures/ui/smithing/title_background_smithing",
     "$main_title_colour":[0.157,0.169,0.216],
-    "$shadow_colour":[0.404,0.455,0.573]
+    "$shadow_colour":[0.404,0.455,0.573],
+    "$common_panel_size":[170,42]
   },
 
   "top_half_panel":{

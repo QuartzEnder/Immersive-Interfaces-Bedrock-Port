@@ -6,7 +6,7 @@
   //---------------
 
   "cartography_panel":{
-    "$common_panel_size":[176,78],
+    "$common_panel_size":[176,109],
     "$show_side_help_button":true,
     "$anchor_point":"top_middle"
   },

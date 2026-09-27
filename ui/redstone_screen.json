@@ -91,6 +91,7 @@
     "$is_dispenser":true,
     "$background_texture":"textures/ui/dispenser/screen_background_dispenser",
     "$title_background_texture":"textures/ui/dropper/title_background_dropper",
+    "$common_panel_size":[72,65],
 
     "$screen_label": "redstone.dispenser_label",
     "$screen_dimensions": [ 176, 166 ],
@@ -111,7 +112,7 @@
     "$title_background_size":["100% + 12px", 12],
     "$title_background_offset":[0,3],
     "$common_panel_offset":[0,1],
-    "$common_panel_size":[176,42],
+    "$common_panel_size":[138,32],
     "$not_dispenser":true,
     "$not_dropper":true,
     "$is_hopper":true,
@@ -149,6 +150,7 @@
     "$title_background_texture":"textures/ui/crafter/title_background_crafter",
     "$main_title_colour":"$generic_main_title_colour",
     "$shadow_colour":"$generic_shadow_title_colour",
+    "$common_panel_size":[172,92],
 
     "$screen_label": "redstone.crafter_label",
     "$screen_dimensions": [ 176, 166 ],

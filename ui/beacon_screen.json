@@ -25,7 +25,7 @@
   "beacon_panel/root_panel":{
     "$show_close_button":true,
     "size": [256,219],
-    "$common_panel_size":[214,130],
+    "$common_panel_size":[259,158],
     "$is_déesse_ui_pack|default":false,
     "$anchor_point":"top_middle",
     "modifications":[

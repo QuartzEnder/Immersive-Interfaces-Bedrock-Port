@@ -84,7 +84,8 @@
   },
 
   "right_panel/common_panel":{
-    "$show_close_button":true
+    "$show_close_button":true,
+    "$common_panel_size":[206,101]
   },
 
   "loom_label":{

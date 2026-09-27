@@ -7,6 +7,7 @@
     "$main_title_colour":"$generic_main_title_colour",
     "$shadow_colour":"$generic_shadow_title_colour",
     "$anchor_point":"top_middle",
+    "$common_panel_size":[153,61],
 
     "$screen_content": "anvil.anvil_panel",
     "$screen_bg_content": "common.screen_background",

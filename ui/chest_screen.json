@@ -185,7 +185,7 @@
     "$localization_key":"container.enderchest",
     "$ignore_eye": false,
 
-    "$screen_content": "chest.shulker_box_panel",
+    "$screen_content": "chest.ender_chest_panel",
     "$screen_bg_content": "common.screen_background",
     "$screen_background_alpha": 0.4,
     "variables":[]
@@ -220,7 +220,7 @@
     "$common_panel_offset":[0,3],
     "$déesse_lowering_padding_size":[1,22],
     "$chest_grid_offset":[0,19],
-    "$common_panel_size":[176,78],
+    "$common_panel_size":[176,101],
     "$cell_texture":"textures/ui/shulker/default/cell_shulker",
     "$background_texture":"textures/ui/shulker/default/screen_background_shulker",
     "$title_background_texture":"textures/ui/shulker/default/title_background_shulker",

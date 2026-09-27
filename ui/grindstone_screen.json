@@ -2,7 +2,7 @@
   "namespace": "grindstone",
 
   "grindstone_panel":{
-    "$common_panel_size":[124,69],
+    "$common_panel_size":[149,69],
     "$close_button_offset":[43,3],
     "$big_close_button_offset":[46,2],
     "$common_panel_offset":[0,7],

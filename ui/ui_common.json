@@ -136,6 +136,7 @@
           "inventory_background@common.dialog_background_opaque":{
             "$background_texture":"$inv_background_texture",
             "size":[200,129],
+            "offset":[0,43],
             "anchor_from":"bottom_middle",
             "anchor_to":"bottom_middle",
             "$inventory_background_layer|default":-3,
@@ -176,6 +177,7 @@
           "inventory_background@dialog_background_opaque":{
             "$background_texture":"$inv_background_texture",
             "size":[200,129],
+            "offset":[0,43],
             "anchor_from":"bottom_middle",
             "anchor_to":"bottom_middle",
             "$inventory_background_layer|default":-3,
