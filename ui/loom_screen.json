@@ -10,9 +10,7 @@
     "$title_background_size":["100% + 12px", 12],
     "$title_background_offset":[0,3],
     "$main_title_colour":[0.639,0.404,0.008],
-    "$shadow_colour":[0.886,0.804,0.510],
     "$background_texture":"textures/ui/loom/screen_background_loom",
-    "$title_background_texture":"textures/ui/loom/title_background_loom",
     "$show_side_help_button":true
   },
 

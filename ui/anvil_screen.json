@@ -3,9 +3,7 @@
 
   "anvil_screen":{
     "$background_texture":"textures/ui/anvil/screen_background_anvil",
-    "$title_background_texture":"textures/ui/anvil/title_background_anvil",
     "$main_title_colour":"$generic_main_title_colour",
-    "$shadow_colour":"$generic_shadow_title_colour",
     "$anchor_point":"top_middle",
     "$common_panel_size":[153,61],
     "$common_panel_offset":[0.5,19],

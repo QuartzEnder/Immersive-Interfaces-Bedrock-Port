@@ -7,7 +7,6 @@
 
   "cartography_screen":{
     "$background_texture":"textures/ui/cartography/screen_background_cartography",
-    "$title_background_texture":"textures/ui/cartography/title_background_cartography",
     "$anchor_point":"top_middle",
     "$common_panel_size":[176,109],
     "$common_panel_offset":[0,-16],

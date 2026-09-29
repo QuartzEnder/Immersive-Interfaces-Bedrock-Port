@@ -20,7 +20,6 @@
 
   "crafting_screen":{
     "$background_texture":"textures/ui/crafting/3x3_crafting_bg",
-    "$title_background_texture":"textures/ui/crafting/title_background_crafting",
     "$hide_toolbar_panel":true,
     "$common_panel_size":[168,68],
     "$common_panel_offset":[4,12],
@@ -222,7 +221,6 @@
             "anchor_from":"top_middle",
             "anchor_to":"top_middle",
             "offset":[-14.5,-1],
-            "$title_background_texture":"textures/ui/crafting/title_background_crafting",
             "controls":[{"crafting_label@crafting.crafting_label":{}}]
           }
         }

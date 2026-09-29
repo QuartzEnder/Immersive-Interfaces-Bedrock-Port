@@ -3,7 +3,6 @@
 
   "crafting_screen_pocket":{
     "$background_texture":"textures/ui/crafting/3x3_crafting_bg",
-    "$title_background_texture":"textures/ui/crafting/title_background_crafting",
     "$hide_toolbar_panel":true,
     "$common_panel_size":[176,78],
     "$common_panel_offset":[0,3],
@@ -46,13 +45,11 @@
 
   "left_panel":{
     "use_anchored_offset":true,
-    "$background_texture":"textures/ui/generic/screen_background_generic",
-    "$title_background_texture":"textures/ui/generic/title_background_generic"
+    "$background_texture":"textures/ui/generic/screen_background_generic"
   },
 
   "hotbar_panel":{
-    "$background_texture":"textures/ui/generic/screen_background_generic",
-    "$title_background_texture":"textures/ui/generic/title_background_generic"
+    "$background_texture":"textures/ui/generic/screen_background_generic"
   },
 
   "right_tab_content":{
@@ -208,8 +205,7 @@
         "array_name":"controls",
         "operation":"insert_front",
         "value":{"crafting_label@crafting.crafting_label":{
-            "color":"$generic_main_title_colour",
-            "$shadow_colour":"$generic_shadow_title_colour"
+            "color":"$generic_main_title_colour"
           }
         }
       }

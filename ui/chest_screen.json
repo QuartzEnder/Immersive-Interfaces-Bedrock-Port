@@ -68,10 +68,6 @@
   "large_chest_panel_top_half/chest_label":{
     "offset": [0,-5]
   },
-
-  "large_chest_panel/root_panel/common_panel":{
-    //"offset": [0,7]
-  },
   
   //-----------------------------
   //Particular Chest Containers
@@ -84,13 +80,10 @@
     "$big_close_button_offset":[20,0],
     "$déesse_lowering_padding_size":[1,12],
     "$background_texture":"textures/ui/chest/screen_background_chest",
-    "$title_background_texture":"textures/ui/chest/title_background_chest",
-    "$container_scroll_box_texture":"textures/ui/chest/scroller",
     "$show_side_help_button":false,
     "$container_title_custom|default":"$container_title",
     "$localization_key":"container.chest",
     "$ignore_eye|default": true,
-    "$chest_label_primary_colour":[0.859,0.678,0.322],
     "variables": [
       // SCREEN CONTENT
       {
@@ -102,24 +95,19 @@
       },
       {
       // DETECT COPPER CHEST
-        "requires":"(($container_title_custom = 'container.chestCopper') or ('%.3s' * $container_title_custom = '§n'))",
-        "$background_texture":"textures/ui/copper_chest/screen_background_small_copper_chest",
-        "$container_scroll_box_texture":"textures/ui/copper_chest/scroller",
-        "$chest_label_primary_colour":[0.887,0.561,0.424]
+        "requires":"(($container_title_custom = 'container.chestCopper') or ('%.3s' * $container_title_custom = '§n'))"
+        //"$background_texture":"textures/ui/copper_chest/screen_background_small_copper_chest"
       }
     ]
   },
 
   "large_chest_screen":{
-    "$chest_label_primary_colour":[0.859,0.678,0.322],
     "$has_title_label":false,
     "$big_close_button_offset":[20,0],
     "$déesse_lowering_padding_size":[1,19],
     "$common_panel_size":[200,159],
     "$background_texture":"textures/ui/chest/screen_background_chest",
-    "$title_background_texture":"textures/ui/chest/title_background_chest",
     "$container_title_custom|default":"$container_title",
-    "$container_scroll_box_texture":"textures/ui/chest/scroller",
     "variables":[
       // SCREEN CONTENT
       {
@@ -132,9 +120,7 @@
       {
       // DETECT COPPER CHEST
         "requires": "(($container_title_custom = 'container.chestDoubleCopper') or ('%.3s' * $container_title_custom = '§n'))",
-        "$background_texture":"textures/ui/copper_chest/screen_background_large_copper_chest",
-        "$container_scroll_box_texture":"textures/ui/copper_chest/scroller",
-        "$chest_label_primary_colour":[0.887,0.561,0.424]
+        "$background_texture":"textures/ui/copper_chest/screen_background_large_copper_chest"
       }
     ]
   },
@@ -146,10 +132,7 @@
   "ender_chest_screen":{
     "$chest_label_anchor":"top_left",
     "$chest_label_offset":[8,6],
-    "$chest_label_primary_colour":[0.251,0.345,0.392],
     "$background_texture":"textures/ui/ender_chest/screen_background_ender_chest",
-    "$title_background_texture":"textures/ui/ender_chest/title_background_ender_chest",
-    "$container_scroll_box_texture":"textures/ui/ender_chest/scroller",
     "$localization_key":"container.enderchest",
     "$ignore_eye": false,
 
@@ -165,12 +148,8 @@
     "$common_panel_size":[176,85],
     "$common_panel_offset":[0,-2],
     "$déesse_lowering_padding_size":[1,15],
-    "$chest_label_primary_colour":[0.482,0.337,0.149],
-    "$shadow_colour":[0.851,0.706,0.498],
     "$chest_grid_offset":[0,18],
     "$background_texture":"textures/ui/barrel/screen_background_barrel",
-    "$title_background_texture":"textures/ui/barrel/title_background_barrel",
-    "$container_scroll_box_texture":"textures/ui/barrel/scroller",
     "$localization_key":"container.barrel",
 
     "$screen_content": "chest.barrel_panel",
@@ -182,15 +161,11 @@
   "shulker_box_screen":{
     "$chest_label_offset":[0,3],
     "$show_bg_and_shadow":true,
-    "$chest_label_primary_colour":[0.380,0.263,0.482],
-    "$shadow_colour":[0.863,0.745,0.941],
-    "$common_panel_offset":[0,3],
     "$déesse_lowering_padding_size":[1,22],
     "$chest_grid_offset":[0,19],
     "$common_panel_size":[176,101],
-    "$background_texture":"textures/ui/shulker/default/screen_background_shulker",
-    "$title_background_texture":"textures/ui/shulker/default/title_background_shulker",
-    "$container_scroll_box_texture":"textures/ui/shulker/default/scroller",
+    "$common_panel_offset":[0,0],
+    "$background_texture":"textures/ui/shulker/default",
     "$localization_key":"container.shulkerbox",
 
     "$screen_content": "chest.shulker_box_panel",
@@ -201,146 +176,82 @@
       {
         // BLACK
         "requires": "(((%.3s * $container_title_custom) = '§0') or ((%.3s * $container_title_custom) = '§j'))",
-        "$background_texture":"textures/ui/shulker/black/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/black/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/black/scroller",
-        "$chest_label_primary_colour":[0.173,0.176,0.200],
-        "$shadow_colour":[0.435,0.439,0.490]
+        "$background_texture":"textures/ui/shulker/black"
       },
       {
         // BLUE
         "requires": "(((%.3s * $container_title_custom) = '§9') or ((%.3s * $container_title_custom) = '§1'))",
-        "$background_texture":"textures/ui/shulker/blue/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/blue/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/blue/scroller",
-        "$chest_label_primary_colour":[0.157,0.167,0.451],
-        "$shadow_colour":[0.388,0.424,0.886]
+        "$background_texture":"textures/ui/shulker/blue"
       },
       {
         // BROWN
         "requires": "((%.3s * $container_title_custom) = '§n')",
-        "$background_texture":"textures/ui/shulker/brown/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/brown/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/brown/scroller",
-        "$chest_label_primary_colour":[0.353,0.243,0.145],
-        "$shadow_colour":[0.824,0.576,0.369]
+        "$background_texture":"textures/ui/shulker/brown"
       },
       {
         // CYAN
         "requires": "(((%.3s * $container_title_custom) = '§3') or ((%.3s * $container_title_custom) = '§s'))",
-        "$background_texture":"textures/ui/shulker/cyan/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/cyan/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/cyan/scroller",
-        "$chest_label_primary_colour":[0.090,0.412,0.443],
-        "$shadow_colour":[0.353,0.859,0.882]
+        "$background_texture":"textures/ui/shulker/cyan"
       },
       {
         // GREY
         "requires": "((%.3s * $container_title_custom) = '§8')",
-        "$background_texture":"textures/ui/shulker/grey/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/grey/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/grey/scroller",
-        "$chest_label_primary_colour":[0.290,0.318,0.341],
-        "$shadow_colour":[0.694,0.761,0.792]
+        "$background_texture":"textures/ui/shulker/grey"
       },
       {
         // GREEN
         "requires": "(((%.3s * $container_title_custom) = '§2') or ((%.3s * $container_title_custom) = '§q'))",
-        "$background_texture":"textures/ui/shulker/green/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/green/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/green/scroller",
-        "$chest_label_primary_colour":[0.231,0.302,0.090],
-        "$shadow_colour":[0.553,0.737,0.243]
+        "$background_texture":"textures/ui/shulker/green"
       },
       {
         // LIGHT BLUE
         "requires": "((%.3s * $container_title_custom) = '§b')",
-        "$background_texture":"textures/ui/shulker/light_blue/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/light_blue/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/light_blue/scroller",
-        "$chest_label_primary_colour":[0.169,0.471,0.561],
-        "$shadow_colour":[0.494,0.886,0.957]
+        "$background_texture":"textures/ui/shulker/light_blue"
       },
       {
         // LIGHT GREY
         "requires": "(((%.3s * $container_title_custom) = '§7') or ((%.3s * $container_title_custom) = '§h') or ((%.3s * $container_title_custom) = '§i'))",
-        "$background_texture":"textures/ui/shulker/light_grey/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/light_grey/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/light_grey/scroller",
-        "$chest_label_primary_colour":[0.427,0.455,0.427],
-        "$shadow_colour":[0.855,0.878,0.855]
+        "$background_texture":"textures/ui/shulker/light_grey"
       },
       {
         // LIME
         "requires": "((%.3s * $container_title_custom) = '§a')",
-        "$background_texture":"textures/ui/shulker/lime/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/lime/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/lime/scroller",
-        "$chest_label_primary_colour":[0.286,0.486,0.082],
-        "$shadow_colour":[0.663,0.918,0.271]
+        "$background_texture":"textures/ui/shulker/lime"
       },
       {
         // MAGENTA
         "requires": "((%.3s * $container_title_custom) = '§5')",
-        "$background_texture":"textures/ui/shulker/magenta/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/magenta/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/magenta/scroller",
-        "$chest_label_primary_colour":[0.490,0.188,0.486],
-        "$shadow_colour":[0.914,0.490,0.914]
+        "$background_texture":"textures/ui/shulker/magenta"
       },
       {
         // ORANGE
         "requires": "(((%.3s * $container_title_custom) = '§p') or ((%.3s * $container_title_custom) = '§6') or ((%.3s * $container_title_custom) = '§v'))",
-        "$background_texture":"textures/ui/shulker/orange/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/orange/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/orange/scroller",
-        "$chest_label_primary_colour":[0.529,0.318,0.102],
-        "$shadow_colour":[0.957,0.765,0.263]
+        "$background_texture":"textures/ui/shulker/orange"
       },
       {
         // PINK
         "requires": "((%.3s * $container_title_custom) = '§d')",
-        "$background_texture":"textures/ui/shulker/pink/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/pink/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/pink/scroller",
-        "$chest_label_primary_colour":[0.624,0.310,0.424],
-        "$shadow_colour":[0.988,0.761,0.843]
+        "$background_texture":"textures/ui/shulker/pink"
       },
       {
         // PURPLE
         "requires": "((%.3s * $container_title_custom) = '§u')",
-        "$background_texture":"textures/ui/shulker/purple/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/purple/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/purple/scroller",
-        "$chest_label_primary_colour":[0.400,0.110,0.609],
-        "$shadow_colour":[0.812,0.365,0.969]
+        "$background_texture":"textures/ui/shulker/purple"
       },
       {
         // RED
         "requires": "(((%.3s * $container_title_custom) = '§c') or ((%.3s * $container_title_custom) = '§4') or ((%.3s * $container_title_custom) = '§m'))",
-        "$background_texture":"textures/ui/shulker/red/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/red/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/red/scroller",
-        "$chest_label_primary_colour":[0.424,0.141,0.141],
-        "$shadow_colour":[0.867,0.361,0.349]
+        "$background_texture":"textures/ui/shulker/red"
       },
       {
         // WHITE
         "requires": "((%.3s * $container_title_custom) = '§f')",
-        "$background_texture":"textures/ui/shulker/white/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/white/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/white/scroller",
-        "$chest_label_primary_colour":[0.514,0.533,0.533],
-        "$shadow_colour":[0.949,0.961,0.961]
+        "$background_texture":"textures/ui/shulker/white"
       },
       {
         // YELLOW
         "requires": "(((%.3s * $container_title_custom) = '§e') or ((%.3s * $container_title_custom) = '§g'))",
-        "$background_texture":"textures/ui/shulker/yellow/screen_background_shulker",
-        "$title_background_texture":"textures/ui/shulker/yellow/title_background_shulker",
-        "$container_scroll_box_texture":"textures/ui/shulker/yellow/scroller",
-        "$chest_label_primary_colour":[0.780,0.651,0.043],
-        "$shadow_colour":[1.000,0.949,0.133]
+        "$background_texture":"textures/ui/shulker/yellow"
       }
     ]
   }

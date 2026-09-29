@@ -428,19 +428,15 @@
   "chest_scroll_box":{
     "type":"image",
     "$lock_theme|default":false,
-    "$container_scroll_box_texture|default":"textures/ui/generic/scroller",
-    "texture": "$container_scroll_box_texture",
     "variables":{
-      "requires": "$lock_theme",
-      "$container_scroll_box_texture|default":"textures/ui/generic/scroller"
+      "requires": "$lock_theme"
     }
   },
 
   "chest_scroll_track":{
     "type":"image",
     "keep_ratio": false,
-    "texture": "textures/ui/chest/scroll_track",
-    "color": "$chest_label_primary_colour"
+    "texture": "textures/ui/chest/scroll_track"
   },
 
   //-----------------------------------------
@@ -500,7 +496,6 @@
     "text": "tile.beacon.name",
     "$parent_text":"tile.beacon.name",
     "color": [0.000,0.631,0.569],
-    "$shadow_colour":[0.761,1.000,0.980],
     "localize": true,
     "anchor_from":"top_middle",
     "anchor_to":"top_middle",

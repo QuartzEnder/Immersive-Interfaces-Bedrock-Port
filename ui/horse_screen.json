@@ -4,7 +4,6 @@
   "horse_screen":{
     "$dialog_background":"common.empty_panel",
     "$main_title_colour":"$generic_main_title_colour",
-    "$shadow_colour":"$generic_shadow_title_colour",
     "$close_button_offset":[21.5,6.5],
 
     "$screen_content": "horse.horse_panel",

@@ -24,7 +24,6 @@
     "$grid_offset_override":[0,9],
     "$is_dropper":true,
     "$background_texture":"textures/ui/dropper/screen_background_dropper",
-    "$title_background_texture":"textures/ui/dropper/title_background_dropper",
     "$common_panel_size":[78,112],
     "$common_panel_offset":[0,-32],
 
@@ -46,7 +45,6 @@
     "$grid_offset_override":[0,9],
     "$is_dispenser":true,
     "$background_texture":"textures/ui/dispenser/screen_background_dispenser",
-    "$title_background_texture":"textures/ui/dropper/title_background_dropper",
     "$common_panel_size":[78,112],
     "$common_panel_offset":[0,-32],
 
@@ -74,8 +72,6 @@
     "$not_dropper":true,
     "$is_hopper":true,
     "$background_texture":"textures/ui/hopper/screen_background_hopper",
-    "$title_background_texture":"textures/ui/hopper/title_background_hopper",
-    "$chest_label_primary_colour":[0.220,0.216,0.243],
 
     "$screen_label": "redstone.hopper_label",
     "$screen_dimensions": [ 176, 133 ],
@@ -91,9 +87,7 @@
     "offset": [0,-1],
     "$title_background_size":["100% + 12px", 12],
     "anchor_from":"top_middle",
-    "anchor_to":"top_middle",
-    "color": "$chest_label_primary_colour",
-    "$shadow_colour":[0.553,0.549,0.576]
+    "anchor_to":"top_middle"
   },
 
   //---------------

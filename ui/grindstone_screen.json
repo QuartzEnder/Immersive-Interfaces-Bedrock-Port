@@ -23,9 +23,7 @@
 
   "grindstone_screen":{
     "$background_texture":"textures/ui/grindstone/screen_background_grindstone",
-    "$title_background_texture":"textures/ui/generic/title_background_generic_14",
     "$main_title_colour":"$generic_main_title_colour",
-    "$shadow_colour":"$generic_shadow_title_colour",
     "$title_background_size":["100% + 12px",14],
     "$title_background_offset":[0,3],
     

@@ -2,11 +2,9 @@
   "namespace": "stonecutter",
 
   "stonecutter_screen":{
-    "$title_background_texture":"textures/ui/stonecutter/title_background_stonecutter",
     "$title_background_size":["100% + 12px",13],
     "$title_background_offset":[0,3],
     "$main_title_colour":"$generic_main_title_colour",
-    "$shadow_colour":"$generic_shadow_title_colour",
     
     "$screen_content": "stonecutter.stonecutter_panel",
     "$is_dimz_advanced_container|default":false,

@@ -3,7 +3,6 @@
 
   "beacon_screen":{
     "$background_texture":"textures/ui/beacon/screen_background_beacon",
-    "$title_background_texture":"textures/ui/beacon/title_background_beacon",
     // The colours for the title label are defined in the control itself (the controls is at @quartz_gui)
     
     "$screen_content": "beacon.beacon_panel",
