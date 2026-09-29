@@ -5,10 +5,8 @@
     "$alternate_edit_box_texture":true,
     "$is_furnace_screen":true,
     "$background_texture":"textures/ui/furnace/screen_background_furnace",
-    "$title_background_texture":"textures/ui/furnace/title_background_furnace",
-    "$furnace_label_colour":"$generic_main_title_colour",
-    "$shadow_colour":"$generic_shadow_title_colour",
-    "$main_container_colour":"$furnace_label_colour",
+    "$common_panel_size":[176,85],
+    "$common_panel_offset":[0,-5],
 
     "$screen_content": "furnace.furnace_panel",
     "$screen_background_alpha": 0.4,

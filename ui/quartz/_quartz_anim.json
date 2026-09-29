@@ -46,12 +46,12 @@
   "stonecutter_sawblade":{
     "type":"image",
     "texture": "textures/ui/stonecutter/sawblade",
-    "size": [155,58],
-    "uv_size":[155,58],
+    "size": [175,82],
+    "uv_size":[175,82],
     "uv": "@quartz_anim.general_anim",
     "anchor_from":"top_left",
     "anchor_to":"top_left",
-    "offset": [10,9],
+    "offset": [0,-56],
     "layer": 3,
     "bindings":[
       {

@@ -50,8 +50,8 @@
   "large_chest_panel":{
     "$show_close_button":true,
     "$anchor_point":"top_middle",
-    "$common_panel_size":[176,138],
-    "$common_panel_offset":[0,-2],
+    "$common_panel_size":[200,159],
+    "$common_panel_offset":[0,-22],
     "$inventory_background_layer":-5,
     "$container_title_custom":"$container_title",
     "$is_déesse_ui_pack|default":false,
@@ -80,7 +80,7 @@
   "small_chest_screen":{
     "$show_close_button":true,
     "$common_panel_size":[184,91],
-    "$common_panel_offset":[0,0],
+    "$common_panel_offset":[0,-11],
     "$big_close_button_offset":[20,0],
     "$déesse_lowering_padding_size":[1,12],
     "$background_texture":"textures/ui/chest/screen_background_chest",
@@ -163,6 +163,7 @@
     "$chest_label_offset":[0,2],
     "$show_bg_and_shadow":true,
     "$common_panel_size":[176,85],
+    "$common_panel_offset":[0,-2],
     "$déesse_lowering_padding_size":[1,15],
     "$chest_label_primary_colour":[0.482,0.337,0.149],
     "$shadow_colour":[0.851,0.706,0.498],

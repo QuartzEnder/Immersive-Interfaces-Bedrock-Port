@@ -9,7 +9,7 @@
     "$main_container_colour": [0.674,0.510,0.008],
     "$shadow_colour":[1.000,0.945,0.773],
     "$common_panel_size":[139,80],
-    "$common_panel_offset": [-17.5,12.5],
+    "$common_panel_offset": [-19.5,0],
     "$inventory_background_layer":-5,
     "$close_button_offset":[67.5,-2.5],
     "$big_close_button_offset":[72,0],

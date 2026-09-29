@@ -22,6 +22,7 @@
     "$is_déesse_ui_pack|default":false,
     "$is_dimz_advanced_container|default":false,
     "$common_panel_size":[176,90],
+    "$common_panel_offset":[-3,8],
 
     "$screen_content": "enchanting.enchanting_panel",
     "$screen_bg_content": "common.screen_background",

@@ -25,12 +25,14 @@
   "beacon_panel/root_panel":{
     "$show_close_button":true,
     "size": [256,219],
-    "$common_panel_size":[259,158],
+    "$common_panel_size":[259,195],
+    "$common_panel_offset":[6.5,-25],
+    "$inv_background_texture":"textures/ui/beacon/beacon_inventory",
     "$is_déesse_ui_pack|default":false,
     "$anchor_point":"top_middle",
     "variables":{
       "requires": "$is_déesse_ui_pack",
-      "$common_panel_offset":[0,3]
+      "$common_panel_offset":[0,28]
     }
   },
 

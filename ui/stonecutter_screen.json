@@ -20,7 +20,8 @@
 
   "right_panel":{
     "$background_texture":"textures/ui/stonecutter/screen_background_stonecutter",
-    "$common_panel_offset":[0,6],
+    "$common_panel_size":[212,69],
+    "$common_panel_offset":[0,26],
     "modifications":[
       {
         "array_name":"controls",

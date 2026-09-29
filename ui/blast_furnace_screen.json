@@ -3,6 +3,8 @@
 
   "blast_furnace_screen":{
     "$is_furnace_screen":false,
-    "$background_texture":"textures/ui/blast_furnace/screen_background_blast_furnace"
+    "$background_texture":"textures/ui/blast_furnace/screen_background_blast_furnace",
+    "$common_panel_size":[161,107],
+    "$common_panel_offset": [7.5,-22]
   }
 }
