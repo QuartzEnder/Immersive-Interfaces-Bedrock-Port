@@ -35,11 +35,11 @@
 
 
   "top_half_panel/grindstone_slots_panel":{
-    "offset": [2,-9]
+    "offset": [5,-6]
   },
 
   "grindstone_slots_panel/result_item_slot":{
-    "offset": [8,4.5]
+    "offset": [9,4.5]
   },
 
   "arrow_icon":{

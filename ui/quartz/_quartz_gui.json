@@ -12,27 +12,7 @@
     "localize": true,
     "color": [1.0,1.0,1.0]
   },
-
-  //------------------------------
-  // Enchanting Portal Background
-  //------------------------------
-
-  "enchanting_portal_bg":{
-    "type":"image",
-    "texture": "textures/ui/enchanting/enchant_portal_bg",
-    "size": [16,16],
-    "uv_size": [16,16],
-    "uv": "@quartz_gui.enchanting_bg_animation",
-    "anchor_from":"top_left",
-    "anchor_to":"top_left",
-    "offset": [15,40]
-  },
-
-  "enchanting_bg_animation":{
-    "anim_type":"aseprite_flip_book",
-    "initial_uv":[0,0]
-  },
-
+  
   //-----------------------------------
   // Large Container Scrolling Panel
   //-----------------------------------
@@ -261,7 +241,7 @@
 
   
   "debug_villager_texture_label":{
-    "ignored": "(not $debug_release_colourful_oreui)",
+    "ignored": "(not $debug_release_immersive_interfaces_quartz)",
     "type":"label",
     "offset": [0,-60],
     "text": "#test_text",

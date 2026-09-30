@@ -118,7 +118,7 @@
   },
 
   "cell_image":{
-    "visible": "$debug_release_colourful_oreui",
+    "visible": "$debug_release_immersive_interfaces_quartz",
     "$cell_image_alpha|default":1,
     "$cell_image_colour|default":[1,1,1],
     "color": "$cell_image_colour",
@@ -126,7 +126,7 @@
     "texture": "$cell_texture",
     "$cell_texture|default": "textures/ui/slot_enabled",
     "variables":{
-      "requires": "$debug_release_colourful_oreui",
+      "requires": "$debug_release_immersive_interfaces_quartz",
       "$cell_image_alpha":0.3,
       "$cell_image_colour":[0,1,0],
       "$cell_texture":"textures/ui/generic/cell_generic"
@@ -158,7 +158,7 @@
   },
 
   "output_slot_hover_info":{
-    "offset": [54,-39],
+    "offset": [54,-41],
     "modifications":[
       {
         "array_name":"controls",

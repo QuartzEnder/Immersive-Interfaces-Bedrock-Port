@@ -39,27 +39,17 @@
 //-------------------
 
   "lapis_image":{
-    "texture": "textures/ui/lapis"
+    "visible": false
   },
 
   "enchanting_label":{
     "visible": false
   },
 
-  "enchanting_panel_top_half":{
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"insert_front",
-        "value":{"enchanting_portal_bg@quartz_gui.enchanting_portal_bg":{}}
-      }
-    ]
-  },
-
   "enchanting_panel_top_half/item_grid":{
     "anchor_from":"top_left",
     "anchor_to":"top_left",
-    "offset": [14,38]
+    "offset": [14,39]
   },
 
   "enchanting_panel_top_half/lapis_grid":{
