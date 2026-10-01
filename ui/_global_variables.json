@@ -20,6 +20,8 @@
 
   "$light_toggle_default_text_color": [1.0,1.0,1.0],
 
+  "$enchanting_cost_fail_color":[0.251,0.498,0.063],
+
   // Déesse UI //
 
    "$oreui_default_text_color": [1.0,1.0,1.0],

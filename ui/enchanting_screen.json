@@ -10,6 +10,11 @@
     "$use_compact_close_button":false
   },
 
+  "enchant_runes":{
+    "size": [74,16],
+    "offset": [22,4]
+  },
+
   "enchanting_screen":{
     "$inventory_background_layer":-5,
     "$title_background_offset":[0,2],
@@ -46,6 +51,14 @@
     "visible": false
   },
 
+  "dust_image":{
+    "size": [16,16]
+  },
+
+  "dust_panel":{
+    "size": ["default",52]
+  },
+
   "enchanting_panel_top_half/item_grid":{
     "anchor_from":"top_left",
     "anchor_to":"top_left",
@@ -78,6 +91,20 @@
         "control_name": "indent"
       }
     ]
+  },
+
+  // Button Backgrounds
+
+  "dark_background":{
+    "ignored": true
+  },
+
+  "active_background":{
+    "ignored": true
+  },
+
+  "background_with_hover_text":{
+    "alpha": 0
   },
 
   //---------------
