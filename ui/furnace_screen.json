@@ -7,6 +7,7 @@
     "$background_texture":"textures/ui/furnace/screen_background_furnace",
     "$common_panel_size":[176,85],
     "$common_panel_offset":[0,-5],
+    "$flame_texture":"textures/ui/furnace/lit_progress",
 
     "$screen_content": "furnace.furnace_panel",
     "$screen_background_alpha": 0.4,
@@ -270,13 +271,24 @@
   },
 
   "flame_panel":{
+    "size": [14,14],
     "anchor_from":"bottom_right",
     "anchor_to":"bottom_right",
     "offset": [-23,-2]
   },
 
+  "flame_empty_image":{
+    "ignored": true
+  },
+
+  "flame_full_image":{
+    "texture": "$flame_texture"
+  },
+
   "furnace_arrow_full_image":{
-    "offset": [3,-1]
+    "texture": "textures/ui/furnace/burn_progress",
+    "offset": [3,-0.5],
+    "size": [24,12]
   },
 
   "container_cell_images":{

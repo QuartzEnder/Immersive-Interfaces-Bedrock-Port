@@ -44,5 +44,21 @@
 
   "arrow_icon":{
     "visible": false
+  },
+
+  //----------------
+  // Icons
+  //----------------
+
+  "template_overlay_image":{
+    "ignored": true
+  },
+
+  "input_overlay_image":{
+    "ignored": true
+  },
+
+  "material_overlay_image":{
+    "ignored": true
   }
 }
