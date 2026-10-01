@@ -55,7 +55,6 @@
     "uv": "@quartz_anim.general_anim",
     "variables":{
       "requires": "$is_small_scrolling_panel",
-      "$highlight_slot_texture|default":"textures/ui/generic/slot_hover",
       "$highlight_slot_size|default":["100%","100%"]
     }
   },

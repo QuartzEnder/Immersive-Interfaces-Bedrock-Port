@@ -6,22 +6,6 @@
     "initial_uv":[0,0]
   },
 
-  //------------------
-  //Animated Compass
-  //------------------
-
-  "animated_compass":{
-    "type":"image",
-    "size": [21,21],
-    "offset": [41,6],
-    "texture":"textures/ui/cartography/animated_compass",
-    "uv_size":[21,21],
-    "layer": 3,
-    "anchor_from":"top_left",
-    "anchor_to":"top_left",
-    "uv":"@quartz_anim.general_anim"
-  },
-
   //------------------------
   // Ender Chest Elements
   //------------------------

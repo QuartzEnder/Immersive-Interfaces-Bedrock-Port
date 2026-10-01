@@ -688,6 +688,7 @@
   },
 
   "loom_scroll_panel@quartz_gui.small_container_scroll_panel":{
+    "$highlight_slot_texture":"textures/ui/loom/slot_hover",
     "size": [72,56],
     "offset": [52,-2],
     "$scroll_view_port_size":[60,56],

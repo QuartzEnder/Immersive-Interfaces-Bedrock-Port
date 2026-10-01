@@ -92,7 +92,7 @@
   },
   
 "container_cell_image":{
-  "bindings": [
+  "bindings":[
       {
         "binding_name": "#container_cell_background_texture",
         "binding_type": "collection",
@@ -105,5 +105,21 @@
         "target_property_name": "#texture"
       }
     ]
+  },
+
+  //---------------------
+  // Icons
+  //---------------------
+
+  "banner_empty_image":{
+    "ignored": true
+  },
+
+  "dye_empty_image":{
+    "ignored":true
+  },
+
+  "pattern_item_empty_image":{
+    "ignored":true
   }
 }
