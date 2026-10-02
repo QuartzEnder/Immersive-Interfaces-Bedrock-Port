@@ -5,8 +5,8 @@
     "$background_texture":"textures/ui/anvil/screen_background_anvil",
     "$main_title_colour":"$generic_main_title_colour",
     "$anchor_point":"top_middle",
-    "$common_panel_size":[153,61],
-    "$common_panel_offset":[0.5,19],
+    "$common_panel_size":[195,73],
+    "$common_panel_offset":[-1.5,18],
 
     "$screen_content": "anvil.anvil_panel",
     "$screen_bg_content": "common.screen_background",
@@ -19,7 +19,10 @@
       {
         "array_name":"controls",
         "operation":"insert_back",
-        "value":{"title_label@anvil.title_label":{}}
+        "value":[
+          {"anvil_state_image_panel@quartz_gui.anvil_state_image_panel":{}},
+          {"title_label@anvil.title_label":{}}
+        ]
       }
     ]
   },
@@ -58,9 +61,7 @@
   },
 
   "cross_out_icon":{
-    "texture": "textures/ui/anvil/anvil_crossout",
-    "size": [15,15],
-    "offset": [-0.5,9]
+    "ignored": true
   },
 
   "anvil_icon":{
@@ -87,8 +88,8 @@
   },
 
   "text_edit_control":{
-    "$text_background_default":"quartz_gui.anvil_text_box_default",
-    "$text_background_hover":"quartz_gui.anvil_text_box_default",
-    "$text_background_locked":"quartz_gui.anvil_text_box_locked"
+    "$text_background_default":"common.empty_panel",
+    "$text_background_hover":"common.empty_panel",
+    "$text_background_locked":"common.empty_panel"
   }
 }

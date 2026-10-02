@@ -748,5 +748,56 @@
   "recipe_book_background_image":{
     "type":"image",
     "texture": "textures/ui/recipe/recipe_book_background"
+  },
+
+  //-----------------------------
+  // Anvil State Image
+  //-----------------------------
+
+  "anvil_state_image_panel":{
+    "type":"panel",
+    "size": [172,52],
+    "offset": [2,-3.5],
+    "controls":[
+      {"text_field_anvil_image@quartz_gui.text_field_anvil_image":{}},
+      {"anvil_disabled_hammer@quartz_gui.anvil_disabled_hammer":{}},
+      {"anvil_error_image@quartz_gui.anvil_error_image":{}}
+    ]
+  },
+
+  "text_field_anvil_image":{
+    "type":"image",
+    "texture": "textures/ui/anvil/text_field",
+    "size": [172,52],
+    "bindings":[
+    ]
+  },
+
+  "anvil_disabled_hammer":{
+    "type":"image",
+    "texture": "textures/ui/anvil/text_field_disabled",
+    "size": [55,30],
+    "bindings":[
+      {
+        "binding_name": "#cost_text"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "(#cost_text = '')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "anvil_error_image":{
+    "type":"image",
+    "texture": "textures/ui/anvil/error",
+    "size": [114,24],
+    "bindings": [
+      {
+        "binding_name": "#cross_out_icon",
+        "binding_name_override": "#visible"
+      }
+    ]
   }
 }
