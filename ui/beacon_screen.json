@@ -3,7 +3,6 @@
 
   "beacon_screen":{
     "$background_texture":"textures/ui/beacon/screen_background_beacon",
-    // The colours for the title label are defined in the control itself (the controls is at @quartz_gui)
     
     "$screen_content": "beacon.beacon_panel",
     "$screen_bg_content": "common.screen_background",
@@ -90,35 +89,6 @@
   },
 
   "usable_items_panel":{
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"remove",
-        "control_name": "item_seperator_0"
-      },
-      {
-        "array_name":"controls",
-        "operation":"remove",
-        "control_name": "item_seperator_1"
-      },
-      {
-        "array_name":"controls",
-        "operation":"remove",
-        "control_name": "item_seperator_2"
-      },
-      {
-        "array_name":"controls",
-        "operation":"remove",
-        "control_name": "item_seperator_3"
-      }
-    ]
-  },
-
-  "usable_items_panel/emerald":{
-    "offset": [21,0]
-  },
-
-  "usable_items_panel/diamond":{
-    "offset": [43,0]
+    "visible": false
   }
 }

@@ -7,7 +7,17 @@
   
   "chest_label":{
     "$show_chest_label|default":false,
-    "visible": "$show_chest_label"
+    "visible": "$show_chest_label",
+    "size": ["default","default"],
+    "offset": [8,7],
+    "color": [0.251,0.251,0.251],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"shulker_label_background@quartz_gui.shulker_label_background":{}}
+      }
+    ]
   },
 
   "small_chest_panel":{
@@ -119,8 +129,8 @@
       },
       {
       // DETECT COPPER CHEST
-        "requires": "(($container_title_custom = 'container.chestDoubleCopper') or ('%.3s' * $container_title_custom = '§n'))",
-        "$background_texture":"textures/ui/copper_chest/screen_background_large_copper_chest"
+        "requires": "(($container_title_custom = 'container.chestDoubleCopper') or ('%.3s' * $container_title_custom = '§n'))"
+        //"$background_texture":"textures/ui/copper_chest/screen_background_large_copper_chest"
       }
     ]
   },
@@ -167,6 +177,7 @@
     "$common_panel_offset":[0,0],
     "$background_texture":"textures/ui/shulker/default",
     "$localization_key":"container.shulkerbox",
+    "$show_chest_label":true,
 
     "$screen_content": "chest.shulker_box_panel",
     "$screen_bg_content": "common.screen_background",

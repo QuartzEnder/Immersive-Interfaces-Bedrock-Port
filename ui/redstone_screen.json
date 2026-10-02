@@ -137,8 +137,11 @@
   // Disabled slots & Grid - Mojang couldn't you wrap these slots in a panel???
   //----------------------------------------------------------------------------------------
 
-  "crafter_highlighted_slot":{
-    "texture": "textures/ui/highlight_slot"
+  "crafter_highlight_slot":{
+    "texture": "textures/ui/highlight_slot",
+    "size": [24,24],
+    "uv_size": [24,24],
+    "uv": "@quartz_anim.general_anim"
   },
 
   "panel_crafter/root_panel/redstone_screen_inventory":{

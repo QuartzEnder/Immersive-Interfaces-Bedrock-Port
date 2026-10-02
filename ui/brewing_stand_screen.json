@@ -2,10 +2,7 @@
   "namespace": "brewing_stand",
 
   "brewing_stand_screen":{
-    "$title_background_offset":[0,3],
-    "$title_background_size":["100% + 10px", 14],
     "$background_texture":"textures/ui/brewing/screen_background_brewing",
-    "$main_container_colour": [0.674,0.510,0.008],
     "$common_panel_size":[139,80],
     "$common_panel_offset": [-19.5,0],
     "$inventory_background_layer":-5,
@@ -32,6 +29,7 @@
 
   "brewing_panel_top_half":{
     "$is_déesse_ui_pack|default":false,
+    "offset": [-3,7.5],
     "modifications":[
       {
         "array_name":"controls",
@@ -47,12 +45,17 @@
     ]
   },
 
+  "brewing_arrow_full_image":{
+    "offset": [14.5,-13]
+  },
+
   "brewing_fuel_bar_full_image":{
     "size": [18,4],
     "offset": [-18,3]
   },
   
   "bottle_empty_image":{
+    "visible": false,
     "bindings":[]
   },
 

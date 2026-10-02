@@ -770,6 +770,17 @@
     "texture": "textures/ui/anvil/text_field",
     "size": [172,52],
     "bindings":[
+      {
+        "binding_name": "#cost_text"
+      },
+      {
+        "binding_name": "#cross_out_icon"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "((not (#cost_text = '')) or #cross_out_icon)",
+        "target_property_name": "#visible"
+      }
     ]
   },
 
@@ -777,13 +788,19 @@
     "type":"image",
     "texture": "textures/ui/anvil/text_field_disabled",
     "size": [55,30],
+    "offset": [21,0],
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
     "bindings":[
       {
         "binding_name": "#cost_text"
       },
       {
+        "binding_name": "#cross_out_icon"
+      },
+      {
         "binding_type":"view",
-        "source_property_name": "(#cost_text = '')",
+        "source_property_name": "((#cost_text = '') and not #cross_out_icon)",
         "target_property_name": "#visible"
       }
     ]
@@ -792,12 +809,30 @@
   "anvil_error_image":{
     "type":"image",
     "texture": "textures/ui/anvil/error",
+    "anchor_from":"bottom_right",
+    "anchor_to":"bottom_right",
     "size": [114,24],
+    "offset": [-16,6],
     "bindings": [
       {
         "binding_name": "#cross_out_icon",
         "binding_name_override": "#visible"
       }
     ]
+  },
+
+  //---------------------------
+  // Shulker bg label
+  //---------------------------
+
+  "shulker_label_background":{
+    "type":"image",
+    "texture": "textures/ui/shulker/label_background",
+    "size": ["100% + 10px",14],
+    "min_size": [93,14],
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "offset": [-5,-3],
+    "layer": -1
   }
 }
