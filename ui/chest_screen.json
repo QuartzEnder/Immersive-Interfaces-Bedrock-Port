@@ -34,16 +34,7 @@
 
   "small_chest_panel_top_half":{
     "offset": [0,-2],
-    "layer": 3,
-    "modifications":[
-      {
-        "operation":"insert_back", 
-        "array_name":"controls",
-        "value":{
-          "ender_eye_element@quartz_anim.ender_eye_element":{}
-        }
-      }
-    ]
+    "layer": 3
   },
   
   "small_chest_panel_top_half/small_chest_grid":{
