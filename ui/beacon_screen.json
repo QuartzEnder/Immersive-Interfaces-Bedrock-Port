@@ -111,10 +111,12 @@
   },
 
   "button_unchecked_default":{
+    "size": [28,28],
     "texture": "$default_beacon_texture"
   },
 
   "button_unchecked_hover":{
+    "size": [28,28],
     "texture": "$hover_beacon_texture"
   },
 
