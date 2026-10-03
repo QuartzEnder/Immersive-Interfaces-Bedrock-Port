@@ -96,15 +96,90 @@
   // Beacon Buttons
   //---------------------------
 
-  "toggle_button@common_toggles.switch_toggle":{
-    "size": [24,24],
-    "layer": 1,
-    "$toggle_name": "$button_name",
-    "$default_texture":"$default_beacon_texture",
-    "$hover_texture": "$hover_beacon_texture",
-    "$pressed_texture": "$pressed_beacon_texture",
-    "$pressed_no_hover_texture": "$pressed_on_hover_beacon_texture",
-    "$unchecked_locked_texture": "$unchecked_locked_beacon_texture",
-    "$checked_locked_texture": "$checked_locked_beacon_texture"
+  "toggle_button":{
+    "size": [28,28]
+  },
+
+  "toggle_template":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "$image_control"
+      }
+    ]
+  },
+
+  "button_unchecked_default":{
+    "texture": "$default_beacon_texture"
+  },
+
+  "button_unchecked_hover":{
+    "texture": "$hover_beacon_texture"
+  },
+
+  "button_checked":{
+    "texture": "$selected_beacon_texture"
+  },
+
+  "button_checked_hover":{
+    "texture": "$selected_beacon_texture"
+  },
+
+  "button_locked":{
+    "texture": "$locked_beacon_texture"
+  },
+
+  "button_locked_hover":{
+    "texture": "$locked_beacon_texture"
+  },
+
+  "button_panel/speed_panel":{
+    "$default_beacon_texture":"textures/ui/beacon/normal/speed",
+    "$hover_beacon_texture":"textures/ui/beacon/hover/speed",
+    "$selected_beacon_texture":"textures/ui/beacon/selected/speed",
+    "$locked_beacon_texture":"textures/ui/beacon/locked/speed"
+  },
+
+  "button_panel/haste_panel":{
+    "$default_beacon_texture":"textures/ui/beacon/normal/haste",
+    "$hover_beacon_texture":"textures/ui/beacon/hover/haste",
+    "$selected_beacon_texture":"textures/ui/beacon/selected/haste",
+    "$locked_beacon_texture":"textures/ui/beacon/locked/haste"
+  },
+
+  "button_panel/resist_panel":{
+    "$default_beacon_texture":"textures/ui/beacon/normal/resistance",
+    "$hover_beacon_texture":"textures/ui/beacon/hover/resistance",
+    "$selected_beacon_texture":"textures/ui/beacon/selected/resistance",
+    "$locked_beacon_texture":"textures/ui/beacon/locked/resistance"
+  },
+
+  "button_panel/jump_panel":{
+    "$default_beacon_texture":"textures/ui/beacon/normal/jump_boost",
+    "$hover_beacon_texture":"textures/ui/beacon/hover/jump_boost",
+    "$selected_beacon_texture":"textures/ui/beacon/selected/jump_boost",
+    "$locked_beacon_texture":"textures/ui/beacon/locked/jump_boost"
+  },
+
+  "button_panel/strength_panel":{
+    "$default_beacon_texture":"textures/ui/beacon/normal/strength",
+    "$hover_beacon_texture":"textures/ui/beacon/hover/strength",
+    "$selected_beacon_texture":"textures/ui/beacon/selected/strength",
+    "$locked_beacon_texture":"textures/ui/beacon/locked/strength"
+  },
+
+  "button_panel/regen_panel":{
+    "$default_beacon_texture":"textures/ui/beacon/normal/regeneration",
+    "$hover_beacon_texture":"textures/ui/beacon/hover/regeneration",
+    "$selected_beacon_texture":"textures/ui/beacon/selected/regeneration",
+    "$locked_beacon_texture":"textures/ui/beacon/locked/regeneration"
+  },
+
+    "button_panel/extra_panel":{
+    "$default_beacon_texture":"textures/ui/beacon/normal/overlay_2",
+    "$hover_beacon_texture":"textures/ui/beacon/hover/overlay_2",
+    "$selected_beacon_texture":"textures/ui/beacon/selected/overlay_2",
+    "$locked_beacon_texture":"textures/ui/beacon/locked/overlay_2"
   }
 }
