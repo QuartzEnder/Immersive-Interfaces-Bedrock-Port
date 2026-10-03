@@ -144,12 +144,29 @@
     "uv": "@quartz_anim.general_anim"
   },
 
+  "crafter_disabled_slot/hover":{
+    "texture": "textures/ui/highlight_slot",
+    "size": [24,24],
+    "uv_size": [24,24],
+    "uv": "@quartz_anim.general_anim"
+    //"layer": 21,
+    /*"modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"disabled_slot_preserved@quartz_gui.disabled_slot_preserved":{}}
+      }
+    ]*/
+  },
+
+
   "panel_crafter/root_panel/redstone_screen_inventory":{
     "modifications":[
       {
         "array_name":"controls",
-        "operation":"remove",
-        "control_name": "redstone_wire_line"
+        "operation":"replace",
+        "control_name": "redstone_wire_line",
+        "value":{"powered_redstone_crafter@quartz_gui.powered_redstone_crafter":{}}
       }
     ]
   },

@@ -666,5 +666,34 @@
     "anchor_to":"top_left",
     "offset": [-5,-3],
     "layer": -1
+  },
+
+  //------------------------
+  // Crafter Redstone
+  //------------------------
+
+  "powered_redstone_crafter":{
+    "type":"image",
+    "texture": "textures/ui/crafter/powered_redstone",
+    "size": [15,16],
+    "layer": 3,
+    "offset": [16.5,-40],
+    "bindings":[
+      {
+        "binding_name": "#redstone_arrow_texture"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_powered')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "disabled_slot_preserved":{
+    "type": "image",
+    "size":[18,18],
+    "texture": "textures/ui/slot_disabled",
+    "layer":-21
   }
 }
