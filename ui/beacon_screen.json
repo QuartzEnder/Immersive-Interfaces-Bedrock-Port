@@ -77,7 +77,14 @@
 
   "payment_panel":{
     "anchor_from":"top_left",
-    "anchor_to":"top_left"
+    "anchor_to":"top_left",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "cancel_panel"
+      }
+    ]
   },
 
   "beacon_panel/root_panel/beacon_inventory/payment_panel":{
@@ -93,7 +100,7 @@
   },
 
   //---------------------------
-  // Beacon Buttons
+  // Beacon Toggles
   //---------------------------
 
   "toggle_button":{
@@ -183,5 +190,53 @@
     "$hover_beacon_texture":"textures/ui/beacon/hover/overlay_2",
     "$selected_beacon_texture":"textures/ui/beacon/selected/overlay_2",
     "$locked_beacon_texture":"textures/ui/beacon/locked/overlay_2"
+  },
+
+  //-------------------------
+  // Beacon Buttons
+  //-------------------------
+  
+  "base_button":{
+    "size": [28,28]
+  },
+
+  "button_template":{
+    "size": [28,28],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "image_template"
+      }
+    ]
+  },
+
+  "base_button/default":{
+    "texture": "$default_beacon_texture"
+  },
+  
+  "base_button/hover":{
+    "texture": "$hover_beacon_texture"
+  },
+  
+  "base_button/pressed":{
+    "texture": "$selected_beacon_texture"
+  },
+
+  "inactive_button/default":{
+    "texture": "$locked_beacon_texture"
+  },
+  
+  "inactive_button/hover":{
+    "texture": "$locked_beacon_texture"
+  },
+
+  "payment_panel/confirm_panel":{
+    "size": [28,28],
+    "offset": [45,0],
+    "$default_beacon_texture":"textures/ui/beacon/normal/confirm",
+    "$hover_beacon_texture":"textures/ui/beacon/hover/confirm",
+    "$selected_beacon_texture":"textures/ui/beacon/selected/confirm",
+    "$locked_beacon_texture":"textures/ui/beacon/locked/confirm"
   }
 }
