@@ -7,6 +7,6 @@
     "ui/quartz/_quartz_anim.json",
     "ui/quartz/_quartz_bossbars.json",
     "ui/quartz/other_packs/_quartz_déesse.json",
-    "ui/quartz/_quartz_cmd.json"
+    "ui/quartz/_quartz_command_block.json"
   ]
 }

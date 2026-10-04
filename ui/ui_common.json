@@ -257,12 +257,12 @@
       {
         "requires": "$magnifying_glass_enabled",
         "$text_edit_box_label_offset":[2,0]
-      },
-      {
+      }
+      /*{
         "requires": "$alternate_edit_box_texture",
         "$default_edit_box_texture":"textures/ui/generic/text_box_default",
         "$hover_edit_box_texture":"textures/ui/generic/text_box_hover"
-      }
+      }*/
     ]
   },
 
@@ -283,12 +283,12 @@
   },
    
   "edit_box_indent":{
-    "$default_edit_box_texture|default":"textures/ui/edit_box_indent",
+    "$default_edit_box_texture|default":"textures/ui/generic/text_box_default",
     "texture":"$default_edit_box_texture"
   },
 
   "edit_box_indent_hover":{
-    "$hover_edit_box_texture|default":"textures/ui/edit_box_indent_hover",
+    "$hover_edit_box_texture|default":"textures/ui/generic/text_box_hover",
     "texture": "$hover_edit_box_texture"
   },
 

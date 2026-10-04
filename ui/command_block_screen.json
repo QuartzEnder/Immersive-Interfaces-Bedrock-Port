@@ -1,0 +1,7 @@
+{
+  "namespace": "command_block",
+
+  "command_block_screen":{
+    "$screen_content":"quartz_command_block.command_block_panel"
+  }
+}

@@ -88,7 +88,6 @@
   },
 
   "text_edit_control":{
-    "$shadow":true,
     "$text_background_default":"common.empty_panel",
     "$text_background_hover":"common.empty_panel",
     "$text_background_locked":"common.empty_panel"

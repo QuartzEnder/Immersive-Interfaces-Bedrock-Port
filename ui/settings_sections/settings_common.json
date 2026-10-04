@@ -9,5 +9,25 @@
       "requires": "$is_déesse_ui_pack",
       "$section_label_colour":"$preserved_oreui_default_text_color"
     }
+  },
+  
+  "option_toggle_on": {
+    "$settings_toggle_alpha|default":1.0,
+    "alpha": "$settings_toggle_alpha"
+  },
+
+  "option_toggle_off": {
+    "$settings_toggle_alpha|default":1.0,
+    "alpha": "$settings_toggle_alpha"
+  },
+
+  "option_toggle_on_hover": {
+    "$settings_toggle_alpha|default":1.0,
+    "alpha": "$settings_toggle_alpha"
+  },
+
+  "option_toggle_off_hover": {
+    "$settings_toggle_alpha|default":1.0,
+    "alpha": "$settings_toggle_alpha"
   }
 }
