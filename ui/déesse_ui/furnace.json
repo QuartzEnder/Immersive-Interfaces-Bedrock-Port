@@ -30,7 +30,7 @@
     "layer": -2,
     "$default_texture": "textures/ui/generic/tab_unselected",
     "$hover_texture": "textures/ui/generic/tab_selected",
-    "$pressed_texture":"textures/ui/generic/tab_hover",
-    "$pressed_no_hover_texture":"textures/ui/generic/tab_hover"
+    "$pressed_texture":"textures/ui/generic/tab_unselected",
+    "$pressed_no_hover_texture":"textures/ui/generic/tab_selected"
   }
 }

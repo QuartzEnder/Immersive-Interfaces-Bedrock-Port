@@ -282,19 +282,19 @@
   },
 
   "tab_navigation_panel_layout/navigation_tabs/content/construction_tab_panel":{
-    "size": [35,26]
+    "size": [35,27]
   },
   "tab_navigation_panel_layout/navigation_tabs/content/equipment_tab_panel":{
-    "size": [35,26]
+    "size": [35,27]
   },
   "tab_navigation_panel_layout/navigation_tabs/content/items_tab_panel":{
-    "size": [35,26]
+    "size": [35,27]
   },
   "tab_navigation_panel_layout/navigation_tabs/content/nature_tab_panel":{
-    "size": [35,26]
+    "size": [35,27]
   },
   "tab_navigation_panel_layout/navigation_tabs/content/search_tab_holder":{
-    "size": [35,26]
+    "size": [35,27]
   },
 
   "tab_content/tab_content_search_bar_panel/search_and_filter_panel/text_edit_control":{
@@ -462,8 +462,8 @@
   },
 
   "grid_item_for_recipe_book":{
-    "$scrolling_grid_item_size":[20,20],
-    "$cell_image_size":[20,20],
+    "$scrolling_grid_item_size":[25,25],
+    "$cell_image_size":[25,25],
     "$item_renderer_panel_size":[18,18],
     "$item_render_size":[18,18],
     "$overwrite_cell_size|default":false

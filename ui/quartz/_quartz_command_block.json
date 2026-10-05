@@ -100,8 +100,9 @@
     "anchor_to":"bottom_left",
     "$localised_output_label":"advMode.previousOutput",
     "text": "('§9~/§b ' + '%advMode.previousOutput' + ' .bat')",
+    //"text": "#text",
     "shadow": true,
-    "layer": 3
+    "layer": 2
   },
 
   //------------------------------------
@@ -109,59 +110,144 @@
   //------------------------------------
   
   "block_type_toggle_panel":{
-    "type":"stack_panel",
-    "size": [100,100],
-    "debug":"red",
+    "type":"panel",
+    "size": [102,22],
     "layer": 4,
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
     "$radio_toggle_group": true,
-    //"ignored": true,
-    "$option_enabled_binding_name": "#block_type_dropdown_enabled",
-    "$toggle_binding_condition":"always",
-
+    "$default_texture": "textures/empty",
+    "$hover_texture": "textures/empty",
+    "$pressed_texture": "textures/empty",
+    "$pressed_no_hover_texture": "textures/empty",
+    "$unchecked_locked_texture": "textures/empty",
+    "$checked_locked_texture": "textures/empty",
+    //"debug":"red",
     "controls": [
       {
         "command_impulse_mode@common_toggles.light_image_toggle": {
-          "$toggle_name":"block_type_dropdown",
+          "$toggle_name":"#command_impulse_mode",
           "$toggle_state_binding_name": "#command_impulse_mode",
-          "$toggle_group_forced_index": 0,
-          "size": [100,30],
-
-          "$default_texture": "textures/ui/toggle_off",
-          "$hover_texture": "textures/ui/toggle_on",
-          "$pressed_texture": "textures/ui/toggle_off_hover",
-          "$pressed_no_hover_texture": "textures/ui/toggle_on_hover",
-          "$unchecked_locked_texture": "textures/ui/toggle_off",
-          "$checked_locked_texture": "textures/ui/toggle_on"
+          "bindings":[
+            {
+              "binding_name": "#command_repeat_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
         }
       },
       {
         "command_chain_mode@common_toggles.light_image_toggle": {
-          "size": [100,30],
-          "$toggle_name":"block_type_dropdown",
+          "$toggle_name":"#command_chain_mode",
           "$toggle_state_binding_name": "#command_chain_mode",
-          "$toggle_group_forced_index": 1,
-
-          "$default_texture": "textures/ui/toggle_off",
-          "$hover_texture": "textures/ui/toggle_on",
-          "$pressed_texture": "textures/ui/toggle_off_hover",
-          "$pressed_no_hover_texture": "textures/ui/toggle_on_hover",
-          "$unchecked_locked_texture": "textures/ui/toggle_off",
-          "$checked_locked_texture": "textures/ui/toggle_on"
+          "bindings":[
+            {
+              "binding_name": "#command_impulse_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
         }
       },
       {
         "command_repeat_mode@common_toggles.light_image_toggle": {
-          "size": [100,30],
-          "$toggle_name":"block_type_dropdown",
+          "$toggle_name":"#command_repeat_mode",
           "$toggle_state_binding_name": "#command_repeat_mode",
-          "$toggle_group_forced_index": 2,
+          "bindings":[
+            {
+              "binding_name": "#command_chain_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
 
-          "$default_texture": "textures/ui/toggle_off",
-          "$hover_texture": "textures/ui/toggle_on",
-          "$pressed_texture": "textures/ui/toggle_off_hover",
-          "$pressed_no_hover_texture": "textures/ui/toggle_on_hover",
-          "$unchecked_locked_texture": "textures/ui/toggle_off",
-          "$checked_locked_texture": "textures/ui/toggle_on"
+  "conditional_toggle_panel":{
+    "type":"panel",
+    "size": [102,22],
+    "layer": 4,
+    "$radio_toggle_group": true,
+    //"debug":"green",
+    "controls": [
+      {
+        "command_conditional_mode@common_toggles.light_image_toggle": {
+          "$toggle_name":"#command_conditional_mode",
+          "$toggle_state_binding_name": "#command_conditional_mode",
+          "$default_texture": "textures/empty",
+          "$hover_texture": "textures/empty",
+          "$pressed_texture": "textures/empty",
+          "$pressed_no_hover_texture": "textures/empty",
+          "bindings":[
+            {
+              "binding_name": "#command_unconditional_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "command_unconditional_mode@common_toggles.light_image_toggle": {
+          "$toggle_state_binding_name": "#command_unconditional_mode",
+          "$toggle_name":"#command_unconditional_mode",
+          "$default_texture": "textures/ui/command_blocks/comm_conditional",
+          "$hover_texture": "textures/ui/command_blocks/comm_conditional",
+          "$pressed_texture": "textures/ui/command_blocks/comm_conditional",
+          "$pressed_no_hover_texture": "textures/ui/command_blocks/comm_conditional",
+          "bindings":[
+            {
+              "binding_name": "#command_conditional_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "redstone_toggle_panel":{
+    "type":"panel",
+    "size": [102,22],
+    "layer": 4,
+    "anchor_from":"top_right",
+    "anchor_to":"top_right",
+    "$radio_toggle_group": true,
+    //"debug":"red",
+    "controls":[
+      {
+        "command_always_on_mode@common_toggles.light_image_toggle": {
+          "$toggle_state_binding_name": "#command_always_on_mode",
+          "$toggle_name":"#command_always_on_mode",
+
+          "$default_texture": "textures/empty",
+          "$hover_texture": "textures/empty",
+          "$pressed_texture": "textures/empty",
+          "$pressed_no_hover_texture": "textures/empty",
+
+          "bindings":[
+            {
+              "binding_name": "#command_needs_redstone_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "command_needs_redstone_mode@common_toggles.light_image_toggle": {
+          "$toggle_state_binding_name": "#command_needs_redstone_mode",
+          "$toggle_name":"#command_needs_redstone_mode",
+
+          "$default_texture": "textures/ui/command_blocks/comm_always_active",
+          "$hover_texture": "textures/ui/command_blocks/comm_always_active",
+          "$pressed_texture": "textures/ui/command_blocks/comm_always_active",
+          "$pressed_no_hover_texture": "textures/ui/command_blocks/comm_always_active",
+
+          "bindings":[
+            {
+              "binding_name": "#command_always_on_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
         }
       }
     ]
@@ -185,7 +271,18 @@
           "controls":[
             {"custom_command_line_box@quartz_command_block.custom_command_line_box":{}},
             {"show_output_toggle@quartz_command_block.show_output_toggle":{}},
-            {"block_type_toggle_panel@quartz_command_block.block_type_toggle_panel":{}},
+            {
+              "command_block_toggles_settings_panel":{
+                "type":"panel",
+                "size": [310,22],
+                "offset": [13.5,42.5],
+                "controls":[
+                  {"block_type_toggle_panel@quartz_command_block.block_type_toggle_panel":{}},
+                  {"conditional_toggle_panel@quartz_command_block.conditional_toggle_panel":{}},
+                  {"redstone_toggle_panel@quartz_command_block.redstone_toggle_panel":{}}
+                ]
+              }
+            },
             {
               "previous_output_panel":{
                 "type":"panel",
@@ -197,12 +294,8 @@
                 ],
                 "bindings":[
                   {
-                    "binding_name": "#command_output_text"
-                  },
-                  {
-                    "binding_type":"view",
-                    "source_property_name": "(not (#command_output_text = ''))",
-                    "target_property_name": "#visible"
+                    "binding_name": "#track_output_binding",
+                    "binding_name_override": "#visible"
                   }
                 ]
               }

@@ -8,7 +8,7 @@
   "base_tab":{  //These variables aren't vanilla
     "$tab_side|default":"undefined",
     "$unchecked_default_texture|default":"textures/ui/generic/tab_unselected",
-    "$unchecked_hover_texture|default":"textures/ui/generic/tab_hover",
+    "$unchecked_hover_texture|default":"textures/ui/generic/tab_unselected",
     "$checked_default_texture|default":"textures/ui/generic/tab_selected",
     "$tab_content_offset_unchecked|default":[0,0], // In the end I didn't need this
     "$tab_content_offset_checked|default":[0,0] 
