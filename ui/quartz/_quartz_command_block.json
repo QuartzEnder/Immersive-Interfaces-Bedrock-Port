@@ -468,7 +468,7 @@
               "tick_delay_panel":{
                 "type":"panel",
                 "size": [299,"100%c"],
-                "offset": [13,75.5],
+                "offset": [13,72.5],
                 "anchor_from":"top_middle",
                 "anchor_to":"top_middle",
                 "controls":[
