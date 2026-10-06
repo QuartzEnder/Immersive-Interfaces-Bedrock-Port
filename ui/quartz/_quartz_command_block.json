@@ -2,7 +2,7 @@
   "namespace": "quartz_command_block",
 
   //--------------------------
-  // Elements
+  // Main Elements
   //--------------------------
 
   "command_block_background":{
@@ -20,13 +20,12 @@
   },
 
   "custom_command_line_box@command_block.command_block_text_edit_box":{
-    "size": [299,20],
-    "offset": [13,52.5],
-    "anchor_from":"top_middle",
-    "anchor_to":"top_middle",
+    "size": ["fill",20],
+    "enabled_newline": false,
+    
     "$default_edit_box_texture":"textures/ui/generic/text_box_default",
     "$hover_edit_box_texture":"textures/ui/generic/text_box_hover",
-    "$text_box_text_color":[0.667,0.667,0.667],
+    "$text_box_text_color":"$quartz_grey_colour",
 
     "$focus_id": "command_block_commands_text",
     "focus_change_left": "hover_note_text",
@@ -35,6 +34,42 @@
     "$text_box_name": "command_block.command_text",
     "$text_edit_box_content_binding_name": "#command_text_edit",
     "$place_holder_text": ""
+  },
+
+  "custom_paste_button@command_block.paste_button":{
+    "size": [22,22],
+    "layer": 4,
+
+    "$default_button_texture":"textures/ui/generic/text_box_default",
+    "$hover_button_texture":"textures/ui/generic/text_box_hover",
+    "$pressed_button_texture":"textures/ui/generic/text_box_hover",
+    "$default_glyph_color":"$quartz_grey_colour",
+
+    "$button_content":"quartz_command_block.paste_icon"
+    
+  },
+
+  "custom_plus_button@command_block.plus_button":{
+    "size": [22,22],
+    "layer": 4,
+    "$default_button_texture":"textures/ui/generic/text_box_default",
+    "$hover_button_texture":"textures/ui/generic/text_box_hover",
+    "$pressed_button_texture":"textures/ui/generic/text_box_hover",
+    "$default_glyph_color":"$quartz_grey_colour",
+
+    "$button_content":"quartz_command_block.plus_icon"
+  },
+
+  "paste_icon":{
+    "type":"image",
+    "texture": "textures/ui/command_blocks/paste",
+    "size": [8,10]
+  },
+
+  "plus_icon":{
+    "type":"image",
+    "texture": "textures/ui/plus",
+    "size": [9,12]
   },
 
   //-----------------------------
@@ -60,7 +95,7 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "size": [275,20],
-    "$text_box_text_color":[0.667,0.667,0.667],
+    "$text_box_text_color":"$quartz_grey_colour",
 
     "focus_enabled": false,
     "$text_box_name": "command_block.output_text",
@@ -100,7 +135,6 @@
     "anchor_to":"bottom_left",
     "$localised_output_label":"advMode.previousOutput",
     "text": "('§9~/§b ' + '%advMode.previousOutput' + ' .bat')",
-    //"text": "#text",
     "shadow": true,
     "layer": 2
   },
@@ -122,7 +156,6 @@
     "$pressed_no_hover_texture": "textures/empty",
     "$unchecked_locked_texture": "textures/empty",
     "$checked_locked_texture": "textures/empty",
-    //"debug":"red",
     "controls": [
       {
         "command_impulse_mode@common_toggles.light_image_toggle": {
@@ -168,7 +201,6 @@
     "size": [102,22],
     "layer": 4,
     "$radio_toggle_group": true,
-    //"debug":"green",
     "controls": [
       {
         "command_conditional_mode@common_toggles.light_image_toggle": {
@@ -212,7 +244,6 @@
     "anchor_from":"top_right",
     "anchor_to":"top_right",
     "$radio_toggle_group": true,
-    //"debug":"red",
     "controls":[
       {
         "command_always_on_mode@common_toggles.light_image_toggle": {
@@ -253,6 +284,124 @@
     ]
   },
 
+  "execute_on_first_tick_toggle@settings_common.option_toggle": {
+    "anchor_from":"left_middle",
+    "anchor_to":"left_middle",
+    "offset": [1,2],
+    "$option_binding_name": "#execute_on_first_tick",
+    "$option_enabled_binding_name": "#execute_on_first_tick_enabled",
+    "$show_option_label": false,
+    "$toggle_name": "execute_on_first_tick",
+    "$toggle_binding_condition": "visible"
+  },
+
+  "option_label_execute_on_first_tick": {
+    "type": "label",
+    "color": "$quartz_grey_colour",
+    "size": [ "default", "default" ],
+    "layer": 2,
+    "text": "commandBlockScreen.executeFirstTick",
+    "text_alignment":"right",
+    "anchor_from":"right_middle",
+    "anchor_to":"right_middle",
+    "locked_alpha": 0.5
+  },
+
+  "tick_delay_text@common.text_edit_box": {
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": [ 60, 20 ],
+    "$focus_id":"tick_delay_text",
+    "layer": 5,
+    "max_length": 5,
+    "$text_edit_box_text_type": "NumberChars",
+    "$text_box_name": "command_block.tick_delay_textbox",
+    "$text_edit_box_content_binding_name": "#command_tick_delay",
+
+    "$default_edit_box_texture":"textures/ui/generic/text_box_default",
+    "$hover_edit_box_texture":"textures/ui/generic/text_box_hover",
+    "$text_box_text_color":"$quartz_grey_colour"
+  },
+
+  "option_label_tick_delay": {
+    "type": "label",
+    "color": "$quartz_grey_colour",
+    "size": [ "100%", "default" ],
+    "anchor_from":"right_middle",
+    "anchor_to":"right_middle",
+    "text_alignment":"right",
+    "offset": [0,-2],
+    "layer": 1,
+    "text": "commandBlockScreen.tickDelay",
+    "visible": true,
+    "locked_alpha": 0.5
+  },
+
+  //----------------------------
+  // Expanded section
+  //----------------------------
+
+  "expanded_command_block_text@command_block.command_block_text_edit_box": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "layer": 17,
+    "size": ["fill",105],
+    "max_length": 32500,
+    "$text_box_name": "command_block.command_text",
+    "$text_edit_box_content_binding_name": "#command_text_edit",
+    "$place_holder_text": "Enter your command input here",
+    "$cancel_button_id": "command_block.input_minimize",
+    "bindings": [
+      {
+        "binding_name": "#maximized_input_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "minimise_button@common.close_button": {
+    "size": [20,20],
+    "$close_button_offset": [0,0],
+    "$close_button_panel_size": [20,20],
+    "debug":"red",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "command_block.input_minimize",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "command_block.input_minimize",
+        "mapping_type": "focused"
+      }
+    ],
+    "controls": [
+      {
+        "default@common.close_button_panel": {
+          "$close_button_texture": "textures/ui/command_blocks/minus_button_default"
+        }
+      },
+      {
+        "hover@common.close_button_panel": {
+          "$close_button_texture": "textures/ui/command_blocks/minus_button_hover"
+        }
+      },
+      {
+        "pressed@common.close_button_panel": {
+          "$close_button_texture": "textures/ui/command_blocks/minus_button_hover"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#minimize_button_visible_binding_name",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+
   //---------------------------
   // Command Block Panel 
   //---------------------------
@@ -268,8 +417,66 @@
       {
         "root_panel":{
           "type":"panel",
+          "bindings":[
+            {
+              "binding_name": "(not #maximized_input_visible)",
+              "binding_name_override": "#visible"
+            }
+          ],
           "controls":[
-            {"custom_command_line_box@quartz_command_block.custom_command_line_box":{}},
+            {
+              "top_command_stack_panel":{
+                "type":"stack_panel",
+                "orientation":"horizontal",
+                "size": [299,20],
+                "offset": [13,52.5],
+                "anchor_from":"top_middle",
+                "anchor_to":"top_middle",
+                "controls":[
+                  {"custom_command_line_box@quartz_command_block.custom_command_line_box":{}},
+                  {"padding1":{"type":"panel","size": [3,1]}},
+                  {
+                    "paste_button_holder":{
+                    "type":"panel",
+                    "size": [20,20],
+                    "controls":[{"custom_paste_button@quartz_command_block.custom_paste_button":{}}]
+                    }
+                  },
+                  {"padding2":{"type":"panel","size": [3,1]}},
+                  {
+                    "plus_button_holder":{
+                      "type":"panel",
+                      "size": [20,20],
+                      "controls":[{"custom_plus_button@quartz_command_block.custom_plus_button":{}}]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "first_tick_toggle_panel":{
+                "type":"panel",
+                "size": [299,"100%c"],
+                "offset": [12,-23.5],
+                "controls":[
+                  {"execute_on_first_tick_toggle@quartz_command_block.execute_on_first_tick_toggle":{}},
+                  {"option_label_execute_on_first_tick@quartz_command_block.option_label_execute_on_first_tick":{}}
+                ]
+              }
+            },
+            {
+              "tick_delay_panel":{
+                "type":"panel",
+                "size": [299,"100%c"],
+                "offset": [13,75.5],
+                "anchor_from":"top_middle",
+                "anchor_to":"top_middle",
+                "controls":[
+                  {"tick_delay_text@quartz_command_block.tick_delay_text":{}},
+                  {"option_label_tick_delay@quartz_command_block.option_label_tick_delay":{}}
+                ]
+              }
+            },
             {"show_output_toggle@quartz_command_block.show_output_toggle":{}},
             {
               "command_block_toggles_settings_panel":{
@@ -297,6 +504,34 @@
                     "binding_name": "#track_output_binding",
                     "binding_name_override": "#visible"
                   }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "expanded_command_line_panel":{
+          "type":"panel",
+          "bindings":[
+            {
+              "binding_name": "#maximized_input_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls":[
+            {
+              "top_command_expanded_stack_panel":{
+                "type":"stack_panel",
+                "orientation":"horizontal",
+                "size": [299,20],
+                "offset": [13,52.5],
+                "anchor_from":"top_middle",
+                "anchor_to":"top_middle",
+                "controls":[
+                  {"expanded_command_block_text@quartz_command_block.expanded_command_block_text":{}},
+                  {"separator_padding":{"type":"panel","size": [3,1]}},
+                  {"minimise_button@quartz_command_block.minimise_button":{}}
                 ]
               }
             }

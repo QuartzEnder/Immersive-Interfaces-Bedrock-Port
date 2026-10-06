@@ -10,6 +10,7 @@
   "$generic_shadow_title_colour":[0.941,0.969,0.965],
   "$container_title_font":"default",
   "$pocket_scroll_size":["90%",172], // Unused - Derived from GUI Revision Expanded
+  "$quartz_grey_colour":[0.667,0.667,0.667],
 
   // Vanilla //
 
