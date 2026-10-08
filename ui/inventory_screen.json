@@ -326,6 +326,14 @@
 // Recipe Book
 //--------------------
 
+  "item_overlay_expand":{
+    "ignored": true
+  },
+
+  "item_overlay_contract":{
+    "ignored": true
+  },
+
   "tab_content/tab_content_search_bar_panel/items_panel/scroll_pane":{
     "size": ["100% + 6px","100%"],
     "$show_background":false,
@@ -347,7 +355,7 @@
         "array_name":"controls",
         "operation":"replace",
         "control_name": "bg",
-        "value":{"bg@quartz_gui.recipe_book_background":{}}
+        "value":{"bg@quartz_creative.recipe_book_background":{}}
       },
       {
         "array_name":"controls",
@@ -428,7 +436,7 @@
       {
         "array_name":"controls",
         "operation":"insert_back",
-        "value":{"survival_recipe_grid@quartz_gui.survival_recipe_grid":{}}
+        "value":{"survival_recipe_grid@quartz_creative.survival_recipe_grid":{}}
       }
     ]
   },
@@ -442,20 +450,9 @@
       {
         "array_name":"bindings",
         "operation":"insert_back",
-        "value":{"binding_name":"#is_creative_mode"}
-      },
-      {
-        "array_name":"bindings",
-        "operation":"insert_back",
-        "value":{"binding_name":"#is_left_tab_inventory"}
-      },
-      {
-        "array_name":"bindings",
-        "operation":"insert_back",
         "value":{
-          "binding_type":"view",
-          "source_property_name": "(#is_creative_mode or #is_left_tab_inventory)",
-          "target_property_name": "#visible"
+          "binding_name":"#is_creative_layout",
+          "binding_name_override":"#visible"
         }
       }
     ]
@@ -465,11 +462,11 @@
     "$scrolling_grid_item_size":[18,18],
     "$cell_image_size":[20,20],
     "$item_renderer_panel_size":[18,18],
-    "$item_render_size":[18,18]
+    "$item_render_size":[16,16]
   },
 
   "recipe_container_cell_images":{
-    "texture": "textures/ui/recipe/craftable_item_slot_bg",
+    "texture": "textures/ui/creative/item_slot_bg",
     "$creative_mode|default":false,
     "bindings":[
       {

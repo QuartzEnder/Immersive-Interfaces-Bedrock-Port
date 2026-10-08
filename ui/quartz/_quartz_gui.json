@@ -22,43 +22,7 @@
       }
     ]
   },
-
-  //------------------------
-  // Recipe Scroll Panel
-  //------------------------
-
-  "survival_recipe_cell@crafting.grid_item_for_recipe_book":{
-    "$scrolling_grid_item_size":[24,24],
-    "$cell_image_size":[24,24],
-    "$item_renderer_panel_size":[20,20],
-    "$item_renderer_size":[16,16]
-  },
-
-  "survival_recipe_grid@crafting.scroll_grid":{
-    "$creative_mode":false,
-    "$grid_item_template": "quartz_gui.survival_recipe_cell",
-    "bindings":[
-      {
-        "binding_name": "#is_creative_mode"
-      },
-      {
-        "binding_name": "#is_left_tab_inventory"
-      },
-      {
-        "binding_type":"view",
-        "source_property_name": "(not (#is_creative_mode or #is_left_tab_inventory))",
-        "target_property_name": "#visible"
-      },
-      {
-        "binding_name": "#recipe_book_total_items",
-        "binding_name_override": "#maximum_grid_items",
-        "binding_condition": "$binding_condition",
-        "binding_type": "collection",
-        "binding_collection_name": "$collection_name"
-      }
-    ]
-  },
-
+  
   //-----------------------
   // Tab Icon Renderers
   //-----------------------
@@ -695,48 +659,5 @@
     "size":[18,18],
     "texture": "textures/ui/slot_disabled",
     "layer":-21
-  },
-
-  //---------------------------------
-  // Inventory Creative Panel
-  //---------------------------------
-
-  "recipe_book_background":{
-    "type":"panel",
-    "debug":"red",
-    "controls":[
-      {"regular_creative@quartz_gui.regular_creative_bg":{}},
-      {"survival_recipe_bg@quartz_gui.survival_recipe_bg":{}}
-    ]
-  },
-
-  "regular_creative_bg@common.common_panel":{
-    "$show_close_button":false,
-    "$common_panel_size":[279,152],
-    "size": [279,152],
-    "anchor_from":"bottom_middle",
-    "anchor_to":"bottom_middle",
-    "$background_texture":"textures/ui/creative/tab_items",
-    "bindings":[
-      {
-        "binding_name": "#is_creative_layout",
-        "binding_name_override": "#visible"
-      }
-    ]
-  },
-
-  "survival_recipe_bg@common.dialog_background_opaque":{
-    "size":[147,165],
-    "$background_texture":"textures/ui/recipe/recipe_book_background",
-    "anchor_from":"top_right",
-    "anchor_to":"top_right",
-    "layer":8,
-    "offset":[-2,1],
-    "bindings":[
-      {
-        "binding_name":"#is_recipe_book_layout",
-        "binding_name_override": "#visible"
-      }
-    ]
   }
 }
