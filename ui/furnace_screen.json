@@ -480,8 +480,7 @@
     "$scrolling_grid_item_size":[24,24],
     "$cell_image_size":[24,24],
     "$item_renderer_panel_size":[20,20],
-    "$item_render_size":[18,18],
-    "$overwrite_cell_size|default":false
+    "$item_render_size":[18,18]
   },
 
   //---------------------

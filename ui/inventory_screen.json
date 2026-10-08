@@ -263,12 +263,13 @@
   "recipe_book/tab_navigation_panel":{
     "anchor_from":"top_left" ,
     "anchor_to":"top_right",
-    "size": [35,"100%"]
+    "size": [35,"100%"],
+    "layer": 9
   },
 
   "tab_navigation_panel_layout/navigation_tabs/content":{
     "size": [35,"100%"],
-    "offset": [0,0],
+    "offset": [4,0],
     "anchor_to":"top_left",
     "anchor_from":"top_left",
     "orientation":"vertical",
@@ -339,7 +340,6 @@
   },
 
   "recipe_book":{
-    "$background_texture":"textures/ui/recipe/recipe_book_background",
     "$overwriteable":false,
     "$use_compact_close_button":false,
     "modifications":[
@@ -347,7 +347,7 @@
         "array_name":"controls",
         "operation":"replace",
         "control_name": "bg",
-        "value":{"bg@common.dialog_background_opaque":{}}
+        "value":{"bg@quartz_gui.recipe_book_background":{}}
       },
       {
         "array_name":"controls",
@@ -462,11 +462,10 @@
   },
 
   "grid_item_for_recipe_book":{
-    "$scrolling_grid_item_size":[25,25],
-    "$cell_image_size":[25,25],
+    "$scrolling_grid_item_size":[18,18],
+    "$cell_image_size":[20,20],
     "$item_renderer_panel_size":[18,18],
-    "$item_render_size":[18,18],
-    "$overwrite_cell_size|default":false
+    "$item_render_size":[18,18]
   },
 
   "recipe_container_cell_images":{

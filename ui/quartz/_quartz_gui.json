@@ -695,5 +695,48 @@
     "size":[18,18],
     "texture": "textures/ui/slot_disabled",
     "layer":-21
+  },
+
+  //---------------------------------
+  // Inventory Creative Panel
+  //---------------------------------
+
+  "recipe_book_background":{
+    "type":"panel",
+    "debug":"red",
+    "controls":[
+      {"regular_creative@quartz_gui.regular_creative_bg":{}},
+      {"survival_recipe_bg@quartz_gui.survival_recipe_bg":{}}
+    ]
+  },
+
+  "regular_creative_bg@common.common_panel":{
+    "$show_close_button":false,
+    "$common_panel_size":[279,152],
+    "size": [279,152],
+    "anchor_from":"bottom_middle",
+    "anchor_to":"bottom_middle",
+    "$background_texture":"textures/ui/creative/tab_items",
+    "bindings":[
+      {
+        "binding_name": "#is_creative_layout",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "survival_recipe_bg@common.dialog_background_opaque":{
+    "size":[147,165],
+    "$background_texture":"textures/ui/recipe/recipe_book_background",
+    "anchor_from":"top_right",
+    "anchor_to":"top_right",
+    "layer":8,
+    "offset":[-2,1],
+    "bindings":[
+      {
+        "binding_name":"#is_recipe_book_layout",
+        "binding_name_override": "#visible"
+      }
+    ]
   }
 }
