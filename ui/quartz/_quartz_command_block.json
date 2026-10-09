@@ -297,7 +297,8 @@
 
   "option_label_execute_on_first_tick": {
     "type": "label",
-    "color": "$quartz_grey_colour",
+    "color": "green",
+    //"color": "$quartz_grey_colour",
     "size": [ "default", "default" ],
     "layer": 2,
     "text": "commandBlockScreen.executeFirstTick",
@@ -325,7 +326,7 @@
 
   "option_label_tick_delay": {
     "type": "label",
-    "color": "$quartz_grey_colour",
+    "color": "green",
     "size": [ "100%", "default" ],
     "anchor_from":"right_middle",
     "anchor_to":"right_middle",
