@@ -1,13 +1,12 @@
 {
-  "namespace": "quartz_creative",
-
+  "namespace": "quartz_inventory",
   
   "recipe_book_background":{
     "type":"panel",
     "debug":"red",
     "controls":[
-      {"regular_creative@quartz_creative.regular_creative_bg":{}},
-      {"survival_recipe_bg@quartz_creative.survival_recipe_bg":{}}
+      {"regular_creative@quartz_inventory.regular_creative_bg":{}},
+      {"survival_recipe_bg@quartz_inventory.survival_recipe_bg":{}}
     ]
   },
 
@@ -15,6 +14,7 @@
     "$show_close_button":false,
     "$common_panel_size":[279,152],
     "size": [279,152],
+    "offset": [-0.5,-14],
     "anchor_from":"bottom_middle",
     "anchor_to":"bottom_middle",
     "$background_texture":"textures/ui/creative/tab_items",
@@ -49,23 +49,52 @@
     "$scrolling_grid_item_size":[25,25],
     "$cell_image_size":[25,25],
     "$item_renderer_panel_size":[20,20],
-    "$item_renderer_size":[16,16]
+    "$item_renderer_size":[16,16],
+    "$ignore_recipe_cell_bindings":false
   },
 
-  "survival_recipe_grid@crafting.scroll_grid":{
+  "survival_recipe_scroll_grid@crafting.scroll_grid":{
     "$creative_mode":false,
-    "$grid_item_template": "quartz_creative.survival_recipe_cell",
+    //"size": ["default","default"],
+    "$grid_item_template": "quartz_inventory.survival_recipe_cell",
     "bindings":[
-      {
-        "binding_name": "#is_recipe_book_layout",
-        "binding_name_override": "#visible"
-      },
       {
         "binding_name": "#recipe_book_total_items",
         "binding_name_override": "#maximum_grid_items",
         "binding_condition": "$binding_condition",
         "binding_type": "collection",
         "binding_collection_name": "$collection_name"
+      }
+    ]
+  },
+
+  //-------------------------------
+  //  Scroll Panel for both modes
+  //--------------------------------
+
+  "custom_inventory_scroll_panel":{
+    "type":"panel",
+    //"size": ["100%","100%c"],
+    "controls":[
+      {"recipe_book_scroll_panel@crafting.recipe_book_scroll_panel":{"debug":"green"}},
+      {"survival_scroll_panel@quartz_inventory.survival_scroll_panel":{}}
+    ]
+  },
+
+  "survival_scroll_grid_panel@crafting.scroll_grid_panel":{
+    //"size": ["100%","default"],
+    "offset": [0,0],
+    "controls":[{"survival_recipe_scroll_grid@quartz_inventory.survival_recipe_scroll_grid":{}}]
+  },
+
+  "survival_scroll_panel@crafting.scroll_panel":{
+    "$scrolling_content": "quartz_inventory.survival_scroll_grid_panel",
+    "$collection_name": "recipe_book",
+    "debug":"red",
+    "bindings":[
+      {
+        "binding_name":"#is_recipe_book_layout",
+        "binding_name_override":"#visible"
       }
     ]
   }

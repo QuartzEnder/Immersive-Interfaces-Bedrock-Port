@@ -355,7 +355,7 @@
         "array_name":"controls",
         "operation":"replace",
         "control_name": "bg",
-        "value":{"bg@quartz_creative.recipe_book_background":{}}
+        "value":{"bg@quartz_inventory.recipe_book_background":{}}
       },
       {
         "array_name":"controls",
@@ -394,6 +394,10 @@
     ]
   },
 
+  "recipe_book/tab_content_panel":{
+    "$scrolling_pane_control":"quartz_inventory.custom_inventory_scroll_panel"
+  },
+
   "tab_content/tab_content_search_bar_panel/search_and_filter_panel":{
     "size": ["100% + 1px", 14],
     "modifications":[
@@ -429,45 +433,42 @@
     "offset": [1,-2]
   },
 
+  //-----------------------------
+  // Scrolling Panel
+  //-----------------------------
+
+  // This get used for the creative layout only: the recipe book version is in _quartz_inventory.json
+
   "scroll_grid_panel":{
-    "anchor_from":"top_left",
-    "anchor_to":"top_left",
-    "modifications":[
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle"
+    //"size": [166,92],
+    /*"modifications":[
       {
         "array_name":"controls",
         "operation":"insert_back",
-        "value":{"survival_recipe_grid@quartz_creative.survival_recipe_grid":{}}
+        "value":{"survival_recipe_grid@quartz_inventory.survival_recipe_grid":{}}
       }
-    ]
+    ]*/
   },
 
   "scroll_grid":{
     "$is_inventory_tab|default":false,
     "$creative_mode":true,
-    "anchor_from":"top_left",
-    "anchor_to":"top_left",
-    "modifications":[
-      {
-        "array_name":"bindings",
-        "operation":"insert_back",
-        "value":{
-          "binding_name":"#is_creative_layout",
-          "binding_name_override":"#visible"
-        }
-      }
-    ]
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle"
   },
 
   "grid_item_for_recipe_book":{
     "$scrolling_grid_item_size":[18,18],
     "$cell_image_size":[20,20],
     "$item_renderer_panel_size":[18,18],
-    "$item_render_size":[16,16]
+    "$item_render_size":[16,16],
+    "$ignore_recipe_cell_bindings|default":true
   },
 
   "recipe_container_cell_images":{
     "texture": "textures/ui/creative/item_slot_bg",
-    "$creative_mode|default":false,
     "bindings":[
       {
         "binding_name": "#container_item_background_texture",
@@ -475,9 +476,13 @@
         "binding_type": "collection",
         "binding_collection_name": "$item_collection_name",
         "binding_condition": "$cell_images_binding_condition",
-        "ignored": "$creative_mode" // This is what changed from vanilla
+        "ignored": "$ignore_recipe_cell_bindings" // This is what changed from vanilla
       }
     ]
+  },
+
+  "recipe_book_scroll_panel":{
+    "size": [180,92]
   },
 
 //-------------------
@@ -546,19 +551,6 @@
         "operation":"replace",
         "control_name": "toolbar_panel",
         "value":{"toolbar_panel_centerer@quartz_gui.toolbar_panel_centerer":{}}
-      }
-    ]
-  },
-
-  //--------------------------
-  // Pocket UI Modifications
-  //--------------------------
-
-  "tab_content/tab_content_search_bar_panel/vertical_padding_3":{
-    "bindings":[
-      {
-        "binding_name": "(not #is_left_tab_inventory)",
-        "binding_name_override": "#visible"
       }
     ]
   },
