@@ -425,10 +425,20 @@
     ]
   },
 
+  "tab_content/tab_content_search_bar_panel/search_and_filter_panel/filter_toggle_holder":{
+    "bindings":[]
+  },
+
   "tab_content/tab_content_search_bar_panel/search_and_filter_panel/filter_toggle_holder/filter_toggle":{
     "anchor_from":"center",
     "anchor_to":"center",
-    "offset": [-4,0.5]
+    "offset": [-4,0.5],
+    "bindings":[
+      {
+        "binding_name":"#is_recipe_book_layout",
+        "binding_name_override":"#visible"
+      }
+    ]
   },
 
   "tab_content/tab_content_search_bar_panel":{
