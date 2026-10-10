@@ -15,7 +15,9 @@
   //------------------------------------
 
   "filter_toggle":{
-    "size": [26,17]
+    "size": [14,17], // REMEMBER: the size to write here is: size of the texture + 2px
+    "anchor_from":"center",
+    "anchor_to":"center"
   },
 
   "crafting_screen":{
@@ -146,18 +148,6 @@
         "operation":"remove",
         "control_name": "player_preview_border"
       }
-      /*{
-        "array_name":"controls",
-        "operation":"insert_after",
-        "control_name": "player_bg",
-        "value":{"armour_slots_bg@quartz_inv.armour_slots_bg":{}}
-      },
-      {
-        "array_name":"controls",
-        "operation":"insert_before",
-        "control_name": "offhand_grid",
-        "value":{"offhand_bg@quartz_inv.offhand_bg":{}}
-      }*/
     ]
   },
 
@@ -242,12 +232,8 @@
     "layer": 5
   },
 
-  "tab_content/tab_content_search_bar_panel":{
-    "size": ["100% - 24px","100% - 20px"]
-  },
-
   "tab_content/tab_content_search_bar_panel/vertical_padding_1":{
-    "size": [0,3]
+    "size": [0,0]
   },
 
   "tab_content/tab_content_search_bar_panel/items_panel":{
@@ -303,7 +289,14 @@
     "$magnifying_glass_size":[12,12],
     "$magnifying_glass_offset":[0,0],
     "$text_edit_box_label_offset": [2,0],
-    "$magnifying_glass_enabled":false
+    "$magnifying_glass_enabled":false,
+    "$place_holder_text":"('§r§o§f' + %realmsSettingsScreen.searchBox)",
+    "bindings":[
+      {
+        "binding_name": "#is_left_tab_search",
+        "binding_name_override": "#enabled"
+      }
+    ]
   },
 
   "construction_tab":{
@@ -400,27 +393,32 @@
 
   "tab_content/tab_content_search_bar_panel/search_and_filter_panel":{
     "size": ["100% + 1px", 14],
+    "bindings":[
+      {
+        "binding_name": "#is_recipe_book_layout",
+        "binding_name_override": "#visible"
+      }
+    ],
     "modifications":[
       {
         "array_name":"controls",
         "operation":"insert_front",
         "value":{
-          "search_padding":{
+          "start_padding":{
             "type":"panel",
-            "size":[3,1]
+            "size":[16,1]
           }
         }
       },
       {
         "array_name":"controls",
-        "operation":"insert_front",
+        "operation":"replace",
+        "control_name": "padding_1",
         "value":{
-          "magnifying_glass_holder":{
+          "end_padding":{
             "type":"panel",
-            "size":[11,14],
-            "controls":[
-              {"magnifying_glass@common.text_magnifying_glass_image":{}}
-            ]
+            //"size":[29,1],
+            "size":[15,1]
           }
         }
       }
@@ -428,9 +426,21 @@
   },
 
   "tab_content/tab_content_search_bar_panel/search_and_filter_panel/filter_toggle_holder/filter_toggle":{
-    "anchor_from":"top_right",
-    "anchor_to":"top_right",
-    "offset": [1,-2]
+    "anchor_from":"center",
+    "anchor_to":"center",
+    "offset": [-4,0.5]
+  },
+
+  "tab_content/tab_content_search_bar_panel":{
+    "size": ["100% - 24px","100% - 2px"],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"replace",
+        "control_name": "creative_label_and_filter_toggle_holder",
+        "value":{"empty_spacing_panel":{"type":"panel","size":["100%",10]}}
+      }
+    ]
   },
 
   //-----------------------------
@@ -442,14 +452,6 @@
   "scroll_grid_panel":{
     "anchor_from":"top_middle",
     "anchor_to":"top_middle"
-    //"size": [166,92],
-    /*"modifications":[
-      {
-        "array_name":"controls",
-        "operation":"insert_back",
-        "value":{"survival_recipe_grid@quartz_inventory.survival_recipe_grid":{}}
-      }
-    ]*/
   },
 
   "scroll_grid":{
@@ -482,7 +484,20 @@
   },
 
   "recipe_book_scroll_panel":{
-    "size": [180,92]
+    "size": [180,91],
+    "offset": [-5,5],
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "modifications":[
+      {
+        "array_name":"bindings",
+        "operation":"insert_back",
+        "value":{
+          "binding_name":"#is_creative_layout",
+          "binding_name_override":"#visible"
+        }
+      }
+    ]
   },
 
 //-------------------

@@ -3,7 +3,6 @@
   
   "recipe_book_background":{
     "type":"panel",
-    "debug":"red",
     "controls":[
       {"regular_creative@quartz_inventory.regular_creative_bg":{}},
       {"survival_recipe_bg@quartz_inventory.survival_recipe_bg":{}}
@@ -69,28 +68,29 @@
   },
 
   //-------------------------------
-  //  Scroll Panel for both modes
+  // Scroll Panel for both modes
   //--------------------------------
 
   "custom_inventory_scroll_panel":{
     "type":"panel",
-    //"size": ["100%","100%c"],
     "controls":[
-      {"recipe_book_scroll_panel@crafting.recipe_book_scroll_panel":{"debug":"green"}},
+      {"recipe_book_scroll_panel@crafting.recipe_book_scroll_panel":{}},
       {"survival_scroll_panel@quartz_inventory.survival_scroll_panel":{}}
     ]
   },
 
   "survival_scroll_grid_panel@crafting.scroll_grid_panel":{
-    //"size": ["100%","default"],
-    "offset": [0,0],
     "controls":[{"survival_recipe_scroll_grid@quartz_inventory.survival_recipe_scroll_grid":{}}]
   },
 
   "survival_scroll_panel@crafting.scroll_panel":{
     "$scrolling_content": "quartz_inventory.survival_scroll_grid_panel",
+    "offset": [5.5,1],
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
     "$collection_name": "recipe_book",
-    "debug":"red",
+    "size": ["100% + 6px","100% - 35px"],
+
     "bindings":[
       {
         "binding_name":"#is_recipe_book_layout",
