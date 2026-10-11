@@ -16,7 +16,7 @@
     "offset": [-0.5,-14],
     "anchor_from":"bottom_middle",
     "anchor_to":"bottom_middle",
-    "$background_texture":"textures/ui/creative/tab_items",
+    "$background_texture":"textures/ui/creative/creative_background",
     "bindings":[
       {
         "binding_name": "#is_creative_layout",
@@ -143,5 +143,77 @@
     "$text_edit_box_label_offset":[0,0],
     "anchor_from":"top_right",
     "anchor_to":"top_right"
+  },
+
+  //---------------------------------
+  // Creative Tab Navigation Panel
+  //---------------------------------
+
+  // Remember: texture size + 2px
+
+  "blocks_creative_tab@crafting.construction_tab":{
+    "size": [39,33],
+    "$unchecked_default_texture": "textures/ui/creative/tab_blocks",
+    "$unchecked_hover_texture": "textures/ui/creative/tab_blocks",
+    "$checked_default_texture": "textures/ui/creative/tab_blocks_selected",
+    "$checked_hover_texture": "textures/ui/creative/tab_blocks_selected",
+    "anchor_from":"top_left",
+    "anchor_to":"top_left"
+  },
+
+  "equipment_creative_tab@crafting.equipment_tab":{
+    "size": [32,30],
+    "$unchecked_default_texture": "textures/ui/creative/tab_equipment",
+    "$unchecked_hover_texture": "textures/ui/creative/tab_equipment",
+    "$checked_default_texture": "textures/ui/creative/tab_equipment_selected",
+    "$checked_hover_texture": "textures/ui/creative/tab_equipment_selected"
+  },
+
+  "items_creative_tab@crafting.items_tab":{
+    "size": [34,35],
+    "$unchecked_default_texture": "textures/ui/creative/tab_various",
+    "$unchecked_hover_texture": "textures/ui/creative/tab_various",
+    "$checked_default_texture": "textures/ui/creative/tab_various_selected",
+    "$checked_hover_texture": "textures/ui/creative/tab_various_selected"
+  },
+
+  "nature_creative_tab@crafting.nature_tab":{
+    "size": [38,33],
+    "$unchecked_default_texture": "textures/ui/creative/tab_nature",
+    "$unchecked_hover_texture": "textures/ui/creative/tab_nature",
+    "$checked_default_texture": "textures/ui/creative/tab_nature_selected",
+    "$checked_hover_texture": "textures/ui/creative/tab_nature_selected"
+  },
+
+  "search_creative_tab@crafting.search_tab":{
+    "size": [30,32],
+    "$unchecked_default_texture": "textures/ui/creative/search_tab",
+    "$unchecked_hover_texture": "textures/ui/creative/search_tab",
+    "$checked_default_texture": "textures/ui/creative/search_tab_selected",
+    "$checked_hover_texture": "textures/ui/creative/search_tab_selected",
+    "anchor_from":"top_right",
+    "anchor_to":"top_right",
+    "$is_left_most_tab":false,
+    "$is_right_most_tab":false
+  },
+
+  "creative_tabs_panel":{
+    "type":"panel",
+    "size": [203,35],
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "controls":[
+      {"blocks_creative_tab@quartz_inventory.blocks_creative_tab":{}},
+      {"equipment_creative_tab@quartz_inventory.equipment_creative_tab":{}},
+      {"items_creative_tab@quartz_inventory.items_creative_tab":{}},
+      {"nature_creative_tab@quartz_inventory.nature_creative_tab":{}},
+      {"search_creative_tab@quartz_inventory.search_creative_tab":{}}
+    ],
+    "bindings":[
+      {
+        "binding_name": "#is_creative_layout",
+        "binding_name_override": "#visible"
+      }
+    ]
   }
 }

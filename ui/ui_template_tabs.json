@@ -6,12 +6,11 @@
   },
 
   "base_tab":{  //These variables aren't vanilla
-    "$tab_side|default":"undefined",
     "$unchecked_default_texture|default":"textures/ui/generic/tab_unselected",
     "$unchecked_hover_texture|default":"textures/ui/generic/tab_unselected",
     "$checked_default_texture|default":"textures/ui/generic/tab_selected",
     "$tab_content_offset_unchecked|default":[0,0], // In the end I didn't need this
-    "$tab_content_offset_checked|default":[0,0] 
+    "$tab_content_offset_checked|default":[0,0]  // or this
   },
 
   "base_tab/$tab_view_binding_name/unchecked":{
@@ -41,29 +40,5 @@
   "tab_panel/tab_content_sizer":{
     "$tab_content_offset|default":[0,0],
     "offset": "$tab_content_offset"
-  },
-
-  //---------------------------
-  // Pocket UI Modifications
-  //---------------------------
-
-  "pocket_tab_left":{
-    "size": [40,29]
-  },
-
-  "pocket_tab_right":{
-    "size": [40,29]
-  },
-
-  "pocket_tab_close_button":{
-    "alpha": 0
-  },
-
-  "pocket_tab_help_button":{
-    "alpha": 0
-  },
-
-  "pocket_tab_close_and_help_button":{
-    "alpha": 0
   }
 }

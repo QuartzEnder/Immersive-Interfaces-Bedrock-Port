@@ -382,7 +382,8 @@
               ]
             }
           },
-          {"creative_search_elements_panel@quartz_inventory.creative_search_elements_panel":{}}
+          {"creative_search_elements_panel@quartz_inventory.creative_search_elements_panel":{}},
+          {"creative_tabs_panel@quartz_inventory.creative_tabs_panel":{}}
         ]
       }
     ]
