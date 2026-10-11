@@ -258,11 +258,6 @@
         "requires": "$magnifying_glass_enabled",
         "$text_edit_box_label_offset":[2,0]
       }
-      /*{
-        "requires": "$alternate_edit_box_texture",
-        "$default_edit_box_texture":"textures/ui/generic/text_box_default",
-        "$hover_edit_box_texture":"textures/ui/generic/text_box_hover"
-      }*/
     ]
   },
 

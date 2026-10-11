@@ -340,10 +340,6 @@
     "$scroll_track_image_control": "common.empty_panel"
   },
 
-  "creative_label":{
-    "visible": false
-  },
-
   "recipe_book":{
     "$overwriteable":false,
     "$use_compact_close_button":false,
@@ -386,7 +382,7 @@
               ]
             }
           },
-          {"creative_magnifying_glass_image@quartz_inventory.creative_magnifying_glass_image":{}}
+          {"creative_search_elements_panel@quartz_inventory.creative_search_elements_panel":{}}
         ]
       }
     ]

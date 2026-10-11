@@ -149,14 +149,6 @@
     "size": [24,24],
     "uv_size": [24,24],
     "uv": "@quartz_anim.general_anim"
-    //"layer": 21,
-    /*"modifications":[
-      {
-        "array_name":"controls",
-        "operation":"insert_back",
-        "value":{"disabled_slot_preserved@quartz_gui.disabled_slot_preserved":{}}
-      }
-    ]*/
   },
 
 

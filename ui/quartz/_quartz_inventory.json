@@ -31,7 +31,6 @@
     "anchor_from":"top_right",
     "anchor_to":"top_right",
     "layer":8,
-    //"offset":[-2,1],
     "bindings":[
       {
         "binding_name":"#is_recipe_book_layout",
@@ -101,17 +100,15 @@
   },
   
   //----------------------------------
-  // Giant Creative Magnifying Glass
+  // Creative Mode Elements
   //----------------------------------
 
-  "creative_magnifying_glass_image":{
-    "type":"image",
-    "texture": "textures/ui/creative/creative_magnifying_glass",
-    "size": [41,61],
-    "layer": 4,
-    "anchor_from":"bottom_right",
-    "anchor_to":"bottom_right",
-    "offset": [-33,-17],
+  "creative_search_elements_panel":{
+    "type":"panel",
+    "controls":[
+      {"creative_magnifying_glass_image@quartz_inventory.creative_magnifying_glass_image":{}},
+      {"creative_search_bar@quartz_inventory.creative_search_bar":{}}
+    ],
     "bindings":[
       {
         "binding_name": "#is_left_tab_search"
@@ -125,5 +122,26 @@
         "target_property_name": "#visible"
       }
     ]
+  },
+
+  "creative_magnifying_glass_image":{
+    "type":"image",
+    "texture": "textures/ui/creative/creative_magnifying_glass",
+    "size": [41,61],
+    "layer": 4,
+    "anchor_from":"bottom_right",
+    "anchor_to":"bottom_right",
+    "offset": [-33,-17]
+  },
+
+  "creative_search_bar@common.text_edit_control":{
+    "$default_edit_box_texture":"textures/ui/creative/creative_search_box",
+    "$hover_edit_box_texture":"textures/ui/creative/creative_search_box",
+    "$magnifying_glass_enabled":false,
+    "size": [98,14],
+    "offset": [-83,18],
+    "$text_edit_box_label_offset":[0,0],
+    "anchor_from":"top_right",
+    "anchor_to":"top_right"
   }
 }
