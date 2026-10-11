@@ -84,6 +84,7 @@
   },
 
   "survival_scroll_panel@crafting.scroll_panel":{
+    "$ignore_plus_icon":true,
     "$scrolling_content": "quartz_inventory.survival_scroll_grid_panel",
     "offset": [5.5,1],
     "anchor_from":"top_middle",
@@ -95,6 +96,33 @@
       {
         "binding_name":"#is_recipe_book_layout",
         "binding_name_override":"#visible"
+      }
+    ]
+  },
+  
+  //----------------------------------
+  // Giant Creative Magnifying Glass
+  //----------------------------------
+
+  "creative_magnifying_glass_image":{
+    "type":"image",
+    "texture": "textures/ui/creative/creative_magnifying_glass",
+    "size": [41,61],
+    "layer": 4,
+    "anchor_from":"bottom_right",
+    "anchor_to":"bottom_right",
+    "offset": [-33,-17],
+    "bindings":[
+      {
+        "binding_name": "#is_left_tab_search"
+      },
+      {
+        "binding_name": "#is_creative_layout"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "(#is_left_tab_search and #is_creative_layout)",
+        "target_property_name": "#visible"
       }
     ]
   }
