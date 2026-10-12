@@ -149,10 +149,8 @@
   // Creative Tab Navigation Panel
   //---------------------------------
 
-  // Remember: texture size + 2px
-
   "blocks_creative_tab@crafting.construction_tab":{
-    "size": [39,33],
+    "size": [37,31],
     "$unchecked_default_texture": "textures/ui/creative/tab_blocks",
     "$unchecked_hover_texture": "textures/ui/creative/tab_blocks",
     "$checked_default_texture": "textures/ui/creative/tab_blocks_selected",
@@ -162,7 +160,8 @@
   },
 
   "equipment_creative_tab@crafting.equipment_tab":{
-    "size": [32,30],
+    "size": [30,28],
+    "offset": [-56,-1.5],
     "$unchecked_default_texture": "textures/ui/creative/tab_equipment",
     "$unchecked_hover_texture": "textures/ui/creative/tab_equipment",
     "$checked_default_texture": "textures/ui/creative/tab_equipment_selected",
@@ -170,7 +169,8 @@
   },
 
   "items_creative_tab@crafting.items_tab":{
-    "size": [34,35],
+    "size": [32,33],
+    "offset": [-29,-1],
     "$unchecked_default_texture": "textures/ui/creative/tab_various",
     "$unchecked_hover_texture": "textures/ui/creative/tab_various",
     "$checked_default_texture": "textures/ui/creative/tab_various_selected",
@@ -178,7 +178,8 @@
   },
 
   "nature_creative_tab@crafting.nature_tab":{
-    "size": [38,33],
+    "size": [36,31],
+    "offset": [-1,-1],
     "$unchecked_default_texture": "textures/ui/creative/tab_nature",
     "$unchecked_hover_texture": "textures/ui/creative/tab_nature",
     "$checked_default_texture": "textures/ui/creative/tab_nature_selected",
@@ -186,11 +187,13 @@
   },
 
   "search_creative_tab@crafting.search_tab":{
-    "size": [30,32],
+    "size": [28,30],
+    "offset": [0,-5],
     "$unchecked_default_texture": "textures/ui/creative/search_tab",
     "$unchecked_hover_texture": "textures/ui/creative/search_tab",
     "$checked_default_texture": "textures/ui/creative/search_tab_selected",
     "$checked_hover_texture": "textures/ui/creative/search_tab_selected",
+    "$tab_icon":"common.empty_panel",
     "anchor_from":"top_right",
     "anchor_to":"top_right",
     "$is_left_most_tab":false,
@@ -199,7 +202,8 @@
 
   "creative_tabs_panel":{
     "type":"panel",
-    "size": [203,35],
+    "size": [204,35],
+    "offset": [-2,-11],
     "anchor_from":"top_middle",
     "anchor_to":"top_middle",
     "controls":[
@@ -215,5 +219,41 @@
         "binding_name_override": "#visible"
       }
     ]
+  },
+
+  //-----------------------------------
+  // Creative Layout Toggles
+  //-----------------------------------
+
+  "creative_recipe_book_layout_toggle@common_toggles.light_image_toggle":{
+    "size": [44,51],
+    "$toggle_name":"layout_toggle",
+    "anchor_from":"top_right",
+    "anchor_to":"top_right",
+    "$toggle_group_forced_index": "$recipe_book_layout_index",
+    "$focus_id": "recipe_book_layout_toggle",
+    "$toggle_state_binding_name": "#is_recipe_book_layout",
+
+    "$default_texture": "textures/ui/creative/tab_recipe_book",
+    "$hover_texture": "textures/ui/creative/tab_recipe_book_selected",
+    "$pressed_texture": "textures/ui/creative/tab_recipe_book",
+    "$pressed_no_hover_texture": "textures/ui/creative/tab_recipe_book_selected",
+    "$focus_override_up": "FOCUS_OVERRIDE_STOP"
+
+  },
+
+  "creative_inventory_layout_toggle@common_toggles.light_image_toggle":{
+    "size": [42,43],
+    "$toggle_name":"layout_toggle",
+    "anchor_from":"bottom_right",
+    "anchor_to":"bottom_right",
+    "$toggle_group_forced_index": "$survival_layout_index",
+    "$toggle_state_binding_name": "#is_survival_layout",
+
+    "$default_texture": "textures/ui/creative/tab_inv",
+    "$hover_texture": "textures/ui/creative/tab_inv_selected",
+    "$pressed_texture": "textures/ui/creative/tab_inv",
+    "$pressed_no_hover_texture": "textures/ui/creative/tab_inv_selected",
+    "$focus_override_up": "FOCUS_OVERRIDE_STOP"
   }
 }
