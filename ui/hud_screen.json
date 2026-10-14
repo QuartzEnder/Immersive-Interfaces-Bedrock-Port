@@ -1,17 +1,39 @@
 {
   "namespace": "hud",
 
-  "root_panel":{
-    "$xp_control_offset|default": [0,-13]
-  },
-
+  //--------------------------
   // Hotbar
 
+  "root_panel":{
+    "$xp_control_offset|default": [0,-13.5]
+  },
+
+  "centered_gui_elements_at_bottom_middle":{
+    "offset": [0,2]
+  },
+  
+  "centered_gui_elements_at_bottom_middle_touch":{
+    "offset": [0,2]
+  },
   "start_cap_image":{
     "alpha": 0
   },
+    
+  // End of this mess
 
-  // This is where the weird things end
+  "hotbar_renderer":{
+    "$hotbar_renderer_size|default": [20,22],
+    "layer": 0
+  },
+
+  "hotbar_slot_selected_image":{
+    "layer": 2,
+    "size": [24,24]
+  },
+
+  //---------------------------------
+  // Progress Bars
+  //--------------------------------
 
   "empty_progress_bar":{
     "texture": "textures/ui/progress_bars/progress_bar_empty"
@@ -68,17 +90,5 @@
         "value":{"hotbar_overlay@quartz_gui.hotbar_overlay":{}}
       }
     ]
-  },
-  
-  // End of this mess
-
-  "hotbar_renderer":{
-    "$hotbar_renderer_size|default": [20,22],
-    "layer": 0
-  },
-
-  "hotbar_slot_selected_image":{
-    "layer": 2,
-    "size": [24,24]
   }
 }
