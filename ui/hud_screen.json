@@ -1,53 +1,77 @@
 {
   "namespace": "hud",
 
-  "start_cap_image":{
-    "texture": "textures/ui/hotbar_end_cap"
+  "root_panel":{
+    "$xp_control_offset|default": [0,-13]
   },
+
+  // Hotbar
+
+  "start_cap_image":{
+    "alpha": 0
+  },
+
+  // This is where the weird things end
 
   "empty_progress_bar":{
     "texture": "textures/ui/progress_bars/progress_bar_empty"
   },
 
   "full_progress_bar":{
-    "texture": "textures/ui/progress_bars/filled_progress_bar"
+    "texture": "textures/ui/progress_bars/progress_bar_full_hud",
+    "clip_pixelperfect": true
   },
 
   "progress_bar_nub":{
-    "texture": "textures/ui/progress_bars/filled_bar_nub",
-    "clip_direction": "left",
-    "clip_pixelperfect": false,
-    "bindings":[
-      {
-        "binding_name": "#exp_progress",
-        "binding_name_override": "#clip_ratio",
-        "binding_type": "global"
-      }
-    ]
+    "alpha": 0
   },
 
   // Whoever designed this tree, may you have warm pillows
 
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar":{
-    "size": [182,5]
+    "size": [182,12]
   },
 
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar":{
-    "size": [182,5]
+    "size": [182,12]
   },
 
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar/progress_bar_nub":{
-    "size": [180,5]
+    "size": [180,5] // Since I made it invisible it doesn't have any use but I'll still keep it
   },
 
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar/progress_bar_nub/horse_jump_rend":{
     "size": [182,5]
   },
 
+  //-----------------------------
+  // Hotbar overlay insertion
+  //-----------------------------
+
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar/progress_bar_nub/horse_jump_rend/dash_rend":{
-    "size": [182,5]
+    "size": [182,5],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"hotbar_overlay@quartz_gui.hotbar_overlay":{}}
+      }
+    ]
+  },
+
+  "exp_progress_bar_and_hotbar/resizing_hotbar_no_xp_bar/horse_jump_rend/dash_rend":{
+    "size": [182,5],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"hotbar_overlay@quartz_gui.hotbar_overlay":{}}
+      }
+    ]
   },
   
+  // End of this mess
+
   "hotbar_renderer":{
     "$hotbar_renderer_size|default": [20,22],
     "layer": 0
@@ -56,16 +80,5 @@
   "hotbar_slot_selected_image":{
     "layer": 2,
     "size": [24,24]
-  },
-
-  "boss_health_panel":{
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"replace",
-        "control_name":"progress_bar_for_collections",
-        "value":{"bossbar_wrapper@quartz_bossbars.bossbar_wrapper":{}}
-      }
-    ]
   }
 }

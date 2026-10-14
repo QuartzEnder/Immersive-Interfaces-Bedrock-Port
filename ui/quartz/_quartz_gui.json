@@ -526,6 +526,8 @@
   },
 
   "stonecutter_scroll_panel@quartz_gui.small_container_scroll_panel":{
+    "$highlight_slot_size":[16,18],
+    "$highlight_slot_texture":"textures/ui/stonecutter/slot_hover",
     "size": [81,56],
     "offset": [45,0],
     "layer": 6,
@@ -659,5 +661,17 @@
     "size":[18,18],
     "texture": "textures/ui/slot_disabled",
     "layer":-21
+  },
+
+  //---------------------------
+  // Hotbar Overlay
+  //---------------------------
+
+  "hotbar_overlay":{
+    "type":"image",
+    "texture": "textures/ui/hud/hotbar_overlay",
+    "size": [194,35],
+    "offset": [0,9.5],
+    "layer": -20
   }
 }

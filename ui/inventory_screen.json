@@ -124,6 +124,14 @@
     "$deesse_inv_instant_offset":[0,-12]
   },
 
+  "armor_overlay":{
+    "alpha": 0
+  },
+
+  "offhand_overlay":{
+    "alpha": 0
+  },
+
   "player_inventory":{
     "layer": 0
   },
@@ -134,7 +142,7 @@
   },
 
   "player_armor_panel/armor_grid":{
-    "offset": [11,7]
+    "offset": [7,7]
   },
 
   "player_armor_panel/player_bg":{
@@ -152,7 +160,7 @@
   },
 
   "player_armor_panel/offhand_grid":{
-    "offset": [79,60]
+    "offset": [76,61]
   },
 
   "creative_hotbar_panel":{

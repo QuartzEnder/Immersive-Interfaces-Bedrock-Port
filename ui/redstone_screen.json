@@ -145,7 +145,7 @@
   },
 
   "crafter_disabled_slot/hover":{
-    "texture": "textures/ui/highlight_slot",
+    "texture": "textures/ui/crafter/highlight_slot_disabled",
     "size": [24,24],
     "uv_size": [24,24],
     "uv": "@quartz_anim.general_anim"

@@ -1,11 +1,7 @@
 {
   "namespace": "stonecutter",
 
-  "stonecutter_screen":{
-    "$title_background_size":["100% + 12px",13],
-    "$title_background_offset":[0,3],
-    "$main_title_colour":"$generic_main_title_colour",
-    
+  "stonecutter_screen":{    
     "$screen_content": "stonecutter.stonecutter_panel",
     "$is_dimz_advanced_container|default":false,
     "variables":[
@@ -25,7 +21,7 @@
         "array_name":"controls",
         "operation":"insert_after",
         "control_name": "common_panel",
-        "value":{"stonecutter_sawblade@quartz_anim.stonecutter_sawblade":{}}
+        "value":{"animated_sawblade_panel@quartz_anim.animated_sawblade_panel":{}}
       },
       {
         "array_name":"controls",

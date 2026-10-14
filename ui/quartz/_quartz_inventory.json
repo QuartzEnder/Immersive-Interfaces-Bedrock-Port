@@ -84,6 +84,8 @@
 
   "survival_scroll_panel@crafting.scroll_panel":{
     "$ignore_plus_icon":true,
+    "$highlight_slot_texture":"textures/ui/recipe/highlight_slot_recipe",
+    "$highlight_slot_size":[24,24],
     "$scrolling_content": "quartz_inventory.survival_scroll_grid_panel",
     "offset": [5.5,1],
     "anchor_from":"top_middle",

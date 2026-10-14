@@ -1,0 +1,36 @@
+{ "frames": [
+   {
+    "filename": "highlight_slot 0.png",
+    "frame": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "sourceSize": { "w": 24, "h": 24 },
+    "duration": 500
+   },
+   {
+    "filename": "highlight_slot 1.png",
+    "frame": { "x": 24, "y": 0, "w": 24, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "sourceSize": { "w": 24, "h": 24 },
+    "duration": 500
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.17-dev",
+  "image": "highlight_slott.png",
+  "format": "I8",
+  "size": { "w": 48, "h": 24 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

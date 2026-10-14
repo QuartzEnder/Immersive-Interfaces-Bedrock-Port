@@ -9,17 +9,10 @@
   "$generic_main_title_colour":[0.518,0.553,0.553],
   "$generic_shadow_title_colour":[0.941,0.969,0.965],
   "$container_title_font":"default",
-  "$pocket_scroll_size":["90%",172], // Unused - Derived from GUI Revision Expanded
+  "$pocket_scroll_size":["80%","80%"], // Unused - Derived from GUI Revision Expanded
   "$quartz_grey_colour":[0.667,0.667,0.667],
 
-  // Vanilla //
-
-  "$light_button_default_text_color": [1.0,1.0,1.0],
-  "$light_button_locked_text_color": [1.0,1.0,1.0],
-  "$trade_lock_color":[1.0,1.0,1.0],
-  "$dark_button_secondary_default_text_color": [ 0.7, 0.7, 0.7, 1.0 ],
-
-  "$light_toggle_default_text_color": [1.0,1.0,1.0],
+  // Vanilla // 
 
   "$enchanting_cost_fail_color":[0.251,0.498,0.063],
 

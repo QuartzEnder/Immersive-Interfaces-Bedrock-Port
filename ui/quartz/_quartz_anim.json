@@ -27,21 +27,44 @@
   // Animated Stonecutter Sawblade
   //-----------------------------------
 
-  "stonecutter_sawblade":{
-    "type":"image",
-    "texture": "textures/ui/stonecutter/sawblade",
+  "animated_sawblade_panel":{
+    "type":"panel",
     "size": [175,82],
-    "uv_size":[175,82],
-    "uv": "@quartz_anim.general_anim",
     "anchor_from":"top_left",
     "anchor_to":"top_left",
     "offset": [0,-56],
+    "controls":[
+      {"stonecutter_sawblade@quartz_anim.stonecutter_sawblade":{}},
+      {"stonecutter_sawblade_still@quartz_anim.stonecutter_sawblade_still":{}}
+    ]
+  },
+
+  "stonecutter_sawblade":{
+    "type":"image",
+    "texture": "textures/ui/stonecutter/sawblade",
+    "uv_size":[175,82],
+    "uv": "@quartz_anim.general_anim",
     "layer": 3,
     "bindings":[
       {
         "binding_type":"view",
         "source_control_name": "quartz_anim_toggle_state",
         "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "stonecutter_sawblade_still":{
+    "type":"image",
+    "texture": "textures/ui/stonecutter/sawblade",
+    "uv_size": [175,82],
+    "uv": [0,0],
+    "bindings":[
+      {
+        "binding_type":"view",
+        "source_control_name": "quartz_anim_toggle_state",
+        "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
       }
     ]
