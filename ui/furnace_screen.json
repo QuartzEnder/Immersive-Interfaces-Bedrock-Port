@@ -469,11 +469,11 @@
 
   "cell_image": {
     "type": "image",
-    "texture": "textures/ui/generic/cell_generic"
+    "texture": "textures/ui/cell_image"
   },
 
   "cell_image_classic@furnace.cell_image": {
-    "texture": "textures/ui/generic/cell_generic"
+    "texture": "textures/ui/cell_image"
   },
 
   "grid_item_for_recipe_book":{

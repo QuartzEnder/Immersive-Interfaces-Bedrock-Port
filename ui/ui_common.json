@@ -19,7 +19,7 @@
   
   "cell_image":{
     "$lock_theme|default":false,
-    "$cell_texture|default":"textures/ui/generic/cell_generic",
+    "$cell_texture|default":"textures/ui/cell_image",
     "texture": "$cell_texture",
     "layer": 0,
     "$cell_image_visible|default":false,
@@ -65,12 +65,12 @@
 
   "dialog_background_opaque":{
     "layer": 0,
-    "$background_texture|default":"textures/ui/generic/screen_background_generic",
+    "$background_texture|default":"textures/ui/dialog_background_opaque",
     "$lock_theme|default":false,
     "texture": "$background_texture",
     "variables":{
       "requires": "$lock_theme",
-      "$background_texture":"textures/ui/generic/screen_background_generic"
+      "$background_texture":"textures/ui/dialog_background_opaque"
     }
   },
 

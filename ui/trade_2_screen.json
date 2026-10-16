@@ -1,7 +1,7 @@
 {
-  "namespace": "trade2",
+  "namespace": "trade2"
 
-  "trade_screen":{
+  /*"trade_screen":{
     "$default_border_visible": false,
     "$hover_border_visible": false,
     "$close_button_offset":[28.5,0.5],
@@ -350,5 +350,5 @@
 
   "quick_trade_button@common_buttons.light_content_button":{
     "offset": [9,9.5]
-  }
+  }*/
 }

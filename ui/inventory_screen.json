@@ -168,7 +168,7 @@
   },
 
   "creative_hotbar_panel/creative_hotbar_background":{
-    "texture": "textures/ui/generic/screen_background_generic",
+    "texture": "textures/ui/dialog_background_opaque",
     "offset": [0,2],
     "layer": 0
   },

@@ -129,7 +129,7 @@
       "requires": "$debug_release_immersive_interfaces_quartz",
       "$cell_image_alpha":0.3,
       "$cell_image_colour":[0,1,0],
-      "$cell_texture":"textures/ui/generic/cell_generic"
+      "$cell_texture":"textures/ui/cell_image"
     }
   },
 

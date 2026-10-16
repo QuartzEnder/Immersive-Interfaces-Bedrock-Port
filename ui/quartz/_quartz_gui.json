@@ -704,7 +704,7 @@
 
   "equip_grid_for_carpet@horse.equip_grid":{
     "size": [18,30],
-    "offset": [1,19],
+    "offset": [1,18],
     "bindings":[
       {
         "binding_name": "#equip_grid_dimensions"

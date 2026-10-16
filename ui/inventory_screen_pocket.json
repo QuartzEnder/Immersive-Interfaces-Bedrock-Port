@@ -45,11 +45,11 @@
 
   "left_panel":{
     "use_anchored_offset":true,
-    "$background_texture":"textures/ui/generic/screen_background_generic"
+    "$background_texture":"textures/ui/dialog_background_opaque"
   },
 
   "hotbar_panel":{
-    "$background_texture":"textures/ui/generic/screen_background_generic"
+    "$background_texture":"textures/ui/dialog_background_opaque"
   },
 
   "right_tab_content":{
@@ -218,7 +218,7 @@
   },
 
   "pocket_armor_tab_content/equipment_and_renderer/armor_panel/armor_and_player/player_preview_border":{
-    "texture": "textures/ui/generic/cell_generic"
+    "texture": "textures/ui/cell_image"
   },
 
   "pocket_armor_tab_content/equipment_and_renderer/armor_panel/armor_and_player/player_preview_border/player_bg":{

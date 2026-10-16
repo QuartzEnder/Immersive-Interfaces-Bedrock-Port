@@ -2,7 +2,7 @@
   "namespace": "déesse_inventory",
 
   "armor_grid_creative_layout_panel":{
-    "texture": "textures/ui/generic/screen_background_generic",
+    "texture": "textures/ui/dialog_background_opaque",
     "layer": -1,
     "$cell_image_visible":true
   }
