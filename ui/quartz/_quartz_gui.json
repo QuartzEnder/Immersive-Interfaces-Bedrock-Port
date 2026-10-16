@@ -63,7 +63,8 @@
   "horse_chest_background":{
     "type":"image",
     "texture": "textures/ui/horse/chest_background",
-    "size": [94,72]
+    "size": [94,72],
+    "offset": [-2,-2.5]
   },
 
   "horse_slot_bg_panel":{

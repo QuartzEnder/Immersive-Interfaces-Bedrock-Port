@@ -1,5 +1,9 @@
 {
-  "namespace": "trade2"
+  "namespace": "trade2",
+
+  "trade_screen":{
+    "$cell_image_visible":true
+  }
 
   /*"trade_screen":{
     "$default_border_visible": false,
