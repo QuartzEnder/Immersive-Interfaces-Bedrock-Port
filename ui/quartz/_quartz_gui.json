@@ -676,6 +676,10 @@
     "layer": -20
   },
 
+  "hotbar_overlay_no_xp@quartz_gui.hotbar_overlay":{
+    "texture": "textures/ui/hud/hotbar_overlay_no_xp"
+  },
+
   //---------------------------
   // Mounts Screen Elements
   //---------------------------
