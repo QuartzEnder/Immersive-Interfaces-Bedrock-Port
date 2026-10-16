@@ -63,7 +63,7 @@
   "horse_chest_background":{
     "type":"image",
     "texture": "textures/ui/horse/chest_background",
-    "size": [104,75]
+    "size": [94,72]
   },
 
   "horse_slot_bg_panel":{
@@ -673,5 +673,53 @@
     "size": [194,35],
     "offset": [0,9.5],
     "layer": -20
+  },
+
+  //---------------------------
+  // Mounts Screen Elements
+  //---------------------------
+
+  "llama_carpet_image":{
+    "type":"image",
+    "texture": "textures/ui/horse/llama_carpet_slot",
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "size": [18,18],
+    "offset": [1,19],
+    "layer": 4,
+    "bindings":[
+      {
+        "binding_name": "#has_only_carpet_slot"
+      },
+      {
+        "binding_name": "#has_carpet_and_saddle_slot"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "(#has_only_carpet_slot or #has_carpet_and_saddle_slot)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "equip_grid_for_carpet@horse.equip_grid":{
+    "size": [18,30],
+    "offset": [1,19],
+    "bindings":[
+      {
+        "binding_name": "#equip_grid_dimensions"
+      },
+      {
+        "binding_name": "#has_only_carpet_slot"
+      },
+      {
+        "binding_name": "#has_carpet_and_saddle_slot"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "(#has_only_carpet_slot or #has_carpet_and_saddle_slot)",
+        "target_property_name": "#visible"
+      }
+    ]
   }
 }

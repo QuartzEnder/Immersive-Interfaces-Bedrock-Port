@@ -16,11 +16,6 @@
 
   "$enchanting_cost_fail_color":[0.251,0.498,0.063],
 
-  // Déesse UI //
-
-   "$oreui_default_text_color": [1.0,1.0,1.0],
-   "$light_button_pressed_text_color":[1.0,1.0,1.0],
-
   // Preserved Déesse UI values //
 
   "$preserved_oreui_default_text_color":[0.117,0.117,0.121]

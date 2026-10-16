@@ -2,7 +2,9 @@
   "namespace": "horse",
 
   "horse_screen":{
-    "$dialog_background":"common.empty_panel",
+    "$background_texture":"textures/ui/horse/horse_background",
+    "$common_panel_size":[264,119],
+    "$common_panel_offset":[0,-23],
     "$main_title_colour":"$generic_main_title_colour",
     "$close_button_offset":[21.5,6.5],
 
@@ -10,6 +12,10 @@
     "$screen_bg_content": "common.screen_background",
     "$screen_background_alpha": 0.4,
     "variables":[]
+  },
+
+  "horse_label":{
+    "offset": [7,5]
   },
 
   "horse_panel":{
@@ -23,7 +29,7 @@
   },
 
   "horse_panel/root_panel/equipment":{
-    "offset": [7,19]
+    "offset": [6,16]
   },
 
   "horse_panel/root_panel/renderer":{
@@ -46,11 +52,6 @@
     "offset": [79,17.5]
   },
 
-  "inv_grid":{
-    "$cell_image_visible":true,
-    "$cell_texture":"textures/ui/horse/chest_slot_bg"
-  },
-
   "inv_bg_panel":{
     "modifications":[
       {
@@ -62,33 +63,92 @@
     ]
   },
 
-  "equip_panel":{
-    "$cell_texture":"textures/ui/horse/chest_slot_bg",
+  "equip_grid":{
+    "size": [18,36],
+    "debug":"yellow",
+    "offset": [1,1],
     "modifications":[
       {
-        "array_name":"controls",
-        "operation":"insert_front",
-        "value":{"horse_slot_bg_panel@quartz_gui.horse_slot_bg_panel":{}}
+        "array_name":"bindings",
+        "operation":"insert_back",
+        "value":[
+          {
+            "binding_name": "#has_only_carpet_slot"
+          },
+          {
+            "binding_name": "#has_carpet_and_saddle_slot"
+          },
+          {
+            "binding_type":"view",
+            "source_property_name": "(not (#has_only_carpet_slot or #has_carpet_and_saddle_slot))",
+            "target_property_name": "#visible"
+          }
+        ]
       }
     ]
   },
 
+  //-----------------------
+  // Equip Sprites
+  //-----------------------
+
+  "overlay_image":{
+    "alpha": 1
+  },
+
+  "saddle_image": {
+    "texture": "textures/ui/horse/saddle_slot"
+  },
+
+  "horse_armor_image": {
+    "texture": "textures/ui/horse/horse_armour_slot"
+  },
+
+  "carpet_image": {
+    "texture": "textures/ui/horse/llama_carpet_slot",
+    "ignored": true
+  },
+
+  "nautilus_armor_image": {
+    "texture": "textures/ui/horse/horse_armour_slot"
+  },
+
+  "equip_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":[
+          {"llama_carpet_image@quartz_gui.llama_carpet_image":{}},
+          {"equip_grid_for_carpet@quartz_gui.equip_grid_for_carpet":{}}
+        ]
+      }
+    ]
+  },
+
+  "equip_panel/saddle":{
+    "size": [18,18]
+  },
+
+  "equip_panel/horse_armor_0":{
+    "size": [18,18]
+  },
+
+  "equip_panel/carpet_0":{
+    "size": [18,18]
+  },
+  
   "equip_panel/horse_armor_1":{
-    "offset": [1,21]
+    "size": [18,18],
+    "offset": [1,19]
   },
 
   "equip_panel/carpet_1":{
-    "offset": [1,21]
+    "size": [18,18],
+    "offset": [1,19]
   },
 
   "equip_panel/nautilus_armor_1":{
-    "offset": [1,21]
-  },
-
-  "equip_grid":{
-    "size": ["100%c",40]
-  },
-
-  "horse_label":{
+    "offset": [1,19]
   }
 }
