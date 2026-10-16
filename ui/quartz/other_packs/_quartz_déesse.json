@@ -17,6 +17,8 @@
     "$radio_toggle_group": true,
     "$toggle_group_default_selected": 0,
     "size": "$button_size",
+    "$hover_border_visible":false,
+    "$default_border_visible":false,
 
     "$toggle_default_state": true,
     "$toggle_group_forced_index": 0,

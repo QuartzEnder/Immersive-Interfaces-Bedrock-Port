@@ -160,6 +160,8 @@
       {
         "command_impulse_mode@common_toggles.light_image_toggle": {
           "$toggle_name":"#command_impulse_mode",
+          "$hover_border_visible":false,
+          "$default_border_visible":false,
           "$toggle_state_binding_name": "#command_impulse_mode",
           "bindings":[
             {
@@ -171,6 +173,8 @@
       },
       {
         "command_chain_mode@common_toggles.light_image_toggle": {
+          "$hover_border_visible":false,
+          "$default_border_visible":false,
           "$toggle_name":"#command_chain_mode",
           "$toggle_state_binding_name": "#command_chain_mode",
           "bindings":[
@@ -183,6 +187,8 @@
       },
       {
         "command_repeat_mode@common_toggles.light_image_toggle": {
+          "$hover_border_visible":false,
+          "$default_border_visible":false,
           "$toggle_name":"#command_repeat_mode",
           "$toggle_state_binding_name": "#command_repeat_mode",
           "bindings":[
@@ -210,6 +216,8 @@
           "$hover_texture": "textures/empty",
           "$pressed_texture": "textures/empty",
           "$pressed_no_hover_texture": "textures/empty",
+          "$hover_border_visible":false,
+          "$default_border_visible":false,
           "bindings":[
             {
               "binding_name": "#command_unconditional_mode",
@@ -226,6 +234,8 @@
           "$hover_texture": "textures/ui/command_blocks/comm_conditional",
           "$pressed_texture": "textures/ui/command_blocks/comm_conditional",
           "$pressed_no_hover_texture": "textures/ui/command_blocks/comm_conditional",
+          "$hover_border_visible":false,
+          "$default_border_visible":false,
           "bindings":[
             {
               "binding_name": "#command_conditional_mode",
@@ -254,6 +264,8 @@
           "$hover_texture": "textures/empty",
           "$pressed_texture": "textures/empty",
           "$pressed_no_hover_texture": "textures/empty",
+          "$hover_border_visible":false,
+          "$default_border_visible":false,
 
           "bindings":[
             {
@@ -272,6 +284,8 @@
           "$hover_texture": "textures/ui/command_blocks/comm_always_active",
           "$pressed_texture": "textures/ui/command_blocks/comm_always_active",
           "$pressed_no_hover_texture": "textures/ui/command_blocks/comm_always_active",
+          "$hover_border_visible":false,
+          "$default_border_visible":false,
 
           "bindings":[
             {

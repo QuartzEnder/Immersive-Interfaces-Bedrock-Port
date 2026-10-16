@@ -235,6 +235,8 @@
     "$toggle_group_forced_index": "$recipe_book_layout_index",
     "$focus_id": "recipe_book_layout_toggle",
     "$toggle_state_binding_name": "#is_recipe_book_layout",
+    "$hover_border_visible":false,
+    "$default_border_visible":false,
 
     "$default_texture": "textures/ui/creative/tab_recipe_book",
     "$hover_texture": "textures/ui/creative/tab_recipe_book_selected",
@@ -251,6 +253,8 @@
     "anchor_to":"bottom_right",
     "$toggle_group_forced_index": "$survival_layout_index",
     "$toggle_state_binding_name": "#is_survival_layout",
+    "$hover_border_visible":false,
+    "$default_border_visible":false,
 
     "$default_texture": "textures/ui/creative/tab_inv",
     "$hover_texture": "textures/ui/creative/tab_inv_selected",
