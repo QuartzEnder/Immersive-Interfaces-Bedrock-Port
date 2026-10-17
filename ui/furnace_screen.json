@@ -437,7 +437,8 @@
     "$magnifying_glass_size":[12,12],
     "$magnifying_glass_offset":[0,0],
     "$text_edit_box_label_offset": [2,0],
-    "$magnifying_glass_enabled":false
+    "$magnifying_glass_enabled":false,
+    "$place_holder_text":"('§r§o§f' + %realmsSettingsScreen.searchBox)"
   },
 
   "filter_toggle":{

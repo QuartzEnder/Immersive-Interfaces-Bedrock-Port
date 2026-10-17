@@ -113,15 +113,8 @@
     ],
     "bindings":[
       {
-        "binding_name": "#is_left_tab_search"
-      },
-      {
-        "binding_name": "#is_creative_layout"
-      },
-      {
-        "binding_type":"view",
-        "source_property_name": "(#is_left_tab_search and #is_creative_layout)",
-        "target_property_name": "#visible"
+        "binding_name": "#is_left_tab_search",
+        "binding_name_override": "#visible"
       }
     ]
   },
@@ -190,7 +183,7 @@
 
   "search_creative_tab@crafting.search_tab":{
     "size": [28,30],
-    "offset": [0,-5],
+    "offset": [0,-1],
     "$unchecked_default_texture": "textures/ui/creative/search_tab",
     "$unchecked_hover_texture": "textures/ui/creative/search_tab",
     "$checked_default_texture": "textures/ui/creative/search_tab_selected",
@@ -214,6 +207,21 @@
       {"items_creative_tab@quartz_inventory.items_creative_tab":{}},
       {"nature_creative_tab@quartz_inventory.nature_creative_tab":{}},
       {"search_creative_tab@quartz_inventory.search_creative_tab":{}}
+    ]
+  },
+
+  //-----------------------------------
+  // Creative Layout Toggles
+  //-----------------------------------
+
+  "creative_content_panel":{
+    "type":"panel",
+    "controls":[
+      {"creative_recipe_book_layout_toggle@quartz_inventory.creative_recipe_book_layout_toggle":{}},
+      {"creative_inventory_layout_toggle@quartz_inventory.creative_inventory_layout_toggle":{}},
+      {"creative_tabs_panel@quartz_inventory.creative_tabs_panel":{}},
+      {"creative_search_elements_panel@quartz_inventory.creative_search_elements_panel":{}},
+      {"blueprint_creative_layout_toggle@quartz_inventory.blueprint_creative_layout_toggle":{}}
     ],
     "bindings":[
       {
@@ -223,12 +231,9 @@
     ]
   },
 
-  //-----------------------------------
-  // Creative Layout Toggles
-  //-----------------------------------
-
   "creative_recipe_book_layout_toggle@common_toggles.light_image_toggle":{
-    "size": [44,51],
+    "size": [46,53],
+    "offset": [-86,-25],
     "$toggle_name":"layout_toggle",
     "anchor_from":"top_right",
     "anchor_to":"top_right",
@@ -247,7 +252,8 @@
   },
 
   "creative_inventory_layout_toggle@common_toggles.light_image_toggle":{
-    "size": [42,43],
+    "size": [44,45],
+    "offset": [-57,16],
     "$toggle_name":"layout_toggle",
     "anchor_from":"bottom_right",
     "anchor_to":"bottom_right",
@@ -261,5 +267,45 @@
     "$pressed_texture": "textures/ui/creative/tab_inv",
     "$pressed_no_hover_texture": "textures/ui/creative/tab_inv_selected",
     "$focus_override_up": "FOCUS_OVERRIDE_STOP"
+  },
+
+  "blueprint_inv_layout_toggle@common_toggles.light_image_toggle":{
+    "size": [30,33],
+    "$toggle_name":"layout_toggle",
+    "anchor_from":"top_right",
+    "anchor_to":"top_right",
+    "offset": [-43,-29],
+    "$toggle_group_forced_index": "$creative_layout_index",
+    "$toggle_binding_type": "global",
+    "$toggle_state_binding_name": "#is_creative_layout",
+    "$focus_id": "creative_layout_toggle",
+    "$hover_border_visible":false,
+    "$default_border_visible":false,
+
+    "$default_texture":"textures/ui/creative/creative_tab",
+    "$hover_texture":"textures/empty",
+    "$checked_image":"quartz_inventory.creative_blueprint_toggled_sprite",
+    "$pressed_no_hover_texture":"textures/empty",
+    "$pressed_texture":"textures/ui/creative/creative_tab"
+  },
+
+  "blueprint_creative_layout_toggle@quartz_inventory.blueprint_inv_layout_toggle":{
+    "anchor_from":"bottom_right",
+    "anchor_to":"bottom_right",
+    "offset": [-92,10],
+    "bindings":[
+      {
+        "binding_name": "#is_creative_mode",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "creative_blueprint_toggled_sprite":{
+    "type":"image",
+    "texture": "textures/ui/creative/creative_toggle_selected",
+    "size": [28,31],
+    "uv_size": [28,31],
+    "uv": "@quartz_anim.general_anim"
   }
 }

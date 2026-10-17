@@ -133,7 +133,14 @@
   },
 
   "player_inventory":{
-    "layer": 0
+    "layer": 0,
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"blueprint_inv_layout_toggle@quartz_inventory.blueprint_inv_layout_toggle":{}}
+      }
+    ]
   },
 
   "player_inventory/common_panel":{
@@ -161,16 +168,6 @@
 
   "player_armor_panel/offhand_grid":{
     "offset": [76,61]
-  },
-
-  "creative_hotbar_panel":{
-    "$cell_image_visible":true
-  },
-
-  "creative_hotbar_panel/creative_hotbar_background":{
-    "texture": "textures/ui/dialog_background_opaque",
-    "offset": [0,2],
-    "layer": 0
   },
 
   "crafting_panel_2x2":{
@@ -258,7 +255,13 @@
     "anchor_from":"top_left" ,
     "anchor_to":"top_right",
     "size": [35,"100%"],
-    "layer": 9
+    "layer": 9,
+    "bindings":[
+      {
+        "binding_name": "#is_recipe_book_layout",
+        "binding_name_override": "#visible"
+      }
+    ]
   },
 
   "tab_navigation_panel_layout/navigation_tabs/content":{
@@ -390,10 +393,7 @@
               ]
             }
           },
-          {"creative_search_elements_panel@quartz_inventory.creative_search_elements_panel":{}},
-          {"creative_tabs_panel@quartz_inventory.creative_tabs_panel":{}},
-          {"creative_recipe_book_layout_toggle@quartz_inventory.creative_recipe_book_layout_toggle":{}},
-          {"creative_inventory_layout_toggle@quartz_inventory.creative_inventory_layout_toggle":{}}
+          {"creative_content_panel@quartz_inventory.creative_content_panel":{}}
         ]
       }
     ]
@@ -560,6 +560,20 @@
         "control_name": "help_button_panel"
       }
     ]
+  },
+
+  //--------------------------
+  // Creative Hotbar
+  //--------------------------
+
+  "recipe_book/creative_hotbar_panel":{
+    "anchor_from":"bottom_middle",
+    "anchor_to":"bottom_middle",
+    "offset": [-9,-16]
+  },
+
+  "creative_hotbar_panel/creative_hotbar_background":{
+    "alpha": 0
   },
 
   //--------------------------
