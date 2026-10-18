@@ -11,7 +11,7 @@
   },
   
   //------------------------------------
-  //Crafting elements
+  //  Crafting elements
   //------------------------------------
 
   "filter_toggle":{
@@ -21,12 +21,13 @@
   },
 
   "crafting_screen":{
+    "$is_crafting_screen":true,
+    "$is_inventory_screen":false,
     "$background_texture":"textures/ui/crafting/3x3_crafting_bg",
     "$hide_toolbar_panel":true,
     "$common_panel_size":[168,68],
     "$common_panel_offset":[4,12],
     "$anchor_point":"top_middle",
-    //"$deesse_inv_instant_anchor":"top_right",
     "$deesse_inv_instant_offset": [-1,-12],
     "$crafting_label_offset":[0,0]
   },
@@ -116,6 +117,7 @@
 //----------------------------
 
   "inventory_screen":{
+    "$is_inventory_screen":true,
     "$hide_toolbar_panel":false,
     "$background_texture":"textures/ui/crafting/2x2_crafting_bg",
     "$anchor_point":"top_middle",
@@ -600,9 +602,9 @@
     "modifications":[
       {
         "array_name":"controls",
-        "operation":"replace",
-        "control_name": "toolbar_panel",
-        "value":{"toolbar_panel_centerer@quartz_gui.toolbar_panel_centerer":{}}
+        "operation":"remove",
+        "control_name": "toolbar_panel"
+        //"value":{"toolbar_panel_centerer@quartz_gui.toolbar_panel_centerer":{}}
       }
     ]
   },
