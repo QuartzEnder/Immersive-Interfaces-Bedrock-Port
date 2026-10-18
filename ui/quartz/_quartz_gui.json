@@ -672,7 +672,7 @@
     "type":"image",
     "texture": "textures/ui/hud/hotbar_overlay",
     "size": [194,35],
-    "offset": [0,9.5],
+    "offset": [0,7.5],
     "layer": -20
   },
 

@@ -12,6 +12,12 @@
     "$use_custom_view_toggle_bindings|default":false,
     "$closed_book_visibility_bindings|default":[],
     "$open_book_visibility_bindings|default":[],
+
+    "$closed_default_texture":"textures/ui/recipe/recipe_book_closed_default",
+    "$closed_hover_texture": "textures/ui/recipe/recipe_book_closed_hover",
+    "$open_default_texture":"textures/ui/recipe/recipe_book_open_default",
+    "$open_hover_texture": "textures/ui/recipe/recipe_book_open_hover",
+
     "controls":[
       {
         "closed_book@common_toggles.light_image_toggle":{
@@ -22,8 +28,8 @@
           "$toggle_state_binding_name": "$closed_book_toggle_state_binding_name",
           "$toggle_group_forced_index": "$closed_book_toggle_group_forced_index",
 
-          "$default_texture": "textures/ui/recipe/recipe_book_closed_default",
-          "$pressed_texture": "textures/ui/recipe/recipe_book_closed_hover",
+          "$default_texture": "$closed_default_texture",
+          "$pressed_texture": "$closed_hover_texture",
 
           "$toggle_tts_header": "$closed_book_tts",
 
@@ -39,8 +45,8 @@
           "$toggle_state_binding_name": "$open_book_toggle_state_binding_name",
           "$toggle_group_forced_index": "$open_book_toggle_group_forced_index",
 
-          "$default_texture": "textures/ui/recipe/recipe_book_open_default",
-          "$pressed_texture": "textures/ui/recipe/recipe_book_open_hover",
+          "$default_texture": "$open_default_texture",
+          "$pressed_texture": "$open_hover_texture",
 
           "$toggle_tts_header": "$open_book_tts",
 

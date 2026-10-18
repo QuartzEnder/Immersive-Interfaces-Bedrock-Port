@@ -1,4 +1,4 @@
 {
-  "base_size": [182,12],
+  "base_size": "$xp_bar_size",
   "nineslice_size":1
 }

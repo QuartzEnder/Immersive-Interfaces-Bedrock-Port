@@ -1,19 +1,26 @@
 {
   "namespace": "hud",
 
+  "hud_screen":{
+    "$xp_bar_size":[182,8],
+    "$all_hotbar_offset":[0,2],
+    "$hotbar_grid_offset":[4,14]
+  },
+
   //--------------------------
   // Hotbar
+  //--------------------------
 
   "root_panel":{
-    "$xp_control_offset|default": [0,-13.5]
+    "$xp_control_offset|default": [0,-11.5]
   },
 
   "centered_gui_elements_at_bottom_middle":{
-    "offset": [0,2]
+    "offset": "$all_hotbar_offset"
   },
   
   "centered_gui_elements_at_bottom_middle_touch":{
-    "offset": [0,2]
+    "offset": "$all_hotbar_offset"
   },
   "start_cap_image":{
     "alpha": 0
@@ -51,27 +58,27 @@
   // Whoever designed this tree, may you have warm pillows
 
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar":{
-    "size": [182,12]
+    "size": "$xp_bar_size"
   },
 
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar":{
-    "size": [182,12]
+    "size": "$xp_bar_size"
   },
 
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar/progress_bar_nub":{
-    "size": [180,5] // Since I made it invisible it doesn't have any use but I'll still keep it
+    "size": "$xp_bar_size" // Since I made it invisible it doesn't have any use but I'll still keep it
   },
 
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar/progress_bar_nub/horse_jump_rend":{
-    "size": [182,5]
+    "anchor_from":"center",
+    "anchor_to":"center",
+    "size": "$xp_bar_size"
   },
 
-  //-----------------------------
-  // Hotbar overlay insertion
-  //-----------------------------
-
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar/progress_bar_nub/horse_jump_rend/dash_rend":{
-    "size": [182,5],
+    "anchor_from":"center",
+    "anchor_to":"center",
+    "size": "$xp_bar_size",
     "modifications":[
       {
         "array_name":"controls",
@@ -81,8 +88,14 @@
     ]
   },
 
+  "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar/progress_bar_nub/horse_jump_rend/dash_rend/hotbar":{
+    "offset": "$hotbar_grid_offset"
+  },
+
   "exp_progress_bar_and_hotbar/resizing_hotbar_no_xp_bar/horse_jump_rend/dash_rend":{
-    "size": [182,5],
+    "anchor_from":"center",
+    "anchor_to":"center",
+    "size": "$xp_bar_size",
     "modifications":[
       {
         "array_name":"controls",
@@ -90,5 +103,9 @@
         "value":{"hotbar_overlay_no_xp@quartz_gui.hotbar_overlay_no_xp":{}}
       }
     ]
+  },
+
+  "exp_progress_bar_and_hotbar/resizing_hotbar_no_xp_bar/horse_jump_rend/dash_rend/hotbar":{
+    "offset": "$hotbar_grid_offset"
   }
 }
