@@ -21,6 +21,7 @@
   //---------------
 
   "dropper_screen":{
+    "$close_button_offset|default":[75,-0.5],
     "$grid_offset_override":[0,9],
     "$is_dropper":true,
     "$background_texture":"textures/ui/dropper/screen_background_dropper",
@@ -42,6 +43,7 @@
   //---------------
 
   "dispenser_screen":{
+    "$close_button_offset|default":[75,-0.5],
     "$grid_offset_override":[0,9],
     "$is_dispenser":true,
     "$background_texture":"textures/ui/dispenser/screen_background_dispenser",
@@ -63,6 +65,7 @@
   //---------------
 
   "hopper_screen":{
+    "$close_button_offset":[36.5,-0.5],
     "$grid_offset_override":[0,12],
     "$title_background_size":["100% + 12px", 12],
     "$title_background_offset":[0,3],

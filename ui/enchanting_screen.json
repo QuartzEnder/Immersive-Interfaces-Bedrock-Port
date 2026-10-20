@@ -20,7 +20,7 @@
     "$title_background_offset":[0,2],
     "$title_background_size":["100% + 12px", 12],
     "$background_texture":"textures/ui/enchanting/screen_background_enchanting",
-    "$close_button_offset":[19,3],
+    "$close_button_offset":[22,3],
     "$main_container_colour":[0.192,0.098,0.188],
     "$is_déesse_ui_pack|default":false,
     "$is_dimz_advanced_container|default":false,

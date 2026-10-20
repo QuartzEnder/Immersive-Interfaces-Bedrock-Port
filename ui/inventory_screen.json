@@ -372,7 +372,7 @@
               "anchor_from":"top_right",
               "anchor_to":"top_left",
               "$show_close_button":true,
-              "offset":[1,3],
+              "offset":[-10,3],
               "bindings":[
                 {
                   "binding_name":"#is_creative_layout",
@@ -386,7 +386,7 @@
               "anchor_from":"top_right",
               "anchor_to":"top_left",
               "ignored": "$pocket_screen",
-              "offset": [-1.5,-0.5],
+              "offset": [-10.5,-0.5],
               "bindings":[
                 {
                   "binding_name":"#is_creative_layout",

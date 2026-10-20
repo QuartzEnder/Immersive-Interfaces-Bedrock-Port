@@ -79,8 +79,8 @@
   },
 
   "close_button":{
-    "$close_button_offset|default":[18.5,-0.5],
-    "$close_button_panel_size|default": [14,14],
+    "$close_button_offset|default":[19,-0.5],
+    "$close_button_panel_size|default": [15,15],
     "$is_déesse_ui_pack|default":false,
     "$is_dimz_advanced_container|default":false,
     "variables":[

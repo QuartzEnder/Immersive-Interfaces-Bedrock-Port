@@ -77,7 +77,7 @@
   "small_chest_screen":{
     "$show_close_button":true,
     "$common_panel_size":[184,91],
-    "$common_panel_offset":[0,-11],
+    "$common_panel_offset":[2.5,-9],
     "$big_close_button_offset":[20,0],
     "$déesse_lowering_padding_size":[1,12],
     "$background_texture":"textures/ui/chest/screen_background_chest",
@@ -107,6 +107,7 @@
     "$big_close_button_offset":[20,0],
     "$déesse_lowering_padding_size":[1,19],
     "$common_panel_size":[200,159],
+    "$close_button_offset":[18.5,30],
     "$background_texture":"textures/ui/chest/screen_background_chest",
     "$container_title_custom|default":"$container_title",
     "variables":[

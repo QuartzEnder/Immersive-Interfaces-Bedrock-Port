@@ -101,6 +101,7 @@
     "$text_box_name": "command_block.output_text",
     "max_length": 32500,
     "$text_edit_box_content_binding_name": "#command_output_text",
+    "$hover_edit_box_texture":"textures/ui/generic/text_box_default",
     "$place_holder_text": "",
     //we dont want selection on the output window
     "button_mappings": [
@@ -424,7 +425,7 @@
     "type":"panel",
     "layer": 0,
     "$dialog_background":"quartz_command_block.command_block_background",
-    "$close_button_offset":[0,0],
+    "$close_button_offset":[-15,35],
     "$common_panel_size":[461,275],
     "controls":[
       {"common_panel@common.common_panel":{"layer": 0}},

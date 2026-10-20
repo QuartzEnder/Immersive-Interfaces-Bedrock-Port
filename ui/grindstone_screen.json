@@ -3,7 +3,7 @@
 
   "grindstone_panel":{
     "$common_panel_size":[149,69],
-    "$close_button_offset":[43,3],
+    "$close_button_offset":[30,0],
     "$big_close_button_offset":[46,2],
     "$common_panel_offset":[10.5,11],
     "$is_déesse_ui_pack|default":false,
