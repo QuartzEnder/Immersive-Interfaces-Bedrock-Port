@@ -8,6 +8,7 @@
     "$common_panel_size":[176,85],
     "$common_panel_offset":[0,-5],
     "$flame_texture":"textures/ui/furnace/lit_progress",
+    "$book_type":"furnace",
 
     "$screen_content": "furnace.furnace_panel",
     "$screen_background_alpha": 0.4,

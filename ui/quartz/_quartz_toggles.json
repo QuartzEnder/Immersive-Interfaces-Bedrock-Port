@@ -2,8 +2,12 @@
 {
   "namespace": "quartz_toggles",
 
-  "recipe_book_toggle_template":{
-    "size": [22,20],
+  //---------------------------------
+  // Recipe book Toggle Templates
+  //---------------------------------
+
+  "recipe_toggle_template_inv":{
+    "size": [47,42],
     "type":"panel",
     "$radio_toggle_group": true,
     "$default_border_visible": false,
@@ -13,10 +17,10 @@
     "$closed_book_visibility_bindings|default":[],
     "$open_book_visibility_bindings|default":[],
 
-    "$closed_default_texture":"textures/ui/recipe/recipe_book_closed_default",
-    "$closed_hover_texture": "textures/ui/recipe/recipe_book_closed_hover",
-    "$open_default_texture":"textures/ui/recipe/recipe_book_open_default",
-    "$open_hover_texture": "textures/ui/recipe/recipe_book_open_hover",
+    "$closed_default_texture":"textures/ui/recipe/inv/recipe_book_closed",
+    "$open_default_texture":"textures/empty",
+    "$closed_hover_texture": "textures/ui/recipe/inv/recipe_book_open",
+    "$open_hover_texture": "textures/empty",
 
     "controls":[
       {
@@ -56,25 +60,69 @@
     ]
   },
 
+  "recipe_toggle_template_crafting@quartz_toggles.recipe_toggle_template_inv":{
+    "size": [23,33],
+    "$closed_default_texture":"textures/ui/recipe/crafting/recipe_book_closed",
+    "$open_default_texture":"textures/empty",
+    "$closed_hover_texture": "textures/ui/recipe/crafting/recipe_book_open",
+    "$open_hover_texture": "textures/empty"
+  },
+
+  "recipe_toggle_template_furnace@quartz_toggles.recipe_toggle_template_inv":{
+    "size": [47,42],
+    "$closed_default_texture":"textures/ui/recipe/furnace/recipe_book_closed",
+    "$open_default_texture":"textures/empty",
+    "$closed_hover_texture": "textures/ui/recipe/furnace/recipe_book_open",
+    "$open_hover_texture": "textures/empty"
+  },
+
   "recipe_toggle_view_template@common_toggles.switch_toggle":{
-    "size": [22,20],
+    "size": "$recipe_book_size",
     "$is_déesse_ui_pack|default":false,
     "$default_border_visible": false,
     "$hover_border_visible": false,
     "$toggle_name":"recipe_book",
+    "$book_type|default":"inv",
 
-    "$default_texture": "textures/ui/recipe/recipe_book_closed_default",
-    "$pressed_texture": "textures/ui/recipe/recipe_book_closed_hover",
-    "$hover_texture": "textures/ui/recipe/recipe_book_open_default",
-    "$pressed_no_hover_texture": "textures/ui/recipe/recipe_book_open_hover",
-    "$locked_texture":"textures/ui/absorbing_full_blinking"
+    "$recipe_book_size":[47,42],
+    "$default_texture":"textures/ui/recipe/inv/recipe_book_closed",
+    "$hover_texture":"textures/empty",
+    "$pressed_texture": "textures/ui/recipe/inv/recipe_book_open",
+    "$pressed_no_hover_texture": "textures/empty",
+
+    "variables":[
+      {
+        "requires": "($book_type = 'inv')", // unused, uses the other template
+        "$default_texture":"textures/ui/recipe/inv/recipe_book_closed",
+        "$hover_texture":"textures/empty",
+        "$pressed_texture": "textures/ui/recipe/inv/recipe_book_open",
+        "$pressed_no_hover_texture": "textures/empty",
+        "$recipe_book_size":[47,42]
+      },
+      {
+        "requires": "($book_type = 'crafting')", // unused, uses the other template
+        "$default_texture":"textures/ui/recipe/crafting/recipe_book_closed",
+        "$hover_texture":"textures/empty",
+        "$pressed_texture": "textures/ui/recipe/crafting/recipe_book_open",
+        "$pressed_no_hover_texture": "textures/empty",
+        "$recipe_book_size":[23,33]
+      },
+      {
+        "requires": "($book_type = 'furnace')",
+        "$default_texture":"textures/ui/recipe/furnace/recipe_book_closed",
+        "$hover_texture":"textures/empty",
+        "$pressed_texture": "textures/ui/recipe/furnace/recipe_book_open",
+        "$pressed_no_hover_texture": "textures/empty",
+        "$recipe_book_size":[31,41]
+      }
+    ]
   },
 
   //------------------------------------------
   // Recipe Book Toggles
   //------------------------------------------
 
-  "recipe_toggle_survival@quartz_toggles.recipe_book_toggle_template":{
+  "recipe_toggle_survival@quartz_toggles.recipe_toggle_template_inv":{
     "$book_toggle_name":"layout_toggle",
 
     "$closed_book_toggle_state_binding_name":"#is_recipe_book_layout",
@@ -98,11 +146,33 @@
     ]
   },
 
+  "recipe_toggle_crafting@quartz_toggles.recipe_toggle_survival":{
+    "size": [23,33],
+    "$closed_default_texture":"textures/ui/recipe/crafting/recipe_book_closed",
+    "$open_default_texture":"textures/empty",
+    "$closed_hover_texture": "textures/ui/recipe/crafting/recipe_book_open",
+    "$open_hover_texture": "textures/empty",
+    "$book_anchor_point":"left_middle",
+    "$book_offset":[7,-1],
+    "anchor_from":"$book_anchor_point",
+    "anchor_to":"$book_anchor_point",
+    "offset":"$book_offset",
+
+    "$is_déesse_ui_pack|default":false,
+    "$is_dimz_advanced_container|default":false,
+
+    "variables":{
+      "requires":"($is_déesse_ui_pack or $is_dimz_advanced_container)",
+      "$book_anchor_point":"bottom_middle",
+      "$book_offset":[10,-3]
+    }
+  },
+
   //--------------------------------------------
   // Déesse UI Brewing Stand Book Toggle
   //--------------------------------------------
 
-  "déesse_toggle_brewing@quartz_toggles.recipe_book_toggle_template":{
+  "déesse_toggle_brewing@quartz_toggles.recipe_toggle_template_crafting":{
     "$book_toggle_name":"container_guide_layout_toggle",
     "$toggle_view_binding_name":"brewing_guide_tog",
     "ignored": "(not $is_déesse_ui_pack)",
@@ -154,6 +224,7 @@
   //---------------------------------
 
   "recipe_toggle_furnace@quartz_toggles.recipe_toggle_view_template":{
+    //"$book_type":"furnace",
     "$toggle_view_binding_name":"recipe_furnace_toggle"
   },
 
@@ -161,7 +232,7 @@
   // Stonecutter & Loom layout toggle
   //------------------------------------
 
-  "bedrock_large_toggle@quartz_toggles.recipe_book_toggle_template":{
+  "bedrock_large_toggle@quartz_toggles.recipe_toggle_template_crafting":{
     "$book_toggle_name":"left_panel_toggle",
     "$toggle_view_binding_name":"left_panel_toggle",
     "layer": 3,
