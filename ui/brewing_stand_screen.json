@@ -34,13 +34,16 @@
       {
         "array_name":"controls",
         "operation":"insert_front",
-        "value":{
-          "déesse_toggle_brewing@quartz_toggles.déesse_toggle_brewing":{
-            "anchor_from":"right_middle",
-            "anchor_to":"right_middle",
-            "offset":[-15,0]
-          }
-        }
+        "value":[
+          {
+            "déesse_toggle_brewing@quartz_toggles.déesse_toggle_brewing":{
+              "anchor_from":"right_middle",
+              "anchor_to":"right_middle",
+              "offset":[-15,0]
+            }
+          },
+          {"brewing_guide_book_toggle@quartz_brewing.brewing_guide_book_toggle":{}}
+        ]
       }
     ]
   },
@@ -113,6 +116,20 @@
             "$focus_override_right": "brewing_input_item0"
           }
         }    
+      }
+    ]
+  },
+
+  //-------------------------
+  // Guide Image Insertion
+  //-------------------------
+
+  "brewing_stand_panel/root_panel":{
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_front",
+        "value":{"brewing_guide_image@quartz_brewing.brewing_guide_image":{}}
       }
     ]
   }

@@ -1,0 +1,37 @@
+{
+  "namespace": "quartz_brewing",
+
+  "brewing_guide_book_toggle@quartz_toggles.recipe_toggle_view_template":{
+    "$book_type":"null",
+    "$default_texture":"textures/ui/recipe/furnace/recipe_book_closed",
+    "$pressed_texture":"textures/ui/recipe/furnace/recipe_book_open",
+    "$hover_texture":"textures/ui/recipe/furnace/recipe_book_open",
+    "$pressed_no_hover_texture":"textures/ui/recipe/furnace/recipe_book_open",
+    "anchor_from":"left_middle",
+    "anchor_to":"left_middle",
+    "$is_déesse_ui_pack|default":false,
+    "ignored": "($is_déesse_ui_pack)",
+    "offset": [0,14],
+
+    "$toggle_name":"brewing_guide_toggle",
+    "$toggle_view_binding_name":"brewing_guide_toggle_control"
+  },
+
+  "brewing_guide_image":{
+    "type":"image",
+    "texture": "textures/ui/brewing/brewing_guide",
+    "size": [128,166],
+    "anchor_from":"top_left",
+    "anchor_to":"top_right",
+    "$is_déesse_ui_pack|default":false,
+    "ignored": "($is_déesse_ui_pack)",
+    "bindings":[
+      {
+        "binding_type":"view",
+        "source_control_name": "brewing_guide_toggle_control",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ] 
+  }
+}
