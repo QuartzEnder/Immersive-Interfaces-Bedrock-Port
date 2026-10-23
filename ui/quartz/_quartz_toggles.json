@@ -276,7 +276,7 @@
     "anchor_from":"top_right",
     "anchor_to":"top_right",
     "layer": 3,
-    "size": [16,16],
+    "size": [17,17],
     "$anim_toggle_offset|default":[16,23],
     "offset": "$anim_toggle_offset",
     "$toggle_name":"quartz_anim_toggle",

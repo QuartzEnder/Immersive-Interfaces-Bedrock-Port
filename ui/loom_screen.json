@@ -15,7 +15,10 @@
   },
 
   "scroll_panel":{
-    "size": ["100% - 12px","100% - 16px"]
+    "offset": [2,30],
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "size": ["100% - 10px","100% - 50px"]
   },
 
   "top_half_panel":{
@@ -50,8 +53,18 @@
   },
 
   "pattern_book_panel":{
+    "layer": 3,
+    "$common_panel_size":[147,165],
     "$overwriteable":false,
     "$background_texture":"textures/ui/recipe/recipe_book_background",
+    "$left_panel_text":"('§o' + %itemGroup.name.banner_pattern)",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"left_panel_title@quartz_gui.left_panel_title":{}}
+      }
+    ],
     "bindings":[
       {
         "binding_type":"view",
@@ -78,7 +91,7 @@
   },
 
   "pattern_button":{
-    "size": [20,20]
+    "size": [25,25]
   },
 
   "right_panel/common_panel":{

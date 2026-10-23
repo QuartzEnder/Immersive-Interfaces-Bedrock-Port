@@ -24,16 +24,16 @@
         "operation":"insert_back",
         "value":{
           "anim_toggle_panel@quartz_toggles.anim_toggle_panel":{
-            "$anim_toggle_offset":[16,27],
+            "$anim_toggle_offset":[34.5,27],
             "variables":[
               {
                 "requires":"$is_déesse_ui_pack",
-                "$anim_toggle_offset":[20,27],
+                "$anim_toggle_offset":[38.5,27],
                 "$big_anim_toggle_offset":[22,30]
               },
               {
                 "requires":"$is_dimz_advanced_container",
-                "$anim_toggle_offset":[19,43]
+                "$anim_toggle_offset":[37.5,43]
               }
             ]
           }
@@ -43,11 +43,24 @@
   },
 
   "scroll_panel":{
-    "size": ["100% - 12px","100% - 16px"]
+    "offset": [4,30],
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "size": ["100% - 12px","100% - 36px"]
   },
 
   "stone_book_panel":{
+    "layer": 3,
     "$background_texture":"textures/ui/recipe/recipe_book_background",
+    "$left_panel_text":"('§o' + %itemGroup.name.stone)",
+    "$common_panel_size":[147,165],
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"insert_back",
+        "value":{"left_panel_title@quartz_gui.left_panel_title":{}}
+      }
+    ],
     "bindings":[
       {
         "binding_type":"view",
@@ -96,7 +109,7 @@
           "bedrock_large_toggle@quartz_toggles.bedrock_large_toggle":{
             "anchor_from":"top_left",
             "anchor_to":"top_left",
-            "offset":[10,-12]
+            "offset":[12,-16]
           }
         }
       }
@@ -166,7 +179,7 @@
   },
 
   "stone_button":{
-    "size": [20,20]
+    "size": [25,25]
   },
 
   "toolbar_panel":{

@@ -132,6 +132,8 @@
   },
   
   "ender_chest_screen":{
+    "$common_panel_size":[184,91],
+    "$common_panel_offset":[2.5,-9],
     "$chest_label_anchor":"top_left",
     "$chest_label_offset":[8,6],
     "$background_texture":"textures/ui/ender_chest/screen_background_ender_chest",

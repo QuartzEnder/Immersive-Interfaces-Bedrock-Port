@@ -726,5 +726,31 @@
         "target_property_name": "#visible"
       }
     ]
+  },
+
+  //--------------------------
+  // Left Panel title
+  //--------------------------
+
+  "left_panel_title":{
+    "type":"image",
+    "layer": 3,
+    "texture": "textures/ui/generic/text_box_default",
+    "size": [82,14],
+    "anchor_from":"top_middle",
+    "anchor_to":"top_middle",
+    "offset": [-7.5,12.5],
+    "controls":[
+      {
+        "left_panel_label":{
+          "type":"label",
+          "text": "$left_panel_text",
+          "size": ["100%","100%"],
+          "anchor_from":"top_left",
+          "anchor_to":"top_left",
+          "offset": [3,3]
+        }
+      }
+    ]
   }
 }
