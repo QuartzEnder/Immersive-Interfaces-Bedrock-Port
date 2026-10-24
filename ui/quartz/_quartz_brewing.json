@@ -2,11 +2,7 @@
   "namespace": "quartz_brewing",
 
   "brewing_guide_book_toggle@quartz_toggles.recipe_toggle_view_template":{
-    "$book_type":"null",
-    "$default_texture":"textures/ui/recipe/furnace/recipe_book_closed",
-    "$pressed_texture":"textures/ui/recipe/furnace/recipe_book_open",
-    "$hover_texture":"textures/ui/recipe/furnace/recipe_book_open",
-    "$pressed_no_hover_texture":"textures/ui/recipe/furnace/recipe_book_open",
+    "$book_type":"furnace_paper",
     "anchor_from":"left_middle",
     "anchor_to":"left_middle",
     "$is_déesse_ui_pack|default":false,

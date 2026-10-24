@@ -68,12 +68,22 @@
     "$open_hover_texture": "textures/empty"
   },
 
+  "recipe_toggle_template_crafting_paper@quartz_toggles.recipe_toggle_template_crafting":{
+    "$open_default_texture":"textures/ui/recipe/crafting/paper",
+    "$open_hover_texture":"textures/ui/recipe/crafting/paper"
+  },
+
   "recipe_toggle_template_furnace@quartz_toggles.recipe_toggle_template_inv":{
     "size": [47,42],
     "$closed_default_texture":"textures/ui/recipe/furnace/recipe_book_closed",
     "$open_default_texture":"textures/empty",
     "$closed_hover_texture": "textures/ui/recipe/furnace/recipe_book_open",
     "$open_hover_texture": "textures/empty"
+  },
+
+  "recipe_toggle_template_furnace_paper@quartz_toggles.recipe_toggle_template_furnace":{
+    "$open_default_texture":"textures/ui/recipe/furnace/paper",
+    "$open_hover_texture":"textures/ui/recipe/furnace/paper"
   },
 
   "recipe_toggle_view_template@common_toggles.switch_toggle":{
@@ -100,6 +110,14 @@
         "$recipe_book_size":[47,42]
       },
       {
+        "requires": "($book_type = 'crafting_paper')",
+        "$default_texture":"textures/ui/recipe/crafting/recipe_book_closed",
+        "$hover_texture":"textures/ui/recipe/crafting/paper",
+        "$pressed_texture": "textures/ui/recipe/crafting/recipe_book_open",
+        "$pressed_no_hover_texture": "textures/ui/recipe/crafting/paper",
+        "$recipe_book_size":[23,33]
+      },
+      {
         "requires": "($book_type = 'crafting')", // unused, uses the other template
         "$default_texture":"textures/ui/recipe/crafting/recipe_book_closed",
         "$hover_texture":"textures/empty",
@@ -113,6 +131,14 @@
         "$hover_texture":"textures/empty",
         "$pressed_texture": "textures/ui/recipe/furnace/recipe_book_open",
         "$pressed_no_hover_texture": "textures/empty",
+        "$recipe_book_size":[31,41]
+      },
+      {
+        "requires": "($book_type = 'furnace_paper')",
+        "$default_texture":"textures/ui/recipe/furnace/recipe_book_closed",
+        "$hover_texture":"textures/ui/recipe/furnace/paper",
+        "$pressed_texture": "textures/ui/recipe/furnace/recipe_book_open",
+        "$pressed_no_hover_texture": "textures/ui/recipe/furnace/paper",
         "$recipe_book_size":[31,41]
       }
     ]
@@ -224,7 +250,6 @@
   //---------------------------------
 
   "recipe_toggle_furnace@quartz_toggles.recipe_toggle_view_template":{
-    //"$book_type":"furnace",
     "$toggle_view_binding_name":"recipe_furnace_toggle"
   },
 
@@ -232,7 +257,7 @@
   // Stonecutter & Loom layout toggle
   //------------------------------------
 
-  "bedrock_large_toggle@quartz_toggles.recipe_toggle_template_crafting":{
+  "bedrock_large_toggle@quartz_toggles.recipe_toggle_template_crafting_paper":{
     "$book_toggle_name":"left_panel_toggle",
     "$toggle_view_binding_name":"left_panel_toggle",
     "layer": 3,

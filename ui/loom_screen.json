@@ -28,9 +28,9 @@
         "operation":"insert_back",
         "value":{
           "bedrock_large_toggle@quartz_toggles.bedrock_large_toggle":{
-            "anchor_from":"top_left",
-            "anchor_to":"top_left",
-            "offset":[14,-12]
+            "anchor_from":"top_right",
+            "anchor_to":"top_right",
+            "offset":[-10,-12]
           }
         }
       },

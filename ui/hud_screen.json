@@ -92,6 +92,16 @@
     "offset": "$hotbar_grid_offset"
   },
 
+  // No hotbar
+
+  "exp_progress_bar_and_hotbar/resizing_hotbar_no_xp_bar":{
+    "size": "$xp_bar_size"
+  },
+
+  "exp_progress_bar_and_hotbar/resizing_hotbar_no_xp_bar/horse_jump_rend":{
+    "size": "$xp_bar_size"
+  },
+
   "exp_progress_bar_and_hotbar/resizing_hotbar_no_xp_bar/horse_jump_rend/dash_rend":{
     "anchor_from":"center",
     "anchor_to":"center",
