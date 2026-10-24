@@ -11,6 +11,7 @@
     "$common_panel_size":[176,109],
     "$common_panel_offset":[0,-16],
     "$close_button_offset":[18.5,18],
+    "$big_close_button_offset":[18.5,38.5],
 
     "$screen_content": "cartography.cartography_panel",
     "$screen_bg_content": "common.screen_background",

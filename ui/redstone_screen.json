@@ -22,6 +22,7 @@
 
   "dropper_screen":{
     "$close_button_offset":[75,9.5],
+    "$big_close_button_offset":[75,9.5],
     "$grid_offset_override":[0,9],
     "$is_dropper":true,
     "$background_texture":"textures/ui/dropper/screen_background_dropper",
@@ -44,6 +45,7 @@
 
   "dispenser_screen":{
     "$close_button_offset":[75,9.5],
+    "$big_close_button_offset":[75,9.5],
     "$grid_offset_override":[0,9],
     "$is_dispenser":true,
     "$background_texture":"textures/ui/dispenser/screen_background_dispenser",

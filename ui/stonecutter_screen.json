@@ -5,6 +5,7 @@
     "$screen_content": "stonecutter.stonecutter_panel",
     "$is_dimz_advanced_container|default":false,
     "$close_button_offset":[18.5,-20],
+    "$big_close_button_offset":[18.5,-20],
     "variables":[]
   },
 
@@ -29,7 +30,7 @@
               {
                 "requires":"$is_déesse_ui_pack",
                 "$anim_toggle_offset":[38.5,27],
-                "$big_anim_toggle_offset":[22,30]
+                "$big_anim_toggle_offset":[27,0]
               },
               {
                 "requires":"$is_dimz_advanced_container",

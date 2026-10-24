@@ -2,13 +2,15 @@
   "namespace": "crafting_pocket",
 
   "crafting_screen_pocket":{
+    "$book_type":"crafting",
+    "$is_crafting_screen":true,
+    "$is_inventory_screen":false,
     "$background_texture":"textures/ui/crafting/3x3_crafting_bg",
     "$hide_toolbar_panel":true,
-    "$common_panel_size":[176,78],
-    "$common_panel_offset":[0,3],
+    "$common_panel_size":[168,68],
+    "$common_panel_offset":[4,12],
     "$anchor_point":"top_middle",
-    "$deesse_inv_instant_anchor":"top_right",
-    "$deesse_inv_instant_offset": [-26,12],
+    "$deesse_inv_instant_offset": [-1,-12],
     "$crafting_label_offset":[0,0],
 
     "send_telemetry": false,
@@ -21,12 +23,14 @@
     "close_on_player_hurt": "$close_on_player_hurt"
   },
 
-  "inventory_screen_pocket":{
-    
+  "inventory_screen_pocket":{ 
+    "$is_inventory_screen":true,
+    "$hide_toolbar_panel":false,
     "$background_texture":"textures/ui/crafting/2x2_crafting_bg",
-    "$anchor_point":"top_right",
-    "$common_panel_size":[105,81],
-    "$common_panel_offset":[0,3],
+    "$anchor_point":"top_middle",
+    "$common_panel_size":[184,115],
+    "$common_panel_offset":[0,-25],
+    "$deesse_inv_instant_offset":[0,-12],
     
     "cache_screen": true,
     "send_telemetry": false,
