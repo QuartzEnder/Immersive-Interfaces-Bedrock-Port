@@ -18,25 +18,6 @@
     "offset": "$déesse_quick_craft_offset"
   },
 
-  "quick_craft_icon":{
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"insert_front",
-        "value":{
-          "all_button_icon@quartz_déesse.all_button_icon":{
-            "color":"$text_color",
-            "ignored":"(not (($quick_craft_text = 'déesse.all') or ($quick_craft_text = 'all')))"
-          }
-        }
-      }
-    ]
-  },
-
-  "quick_craft_icon/text":{
-    "ignored": "(($quick_craft_text = 'déesse.all') or ($quick_craft_text = 'all'))"
-  },
-
   "clear_crafting_grid_button":{
     "$clear_crafting_offset|default":[-18,22],
     "offset": "$clear_crafting_offset"

@@ -1,7 +1,7 @@
 {
-  "namespace": "déesse_trade2",
+  "namespace": "déesse_trade2"
 
-  "arrow_holder/arrow_image":{
+  /*"arrow_holder/arrow_image":{
     "bindings":[
       {
         "binding_type":"collection_details"
@@ -83,5 +83,5 @@
     "anchor_from":"$déesse_quick_trade_anchor_from",
     "anchor_to":"déesse_quick_trade_anchor_to",
     "offset":"$déesse_quick_trade_offset"
-  }
+  }*/
 }

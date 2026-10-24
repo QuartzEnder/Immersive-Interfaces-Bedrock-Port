@@ -37,7 +37,7 @@
   },
 
   "custom_text_edit_box/centering_panel/clipper_panel/magnifying_glass":{
-    "$button_texture": "textures/ui/recipe/magnifying_glass",
+    "$button_texture": "textures/ui/generic/magnifying_glass_no_bg",
     "size": [11,11],
     "$ignore_magnifying_glass|default":true,
     "visible": "(not $ignore_magnifying_glass)"

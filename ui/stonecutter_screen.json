@@ -27,11 +27,11 @@
           "anim_toggle_panel@quartz_toggles.anim_toggle_panel":{
             "$anim_toggle_offset":[34.5,27],
             "variables":[
-              {
+              /*{
                 "requires":"$is_déesse_ui_pack",
                 "$anim_toggle_offset":[38.5,27],
                 "$big_anim_toggle_offset":[27,0]
-              },
+              },*/
               {
                 "requires":"$is_dimz_advanced_container",
                 "$anim_toggle_offset":[37.5,43]

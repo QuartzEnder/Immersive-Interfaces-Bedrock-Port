@@ -2,7 +2,7 @@
   "namespace": "redstone",
 
   "panel/root_panel/common_panel":{
-    "layer": 2
+    "layer": 1
   },
 
   "redstone_input_grid":{
@@ -115,7 +115,7 @@
   },
 
   "panel_crafter/root_panel/common_panel":{
-    "layer": 2
+    "layer": 1
   },
 
   "crafter_label":{
