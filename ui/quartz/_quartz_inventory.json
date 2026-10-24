@@ -282,7 +282,7 @@
     "$default_border_visible":false,
     "$unchecked_control":"quartz_inventory.creative_blueprint_toggled_sprite",
     "$checked_control":"quartz_inventory.creative_blueprint_toggled_sprite",
-    "$unchecked_hover_control":"quartz_inventory.creative_blueprint_toggled_sprite",
+    "$unchecked_hover_control":"quartz_inventory.creative_blueprint_hover_sprite",
     "$checked_hover_control":"quartz_inventory.creative_blueprint_toggled_sprite",
     "ignored": "(not $is_inventory_screen)",
     "bindings":[

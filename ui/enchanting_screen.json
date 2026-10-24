@@ -34,7 +34,7 @@
     "variables":[
       {
         "requires": "$is_dimz_advanced_container",
-        "$close_button_offset":[21.5,0]
+        "$close_button_offset":[43.5,-7]
       }
     ]
   },

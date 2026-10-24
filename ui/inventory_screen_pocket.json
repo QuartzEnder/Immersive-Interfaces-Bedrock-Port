@@ -12,6 +12,11 @@
     "$anchor_point":"top_middle",
     "$deesse_inv_instant_offset": [-1,-12],
     "$crafting_label_offset":[0,0],
+    "$is_dimz_advanced_container|default":false,
+    "variables":{
+      "requires": "$is_dimz_advanced_container",
+      "$close_button_offset":[22,8]
+    },
 
     "send_telemetry": false,
     "$uses_bundle_tooltip": true,

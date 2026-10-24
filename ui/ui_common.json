@@ -90,7 +90,7 @@
       },
       {
         "requires": "$is_dimz_advanced_container",
-        "$close_button_offset|default":[21.5,0]
+        "$close_button_offset|default":[31.5,-7]
       }
     ]
   },

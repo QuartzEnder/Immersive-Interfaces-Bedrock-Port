@@ -30,7 +30,12 @@
     "$common_panel_offset":[4,12],
     "$anchor_point":"top_middle",
     "$deesse_inv_instant_offset": [-1,-12],
-    "$crafting_label_offset":[0,0]
+    "$crafting_label_offset":[0,0],
+    "$is_dimz_advanced_container|default":false,
+    "variables":{
+      "requires": "$is_dimz_advanced_container",
+      "$close_button_offset":[22,8]
+    }
   },
   
   "output_grid_2x2":{
@@ -337,6 +342,7 @@
   "recipe_book":{
     "$overwriteable":false,
     "$use_compact_close_button":false,
+    "$is_dimz_advanced_container|default":false,
     "modifications":[
       {
         "array_name":"controls",
@@ -353,13 +359,18 @@
               "anchor_from":"top_right",
               "anchor_to":"top_left",
               "$show_close_button":true,
-              "offset":[-10,3],
+              "$close_button_offset":[-10,3],
+              "offset":"$close_button_offset",
               "bindings":[
                 {
                   "binding_name":"#is_creative_layout",
                   "binding_name_override":"#visible"
                 }
-              ]
+              ],
+              "variables":{
+                "requires":"$is_dimz_advanced_container",
+                "$close_button_offset":[-20,3]
+              }
             }
           },
           {
@@ -367,13 +378,18 @@
               "anchor_from":"top_right",
               "anchor_to":"top_left",
               "ignored": "$pocket_screen",
-              "offset": [-10.5,-0.5],
+              "$close_button_offset":[-10.5,0.5],
+              "offset": "$close_button_offset",
               "bindings":[
                 {
                   "binding_name":"#is_creative_layout",
                   "binding_name_override":"#visible"
                 }
-              ]
+              ],
+              "variables":{
+                "requires":"$is_dimz_advanced_container",
+                "$close_button_offset":[-20,1]
+              }
             }
           },
           {"creative_content_panel@quartz_inventory.creative_content_panel":{}}
@@ -585,23 +601,7 @@
         "array_name":"controls",
         "operation":"remove",
         "control_name": "toolbar_panel"
-        //"value":{"toolbar_panel_centerer@quartz_gui.toolbar_panel_centerer":{}}
       }
     ]
-  },
-
-  //---------------------------
-  // Advanced Containers
-  //---------------------------
-
-  "crafting_arrow_large_icon@crafting.crafting_arrow_icon": {
-    "texture": "textures/ui/advanced_container/quick_large_crafting_arrow",
-    "size": [9,8]
-  },
-  
-  "crafting_arrow_icon": {
-    "texture": "textures/ui/advanced_container/small_white_arrow",
-    "size": [5,8],
-    "offset": [0,-0.5]
   }
 }
