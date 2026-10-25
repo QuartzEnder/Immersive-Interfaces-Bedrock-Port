@@ -3,10 +3,15 @@
 
   "stonecutter_screen":{    
     "$screen_content": "stonecutter.stonecutter_panel",
+    "$is_déesse_ui_pack|default":false,
     "$is_dimz_advanced_container|default":false,
     "$close_button_offset":[18.5,-20],
     "$big_close_button_offset":[18.5,-20],
     "variables":[
+      {
+        "requires": "is_déesse_ui_pack",
+        "$big_close_button_offset":[3.5,-20]
+      },
       {
         "requires": "$is_dimz_advanced_container",
         "$close_button_offset":[21.5,-25],
@@ -17,8 +22,6 @@
 
   "right_panel":{
     "$background_texture":"textures/ui/stonecutter/screen_background_stonecutter",
-    "$highlight_slot_texture":"textures/ui/recipe/highlight_slot_recipe",
-    "$highlight_slot_size":[24,24],
     "$common_panel_size":[212,69],
     "$common_panel_offset":[0,26],
     "modifications":[
@@ -34,11 +37,15 @@
         "value":{
           "anim_toggle_panel@quartz_toggles.anim_toggle_panel":{
             "$anim_toggle_offset":[34.5,27],
-            "$big_anim_toggle_offset":[36.5,30],
+            "$big_anim_toggle_offset":[37.5,-71],
             "variables":[
               {
+                "requires":"$is_déesse_ui_pack",
+                "$big_anim_toggle_offset":[46.5,-95]
+              },
+              {
                 "requires":"$is_dimz_advanced_container",
-                "$anim_toggle_offset":[37.5,23]
+                "$anim_toggle_offset":[3.5,-20]
               }
             ]
           }
@@ -56,6 +63,8 @@
 
   "stone_book_panel":{
     "layer": 3,
+    "$highlight_slot_texture":"textures/ui/recipe/highlight_slot_recipe",
+    "$highlight_slot_size":[24,24],
     "$background_texture":"textures/ui/recipe/recipe_book_background",
     "$left_panel_text":"('§o' + %itemGroup.name.stone)",
     "$common_panel_size":[147,165],

@@ -103,6 +103,7 @@
 //----------------------------
 
   "inventory_screen":{
+    "$is_crafting_screen":false,
     "$is_inventory_screen":true,
     "$hide_toolbar_panel":false,
     "$background_texture":"textures/ui/crafting/2x2_crafting_bg",

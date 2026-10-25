@@ -358,7 +358,7 @@
 
   "big_close_button@common.close_button":{
     "size": [19,19],
-    "$is_dimz_advanced_container":false,
+    "$is_dimz_advanced_container|default":false,
     "$use_compact_close_button|default":false,
     "offset": "$big_close_button_offset",
     "$close_button_panel_size": [19,19],

@@ -17,7 +17,7 @@
     "variables":[
       {
         "requires": "$is_déesse_ui_pack",
-        "$close_button_offset":[73.5,-2.5]
+        "$close_button_offset":[60.5,0]
       },
       {
         "requires": "$is_dimz_advanced_container",

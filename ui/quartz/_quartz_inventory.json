@@ -284,7 +284,7 @@
     "$checked_control":"quartz_inventory.creative_blueprint_toggled_sprite",
     "$unchecked_hover_control":"quartz_inventory.creative_blueprint_hover_sprite",
     "$checked_hover_control":"quartz_inventory.creative_blueprint_toggled_sprite",
-    "ignored": "(not $is_inventory_screen)",
+    "ignored": "$is_crafting_screen",
     "bindings":[
       {
         "binding_name": "#is_creative_mode",

@@ -1,6 +1,14 @@
 {
   "namespace": "redstone",
 
+  "panel":{
+    "$inventory_background_layer":-4
+  },
+
+  "panel_crafter":{
+    "$inventory_background_layer":-4
+  },
+
   "panel/root_panel/common_panel":{
     "layer": 1
   },
@@ -81,6 +89,7 @@
 
   "hopper_screen":{
     "$close_button_offset":[36.5,-0.5],
+    "$big_close_button_offset":[36.5,0.5],
     "$grid_offset_override":[0,12],
     "$title_background_size":["100% + 12px", 12],
     "$title_background_offset":[0,3],
