@@ -62,6 +62,8 @@
     "layer": 3,
     "$common_panel_size":[147,165],
     "$overwriteable":false,
+    "$highlight_slot_texture":"textures/ui/recipe/highlight_slot_recipe",
+    "$highlight_slot_size":[24,24],
     "$background_texture":"textures/ui/recipe/recipe_book_background",
     "$left_panel_text":"('§o' + %itemGroup.name.banner_pattern)",
     "modifications":[

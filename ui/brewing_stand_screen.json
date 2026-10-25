@@ -6,7 +6,7 @@
     "$common_panel_size":[139,80],
     "$common_panel_offset": [-19.5,0],
     "$inventory_background_layer":-5,
-    "$close_button_offset":[71.5,5],
+    "$close_button_offset":[51.5,5],
     "$big_close_button_offset":[72,0],
     "$is_déesse_ui_pack|default":false,
     "$is_dimz_advanced_container|default":false,

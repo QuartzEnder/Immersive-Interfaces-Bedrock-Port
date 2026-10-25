@@ -426,6 +426,7 @@
     "layer": 0,
     "$dialog_background":"quartz_command_block.command_block_background",
     "$close_button_offset":[-15,35],
+    "$big_close_button_offset": [-15,32],
     "$common_panel_size":[461,275],
     "controls":[
       {"common_panel@common.common_panel":{"layer": 0}},

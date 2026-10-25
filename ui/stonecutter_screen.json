@@ -17,6 +17,8 @@
 
   "right_panel":{
     "$background_texture":"textures/ui/stonecutter/screen_background_stonecutter",
+    "$highlight_slot_texture":"textures/ui/recipe/highlight_slot_recipe",
+    "$highlight_slot_size":[24,24],
     "$common_panel_size":[212,69],
     "$common_panel_offset":[0,26],
     "modifications":[
@@ -32,7 +34,7 @@
         "value":{
           "anim_toggle_panel@quartz_toggles.anim_toggle_panel":{
             "$anim_toggle_offset":[34.5,27],
-            "$big_anim_toggle_offset":[50,30],
+            "$big_anim_toggle_offset":[36.5,30],
             "variables":[
               {
                 "requires":"$is_dimz_advanced_container",

@@ -326,7 +326,7 @@
   },
 
   "anim_toggle_big@quartz_toggles.anim_toggle":{
-    "size": [20,20],
+    "size": [21,221],
     "$big_anim_toggle_offset|default":[22,26],
     "offset": "$big_anim_toggle_offset",
     "$hover_texture":"textures/ui/recipe/big_anim_toggle_off",
