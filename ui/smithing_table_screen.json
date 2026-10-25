@@ -5,7 +5,8 @@
     "$screen_content": "smithing_table_2.smithing_table_panel",
     "$screen_bg_content": "common.screen_background",
     "$screen_background_alpha": 0.4,
-    "$close_button_offset":[36.5,-3],
+    "$close_button_offset":[36.5,-20],
+    "$big_close_button_offset":[36.5,-35.5],
     "variables":[]
   }
 }

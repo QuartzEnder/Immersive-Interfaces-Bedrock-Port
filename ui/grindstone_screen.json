@@ -16,7 +16,8 @@
       },
       {
         "requires": "$is_dimz_advanced_container",
-        "$close_button_offset":[47.5,2]
+        "$close_button_offset":[46.5,-10],
+        "$big_close_button_offset":[24,11.5]
       }
     ]
   },

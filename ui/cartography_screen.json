@@ -12,6 +12,7 @@
     "$common_panel_offset":[0,-16],
     "$close_button_offset":[18.5,18],
     "$big_close_button_offset":[18.5,38.5],
+    "$is_dimz_advanced_container|default":false,
 
     "$screen_content": "cartography.cartography_panel",
     "$screen_bg_content": "common.screen_background",
@@ -20,7 +21,7 @@
   },
 
   "cartography_panel/root_panel":{
-    "$show_close_button":true,
+    "$show_close_button":"(not $is_dimz_advanced_container)",
     "size": ["100% - 44px",166],
     "modifications":[
       {

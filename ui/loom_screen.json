@@ -3,7 +3,13 @@
 
   "loom_screen":{
     "$screen_content": "loom.loom_panel",
-    "variables":[]
+    "$is_dimz_advanced_container|default":false,
+    "variables":[
+      {
+        "requires": "$is_dimz_advanced_container",
+        "$close_button_offset":[31.5,19]
+      }
+    ]
   },
 
   "right_panel":{

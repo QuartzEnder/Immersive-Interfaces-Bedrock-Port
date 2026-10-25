@@ -21,7 +21,8 @@
   },
 
   "small_chest_panel":{
-    "$show_close_button":true,
+    "$is_dimz_advanced_container|default":false,
+    "$show_close_button":"(not $is_dimz_advanced_container)",
     "$inventory_background_layer":-5,
     "$container_title_custom":"$container_title",
     "$anchor_point":"top_middle",
@@ -49,7 +50,8 @@
   //--------------------
 
   "large_chest_panel":{
-    "$show_close_button":true,
+    "$is_dimz_advanced_container|default":false,
+    "$show_close_button":"(not $is_dimz_advanced_container)",
     "$anchor_point":"top_middle",
     "$common_panel_size":[200,159],
     "$common_panel_offset":[0,-22],
@@ -75,7 +77,8 @@
   //-----------------------------
 
   "small_chest_screen":{
-    "$show_close_button":true,
+    "$is_dimz_advanced_container|default":false,
+    "$show_close_button":"(not $is_dimz_advanced_container)",
     "$common_panel_size":[184,91],
     "$common_panel_offset":[2.5,-9],
     "$big_close_button_offset":[20,0],

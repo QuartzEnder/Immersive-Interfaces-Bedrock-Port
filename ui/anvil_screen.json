@@ -7,6 +7,7 @@
     "$anchor_point":"top_middle",
     "$common_panel_size":[195,73],
     "$common_panel_offset":[-1.5,18],
+    "$close_button_offset":[31.5,-17],
 
     "$screen_content": "anvil.anvil_panel",
     "$screen_bg_content": "common.screen_background",

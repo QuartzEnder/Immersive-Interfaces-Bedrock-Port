@@ -6,7 +6,13 @@
     "$is_dimz_advanced_container|default":false,
     "$close_button_offset":[18.5,-20],
     "$big_close_button_offset":[18.5,-20],
-    "variables":[]
+    "variables":[
+      {
+        "requires": "$is_dimz_advanced_container",
+        "$close_button_offset":[21.5,-25],
+        "$big_close_button_offset":[4,-2]
+      }
+    ]
   },
 
   "right_panel":{
@@ -26,15 +32,11 @@
         "value":{
           "anim_toggle_panel@quartz_toggles.anim_toggle_panel":{
             "$anim_toggle_offset":[34.5,27],
+            "$big_anim_toggle_offset":[50,30],
             "variables":[
-              /*{
-                "requires":"$is_déesse_ui_pack",
-                "$anim_toggle_offset":[38.5,27],
-                "$big_anim_toggle_offset":[27,0]
-              },*/
               {
                 "requires":"$is_dimz_advanced_container",
-                "$anim_toggle_offset":[37.5,43]
+                "$anim_toggle_offset":[37.5,23]
               }
             ]
           }

@@ -1,2 +1,3 @@
 
 diagnostic.disable.resourcepack.ui.inheritance.missing=true
+diagnostic.disable.minecraft.manifest.version.minimum=true
