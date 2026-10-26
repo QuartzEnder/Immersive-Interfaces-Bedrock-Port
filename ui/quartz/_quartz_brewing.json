@@ -13,6 +13,61 @@
     "$toggle_view_binding_name":"brewing_guide_toggle_control"
   },
 
+  //-------------------------
+  // Buttons
+  //-------------------------
+
+  "brewing_hover_area@common_buttons.light_text_button": {
+    "size": [13,13],
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "$pressed_button_name": "",
+    "$border_visible": false,
+    "visible": true,
+    "focus_enabled": false,
+    "controls": [
+      {
+        "hover@common.hover_text": {
+          "property_bag":{
+            "#hover_text": "$hover_text"
+          }
+        }
+      }
+    ]
+  },
+
+  "ingredients_hover_area@quartz_brewing.brewing_hover_area":{
+    "size": [7,7]
+  },
+
+  //-------------------------
+  // Template Paddings
+  //-------------------------
+
+  "1x1_padding":{
+    "type":"panel",
+    "size": [1,1]
+  },
+
+  "3x1_padding":{
+    "type":"panel",
+    "size": [3,1]
+  },
+
+  "7x1_padding":{
+    "type":"panel",
+    "size": [7,1]
+  },
+
+  "8x1_padding":{
+    "type":"panel",
+    "size": [8,1]
+  },
+
+  //-----------------------------
+  // Main Panel Of The Guide
+  //-----------------------------
+
   "brewing_guide_image":{
     "type":"image",
     "texture": "textures/ui/brewing/brewing_guide",
@@ -21,6 +76,388 @@
     "anchor_to":"top_right",
     "$is_déesse_ui_pack|default":false,
     "ignored": "($is_déesse_ui_pack)",
+    "layer": 5,
+    "controls":[
+      {
+        "hover_areas_panel":{
+          "type":"panel",
+          "controls":[       
+            {
+              "main_potion@quartz_brewing.brewing_hover_area":{
+                "size": [15,15],
+                "offset": [60,13],
+                "$hover_text":"Water Bottle"
+              }
+            },
+            {
+              "duration_with_redstone@quartz_brewing.brewing_hover_area":{
+                "size": [24,13],
+                "anchor_from":"top_right",
+                "anchor_to":"top_right",
+                "offset": [-11,13],
+                "$hover_text":"Redstone Dust = Increase Duration"
+              }
+            },
+            {
+              "level_with_glowstone@quartz_brewing.brewing_hover_area":{
+                "size": [24,13],
+                "anchor_from":"top_right",
+                "anchor_to":"top_right",
+                "offset": [-11,27],
+                "$hover_text":"Glowstone Dust = Increase Level"
+              }
+            },
+            {
+              "fermented_spider_eye@quartz_brewing.brewing_hover_area":{
+                "size": [7,7],
+                "offset": [53,30],
+                "$hover_text":"Fermented Spider Eye"
+              }
+            },
+            {
+              "weakness@quartz_brewing.brewing_hover_area":{
+                "offset": [35,27],
+                "$hover_text":"§cWeakness"
+              }
+            },
+            {
+              "nether_wart@quartz_brewing.brewing_hover_area":{
+                "size": [20,6],
+                "$hover_text":"Nether Wart",
+                "offset": [58,37]
+              }
+            },
+            {
+              "ingredients_stack_panel":{
+                "type":"stack_panel",
+                "orientation":"horizontal",
+                "size": [95,7],
+                "anchor_from":"top_left",
+                "anchor_to":"top_left",
+                "offset": [19,57],
+                "controls":[
+                  {
+                    "spider_eye@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Spider Eye"
+                    }
+                  },
+                  {"padding_1@1x1_padding":{}},
+                  {
+                    "glistering_melon@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Glistering Melon Slice"
+                    }
+                  },
+                  {"padding_2@1x1_padding":{}},
+                  {
+                    "golden_carrot@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Golden Carrot"
+                    }
+                  },
+                  {"padding_3@1x1_padding":{}},
+                  {
+                    "sugar@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Sugar"
+                    }
+                  },
+                  {"padding_4@1x1_padding":{}},
+                  {
+                    "rabbit_foot@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Rabbit's Foot"
+                    }
+                  },
+                  {"main_padding":{"type":"panel","size": [9,1]}},
+                  {
+                    "magma_cream@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Magma Cream"
+                    }
+                  },
+                  {"padding_5@1x1_padding":{}},
+                  {
+                    "turtle_shell@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Turtle Shell"
+                    }
+                  },
+                  {"padding_6@1x1_padding":{}},
+                  {
+                    "blaze_powder@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Blaze Powder"
+                    }
+                  },
+                  {"padding_7@1x1_padding":{}},
+                  {
+                    "phantom_membrane@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Phantom Membrane"
+                    }
+                  },
+                  {"padding_8@1x1_padding":{}},
+                  {
+                    "pufferfish@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Pufferfish"
+                    }
+                  },
+                  {"padding_9@1x1_padding":{}},
+                  {
+                    "ghast_tear@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Ghast Tear"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "effects_top_stack_panel":{
+                "type":"stack_panel",
+                "size": [93,13],
+                "anchor_from":"top_left",
+                "anchor_to":"top_left",
+                "orientation":"horizontal",
+                "offset": [16,67],
+                "controls":[
+                  {
+                    "poison@quartz_brewing.brewing_hover_area":{
+                      "$hover_text":"§cPoison"
+                    }
+                  },
+                  {"padding_1@quartz_brewing.3x1_padding":{}},
+                  {
+                    "night_vision@quartz_brewing.brewing_hover_area":{
+                      "$hover_text":"§9Night Vision"
+                    }
+                  },
+                  {"padding_2@quartz_brewing.3x1_padding":{}},
+                  {
+                    "jump_boost@quartz_brewing.brewing_hover_area":{
+                      "$hover_text":"§9Jump Boost"
+                    }
+                  },
+                  {"padding_3@quartz_brewing.3x1_padding":{}},
+                  {
+                    "fire_resistance@quartz_brewing.brewing_hover_area":{
+                      "$hover_text":"§9Fire Resistance"
+                    }
+                  },
+                  {"padding_4@quartz_brewing.3x1_padding":{}},
+                  {
+                    "strength@quartz_brewing.brewing_hover_area":{
+                      "$hover_text":"§9Strength"
+                    }
+                  },
+                  {"padding_5@quartz_brewing.3x1_padding":{}},
+                  {
+                    "water_breathing@quartz_brewing.brewing_hover_area":{
+                      "$hover_text":"§9Water Breathing"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "effects_center_stack_panel":{
+                "type":"stack_panel",
+                "size": [93,13],
+                "anchor_from":"top_left",
+                "anchor_to":"top_left",
+                "orientation":"horizontal",
+                "offset": [24,80],
+                "controls":[
+                  {
+                    "instant_health@quartz_brewing.brewing_hover_area":{
+                      "$hover_text":"§9Instant Health"
+                    }
+                  },
+                  {"padding_1@quartz_brewing.3x1_padding":{}},
+                  {
+                    "speed@quartz_brewing.brewing_hover_area":{
+                      "$hover_text":"§9Speed"
+                    }
+                  },
+                  {
+                    "main_padding":{
+                      "type":"panel",
+                      "size": [19,1]
+                    }
+                  },
+                  {
+                    "resistance@quartz_brewing.brewing_hover_area":{
+                      "$hover_text":"§9Resistance"
+                    }
+                  },
+                  {"padding_2@quartz_brewing.3x1_padding":{}},
+                  {
+                    "slow_falling@quartz_brewing.brewing_hover_area":{
+                      "$hover_text":"§9Slow Falling"
+                    }
+                  },
+                  {"padding_3@quartz_brewing.3x1_padding":{}},
+                  {
+                    "regeneration@quartz_brewing.brewing_hover_area":{
+                      "$hover_text":"§9Regeneration"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "effect_modifiers_stack_panel":{
+                "type":"stack_panel",
+                "orientation":"horizontal",
+                "size": [94,7],
+                "anchor_from":"top_left",
+                "anchor_to":"top_left",
+                "offset": [21,102],
+                "controls":[
+                  {
+                    "fermented_spider_eye_1@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Fermented Spider Eye"
+                    }
+                  },
+                  {"padding_1@quartz_brewing.7x1_padding":{}},
+                  {
+                    "fermented_spider_eye_2@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Fermented Spider Eye"
+                    }
+                  },
+                  {"padding_2@quartz_brewing.7x1_padding":{}},
+                  {
+                    "fermented_spider_eye_3@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Fermented Spider Eye"
+                    }
+                  },
+                  {
+                    "main_padding":{
+                      "type":"panel",
+                      "size": [10,1]
+                    }
+                  },
+                  {
+                    "breeze_rod@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Breeze Rod"
+                    }
+                  },
+                  {"padding_3@quartz_brewing.7x1_padding":{}},
+                  {
+                    "slime_block@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Slime Block"
+                    }
+                  },
+                  {"padding_4@quartz_brewing.7x1_padding":{}},
+                  {
+                    "stone@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Stone"
+                    }
+                  },
+                  {"padding_3@quartz_brewing.7x1_padding":{}},
+                  {
+                    "cobweb@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Cobweb"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "effects_bottom_stack_panel":{
+                "type":"stack_panel",
+                "size":[100,13],
+                "anchor_from":"bottom_left",
+                "anchor_to":"bottom_left",
+                "orientation":"horizontal",
+                "offset": [18,-41],
+                "controls":[
+                  {
+                    "instant_damage@brewing_hover_area":{
+                      "$hover_text":"§cInstant Damage"
+                    }
+                  },
+                  {"padding_1@quartz_brewing.1x1_padding":{}},
+                  {
+                    "invisibility@brewing_hover_area":{
+                      "$hover_text":"§9Invisibility"
+                    }
+                  },
+                  {"padding_2@quartz_brewing.1x1_padding":{}},
+                  {
+                    "slowness@brewing_hover_area":{
+                      "$hover_text":"§cSlowness"
+                    }
+                  },
+                  {
+                    "main_padding":{
+                      "type":"panel",
+                      "size": [4,1]
+                    }
+                  },
+                  {
+                    "wind_charged@brewing_hover_area":{
+                      "$hover_text":"§cWind Charged"
+                    }
+                  },
+                  {"padding_3@quartz_brewing.1x1_padding":{}},
+                  {
+                    "oozing@brewing_hover_area":{
+                      "$hover_text":"§cOozing"
+                    }
+                  },
+                  {"padding_4@quartz_brewing.1x1_padding":{}},
+                  {
+                    "infested@brewing_hover_area":{
+                      "$hover_text":"§cInfested"
+                    }
+                  },
+                  {"padding_5@quartz_brewing.1x1_padding":{}},
+                  {
+                    "weaving@brewing_hover_area":{
+                      "$hover_text":"§cWeaving"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "potion_type_stack_panel":{
+                "type":"stack_panel",
+                "size": [67,7],
+                "anchor_from":"bottom_left",
+                "anchor_to":"bottom_left",
+                "orientation":"horizontal",
+                "offset": [34,-23],
+                "controls":[
+                  {
+                    "bottle@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Drinkable Potion"
+                    }
+                  },
+                  {"padding_1@quartz_brewing.8x1_padding":{}},
+                  {
+                    "gunpowder@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Gunpowder"
+                    }
+                  },
+                  {"padding_2@quartz_brewing.8x1_padding":{}},
+                  {
+                    "throwable@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Throwable Potion"
+                    }
+                  },
+                  {"padding_3@quartz_brewing.8x1_padding":{}},
+                  {
+                    "dragon_breath@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"§eDragon's Breath"
+                    }
+                  },
+                  {"padding_4@quartz_brewing.8x1_padding":{}},
+                  {
+                    "lingering@quartz_brewing.ingredients_hover_area":{
+                      "$hover_text":"Lingering Potion"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
     "bindings":[
       {
         "binding_type":"view",
