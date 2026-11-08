@@ -51,10 +51,18 @@
     "$ignore_recipe_cell_bindings":false
   },
 
-  "survival_recipe_scroll_grid@crafting.scroll_grid":{
-    "$creative_mode":false,
-    //"size": ["default","default"],
+  "survival_recipe_scroll_grid":{
+    "type": "grid",
+    "size": [ "100%", "default" ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
     "$grid_item_template": "quartz_inventory.survival_recipe_cell",
+    "$binding_condition|default": "visible",
+    "$grid_item_precache_count|default": 0,
+    "collection_name": "$collection_name",
+    "grid_rescaling_type": "horizontal",
+    "grid_item_template": "$grid_item_template",
+    "$creative_mode":false,
     "bindings":[
       {
         "binding_name": "#recipe_book_total_items",
@@ -82,7 +90,7 @@
     "controls":[{"survival_recipe_scroll_grid@quartz_inventory.survival_recipe_scroll_grid":{}}]
   },
 
-  "survival_scroll_panel@crafting.scroll_panel":{
+  "survival_scroll_panel@common.container_scroll_panel":{
     "$ignore_plus_icon":true,
     "$highlight_slot_texture":"textures/ui/recipe/highlight_slot_recipe",
     "$highlight_slot_size":[24,24],
@@ -98,12 +106,64 @@
         "binding_name":"#is_recipe_book_layout",
         "binding_name_override":"#visible"
       }
+    ],
+
+    "$scrolling_panel_base_button_mappings": [ // these are just copied from vanilla
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.destroy_selection",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.destroy_selection",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.destroy_selection",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.clear_hotbar_or_remove_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      }
     ]
   },
   
   //----------------------------------
   // Creative Mode Elements
   //----------------------------------
+
+  "creative_scroll_box":{
+    "type":"image",
+    "texture": "textures/ui/creative/scroller_base",
+    "controls":[
+      {
+        "tiled_scroller":{
+          "type":"image",
+          "texture": "textures/ui/creative/tiled_scroller",
+          "size": ["100% - 2px","100% - 5px"],
+          "anchor_from":"top_middle",
+          "anchor_to":"top_middle",
+          "offset": [0,1],
+          "tiled": true
+        }
+      }
+    ]
+  },
 
   "creative_search_elements_panel":{
     "type":"panel",

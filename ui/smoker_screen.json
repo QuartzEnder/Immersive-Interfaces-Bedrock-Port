@@ -4,6 +4,7 @@
   "smoker_screen":{
     "$is_furnace_screen":false,
     "$background_texture":"textures/ui/smoker/screen_background_smoker",
-    "$flame_texture":"textures/ui/smoker/lit_progress"
+    "$flame_texture":"textures/ui/smoker/lit_progress",
+    "$door_texture":"textures/ui/smoker/door"
   }
 }

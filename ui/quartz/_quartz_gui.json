@@ -399,7 +399,7 @@
           "layer": 1,
           "anchor_from":"top_right",
           "anchor_to":"top_right",
-          "offset": [1,-1]
+          "offset": [1,-2]
         }
       }
     ]
@@ -777,5 +777,20 @@
         }
       }
     ]
+  },
+
+  //---------------------------
+  // Furnace door panel
+  //---------------------------
+
+  "furnace_door":{
+    "type":"image",
+    "texture": "$door_texture",
+    "size": [24,37],
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "offset": [26,7],
+    "layer": 5,
+    "ignored": "$is_furnace_screen"
   }
 }

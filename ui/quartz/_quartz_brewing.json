@@ -77,6 +77,8 @@
     "$is_déesse_ui_pack|default":false,
     "ignored": "($is_déesse_ui_pack)",
     "layer": 5,
+    "use_anchored_offset":true,
+    "offset": ["27%",0],
     "controls":[
       {
         "hover_areas_panel":{

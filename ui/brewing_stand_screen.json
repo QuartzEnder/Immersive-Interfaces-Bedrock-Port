@@ -132,5 +132,51 @@
         "value":{"brewing_guide_image@quartz_brewing.brewing_guide_image":{}}
       }
     ]
+  },
+
+  "brewing_stand_panel/root_panel/furnace_screen_inventory":{
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "use_anchored_offset":true,
+    "property_bag":{
+      "#centering_offset_false":0.0,
+      "#centering_offset_true":0.27
+    },
+    "bindings": [
+      {
+        "binding_type":"view",
+        "source_control_name": "brewing_guide_toggle_control",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#guide_open"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "('#centering_offset_' + #guide_open)",
+        "target_property_name": "#anchored_offset_value_x"
+      }
+    ]
+  },
+
+  "brewing_stand_panel/root_panel/common_panel":{
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "use_anchored_offset":true,
+    "property_bag":{
+      "#centering_offset_false":0.0,
+      "#centering_offset_true":0.27
+    },
+    "bindings": [
+      {
+        "binding_type":"view",
+        "source_control_name": "brewing_guide_toggle_control",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#guide_open"
+      },
+      {
+        "binding_type":"view",
+        "source_property_name": "('#centering_offset_' + #guide_open)",
+        "target_property_name": "#anchored_offset_value_x"
+      }
+    ]
   }
 }

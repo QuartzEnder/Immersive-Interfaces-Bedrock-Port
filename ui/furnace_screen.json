@@ -233,13 +233,16 @@
         "array_name":"controls",
         "operation":"replace",
         "control_name": "furnace_arrow_empty_image",
-        "value":{
-          "recipe_toggle_furnace@quartz_toggles.recipe_toggle_furnace":{
-            "anchor_from":"left_middle",
-            "anchor_to":"left_middle",
-            "offset":[15,1]
-          }
-        }
+        "value":[
+          {
+            "recipe_toggle_furnace@quartz_toggles.recipe_toggle_furnace":{
+              "anchor_from":"left_middle",
+              "anchor_to":"left_middle",
+              "offset":[15,1]
+            }
+          },
+          {"furnace_door@quartz_gui.furnace_door":{}}
+        ]
       }
     ]
   },

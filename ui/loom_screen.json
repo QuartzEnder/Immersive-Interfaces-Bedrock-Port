@@ -34,9 +34,9 @@
         "operation":"insert_back",
         "value":{
           "bedrock_large_toggle@quartz_toggles.bedrock_large_toggle":{
-            "anchor_from":"top_right",
-            "anchor_to":"top_right",
-            "offset":[-10,-12]
+            "anchor_from":"right_middle",
+            "anchor_to":"right_middle",
+            "offset":[20,-5]
           }
         }
       },
@@ -127,7 +127,7 @@
       }
     ]
   },
-
+  
   //---------------------
   // Icons
   //---------------------

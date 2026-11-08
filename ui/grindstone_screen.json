@@ -2,10 +2,10 @@
   "namespace": "grindstone",
 
   "grindstone_panel":{
-    "$common_panel_size":[149,69],
+    "$common_panel_size":[152,69],
     "$close_button_offset":[30,0],
     "$big_close_button_offset":[46,2],
-    "$common_panel_offset":[10.5,11],
+    "$common_panel_offset":[12,11],
     "$is_déesse_ui_pack|default":false,
     "$is_dimz_advanced_container|default":false,
     "$adv_cont_close_padding_size":[20,27.5],
@@ -45,10 +45,6 @@
 
   "arrow_icon":{
     "visible": false
-  },
-
-  "cross_out_icon":{
-    "size": [6,7]
   },
 
   "title_label":{

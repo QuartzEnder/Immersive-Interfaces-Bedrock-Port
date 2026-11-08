@@ -476,6 +476,16 @@
     "anchor_to":"top_middle"
   },
 
+  "scroll_panel":{
+    "$scroll_box_mouse_image_control": "quartz_inventory.creative_scroll_box",
+    "$scroll_box_touch_image_control": "quartz_inventory.creative_scroll_box",
+    "$scroll_box_size": ["100%","100%"],
+    "$scroll_size":[12,"100%"],
+    "$scroll_view_port_offset":[0,1],
+    "$scroll_view_port_size":[166,88],
+    "$scroll_view_port_size_touch":[166,88]
+  },
+
   "scroll_grid":{
     "$is_inventory_tab|default":false,
     "$creative_mode":true,
@@ -506,8 +516,8 @@
   },
 
   "recipe_book_scroll_panel":{
-    "size": [180,91],
-    "offset": [-5,17],
+    "size": [182,91],
+    "offset": [-1,17],
     "$ignore_plus_icon":false,
     "anchor_from":"top_middle",
     "anchor_to":"top_middle",

@@ -34,6 +34,8 @@
 
           "$default_texture": "$closed_default_texture",
           "$pressed_texture": "$closed_hover_texture",
+          "$pressed_no_hover_texture": "$closed_hover_texture",
+          "$hover_texture":"$closed_default_texture",
 
           "$toggle_tts_header": "$closed_book_tts",
 
@@ -51,6 +53,9 @@
 
           "$default_texture": "$open_default_texture",
           "$pressed_texture": "$open_hover_texture",
+          "$pressed_no_hover_texture": "$open_hover_texture",
+          "$hover_texture":"$open_default_texture",
+
 
           "$toggle_tts_header": "$open_book_tts",
 
