@@ -140,6 +140,22 @@
     "layer": 2
   },
 
+  //-------------------------------
+  // Hover Note Text Edit Box
+  //-------------------------------
+
+  "hover_note_text@common.text_edit_box": {
+    "size": [120,20],
+    "$focus_id": "hover_note_text",
+    "anchor_from":"left_middle",
+    "anchor_to":"left_middle",
+    "layer": 5,
+    "max_length": 15,
+    "$text_box_name": "command_block.hover_note_textbox",
+    "$text_edit_box_content_binding_name": "#command_hover_note",
+    "$place_holder_text": "commandBlockScreen.hoverNote"
+  },
+
   //------------------------------------
   // Command Block Settings Toggles
   //------------------------------------
@@ -299,6 +315,21 @@
     ]
   },
 
+  "always_active_image":{
+    "type":"image",
+    "texture": "textures/ui/command_block/always_active",
+    "size": [90,36],
+    "anchor_from":"bottom_left",
+    "anchor_to":"bottom_left",
+    "layer": 8,
+    "bindings":[
+      {
+        "binding_name": "#command_always_on_mode",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
   "execute_on_first_tick_toggle@settings_common.option_toggle": {
     "anchor_from":"left_middle",
     "anchor_to":"left_middle",
@@ -322,10 +353,9 @@
     "locked_alpha": 0.5
   },
 
-  "tick_delay_text@common.text_edit_box": {
-    "anchor_from": "left_middle",
-    "anchor_to": "left_middle",
-    "size": [ 60, 20 ],
+  "tick_delay_text_box@common.text_edit_box": {
+    "size": [60,20],
+    "offset": [5,0],
     "$focus_id":"tick_delay_text",
     "layer": 5,
     "max_length": 5,
@@ -423,6 +453,7 @@
 
   "command_block_panel":{
     "type":"panel",
+    "size": [461,275],
     "layer": 0,
     "$dialog_background":"quartz_command_block.command_block_background",
     "$close_button_offset":[-15,35],
@@ -485,28 +516,17 @@
               "tick_delay_panel":{
                 "type":"panel",
                 "size": [299,"100%c"],
-                "offset": [13,72.5],
+                "offset": [13,66.5],
                 "anchor_from":"top_middle",
                 "anchor_to":"top_middle",
                 "controls":[
-                  {"tick_delay_text@quartz_command_block.tick_delay_text":{}},
-                  {"option_label_tick_delay@quartz_command_block.option_label_tick_delay":{}}
+                  {"tick_delay_text_box@quartz_command_block.tick_delay_text_box":{}},
+                  {"option_label_tick_delay@quartz_command_block.option_label_tick_delay":{}},
+                  {"hover_note_text@quartz_command_block.hover_note_text":{}}
                 ]
               }
             },
             {"show_output_toggle@quartz_command_block.show_output_toggle":{}},
-            {
-              "command_block_toggles_settings_panel":{
-                "type":"panel",
-                "size": [310,22],
-                "offset": [13.5,42.5],
-                "controls":[
-                  {"block_type_toggle_panel@quartz_command_block.block_type_toggle_panel":{}},
-                  {"conditional_toggle_panel@quartz_command_block.conditional_toggle_panel":{}},
-                  {"redstone_toggle_panel@quartz_command_block.redstone_toggle_panel":{}}
-                ]
-              }
-            },
             {
               "previous_output_panel":{
                 "type":"panel",
@@ -529,6 +549,7 @@
       },
       {
         "expanded_command_line_panel":{
+          "size": [461,275],
           "type":"panel",
           "bindings":[
             {
@@ -552,6 +573,18 @@
                 ]
               }
             }
+          ]
+        }
+      },
+      {
+        "command_block_toggles_settings_panel":{
+          "type":"panel",
+          "size": [310,22],
+          "offset": [13.5,42.5],
+          "controls":[
+            {"block_type_toggle_panel@quartz_command_block.block_type_toggle_panel":{}},
+            {"conditional_toggle_panel@quartz_command_block.conditional_toggle_panel":{}},
+            {"redstone_toggle_panel@quartz_command_block.redstone_toggle_panel":{}}
           ]
         }
       }
