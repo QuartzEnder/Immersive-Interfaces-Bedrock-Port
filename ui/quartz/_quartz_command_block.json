@@ -317,10 +317,11 @@
 
   "always_active_image":{
     "type":"image",
-    "texture": "textures/ui/command_block/always_active",
+    "texture": "textures/ui/command_blocks/always_active",
     "size": [90,36],
     "anchor_from":"bottom_left",
     "anchor_to":"bottom_left",
+    "offset": [125,-39],
     "layer": 8,
     "bindings":[
       {
@@ -587,6 +588,9 @@
             {"redstone_toggle_panel@quartz_command_block.redstone_toggle_panel":{}}
           ]
         }
+      },
+      {
+        "always_active_image@quartz_command_block.always_active_image":{}
       }
     ]
   }
