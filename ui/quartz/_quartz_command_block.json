@@ -433,6 +433,7 @@
       {
         "root_panel":{
           "type":"panel",
+          "size": [461,275],
           "bindings":[
             {
               "binding_name": "(not #maximized_input_visible)",
