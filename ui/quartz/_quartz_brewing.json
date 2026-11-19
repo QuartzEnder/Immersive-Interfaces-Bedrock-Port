@@ -28,6 +28,7 @@
     "controls": [
       {
         "hover@common.hover_text": {
+          "layer": 28,
           "property_bag":{
             "#hover_text": "$hover_text"
           }
