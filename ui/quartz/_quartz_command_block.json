@@ -49,15 +49,17 @@
     
   },
 
-  "custom_plus_button@command_block.plus_button":{
+  "custom_plus_button@common_toggles.switch_toggle":{
     "size": [22,22],
     "layer": 4,
-    "$default_button_texture":"textures/ui/generic/text_box_default",
-    "$hover_button_texture":"textures/ui/generic/text_box_hover",
-    "$pressed_button_texture":"textures/ui/generic/text_box_hover",
-    "$default_glyph_color":"$quartz_grey_colour",
-
-    "$button_content":"quartz_command_block.plus_icon"
+    "$toggle_name":"expand_plus",
+    "$toggle_view_binding_name":"expand_plus_toggle",
+    "$default_texture":"textures/ui/command_blocks/plus_button_default",
+    "$pressed_texture":"textures/ui/command_blocks/plus_button_hover",
+    "$hover_texture":"textures/ui/command_blocks/minus_button_default",
+    "$pressed_no_hover_texture":"textures/ui/command_blocks/minus_button_hover",
+    "$default_border_visible": false,
+    "$hover_border_visible": false
   },
 
   "paste_icon":{
@@ -397,19 +399,13 @@
     "$text_edit_box_content_binding_name": "#command_text_edit",
     "$place_holder_text": "Enter your command input here",
     "$cancel_button_id": "command_block.input_minimize",
-    "bindings": [
-      {
-        "binding_name": "#maximized_input_visible",
-        "binding_name_override": "#visible"
-      }
-    ]
+    "bindings":[]
   },
 
   "minimise_button@common.close_button": {
     "size": [20,20],
     "$close_button_offset": [0,0],
     "$close_button_panel_size": [20,20],
-    "debug":"red",
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -468,8 +464,10 @@
           "size": [461,275],
           "bindings":[
             {
-              "binding_name": "(not #maximized_input_visible)",
-              "binding_name_override": "#visible"
+              "binding_type":"view",
+              "source_control_name": "expand_plus_toggle",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
             }
           ],
           "controls":[
@@ -491,14 +489,7 @@
                     "controls":[{"custom_paste_button@quartz_command_block.custom_paste_button":{}}]
                     }
                   },
-                  {"padding2":{"type":"panel","size": [3,1]}},
-                  {
-                    "plus_button_holder":{
-                      "type":"panel",
-                      "size": [20,20],
-                      "controls":[{"custom_plus_button@quartz_command_block.custom_plus_button":{}}]
-                    }
-                  }
+                  {"padding2":{"type":"panel","size": [23,1]}}
                 ]
               }
             },
@@ -551,11 +542,14 @@
       {
         "expanded_command_line_panel":{
           "size": [461,275],
+          "layer": 4,
           "type":"panel",
           "bindings":[
             {
-              "binding_name": "#maximized_input_visible",
-              "binding_name_override": "#visible"
+              "binding_type":"view",
+              "source_control_name": "expand_plus_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
             }
           ],
           "controls":[
@@ -569,8 +563,7 @@
                 "anchor_to":"top_middle",
                 "controls":[
                   {"expanded_command_block_text@quartz_command_block.expanded_command_block_text":{}},
-                  {"separator_padding":{"type":"panel","size": [3,1]}},
-                  {"minimise_button@quartz_command_block.minimise_button":{}}
+                  {"separator_padding":{"type":"panel","size": [23,1]}}
                 ]
               }
             }
@@ -591,6 +584,26 @@
       },
       {
         "always_active_image@quartz_command_block.always_active_image":{}
+      },
+      {
+        "expand_stack_panel":{
+          "type":"stack_panel",
+          "orientation":"horizontal",
+          "size": [299,20],
+          "offset": [13,52.5],
+          "anchor_from":"top_middle",
+          "anchor_to":"top_middle",
+          "controls":[
+            {"padding2":{"type":"panel","size": ["fill",1]}},
+            {
+              "plus_button_holder":{
+                "type":"panel",
+                "size": [20,20],
+                "controls":[{"custom_plus_button@quartz_command_block.custom_plus_button":{}}]
+              }
+            }
+          ]
+        }
       }
     ]
   }
