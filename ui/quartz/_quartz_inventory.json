@@ -280,8 +280,7 @@
       {"creative_recipe_book_layout_toggle@quartz_inventory.creative_recipe_book_layout_toggle":{}},
       {"creative_inventory_layout_toggle@quartz_inventory.creative_inventory_layout_toggle":{}},
       {"creative_tabs_panel@quartz_inventory.creative_tabs_panel":{}},
-      {"creative_search_elements_panel@quartz_inventory.creative_search_elements_panel":{}},
-      {"blueprint_creative_layout_toggle@quartz_inventory.blueprint_creative_layout_toggle":{}}
+      {"creative_search_elements_panel@quartz_inventory.creative_search_elements_panel":{}}
     ],
     "bindings":[
       {

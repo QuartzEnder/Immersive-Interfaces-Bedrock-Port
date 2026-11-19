@@ -5,23 +5,6 @@
     "anim_type":"aseprite_flip_book",
     "initial_uv":[0,0]
   },
-
-  //------------------------
-  // Ender Chest Elements
-  //------------------------
-
-  "ender_eye_element":{
-    "type":"image",
-    "size": [10,10],
-    "offset": [0,6],
-    "anchor_from":"top_middle",
-    "anchor_to":"top_middle",
-    "texture": "textures/ui/ender_chest/ender_eye_spritesheet",
-    "uv_size": [10,10],
-    "uv":"@quartz_anim.general_anim",
-    "ignored": "$ignore_eye",
-    "layer": 4
-  },
   
   //-----------------------------------
   // Animated Stonecutter Sawblade
@@ -66,36 +49,6 @@
         "source_control_name": "quartz_anim_toggle_state",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
-      }
-    ]
-  },
-
-  //----------------------
-  // Villager Eyes
-  //----------------------
-
-  "villager_eyes":{
-    "type":"image",
-    "texture": "textures/ui/trading/backup",
-    "size": [12,5],
-    "uv_size": [12,5],
-    "uv":"@quartz_anim.general_anim",
-    "anchor_from":"top_middle",
-    "anchor_to":"top_middle",
-    "offset": [1,12],
-    "bindings":[
-      {
-        "binding_name": "#name_label"
-      },
-      {
-        "binding_type":"view",
-        "source_property_name": "((#name_label - '§r') = #name_label)",
-        "target_property_name": "#val"
-      },
-      {
-        "binding_type":"view",
-        "source_property_name": "('textures/ui/trading/villager_eyes/' + (('%.' + 12 * (1 - #val) + 's') * #name_label) + (('%.' + (6 * #val) + 's') * 'backup')))",
-        "target_property_name": "#texture"
       }
     ]
   }

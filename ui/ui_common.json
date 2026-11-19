@@ -49,7 +49,7 @@
     "$is_small_scrolling_panel|default":false,
     "size": "$highlight_slot_size",
     "alpha": 1,
-    "$highlight_slot_layer|default":1,
+    "$highlight_slot_layer|default":3,
     "layer":"$highlight_slot_layer" ,
     "uv_size": [24,24],
     "uv": "@quartz_anim.general_anim",

@@ -117,33 +117,6 @@
     ]
   },
 
-  //---------------------
-  // Debugging Elements
-  //---------------------
-
-  
-  "debug_villager_texture_label":{
-    "ignored": "(not $debug_release_immersive_interfaces_quartz)",
-    "type":"label",
-    "offset": [0,-60],
-    "text": "#test_text",
-    "bindings":[
-      {
-        "binding_name": "#name_label"
-      },
-      {
-        "binding_type":"view",
-        "source_property_name": "((#name_label - '§r') = #name_label)",
-        "target_property_name": "#val"
-      },
-      {
-        "binding_type":"view",
-        "source_property_name": "('textures/ui/trading/professions/' + (('%.' + 12 * (1 - #val) + 's') * #name_label) + (('%.' + (6 * #val) + 's') * 'backup')))",
-        "target_property_name": "#test_text"
-      }
-    ]
-  },
-
   //--------------------
   // Villager Sprite
   //--------------------
@@ -214,71 +187,6 @@
           "localize": true,
           "color": [0,0,0]
         }
-      }
-    ]
-  },
-
-  //----------------------------------
-  // Villager progress bar nubs
-  //----------------------------------
-
-  "filled_bar_nub":{
-    "type":"image",
-    "texture": "textures/ui/progress_bars/filled_bar_nub",
-    "size": ["100% - 2px","100%"],
-    "color": [1.0,1.0,1.0],
-    "tiled": true,
-    "clip_direction":"left",
-    "clip_pixelperfect": false,
-    "layer": 6,
-    "bindings": [
-      {
-        "binding_name": "#exp_progress",
-        "binding_name_override": "#clip_ratio",
-        "binding_type": "global",
-        "binding_condition":"always_when_visible"
-      }
-    ]
-  },
-
-  "preview_bar_nub":{
-    "type":"image",
-    "texture": "textures/ui/progress_bars/white_bar_nub",
-    "color": [1.0,1.0,1.0],
-    "size": ["100% - 2px","100%"],
-    "tiled": true,
-    "clip_direction":"left",
-    "clip_pixelperfect": false,
-    "layer": 4,
-    "bindings": [
-      {
-        "binding_name": "#exp_possible_progress",
-        "binding_name_override": "#clip_ratio",
-        "binding_type": "global",
-        "binding_condition":"always_when_visible"
-      }
-    ]
-  },
-
-  //---------------------------
-  // Toolbar Panel Centerer
-  //---------------------------
-
-  "toolbar_panel_centerer":{
-    "type":"panel",
-    "size": [326,"100%c"],
-    "anchor_to":"bottom_right",
-    "anchor_from":"top_left",
-    "controls":[{"toolbar_panel@crafting.toolbar_panel":{}}]
-  },
-
-  "centering_padding":{
-    "type":"panel",
-    "size": [75,"100%"],
-    "bindings":[
-      {
-        "binding_name": "#is_survival_layout",
-        "binding_name_override": "#visible"
       }
     ]
   },
@@ -681,14 +589,6 @@
       }
     ]
   },
-
-  "disabled_slot_preserved":{
-    "type": "image",
-    "size":[18,18],
-    "texture": "textures/ui/slot_disabled",
-    "layer":-21
-  },
-
   //---------------------------
   // Hotbar Overlay
   //---------------------------

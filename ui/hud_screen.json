@@ -34,7 +34,7 @@
   },
 
   "hotbar_slot_selected_image":{
-    "layer": 2,
+    //"layer": 8,
     "size": [24,24]
   },
 

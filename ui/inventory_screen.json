@@ -482,8 +482,8 @@
     "$scroll_box_size": ["100%","100%"],
     "$scroll_size":[12,"100%"],
     "$scroll_view_port_offset":[0,1],
-    "$scroll_view_port_size":[166,88],
-    "$scroll_view_port_size_touch":[166,88]
+    "$scroll_view_port_size":[166,89],
+    "$scroll_view_port_size_touch":[166,89]
   },
 
   "scroll_grid":{
@@ -596,12 +596,6 @@
         "array_name":"controls",
         "operation":"remove",
         "control_name": "center_fold"
-      },
-      {
-        "array_name":"controls",
-        "operation":"insert_after",
-        "control_name": "player_inventory",
-        "value":{"centering_padding@quartz_gui.centering_padding":{}}
       }
     ]
   },
