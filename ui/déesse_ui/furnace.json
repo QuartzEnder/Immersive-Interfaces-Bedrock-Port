@@ -32,5 +32,10 @@
     "$hover_texture": "textures/ui/generic/tab_selected",
     "$pressed_texture":"textures/ui/generic/tab_unselected",
     "$pressed_no_hover_texture":"textures/ui/generic/tab_selected"
+  },
+
+  "smelting_duration_text":{
+    "color": [1.0,1.0,1.0],
+    "shadow": true
   }
 }

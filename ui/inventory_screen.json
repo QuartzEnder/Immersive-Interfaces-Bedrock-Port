@@ -319,6 +319,14 @@
 // Recipe Book
 //--------------------
 
+  "creative_label":{
+    "color": [1.0,1.0,1.0],
+    "size": ["default",10],
+    "anchor_from":"top_left",
+    "anchor_to":"top_left",
+    "offset": [73,20]
+  },
+
   "container_overlay_images":{
     "$ignore_plus_icon|default":false
   },
@@ -481,9 +489,15 @@
     "$scroll_box_touch_image_control": "quartz_inventory.creative_scroll_box",
     "$scroll_box_size": ["100%","100%"],
     "$scroll_size":[12,"100%"],
+    "$scroll_size_touch":[12,"100%"],
     "$scroll_view_port_offset":[0,1],
     "$scroll_view_port_size":[166,89],
-    "$scroll_view_port_size_touch":[166,89]
+    "$scroll_view_port_size_touch":[166,89],
+    "$scroll_bar_left_padding_size_touch": [0,0],
+    "$scroll_bar_right_padding_size_touch": [10,0],
+    "$view_port_size_touch": ["fill","100%"],
+    "$scroll_bar_contained_touch": false,
+    "$background_size_touch": ["100%","100%"]
   },
 
   "scroll_grid":{

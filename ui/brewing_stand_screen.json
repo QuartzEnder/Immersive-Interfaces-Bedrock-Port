@@ -49,7 +49,7 @@
   },
 
   "brewing_arrow_full_image":{
-    "offset": [14.5,-13]
+    "offset": [15.5,-13]
   },
 
   "brewing_fuel_bar_full_image":{
@@ -64,6 +64,10 @@
 
   "bubbles_empty_image":{
     "visible": false
+  },
+
+  "bubbles_full_image":{
+    "offset": [-17,-14]
   },
 
   "brewing_pipes":{

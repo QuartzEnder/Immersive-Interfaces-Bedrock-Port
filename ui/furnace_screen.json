@@ -346,7 +346,14 @@
     "offset": [3,2],
     "anchor_to":"top_left",
     "anchor_from":"top_left",
-    "orientation":"vertical"
+    "orientation":"vertical",
+    "modifications":[
+      {
+        "array_name":"controls",
+        "operation":"remove",
+        "control_name": "fill_panel_0"
+      }
+    ]
   },
 
   "tab_navigation_panel_layout/navigation_tabs/content/food_tab_holder":{
