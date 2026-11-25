@@ -64,16 +64,6 @@
   "visible": false
 },
 
-"crafting_grid_3x3_with_label":{
-  "modifications":[
-    {
-      "array_name":"controls",
-      "operation":"remove",
-      "control_name": "crafting_label"
-    }
-  ]
-},
-
 "work_bench_panel_3x3":{
   "modifications":[
     {
@@ -191,26 +181,6 @@
   "crafting_panel_2x2/survival_crafting_output_grid":{
     "offset": [64,28]
   },
-
-  "crafting_grid_2x2_with_label":{
-    "modifications":[
-      {
-        "array_name":"controls",
-        "operation":"replace",
-        "control_name": "crafting_label",
-        "value":{
-          "crafting_label_anchor":{
-            "type":"panel",
-            "size":[3,1],
-            "anchor_from":"top_middle",
-            "anchor_to":"top_middle",
-            "offset":[-14.5,-1],
-            "controls":[{"crafting_label@crafting.crafting_label":{}}]
-          }
-        }
-      }
-    ]
-},
 
 //---------------------------
 // Recipe Book Tabs
@@ -577,11 +547,6 @@
         "array_name":"controls",
         "operation":"remove",
         "control_name": "close_button_panel"
-      },
-      {
-        "array_name":"controls",
-        "operation":"remove",
-        "control_name": "help_button_panel"
       }
     ]
   },

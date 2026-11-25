@@ -144,12 +144,12 @@
             "layer":"$inventory_background_layer"
         }
       }
-    },
-    {
+    }
+    /*{
       "operation":"remove",
       "array_name":"controls",
       "control_name": "inventory_label"
-    }
+    }*/
   ]
 },
 

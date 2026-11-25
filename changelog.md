@@ -11,6 +11,7 @@
 
 ### Bug Fixes
 
+- slight improvements to compatibility with other packs
 - the hotbar overlay scales correctly with touch controls now
 - touch screen has the correct selected recipe slot texture
 - the size and offset of the creative menu scroll box on touch screen is correct
