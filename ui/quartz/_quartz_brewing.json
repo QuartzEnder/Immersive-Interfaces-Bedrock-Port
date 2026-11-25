@@ -13,6 +13,30 @@
     "$toggle_view_binding_name":"brewing_guide_toggle_control"
   },
 
+  "custom_guide_tooltip":{
+    "type":"custom",
+    "renderer":"bundle_tooltip_renderer",
+    "size": ["100%cm","100%cm"],
+    "layer": 29,
+    "allow_clipping": false,
+    "controls":[
+      {
+        "hover_text_label":{
+          "type":"label",
+          "text": "$hover_text"
+        }
+      },
+      {
+        "tooltip_background":{
+          "type":"image",
+          "texture": "textures/ui/generic/custom_tooltip",
+          "size": ["100%sm + 16px","100%sm + 16px"],
+          "layer": -1
+        }
+      }
+    ]
+  },
+
   //-------------------------
   // Buttons
   //-------------------------
@@ -26,14 +50,7 @@
     "visible": true,
     "focus_enabled": false,
     "controls": [
-      {
-        "hover@common.hover_text": {
-          "layer": 28,
-          "property_bag":{
-            "#hover_text": "$hover_text"
-          }
-        }
-      }
+      {"hover@quartz_brewing.custom_guide_tooltip":{}}
     ]
   },
 

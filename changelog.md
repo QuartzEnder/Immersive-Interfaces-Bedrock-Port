@@ -3,6 +3,10 @@
 
 ## Version 0.9.1
 
+### New Features
+
+- the regular and bundle tooltip have been replaced by custom ones, so as to bring the java pack's tooltips
+
 ### Feature Changes
 
 - improved the contrast of the smelting timer with Déesse UI

@@ -1,0 +1,14 @@
+{
+  "namespace": "gameplay",
+
+  "bundle_tooltip":{
+    "size": ["100%cm - 6px","100%cm - 6px"]
+  },
+
+  "bundle_tooltip/background":{
+    "size": ["100%sm + 16px","100%sm + 16px"],
+    "texture":"textures/ui/generic/custom_tooltip",
+    "anchor_from":"center",
+    "anchor_to":"center"
+  }
+}

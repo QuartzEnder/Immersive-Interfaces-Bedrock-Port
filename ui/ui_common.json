@@ -49,7 +49,7 @@
     "$is_small_scrolling_panel|default":false,
     "size": "$highlight_slot_size",
     "alpha": 1,
-    "$highlight_slot_layer|default":3,
+    "$highlight_slot_layer|default":4,
     "layer":"$highlight_slot_layer" ,
     "uv_size": [24,24],
     "uv": "@quartz_anim.general_anim",
@@ -134,23 +134,22 @@
       "operation":"insert_front",
       "array_name":"controls",
       "value":{
-          "inventory_background@common.dialog_background_opaque":{
-            "$background_texture":"$inv_background_texture",
-            "size":[200,129],
-            "offset":[0,43],
-            "anchor_from":"bottom_middle",
-            "anchor_to":"bottom_middle",
-            "$inventory_background_layer|default":-3,
-            "layer":"$inventory_background_layer"
+        "inventory_background@common.dialog_background_opaque":{
+          "$background_texture":"$inv_background_texture",
+          "size":[200,129],
+          "offset":[0,43],
+          "anchor_from":"bottom_middle",
+          "anchor_to":"bottom_middle",
+          "$inventory_background_layer|default":-3,
+          "layer":"$inventory_background_layer"
         }
       }
     }
-    /*{
-      "operation":"remove",
-      "array_name":"controls",
-      "control_name": "inventory_label"
-    }*/
   ]
+},
+
+"inventory_panel_bottom_half_with_label/inventory_label":{
+  "visible": false
 },
 
 "search_icon":{
@@ -324,70 +323,18 @@
     "$scroll_track_anchor":"left_middle"
   },
 
-  //--------------------------
-  // Pocket UI Modifications 
-  //--------------------------
+  //----------------------
+  // Tooltip
+  //----------------------
 
-  "pocket_content_panels":{
-    "$middle_offset_visible|default":false
-  },
-
-  "pocket_hotbar_and_content_panels":{
-    "$has_side_tabs|default":true,
-    "$hide_hotbar|default":false,
-    "$pocket_double_panel_size|default":["100%","100% - 2px"],
-    "size": "$pocket_double_panel_size",
-    "variables":{
-      "requires": "(not $has_side_tabs)",
-      "$pocket_double_panel_size": ["100% - 88px","100% - 2px"]
-    },
+  "highlight_slot_panel/highlight":{
     "modifications":[
       {
         "array_name":"controls",
-        "operation":"insert_front",
-        "value":{
-          "lowering_padding":{
-            "type":"panel",
-            "$lowering_padding_size":["100%",13],
-            "size":"$lowering_padding_size",
-            "variables":{
-              "requires":"$hide_hotbar",
-              "$lowering_padding_size":["100%",19]
-            }
-          }
-        }
-      },
-      {
-        "array_name":"controls",
-        "operation":"insert_back",
-        "value":{
-          "invisible_hotbar_padding":{
-            "type":"panel",
-            "size":[260,28],
-            "visible":"$hide_hotbar"
-          }
-        }
+        "operation":"replace",
+        "control_name": "hover_text",
+        "value":{"custom_tooltip@quartz_gui.custom_tooltip":{}}
       }
     ]
-  },
-
-  "pocket_hotbar_and_content_panels/hotbar_drop_item_panel":{
-    "visible": "(not $hide_hotbar)"
-  },
-
-  "blank_pocket_content_panel":{
-    "size": ["fill",221]
-  },
-
-  "pocket_hotbar_panel":{
-    "$lock_theme":true
-  },
-
-  //-----------------------------
-  // Pocket Scrolling Elements
-  //-----------------------------
-
-  "scrolling_panel":{
-    "$is_scrolling_panel":true
   }
 }
