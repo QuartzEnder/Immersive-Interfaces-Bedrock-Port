@@ -452,7 +452,13 @@
     "$magnifying_glass_offset":[0,0],
     "$text_edit_box_label_offset": [2,0],
     "$magnifying_glass_enabled":false,
-    "$place_holder_text":"('§r§o§f' + %realmsSettingsScreen.searchBox)"
+    "$place_holder_text":"('§r§o§f' + %realmsSettingsScreen.searchBox)",
+    "bindings":[
+      {
+        "binding_name": "#is_left_tab_search",
+        "binding_name_override": "#enabled"
+      }
+    ]
   },
 
   "filter_toggle":{

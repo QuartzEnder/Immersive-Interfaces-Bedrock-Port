@@ -21,6 +21,7 @@
 - the size and offset of the creative menu scroll box on touch screen is correct
 - the entirety of the scroll box now fades away correctly on touch screen
 - fixed a bug which caused the search tab in the furnace recipe book not to appear
+- the search bar in the furnace screen is now enabled only in the appropriate tab
 - the recipe book now always renders behind the smoker or blast furnace door
 - adjusted the offset of the arrow and of the bubbles in the brewing stand screen
 - added missing pixels to the hotbar overlay with the xp bar
