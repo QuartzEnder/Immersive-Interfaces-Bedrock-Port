@@ -21,6 +21,10 @@
     "$show_close_button":true
   },
 
+  "brewing_stand_stack_panel/brewing_stand_panel/brewing_panel/brewing_panel_top_half":{
+    "$cell_image_visible":true
+  },
+
   "brewing_guide_panel":{
     "$background_texture":"textures/ui/recipe/recipe_book_background",
     "$common_panel_size":["100%","100%"],

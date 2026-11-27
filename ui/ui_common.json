@@ -21,7 +21,8 @@
     "$lock_theme|default":false,
     "$cell_texture|default":"textures/ui/cell_image",
     "texture": "$cell_texture",
-    "layer": 0,
+    "$cell_image_layer|default":0,
+    "layer": "$cell_image_layer",
     "$cell_image_visible|default":false,
     "visible": "$cell_image_visible"
   },
@@ -49,7 +50,7 @@
     "$is_small_scrolling_panel|default":false,
     "size": "$highlight_slot_size",
     "alpha": 1,
-    "$highlight_slot_layer|default":4,
+    "$highlight_slot_layer|default":28,
     "layer":"$highlight_slot_layer" ,
     "uv_size": [24,24],
     "uv": "@quartz_anim.general_anim",

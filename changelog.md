@@ -25,3 +25,5 @@
 - the recipe book now always renders behind the smoker or blast furnace door
 - adjusted the offset of the arrow and of the bubbles in the brewing stand screen
 - added missing pixels to the hotbar overlay with the xp bar
+- the highlight slot correctly renders on top of the count label
+- the slots still compare in the brewing stand screen with Déesse UI

@@ -10,5 +10,10 @@
     "texture":"textures/ui/generic/custom_tooltip",
     "anchor_from":"center",
     "anchor_to":"center"
+  },
+
+  "bundle_cell_image/highlight_panel/bundle_selected_item_background_colour_green":{
+    "uv": [0,0],
+    "texture": "textures/ui/generic/bundle_hover_green"
   }
 }

@@ -17,7 +17,8 @@
     "variables":[
       {
         "requires": "$is_déesse_ui_pack",
-        "$close_button_offset":[60.5,0]
+        "$close_button_offset":[60.5,0],
+        "$cell_image_visible":true
       },
       {
         "requires": "$is_dimz_advanced_container",

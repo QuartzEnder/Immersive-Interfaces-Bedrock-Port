@@ -14,24 +14,39 @@
   },
 
   "custom_guide_tooltip":{
-    "type":"custom",
-    "renderer":"bundle_tooltip_renderer",
-    "size": ["100%cm","100%cm"],
+    "type":"input_panel",
+    "size": [0,0],
+    "follows_cursor": true,
     "layer": 29,
     "allow_clipping": false,
+    "consume_hover_events": false,
+    "always_handle_pointer": true,
+    "focus_enabled": false,
+    "focus_magnet_enabled": false,
     "controls":[
       {
-        "hover_text_label":{
-          "type":"label",
-          "text": "$hover_text"
-        }
-      },
-      {
-        "tooltip_background":{
-          "type":"image",
-          "texture": "textures/ui/generic/custom_tooltip",
-          "size": ["100%sm + 16px","100%sm + 16px"],
-          "layer": -1
+        "tooltip_content_panel":{
+          "type":"panel",
+          "size": ["100%cm","100%cm"],
+          "anchor_from":"bottom_right",
+          "anchor_to":"top_left",
+          "offset": [5,5],
+          "controls":[
+            {
+              "hover_text_label":{
+                "type":"label",
+                "text": "$hover_text"
+              }
+            },
+            {
+              "tooltip_background":{
+                "type":"image",
+                "texture": "textures/ui/generic/custom_tooltip",
+                "size": ["100%sm + 16px","100%sm + 16px"],
+                "layer": -1
+              }
+            }
+          ]
         }
       }
     ]
