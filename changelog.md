@@ -6,6 +6,7 @@
 ### New Features
 
 - the regular and bundle tooltip have been replaced by custom ones, so as to bring the java pack's tooltips
+- added controller button mappings for the recipe book toggle in the furnace screen. You need to press L3
 
 ### Feature Changes
 
@@ -27,3 +28,5 @@
 - added missing pixels to the hotbar overlay with the xp bar
 - the highlight slot correctly renders on top of the count label
 - the slots still compare in the brewing stand screen with Déesse UI
+- modified the texture of the recipe book ingredient cells that could appear on controller so as to be transparent
+- aligned the search bar in the recipe book of the furnace screen

@@ -403,7 +403,7 @@
     "size": ["100% + 12px","100% - 22px"],
     "anchor_from":"top_middle",
     "anchor_to":"top_middle",
-    "offset": [1.5,0],
+    "offset": [1.5,2],
     "$show_background":false,
     "$scroll_size":[6,"100%"],
     "$scroll_box_size":[6,"100%"],
@@ -443,7 +443,7 @@
   },
 
   "tab_content/tab_content_search_bar_panel/vertical_padding_1":{
-    "size": [0,3]
+    "size": [0,0]
   },
 
   "tab_content/tab_content_search_bar_panel/search_and_filter_panel/text_edit_control":{
@@ -452,13 +452,13 @@
     "$magnifying_glass_offset":[0,0],
     "$text_edit_box_label_offset": [2,0],
     "$magnifying_glass_enabled":false,
-    "$place_holder_text":"('§r§o§f' + %realmsSettingsScreen.searchBox)",
-    "bindings":[
+    "$place_holder_text":"('§r§o§f' + %realmsSettingsScreen.searchBox)"
+    /*"bindings":[
       {
         "binding_name": "#is_left_tab_search",
         "binding_name_override": "#enabled"
       }
-    ]
+    ]*/
   },
 
   "filter_toggle":{
@@ -476,12 +476,7 @@
 
   "tab_content/tab_content_search_bar_panel/search_and_filter_panel":{
     "size": ["100% + 1px", 14],
-    "bindings":[
-      {
-        "binding_name": "#is_recipe_book_layout",
-        "binding_name_override": "#visible"
-      }
-    ],
+    "bindings":[],
     "modifications":[
       {
         "array_name":"controls",
@@ -509,7 +504,7 @@
 
 
   "tab_content/tab_content_search_bar_panel/search_and_filter_panel/filter_toggle_holder":{
-    "$toggle_offset": [-4,-2.5],
+    "$toggle_offset": [-4,0.5],
     "size": [14,"100%"],
     "bindings":[]
   },

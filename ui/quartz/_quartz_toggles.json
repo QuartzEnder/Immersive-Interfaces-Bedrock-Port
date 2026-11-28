@@ -255,7 +255,49 @@
   //---------------------------------
 
   "recipe_toggle_furnace@quartz_toggles.recipe_toggle_view_template":{
-    "$toggle_view_binding_name":"recipe_furnace_toggle"
+    "$toggle_view_binding_name":"recipe_furnace_toggle",
+    "$button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.controller_back",
+        "mapping_type": "focused",
+        "ignored": "(not $allow_controller_back_button_mapping)"
+      },
+      {
+        "ignored": "(not $enable_directional_toggling)",
+        "from_button_id": "button.menu_left",
+        "to_button_id": "$toggle_off_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "gamepad"
+      },
+      {
+        "ignored": "(not $enable_directional_toggling)",
+        "from_button_id": "button.menu_right",
+        "to_button_id": "$toggle_on_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "gamepad"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "to_button_id": "$toggle_hover_event_mapping",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id":"button.controller_secondary_select_right",
+        "to_button_id":"button.controller_select",
+        "mapping_type":"global"
+      }
+    ]
   },
 
   //------------------------------------

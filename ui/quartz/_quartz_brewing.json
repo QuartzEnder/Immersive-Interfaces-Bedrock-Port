@@ -30,7 +30,7 @@
           "size": ["100%cm","100%cm"],
           "anchor_from":"bottom_right",
           "anchor_to":"top_left",
-          "offset": [5,5],
+          "offset": [8,8],
           "controls":[
             {
               "hover_text_label":{
